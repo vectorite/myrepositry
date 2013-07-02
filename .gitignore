@@ -1,2 +1,10 @@
 *.cache
 live/*
+*.jpa
+kickstart.php
+cache/*
+dbgui
+images
+Video
+pdf
+nbproject/*
