@@ -1,5 +1,0 @@
-RewriteEngine on
-ForceType application/x-http-php
-#RewriteBase /administrator/components/com_onepage/export
-RewriteRule ^(.*)$ index.php [L,R=403]
-deny from all

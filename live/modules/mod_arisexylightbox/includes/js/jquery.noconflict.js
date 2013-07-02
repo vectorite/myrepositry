@@ -1,1 +1,0 @@
-if (typeof(jQuery) != 'undefined') window.jQueryASL = jQuery.noConflict();

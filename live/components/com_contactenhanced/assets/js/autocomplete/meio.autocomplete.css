@@ -1,8 +1,0 @@
-.ma-container{color:#000;border:1px solid #333;background-color:#fff;position:absolute;visibility:hidden;overflow-y:auto;overflow-x:hidden;text-align:left}
-.ma-container ul{list-style:none;overflow:hidden;width:100%}
-.ma-container li{position:relative;display:block;float:none!important;cursor:pointer;font-weight:400;white-space:nowrap;font-size:1em;line-height:1.5em;margin:-2px 0 0;padding:.2em 1.5em .2em 1em}
-.ma-container .ma-hover{color:#fff;background-color:#333!important}
-.ma-container .ma-hover strong{color:#9FCFFF}
-.ma-container .ma-even{background-color:#efefef}
-.ma-loading{background-color:#fafba4}
-.ma-selected{background-color:#ccfda8}
