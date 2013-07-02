@@ -922,13 +922,12 @@ function getExtras(&$ref)
 			{
 			 if (empty($coupon_price_display)) $coupon_price_display = 'salesPriceCoupon'; 
 			 
-			 $coupon_display = $currencyDisplay->createPriceDiv($coupon_price_display,'', $ref->cart->prices,false,false, 1);//$ref->cart->prices['salesPriceCoupon']; 
+			 $coupon_display = $currencyDisplay->createPriceDiv($coupon_price_display,'', $ref->cart->prices,false,false, 1);
+			 //$ref->cart->prices['salesPriceCoupon']; 
 			 $coupon_display = str_replace('class="', 'class="opc_', $coupon_display); 
 			}
 			else $coupon_display = ''; 
-			
-			
-			
+						
 			 if (empty($subtotal_price_display)) $subtotal_price_display = 'salesPrice'; 
 			$subtotal_display = $currencyDisplay->createPriceDiv($subtotal_price_display,'', $ref->cart->prices,false,false, 1); //$ref->cart->prices['salesPrice'];
 			$subtotal_display = str_replace('class="', 'class="opc_', $subtotal_display); 
@@ -1247,7 +1246,7 @@ function getExtras(&$ref)
 	 $html = str_replace('id="virtuemart_country_id"', 'id="virtuemart_country_id" onchange="javascript: op_validateCountryOp2('.$par.'\'false\', this);" ', $html, $count);
 
 	
-	/* ========= Add By RCA ============ */
+	/* ========= Add By RCA chetnath============ */
 	
 		$_SESSION['myuserfield'] = $_SESSION['__default']['mera_cart']->ST;
 
@@ -1446,7 +1445,7 @@ function getExtras(&$ref)
    if (empty($opc_email_in_bt) && (!empty($double_email)))
    $this->insertAfter($fields['fields'], 'email', $email2, 'email2'); 
 	
-  /*=========== add by RCA =========== */
+  /*=========== add by RCA chetnath=========== */
 
 	if(isset($_SESSION['__default']['mera_cart']->BT['email']))
 	 {
@@ -2766,7 +2765,6 @@ function path2url($path)
 			  $thumb_height = $height;
 			  $thumb_width = $width;
 			}
-			
 			
 			if (!empty($fi['extension']))
 			{

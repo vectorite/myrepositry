@@ -227,13 +227,13 @@ window.onload=function(){oldload();convertTrees();window.setTimeout('expandableE
 				<th nowrap="nowrap">FileSize</th>
 				<th nowrap="nowrap">Downloads</th>
 				<th nowrap="nowrap">Md5 Hash</th></tr>
-			<tr class="l"  ><td  valign="top"><a href="/gf/download/frsrelease/18324/80365/Joomla_3.1.1-Stable-Update_Package.zip">Joomla_3.1.1-Stable-Update_Package.zip</a></td><td  valign="top">7457004</td><td  valign="top">127016</td><td  valign="top">206102134102a01d699e84a52c992b88</td>
+			<tr class="l"  ><td  valign="top"><a href="/gf/download/frsrelease/18324/80365/Joomla_3.1.1-Stable-Update_Package.zip">Joomla_3.1.1-Stable-Update_Package.zip</a></td><td  valign="top">7457004</td><td  valign="top">128384</td><td  valign="top">206102134102a01d699e84a52c992b88</td>
 			</tr>
-			<tr class="d"  ><td  valign="top"><a href="/gf/download/frsrelease/18324/80364/Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.zip">Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.zip</a></td><td  valign="top">149204</td><td  valign="top">18560</td><td  valign="top">c187a8953394fc26f8902f7418ac11ab</td>
+			<tr class="d"  ><td  valign="top"><a href="/gf/download/frsrelease/18324/80364/Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.zip">Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.zip</a></td><td  valign="top">149204</td><td  valign="top">18654</td><td  valign="top">c187a8953394fc26f8902f7418ac11ab</td>
 			</tr>
-			<tr class="l"  ><td  valign="top"><a href="/gf/download/frsrelease/18324/80362/Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.tar.bz2">Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.tar.bz2</a></td><td  valign="top">86932</td><td  valign="top">1540</td><td  valign="top">bf2409bd18a36ae0c3e84a9f94433e55</td>
+			<tr class="l"  ><td  valign="top"><a href="/gf/download/frsrelease/18324/80362/Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.tar.bz2">Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.tar.bz2</a></td><td  valign="top">86932</td><td  valign="top">1556</td><td  valign="top">bf2409bd18a36ae0c3e84a9f94433e55</td>
 			</tr>
-			<tr class="d"  ><td  valign="top"><a href="/gf/download/frsrelease/18324/80363/Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.tar.gz">Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.tar.gz</a></td><td  valign="top">121706</td><td  valign="top">1387</td><td  valign="top">acd68959c7631e905d4257d69c957767</td>
+			<tr class="d"  ><td  valign="top"><a href="/gf/download/frsrelease/18324/80363/Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.tar.gz">Joomla_3.1.x_to_3.1.1-Stable-Patch_Package.tar.gz</a></td><td  valign="top">121706</td><td  valign="top">1402</td><td  valign="top">acd68959c7631e905d4257d69c957767</td>
 			</tr><tr style="margin-top:0; margin-bottom:0; padding-top:0; padding-bottom:0"><td style="margin-top:0; margin-bottom:0; padding-top:0; padding-bottom:0" class="tFooter" valign="top" colspan="4" align="right">&nbsp;</td></tr></table>
 		</p>
 </div>

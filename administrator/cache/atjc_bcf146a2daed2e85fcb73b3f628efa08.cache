@@ -227,11 +227,11 @@ window.onload=function(){oldload();convertTrees();window.setTimeout('expandableE
 				<th nowrap="nowrap">FileSize</th>
 				<th nowrap="nowrap">Downloads</th>
 				<th nowrap="nowrap">Md5 Hash</th></tr>
-			<tr class="l"  ><td  valign="top"><a href="/gf/download/frsrelease/18322/80354/Joomla_2.5.11-Stable-Full_Package.zip">Joomla_2.5.11-Stable-Full_Package.zip</a></td><td  valign="top">7930509</td><td  valign="top">354098</td><td  valign="top">0028a144c5a91b708c12dc909fca4409</td>
+			<tr class="l"  ><td  valign="top"><a href="/gf/download/frsrelease/18322/80354/Joomla_2.5.11-Stable-Full_Package.zip">Joomla_2.5.11-Stable-Full_Package.zip</a></td><td  valign="top">7930509</td><td  valign="top">359520</td><td  valign="top">0028a144c5a91b708c12dc909fca4409</td>
 			</tr>
-			<tr class="d"  ><td  valign="top"><a href="/gf/download/frsrelease/18322/80353/Joomla_2.5.11-Stable-Full_Package.tar.gz">Joomla_2.5.11-Stable-Full_Package.tar.gz</a></td><td  valign="top">5485348</td><td  valign="top">2725</td><td  valign="top">fc37656fd2f34b2303a16383e5dfaa4c</td>
+			<tr class="d"  ><td  valign="top"><a href="/gf/download/frsrelease/18322/80353/Joomla_2.5.11-Stable-Full_Package.tar.gz">Joomla_2.5.11-Stable-Full_Package.tar.gz</a></td><td  valign="top">5485348</td><td  valign="top">2772</td><td  valign="top">fc37656fd2f34b2303a16383e5dfaa4c</td>
 			</tr>
-			<tr class="l"  ><td  valign="top"><a href="/gf/download/frsrelease/18322/80352/Joomla_2.5.11-Stable-Full_Package.tar.bz2">Joomla_2.5.11-Stable-Full_Package.tar.bz2</a></td><td  valign="top">4602948</td><td  valign="top">917</td><td  valign="top">f6aadf82d0e7e6e1fe3816321a6bcb53</td>
+			<tr class="l"  ><td  valign="top"><a href="/gf/download/frsrelease/18322/80352/Joomla_2.5.11-Stable-Full_Package.tar.bz2">Joomla_2.5.11-Stable-Full_Package.tar.bz2</a></td><td  valign="top">4602948</td><td  valign="top">977</td><td  valign="top">f6aadf82d0e7e6e1fe3816321a6bcb53</td>
 			</tr><tr style="margin-top:0; margin-bottom:0; padding-top:0; padding-bottom:0"><td style="margin-top:0; margin-bottom:0; padding-top:0; padding-bottom:0" class="tFooter" valign="top" colspan="4" align="right">&nbsp;</td></tr></table>
 		</p>
 </div>

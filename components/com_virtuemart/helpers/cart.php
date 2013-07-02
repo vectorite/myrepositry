@@ -222,7 +222,7 @@ class VirtueMartCart {
 		$sessionCart->couponCode 					= $this->couponCode;
 		$sessionCart->cartData 						= $this->cartData;
 		$sessionCart->lists 						= $this->lists;
-		// 		$sessionCart->user 					= $this->user;
+	//  $sessionCart->user 							= $this->user;
 // 		$sessionCart->prices 						= $this->prices;
 		$sessionCart->pricesUnformatted				= $this->pricesUnformatted;
 		$sessionCart->pricesCurrency				= $this->pricesCurrency;
@@ -706,14 +706,14 @@ class VirtueMartCart {
 		// Check for a valid quantity
 		if (!is_numeric( $quantity)) {
 			$errorMsg = JText::_('COM_VIRTUEMART_CART_ERROR_NO_VALID_QUANTITY', false);
-			//			$this->_error[] = 'Quantity was not a number';
+		//	$this->_error[] = 'Quantity was not a number';
 			$this->setError($errorMsg);
 			vmInfo($errorMsg,$product->product_name);
 			return false;
 		}
 		// Check for negative quantity
 		if ($quantity < 1) {
-			//			$this->_error[] = 'Quantity under zero';
+		//	$this->_error[] = 'Quantity under zero';
 			$errorMsg = JText::_('COM_VIRTUEMART_CART_ERROR_NO_VALID_QUANTITY', false);
 			$this->setError($errorMsg);
 			vmInfo($errorMsg,$product->product_name);
