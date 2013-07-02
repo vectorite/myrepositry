@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+div.current {
+	border: 1px solid #CCCCCC; clear: both; overflow: hidden; padding: 10px;
+}
+
+div.plugins {
+	clear: both; overflow: hidden; padding: 10px;
+}

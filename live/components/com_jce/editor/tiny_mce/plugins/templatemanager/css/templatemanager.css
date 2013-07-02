@@ -1,0 +1,7 @@
+/* CSS file for FileManager plugin */
+div#browser {
+	margin-top: 0px;
+}
+span.action.save{
+	background: url(../img/save.png) no-repeat 0 0; 
+}

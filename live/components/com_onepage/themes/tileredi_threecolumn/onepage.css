@@ -1,0 +1,1117 @@
+/*
+*
+* @copyright Copyright (C) 2007 - 2010 RuposTel - All rights reserved.
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL, see LICENSE.php
+* One Page checkout is free software released under GNU/GPL and uses code from VirtueMart
+* VirtueMart is free software. This version may have been modified pursuant
+* to the GNU General Public License, and as distributed it includes or
+* is derivative of works licensed under the GNU General Public License or
+* other free or open source software licenses.
+* 
+*/
+
+/* basket formatting start */
+div#top_basket_wrapper {
+ width: 100%;
+ float: left; 
+ clear: both;
+}
+div#vmMainPageOPC * {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+ 
+}
+.opc_PricesalesPrice {
+ text-align: right;
+}
+#vmMainPageOPC iframe.tos_iframe {
+ width: 95%; 
+ height: 150px; 
+ margin-bottom: 5px; 
+}
+
+div#vmMainPageOPC div.userradio input, div#vmMainPageOPC div.userradio label {
+  width: auto; 
+  height: auto;
+}
+
+div#vmMainPageOPC div.usercheckbox input, div#vmMainPageOPC div.usercheckbox label {
+  width: auto; 
+  height: auto;
+}
+div#vmMainPageOPC div.usercheckbox input {
+ clear: left;
+}
+
+div#ui-datepicker-div {
+ z-index: 9999 !important;
+}
+
+#vmMainPageOPC a.deletebtn, #vmMainPageOPC a.deletebtn:hover {
+ background: none;
+ background: transparent url('images/remove_from_cart.png') no-repeat top left; 
+ display: inline-block; 
+ width: 20px; 
+ height: 20px; 
+}
+
+#vmMainPageOPC input.updatebtn {
+background: none;
+background: transparent url('images/update_quantity_cart.png') no-repeat top left; 
+ display: inline-block; 
+ width: 20px; 
+ height: 20px; 
+
+}
+
+
+#vmMainPageOPC input.styled {
+ 
+}
+
+div.isectiontableentry2 label,div.isectiontableentry1 label {
+ float: right;
+}
+#vmMainPageOPC .dob1 {
+	padding-left: 1px;
+	background-color: #eaeaea;
+	position: relative;
+	left: 0% !important; 
+	top: 0;
+	width: 32% !important; 
+	
+	margin: 0px;
+    outline:none;
+    border:1px solid #666666;
+    min-height: 397px;
+	float: left;
+        
+}
+#vmMainPageOPC .address_field_name,#vmMainPageOPC  .op_field_name {
+float: left; nowrap: nowrap; width: 30%; text-align: right; margin:0; padding:0; 
+}
+#vmMainPageOPC  .address_field_value, #vmMainPageOPC .op_field_value {
+ float: right; clear: right; width: 65%; margin:0; padding:0;
+}
+#vmMainPageOPC  div.dob0 {
+	background-color: #fff;
+	width: 100% !important; 
+	
+	float: left; 
+	clear: both;
+    position: relative;
+	overflow: visible;
+}
+#vmMainPageOPC.dob0 div.op_inner {
+ padding: 3px 3px 3px 3px !important;  
+}
+#vmMainPageOPC .dob2 {
+	background-color: #eaeaea;
+	position: relative;
+	left: 1% !important; 
+	width: 32% !important; 
+	top: 0;
+    border:1px solid #666666;
+    min-height: 397px;
+	float: left;
+	padding-left: 1px;
+	padding-bottom: 20px;
+}
+#vmMainPageOPCinput {
+ border: none !important;
+}
+
+ 
+#vmMainPageOPC .dob3 {
+	background-color: #eaeaea;
+    border:1px solid #666666;
+    min-height: 397px;
+
+	position: relative;
+        left: 2% !important; 
+	width: 32% !important; 
+	top: 0;
+	 min-height: 397px;
+	float: left;
+	padding-left: 1px;
+}
+#vmMainPageOPCdiv.bottom_button {
+  
+
+  width: 100%;
+  bottom: 0; 
+}
+#vmMainPageOPC.dob3 .op_inner {
+
+	height: 320px;
+	
+
+   
+}
+#vmMainPageOPC .op_radiowrapper {
+ width: 10%; 
+ float: left; 
+ clear: left; 
+ margin: 0; 
+ padding: 0; 
+ margin-top: 5px; 
+ margin-bottom: auto; 
+ }
+#vmMainPageOPC .op_labelwrapper {
+ width: 89%; 
+ float: left; 
+ clear: right; 
+ margin: 0; 
+ padding: 0; 
+}
+
+#vmMainPageOPC input#coupon_code {
+}
+div#payment_info {
+ text-align: center; 
+ margin-left: auto; 
+ margin-right: auto;
+}
+#vmMainPageOPC textarea#customer_note_field {
+ width: 93%;
+}
+#vmMainPageOPC div.coupon_input_section {
+ width: 210px; 
+ float: right; 
+ /*margin-right: -5px;*/
+ clear: both;
+ vertical-align: middle;
+}
+
+#vmMainPageOPC div.coupon_input_section div.middle_input {
+ width: 200px; 
+}
+#vmMainPageOPC div.coupon_input_section div.after_input {
+ position: absolute; 
+ right: 0; 
+ top: 0; 
+}
+
+
+#vmMainPageOPC div.op_update_form {
+  bottom: 0px; position: absolute; right: 5px; text-align: right;
+}
+
+#vmMainPageOPC div.static_line {
+  bottom: 0px; position: absolute; right: 5px; text-align: right;
+}
+
+#vmMainPageOPC div.op_update_form div form input {
+  height: 20px;
+  vertical-align: middle;
+}
+#vmMainPageOPC div.op_update_form div form input.inputbox {
+  width: 50px !important;
+  background-color: white !important;
+  
+}
+#vmMainPageOPC div#tab_selector fieldset {
+ margin: 0; 
+ padding: 0; 
+}
+#vmMainPageOPC div.formField {
+ margin: 0; 
+ padding: 0; 
+ margin-top: 5px; 
+ 
+}
+#vmMainPageOPC input.inputbox:-webkit-autofill {
+ background: none; 
+ background-color: transparent;
+}
+
+#vmMainPageOPC select,#vmMainPageOPC select:active, #vmMainPageOPC select:focus {
+ border: none; 
+ border-color: transparent; 
+ outline: none;
+
+}
+
+div.middle_select select {
+ margin-top: 3px; 
+}
+#vmMainPageOPC input,#vmMainPageOPC input:active, #vmMainPageOPC input:focus  {
+ border: none; 
+ border-color: transparent; 
+ outline: none;
+
+}
+#vmMainPageOPC div.op_update_form div form input.inputbox:hover {
+  background-color: white;
+}
+#vmMainPageOPC div.op_update_form div form input.updatebtn {
+  width: 20px !important;
+}
+#vmMainPageOPC div.op_update_form div form input.deletebtn {
+  width: 20px !important;
+}
+
+
+div.edit_link {
+ float: right;
+ clear: right;
+ width: 30% !important;
+ text-align: right;
+}
+div.edit_link a {
+ text-decoration: none;
+}
+#vmMainPageOPC div.basket_name {
+ float: left; 
+ clear: left; 
+ width: 30% !important;
+}
+#vmMainPageOPC div.basket_name h3 {
+ margin: 0; 
+ padding: 0; 
+ 
+}
+div.op_col2_6 a {
+ text-decoration: none; 
+ color: #383838;
+ font-size: 16px;
+ 
+ text-align: left;
+ }
+div.op_col2_6 a:hover {
+ text-decoration: underline; 
+ color: #383838;
+
+}
+
+div.black_basket {
+ 
+
+}
+
+div#address_1_input, div#phone_1_input {
+ margin-top: 20px !important;
+}
+#vmMainPageOPC h4.payment_header {
+ margin-top: 15px;
+}
+div.totals div {
+ color: #666666 !important;
+}
+#vmMainPageOPC h4 {
+  color: #eaeaea !important;
+}
+div.op_basket_row {
+ margin-top: 5px;
+ margin-bottom: 5px;
+}
+div.op_basket_row div a.continue_link {
+ padding: 0; 
+ padding-left: 20px;
+ margin: 0; 
+ background: none;
+ background-color: transparent;
+}
+
+div#basket_container {
+ width: 100%;
+ float: left;
+ clear: both;
+ margin-bottom: 20px;
+}
+div.basket_content {
+ border: none; 
+ background: none; 
+ background-color: transparent;
+ padding: 0; 
+ margin: 0; 
+}
+
+div#basket_container .black-basket {
+ width: 100%;
+}
+div#basket_container div {
+ width: 100%;
+}
+div#basket_container div div {
+ width: 100%;
+}
+div#basket_container div div div {
+ width: 100%;
+}
+div#basket_container div div div div {
+ width: 100%;
+}
+div#basket_container div div div div div {
+ width: 100%;
+}
+div#basket_container div div div div div div {
+ width: 100%;
+}
+
+#basket_container div div div div div div div div div.op_basket_header.op_basket_row {
+ background: none; 
+ background-color: #FFCD05; 
+ color: 666666; 
+ width: 100%; 
+ margin-bottom: 4px; 
+ padding: 0;
+ height: 30px;
+ min-height: 25px;
+ 
+}
+#vmMainPageOPC input.updatebtn, #vmMainPageOPC input.deletebtn {
+ margin-left: 4px; 
+}
+#basket_container div div div div div div div div div.op_basket_header.op_basket_row div {
+ color: 383838;
+ padding: 0; 
+ margin: 0; 
+ text-indent: 5px; 
+}
+#basket_container div div div div div div div div div.op_basket_header.op_basket_row:focus,#basket_container div div div div div div div div div.op_basket_header.op_basket_row:hover {
+  background-color: #FFCD05; 
+}
+
+div#basket_container div.op_basket_row div.op_col1 {
+ width: 20%;
+ float: left;
+     color: #383838;
+  overflow: visible;
+  height: 100%;
+}
+div#basket_container div.op_basket_row div.op_col2 {
+ width: 30%;
+ float: left;
+    color: #383838;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col3 {
+ width: 10%;
+ float: left;
+    color: #383838;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col4 {
+ width: 10%;
+ float: left;
+    color: #383838;
+  overflow: visible;
+ display: none;
+}
+div#basket_container div.op_basket_row div.op_col5 {
+ width: 10%;
+ float: left;
+    color: #383838;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col6 {
+ width: 20%;
+ float: left;
+ color: #383838;
+ overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col6 form {
+ float: left;
+}
+div#basket_container div.op_basket_row div.op_col6 form input {
+ float: left !important;
+}
+div#basket_container div.op_basket_row div.op_col7 {
+ width: 9%;
+ float: left;
+ text-align: right;
+    color: #383838;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col1_4 {
+ width: 80%;
+ float: left;
+ text-align: right;
+    color: #383838;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col5_3 {
+ width: 18%;
+ text-align: right;
+ color: #383838;
+ overflow: visible;
+ padding-right: 5px; 
+ float: right;
+}
+div#basket_container span.subtotal_desc {
+ font-weight: normal; 
+ font-size: 12px;
+}
+
+div#basket_container div.op_basket_row div.op_col2_2 {
+ width: 40%;
+ float: left;
+    color: #383838;
+  overflow: visible;
+}
+
+div#basket_container div.op_basket_row div.op_col2_6 {
+ float: right;
+ width: 40%;
+ 
+    color: #383838;
+  overflow: visible;
+  height: 100%;
+  position: relative;
+}
+
+div#basket_container div.op_basket_row div.op_col2_3 {
+ width: 50%;
+float: left;
+    color: #383838;
+  overflow: visible;
+}
+div#onepage_main_div fieldset legend.sectiontableheader {
+background: none;
+padding: 0;
+margin: 0;
+border: none;
+
+}
+#basket_container div div div div div div div div div.op_basket_row:hover {
+ /*background: none repeat scroll 0 0 #FFFFCC;*/
+}
+
+#vmMainPageOPC div.op_col6 form input.inputbox  {
+  width: 30px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #C2C0C0;
+  box-shadow: 1px 1px 15px 4px #DDDDDD inset;
+  color: #666666;
+  display: block;
+  padding: 5px; 
+ }
+#vmMainPageOPC div.op_col6 form input.inputbox:hover{
+ background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #C2C0C0;
+  box-shadow: 1px 1px 15px 4px #DDDDDD inset;
+  color: #666666;
+  display: block;
+  padding: 5px; 
+}
+#vmMainPageOPC  textarea#customer_note_field {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #C2C0C0;
+  box-shadow: 1px 1px 15px 4px #DDDDDD inset;
+  color: #666666;
+  display: block;
+  padding: 5px; 
+  height: 150px;
+}
+#basket_container div div div div div div div div div.op_basket_row {
+ 
+ float: left;
+ min-height: 30px;
+ width: 100%;
+ clear: both;
+ vertical-align: center;
+ background: none;
+ border: none;
+ margin: 0; 
+ padding: 0;
+ padding-top: 5px;
+ min-height: 35px;
+ line-height: 35px;
+ margin-bottom: 10px;
+ clear: both;
+ background: none; 
+ background-color: transparent;
+
+ 
+}
+.basket_container {
+ clear: none; 
+ white-space: no-wrap;
+ float: left; 
+}
+span.formLabel {
+ position: absolute; 
+ right: 10000px;
+ float: right; 
+ white-space: wrap; 
+ overflow: visible; 
+ top: -3px; 
+ z-index: 20; 
+ height:1px; 
+ clear: none; 
+ background: none;
+}
+#vmMainPageOPC {
+ color: #333333;
+}
+#vmMainPageOPC h4 {
+ color: #333333;
+}
+span.missing {
+ left: auto !important;
+ right:5% !important;
+ color: red !important;
+ font-weight: bold; 
+ 
+ margin: 2px; 
+ margin-top: 8px; 
+ 
+ 
+}
+div.op_rounded div.op_rounded_fix div div.formLabel {
+    clear: left;
+    float: left;
+    font-weight: bold;
+    margin: 10px 10px 0 0;
+    text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 30%;
+}
+div.op_rounded div.op_rounded_fix div div.formField {
+    float: left;
+    margin: 8px 2px 2px;
+    vertical-align: middle;
+    width: 60%;
+
+}
+#vmMainPageOPC div.formField {
+ 	position: relative; 
+}
+/* rounded corners Felix */
+div.op_inside {
+    /*margin-bottom: -20px;*/
+/*    margin-top: -15px; */
+    margin-top: 0px; 
+/*    padding-top: 15px;  */
+    float: left;
+    margin-right: 0; 
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;	 
+    padding-bottom: 0px;
+    padding-top: 0;
+
+}
+
+div.op_rounded_content div div {
+ padding-top: 20px;
+}
+
+/* basket formatting end */
+
+
+span.shipping_error {
+ color: red; font-weight: bold; padding-top: 20px;
+}
+div#onepage_userfieds {
+	width: 100%; 
+	float: left;
+}
+div#onepage_info_above_button {
+	text-align: center; 
+	margin: auto;
+}
+div#onepage_total_inc_sh {
+ padding: 0; 
+ margin: 0;
+}
+
+#vmMainPageOPC h4 {
+  margin: 0 !important; 
+  padding: 0 !important; 
+  font-weight: bold !important; 
+  font-size: 12px !important;
+  margin-bottom: 10px !important; 
+  margin-top: 10px !important;
+  line-height: 1.2;
+  text-transform: uppercase;
+  
+}
+
+div#onepage_submit_section {
+	width: 100%; 
+	float: left; 
+	padding-top: 30px;
+}
+input#confirmbtn {
+	
+        width: 95%;
+}
+
+
+#vmMainPageOPC fieldset.op_fieldset {
+ border: none; 
+ background: none; 
+ background-color: transparent;
+ margin: 0; 
+ padding: 0;
+ color: #555555;
+ 
+}
+div#agreed_div {
+ width: 100%;
+ margin: 0; 
+ padding: 0;
+}
+div#onepage_login_box {
+ padding: 20px; 
+ text-align: center; 
+ margin-right: auto; 
+ margin-left: auto; 
+ width: 100%; 
+}
+div#onepage_login {
+ text-align: left; 
+ padding-left: 35%;
+}
+textarea#onepage_tos {
+width: 100%;
+}
+
+span.bottom_totals_txt {
+
+text-align: left;
+float: left;
+overflow: visible;
+}
+div.op_hr {
+ border: none; 
+ border-bottom: 1px solid #fff;
+ background: none; 
+ margin: 0; 
+ padding: 0;
+ clear: both;
+ height: 5px;
+}
+div.before_input {
+margin: 0; 
+ padding: 0;  
+ background: #ffffff url('images/leftinput.png') no-repeat left top; 
+ width: 8px; 
+ height: 25px; 
+ float: left;
+ overflow: visible;
+}
+div.before_select {
+ margin: 0; 
+ padding: 0; 
+ background: #ffffff url('images/leftinput.png') no-repeat left top; 
+ width: 8px; 
+ height: 25px; 
+ float: left;
+ overflow: visible;
+}
+div.checkout_link {
+ diplay: none;
+}
+
+#vmMainPageOPC button h4  {
+ color: white; 
+ padding: 0; 
+ margin: 0; 
+ margin-top: 10px; 
+ margin-bottom: 10px;
+}
+
+div.middle_input {
+ margin: 0; 
+ padding: 0;
+ background: #ffffff url('images/middle.png') repeat-x left top; 
+ width: 96%; 
+ height: 25px; 
+ overflow: hidden;
+ position: relative;
+}
+div.middle_select {
+ margin: 0; 
+ padding: 0; 
+ background: #ffffff url('images/middle.png') repeat-x left top; 
+ width: 95%; 
+ height: 25px; 
+ overflow: hidden;
+ position: relative;
+}
+div.middle_select div {
+ margin: 0; 
+ padding: 0;
+}
+div.middle_input > input {
+ float: left;
+ 
+ background: none; 
+ background-color: transparent; 
+ border: none; 
+ border-color: transparent;
+ height: 25px; 
+ margin: 0; 
+ padding: 0; 
+}
+div.middle_select > input {
+ float: left;
+ 
+ background: none; 
+ background-color: transparent; 
+ border: none; 
+ border-color: transparent;
+ height: 25px; 
+ margin: 0; 
+ padding: 0;
+ padding-top: 0px !important; 
+}
+
+div.after_input {
+margin: 0; 
+ padding: 0; 
+ float: right;
+ white-space: wrap;
+ background: #ffffff url('images/rightinput.png') left top no-repeat; 
+ width: 8px; 
+ height: 25px; 
+ position: absolute; 
+ right: 0; 
+ top: 0;
+}
+
+span.bottom_totals {
+/* width: 67%; */
+text-align: right;
+padding-left: 3%;
+float: right;
+overflow: visible;
+}
+
+div#totalam {
+
+width: 100%;
+clear: both;
+float: left;
+margin: 0 auto;
+}
+
+br.op_clear {
+ clear: both;
+}
+
+div#tt_order_subtotal_div {
+ width: 100%;
+ float: left;
+ clear: both;
+}
+div#tt_order_payment_discount_before_div {
+ width: 100%;
+ display: none;
+ 
+}
+
+div#tt_order_discount_before_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_shipping_rate_div {
+ width: 100%;
+ 
+
+}
+div#tt_shipping_tax_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_tax_total_0_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_1_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_2_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_3_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_4_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_order_payment_discount_after_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_order_discount_after_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_total_div {
+ margin-top: 0px; 
+ font-weight: bold;
+ width: 100%;
+ margin-bottom: 10px;
+}
+div#rbsubmit {
+ white-space: wrap;
+}
+select#shipping_inside_basket_select {
+ font-family: monospace;
+}
+select#payment_inside_basket {
+ font-family: monospace;
+}
+button#confirmbtn_button  {
+ 
+ border: none;
+ background: transparent url('images/button_blue.png') repeat-x left top; 
+ /*border-color: transparent;*/
+ width: 100%;
+ color: #666666;
+ height: 35px;
+}
+button#confirmbtn_button:hover  {
+ 
+ 
+}
+
+button h4#confirmbtn {
+ color: #FFFFFF !important;
+ }
+
+
+#couponcode_field .inputbox {
+    
+}
+input.coupon_submit_txt {
+  width: 200px;
+}
+input.op_login_button {
+  -moz-border-radius: 2px;
+  background: none;
+ border-radius: 2px;
+ background-color: #ffcd05;
+ border-color: transparent;
+ color: #666666;
+ width: 93%;
+ clear: both;
+ height: 25px;
+}
+input.op_login_button:hover {
+}
+input.coupon_button {
+  -moz-border-radius: 2px;
+  background: none;
+ border-radius: 2px;
+ background-color: #809FB6;
+ border-color: transparent;
+ color: #FFFFFF;
+ float: right; 
+ clear: both; 
+ padding: 0; 
+ margin: 0; 
+ margin-top: 10px; 
+ margin-bottom: 10px;
+}
+#vmMainPageOPC table.vmMulti {
+ clear: both; 
+ float: left;
+ min-height: 30px;
+ width: 100%;
+}
+#vmMainPageOPC div#vm_genre_input {
+ min-height: 20px; 
+ height: auto;
+}
+#vmMainPageOPC  input[type="radio"] + label {
+   /*padding-left: 20px;*/
+   display: inline-block;
+   clear: right;
+   width: 80%;
+}
+.payment_item input {
+ position: relative;
+}
+input.coupon_button:hover {
+ background-color: #8A8A8A;
+}
+
+#vmMainPageOPC div.coupon_section {
+ float: right; 
+ clear: both;
+ margin-bottom: 10px;
+ width: 50%; 
+ text-align: right;
+ vertical-align: middle;
+ text-align: right; 
+ 
+}
+#vmMainPageOPC input.inputbox:hover,
+#vmMainPageOPC input.inputbox:focus 
+{
+ background: none !important;
+ border: none;
+ border-color: transparent; 
+ border: none;
+ border-radius: 0; 
+ outline: none none; 
+ box-shadow: none;
+}
+div.middle_input select, div.middle_input select:hover, div.middle_input select:focus {
+ border: none; 
+ background: none; 
+ background-color: transparent; 
+ border: none; 
+ border-color: transparent; 
+ margin: 0; 
+ padding; 0; 
+ box-shadow: none; 
+ outline: none; 
+ min-width: 300px;
+ width: 300px;
+ position: relative;
+ z-index: 10;
+} 
+div.middle_select select, div.middle_select select:hover, div.middle_select select:focus {
+ border: none; 
+ background: none; 
+ background-color: transparent; 
+ border: none; 
+ border-color: transparent; 
+ margin: 0; 
+ margin-top: 3px; 
+ padding; 0; 
+ box-shadow: none; 
+ outline: none none; 
+ min-width: 300px;
+ width: 300px;
+ position: relative;
+ z-index: 10;
+} 
+#vmMainPageOPC label.userfields:hover {
+ color: #666666;
+ 
+}
+
+#tab_selector div {
+ margin: 0; 
+ padding: 0;
+}
+#logintab {
+ white-space: wrap;
+}
+
+#logintab div {
+ margin: 0; 
+ padding: 0;
+}
+
+#vmMainPageOPC label.userfields {
+ cursor: pointer;
+ position: absolute;
+ left: 0; 
+ top: -1px;
+ color: #555555;
+ margin: 0; 
+ padding: 0; 
+ display: inline-block; 
+ overflow: visible;
+ font-style: italic;
+ 
+}
+#vmMainPageOPC div.after_select {
+margin: 0; 
+ padding: 0; 
+ float: right;
+ white-space: wrap;
+ background: #ffffff url('images/rightselect.png') left top no-repeat; 
+ width: 25px; 
+ height: 25px; 
+ position: absolute;
+ top: 0; 
+ right: 0;
+ z-index: 22;
+}
+#vmMainPageOPC div#logintab {
+ margin-bottom: 10px;
+}
+
+#vmMainPageOPC input#agreed_field {
+ width: auto !important;
+}
+
+div#tt_order_subtotal_div_basket, div#tt_order_discount_before_div_basket, div#tt_order_payment_discount_before_div_basket, div#tt_order_payment_discount_after_div_basket, div#tt_order_discount_before_div_basket, div#tt_shipping_rate_div_basket, div#tt_order_discount_after_div_basket, div#tt_tax_total_0_div_basket, div#tt_tax_total_1_div_basket, div#tt_tax_total_2_div_basket, div#tt_tax_total_3_div_basket, div#tt_tax_total_4_div_basket, div#tt_total_div_basket, div#basket_continue_link, div#tt_static_total_div_basket, div#tt_total_basket_div_basket {
+ background: none !important; 
+ background-color: transparent !important;
+ margin: 0 !important;
+ margin-bottom: 3px !important; 
+ line-height: 20px !important;
+ min-height: 20px !important;
+}
+div#tt_total_basket_div_basket div.op_col1_4 {
+  font-weight: bold;
+}
+div#tt_order_subtotal_div_basket:hover, div#tt_order_discount_before_div_basket:hover, div#tt_order_payment_discount_before_div_basket:hover, div#tt_order_payment_discount_after_div_basket:hover, div#tt_order_discount_before_div_basket:hover, div#tt_shipping_rate_div_basket:hover, div#tt_order_discount_after_div_basket:hover, div#tt_tax_total_0_div_basket:hover, div#tt_tax_total_1_div_basket:hover, div#tt_tax_total_2_div_basket:hover, div#tt_tax_total_3_div_basket:hover, div#tt_tax_total_4_div_basket:hover, div#tt_total_div_basket:hover, div#basket_continue_link:hover, div#tt_static_total_div_basket:hover, div#tt_total_basket_div_basket:hover {
+ /*background: none repeat scroll 0 0 #FFFFCC !important;*/
+}
+div#tt_total_basket_static {
+  font-size: 16px;
+}
+tr.sectiontableentry1x:hover, tr.sectiontableentry2x:hover {
+ background: none repeat scroll 0 0 #FFFFCC;
+}
+div.isectiontableentry1:hover, div.isectiontableentry2:hover {
+ background: none repeat scroll 0 0 #FFFFCC;
+}
+div.isectiontableentry1, div.isectiontableentry2  {
+  margin: 0; 
+  margin-bottom: 20px; 
+  padding: 0; 
+  clear: both; 
+  border: none; 
+  border: none;
+}
+
+
+input.payment_item_radio {
+ float: left; 
+ top: 50%;
+ left: 0;
+ clear: left; 
+ position: absolute; 
+}
+.payment_item {
+ position: relative;
+ float: left; 
+ clear: both;
+}
+div.payment_item {
+ width: 95%;
+}
+div.cc_wrapper {
+ position: relative; 
+ top: 10px; 
+
+}
+label.op_payment_label {
+
+ position: relative;
+ top: 10px;
+ left: 20px;
+ float: left;
+ clear: right;
+}

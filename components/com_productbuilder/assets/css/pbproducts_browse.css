@@ -1,0 +1,41 @@
+/*
+* main css file for the productbuilder bundle-browse layout
+* @version $Id: styleshet.css 1 08-July-2011 18:25:41Z sakisTerz $
+* @package front-end
+* @subpackage stylesheet
+* @author Sakis Terz (sakis@breakDesigns.net)
+* @copyright	Copyright (C) 2009-2011 breakDesigns.net. All rights reserved
+* @license	GNU/GPL v2
+* see administrator/components/com_productbuilder/COPYING.txt
+*/
+
+/* Styling concerns the bundles browse page */
+
+.bundle_wrapper{
+    float:left;
+    border:1px solid #cccccc;
+    margin-left:10px;
+    margin-bottom:10px;
+    min-height:150px;
+    padding:10px;
+    overflow:hidden;
+}
+
+.pb_browse_img{
+  float:left;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.pb_browse_header{
+  font-size: 120%;
+  color: #000;
+  text-decoration: none;
+  width:100%;
+  display:block;
+  }
+
+  .pb_browse_header:hover{
+  text-decoration: none;
+  }
+

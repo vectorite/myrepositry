@@ -1,0 +1,1027 @@
+﻿<?php
+ /**
+ *
+ @package Module Free Order for Joomla! 1.6
+ * @link       http://www.test.com/
+* @copyright (C) 2011- test rca
+ * @license GNU/GPL http://www.gnu.org/copyleft/gpl.html
+ */
+// no direct access
+defined('_JEXEC') or die('Restricted access');
+class modsalesrepOrderHelper
+{
+		
+	function sendEmail($params)
+	{
+		global $mainframe;
+		
+		$post = JRequest::get('post');
+		$config =& JFactory::getConfig();
+		$jAp =& JFactory::getApplication();
+		$user = JFactory::getUser();
+    	$member_id = $user->id;
+		$jApp = JFactory::getApplication();
+		$db = JFactory::getDBO();		
+		$customer_id = $_POST['customer_name'];
+		if($customer_id == "" && $_POST['select_user_id1'] !="")
+		$customer_id = $_POST['select_user_id1'];
+		
+		$sales_reps_id = $_POST['sales_reps_id'];		
+		
+		if($_POST['user_classref'] != "")
+		$user_classref = $_POST['user_classref'];
+		else
+		$user_classref = "inbound";
+		$_SESSION['customer_id_session'] = $customer_id ;
+		$_SESSION['customer_addr_session'] = $_POST['user_address_detail']; 
+		
+		//print_r($_POST);die;
+		///get selected user country id b'coz if country_id is 223 the select DB2 for US Otherwise DB3 for canada
+		$select_current_user_country_id ="select `virtuemart_country_id` from #__virtuemart_userinfos  where virtuemart_user_id='".$customer_id."'";
+		$db->setQuery($select_current_user_country_id);
+		$db->query();
+		$current_user_country_id = $db->loadResult();
+		$_SESSION['current_user_country_id'] = $current_user_country_id;
+		//end code.		
+		//code for connnect secode DB
+			if($_SESSION['current_user_country_id'] == "38")
+			{
+			$db2 = modsalesrepOrderHelper::getDBO3(); 
+			}else{
+            $db2 = modsalesrepOrderHelper::getDBO2();      
+			}
+		///end code connect secode DB
+				
+		$chkbox = $_POST['chk'];
+		$item_ids = $_POST['item_name'];
+		$item_qty = $_POST['item_qty'];
+		
+		$virtuemart_product_ids = "";
+		
+		$qty_array = array();
+		
+		foreach($item_ids as $a => $b)
+		{
+		$virtuemart_product_ids .= $item_ids[$a].","; 
+		$qty_array[] = array("item_id"=>$item_ids[$a],"item_qty"=>$item_qty[$a]); 		
+		}
+		$_SESSION['item_qty_relation'] = $qty_array;
+		
+		$virtuemart_product_ids = substr($virtuemart_product_ids, 0, strlen($virtuemart_product_ids)-1); 
+		
+		$virtuemart_product_ids = explode(",", $virtuemart_product_ids);
+		
+		require(JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_virtuemart'.DS.'helpers'.DS.'config.php');		
+		require(JPATH_SITE . DS . 'components' . DS . 'com_virtuemart' . DS . 'helpers' . DS . 'cart.php');
+		
+			
+		$cart123 = VirtueMartCart::getCart();
+		$cart123->emptyCart();
+		
+		if($_POST['ClearOrderButton'] == "clearorder")
+		{
+			unset($_SESSION['item_qty_relation']);
+			$_SESSION['item_qty_relation'] = "";
+			unset($_SESSION['customer_addr_session']); 
+			$_SESSION['customer_addr_session']='';
+			unset($_SESSION['customer_id_session']);
+			$_SESSION['customer_id_session']='';
+			unset($_SESSION['pre_user_id_sess']);
+			$_SESSION['pre_user_id_sess'] = '';
+			unset($_SESSION['orderID']);
+			$_SESSION['orderID']='';
+			unset($_SESSION['pending_orders_products']);
+			$_SESSION['pending_orders_products']='';
+			$jAp->redirect(JURI::root().'index.php/sales-orders/', '');
+			return true;		
+		}
+		
+		///set BillTo array in cart object.
+		$user_detail="select * from #__virtuemart_userinfos as vu ,#__users as u  where vu.virtuemart_user_id = u.id AND  vu.virtuemart_user_id = '".trim($customer_id)."' AND vu.address_type = 'BT'";
+		$db->setQuery($user_detail);
+		$db->query();
+		$user_info=$db->loadAssoc();
+		$cart_BT = array();
+		$cart_BT['company'] =$user_info['company'];
+		$cart_BT['email'] =$user_info['email'];
+		$cart_BT['title'] =$user_info['title'];
+		$cart_BT['first_name'] =$user_info['first_name'];
+		$cart_BT['middle_name'] =$user_info['middle_name'];
+		$cart_BT['last_name'] =$user_info['last_name'];
+		$cart_BT['address_1'] =$user_info['address_1'];
+		$cart_BT['address_2'] =$user_info['address_2'];
+		$cart_BT['zip'] = $user_info['zip'];
+		$cart_BT['city'] =$user_info['city'];
+		$cart_BT['virtuemart_country_id'] =$user_info['virtuemart_country_id'];
+		$cart_BT['virtuemart_state_id'] =$user_info['virtuemart_state_id'];
+		$cart_BT['phone_1'] =$user_info['phone_1'];
+		$cart_BT['phone_2'] =$user_info['phone_2'];
+		$cart_BT['fax'] =$user_info['fax'];
+		
+		$cart_BT_select_state="select `state_2_code` from #__virtuemart_states  where virtuemart_state_id='".$user_info['virtuemart_state_id']."'";
+		$db->setQuery($cart_BT_select_state);
+		$db->query();
+		$cart_BT_state=$db->loadResult();
+		
+		$cart_BT_select_country="select country_3_code from #__virtuemart_countries  where virtuemart_country_id ='".$user_info['virtuemart_country_id']."'";
+		$db->setQuery($cart_BT_select_country);
+		$db->query();
+		$cart_BT_country=$db->loadResult();	
+		
+		
+		$cart123->BT = $cart_BT;
+		///End code set BillTo array in cart object.
+		
+		///set ShipTo array in cart object.
+		$st_user_detail="select * from #__virtuemart_userinfos as vu ,#__users as u  where vu.virtuemart_user_id = u.id AND  vu.virtuemart_user_id = '".trim($customer_id)."' AND vu.virtuemart_userinfo_id = '".trim($_POST['ship_to_info_id'])."'";
+		$db->setQuery($st_user_detail);
+		$db->query();
+		$st_user_info=$db->loadAssoc();
+		$cart_ST = array();
+		$cart_ST['address_type_name'] = $st_user_info['address_type_name'];
+		$cart_ST['company'] =$st_user_info['company'];
+		$cart_ST['email'] =$st_user_info['email'];
+		$cart_ST['title'] =$st_user_info['title'];
+		$cart_ST['first_name'] =$st_user_info['first_name'];
+		$cart_ST['middle_name'] =$st_user_info['middle_name'];
+		$cart_ST['last_name'] =$st_user_info['last_name'];
+		$cart_ST['address_1'] =$st_user_info['address_1'];
+		$cart_ST['address_2'] =$st_user_info['address_2'];
+		$cart_ST['zip'] = $st_user_info['zip'];
+		$cart_ST['city'] =$st_user_info['city'];
+		$cart_ST['virtuemart_country_id'] =$st_user_info['virtuemart_country_id'];
+		$cart_ST['virtuemart_state_id'] =$st_user_info['virtuemart_state_id'];
+		$cart_ST['phone_1'] =$st_user_info['phone_1'];
+		$cart_ST['phone_2'] =$st_user_info['phone_2'];
+		$cart_ST['fax'] =$st_user_info['fax'];
+		
+		$cart_BT_select_state="select `state_2_code` from #__virtuemart_states  where virtuemart_state_id='".$st_user_info['virtuemart_state_id']."'";
+		$db->setQuery($cart_BT_select_state);
+		$db->query();
+		$cart_ST_state=$db->loadResult();
+		
+		$cart_BT_select_country="select country_3_code from #__virtuemart_countries  where virtuemart_country_id ='".$st_user_info['virtuemart_country_id']."'";
+		$db->setQuery($cart_BT_select_country);
+		$db->query();
+		$cart_ST_country=$db->loadResult();	
+		
+		if($_POST['ship_to_info_id'] != "")
+		$cart123->ST = $cart_ST;
+		else
+		$cart123->ST = $cart_BT;
+		
+		//$cart123->pricesUnformatted['discountAmount'] = $cart123->pricesUnformatted['discountAmount'] - 30.00;
+		///End code set ShipTo array in cart object.
+		//print_r($cart123);die;
+		if ($cart123)
+		 {
+			//$virtuemart_product_ids = array("1","2","3");
+			$success = true;
+			if ($cart123->add($virtuemart_product_ids,$success)) {
+				$msg = JText::_('COM_VIRTUEMART_PRODUCT_ADDED_SUCCESSFULLY');
+				$type = '';
+			} else {
+				$msg = JText::_('COM_VIRTUEMART_PRODUCT_NOT_ADDED_SUCCESSFULLY');
+				$type = 'error';
+			}
+		}
+		
+		$usr = JFactory::getUser($customer_id);
+		//$msg = $cart123->setCouponCode("test123");
+		$prices = $cart123->getCartPrices();
+		
+		//$cart123->couponCode="test123";
+		$item_discount = $_POST['item_sub_discount'];
+		if($_POST['item_sub_discount'] != "" && $prices['billTotal'] > $item_discount ){
+		$prices['billTotal'] = $prices['billTotal']-$item_discount;		
+		$prices['salesPriceCoupon'] =$item_discount;
+		$prices['couponTax'] =0;
+		$prices['couponValue'] =$item_discount;
+		}
+		/*require(JPATH_ADMINISTRATOR . DS . 'components' . DS . 'com_virtuemart'.DS.'helpers'.DS.'calculationh.php');
+		$calculator = calculationHelper::getInstance();
+		$prices = $calculator->getCheckoutPrices($cart123, true);*/		
+		
+		
+		$cart123->setPaymentMethod("2");
+		//$cart123->confirmedOrder2($cart123, $usr, $prices);
+
+/////////============= payment by authorize.net ================/////////
+		$check_payment= false;
+		if($prices['billTotal'] > 0)
+		{
+			if($current_user_country_id == "38")
+			{
+			$x_login = "7jg7QD4d";
+			$x_tran_key = "9nnF897564eP5aMx";
+			}
+			else
+			{
+			$x_login = "7jg7QD4d";
+			$x_tran_key = "9nnF897564eP5aMx";
+			}
+				
+		$post_url = "https://test.authorize.net/gateway/transact.dll";
+		$post_values = array(	
+			"x_login"			=> $x_login,
+			"x_tran_key"		=> $x_tran_key,
+					
+			"x_version"			=> "3.1",
+			"x_delim_data"		=> "TRUE",
+			"x_delim_char"		=> "|",
+			"x_relay_response"	=> "FALSE",
+		
+			"x_type"			=> "AUTH_CAPTURE",
+			"x_method"			=> "CC",
+			"x_card_num"		=> $_POST['cc_card_number'],
+			"x_exp_date"		=> $_POST['cc_expire_month'].$_POST['cc_expire_year'],
+			'x_card_code'   	=> $_POST['cc_cvv'],
+			
+			// Email Settings
+			'x_email' => $user_info['email'],
+			'x_email_customer' => "TRUE",
+			'x_merchant_email' => $config->getValue('config.email'),	
+				
+			"x_amount"			=> $prices["billTotal"],
+			"x_description"		=> "Tile Redi Order Payment",
+		
+			"x_first_name"		=> $user_info['first_name'],
+			"x_last_name"		=> $user_info['last_name'],
+			"x_address"			=> $user_info['address_1'],
+			'x_city' 			=> $user_info['city'],
+			"x_state"			=> $cart_BT_state,
+			"x_zip"				=> $user_info['zip'],
+			'x_country' 		=> $cart_BT_country,
+			'x_phone' 			=> $user_info['phone_1'],
+			'x_fax' 			=> $user_info['fax'],
+			
+			// Customer Shipping Address
+			'x_ship_to_first_name' => substr($cart_ST["first_name"], 0, 50),
+			'x_ship_to_last_name' => substr($cart_ST["last_name"], 0, 50),
+			'x_ship_to_company' => substr($cart_ST["company"], 0, 50),
+			'x_ship_to_address' => substr($cart_ST["address_1"], 0, 60),
+			'x_ship_to_city' => substr($cart_ST["city"], 0, 40),
+			'x_ship_to_state' => substr($cart_ST_state, 0, 40),
+			'x_ship_to_zip' => substr($cart_ST["zip"], 0, 20),
+			'x_ship_to_country' => substr($cart_ST_country, 0, 60)
+		);
+		
+		$post_string = "";
+		foreach( $post_values as $key => $value )
+		{ $post_string .= "$key=" . urlencode( $value ) . "&"; }
+		$post_string = rtrim( $post_string, "& " );
+		
+		$request = curl_init($post_url); // initiate curl object
+		curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
+		curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
+		curl_setopt($request, CURLOPT_POSTFIELDS, $post_string); // use HTTP POST to send form data
+		curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE); // uncomment this line if you get no gateway response.
+		$post_response = curl_exec($request); // execute curl post and store results in $post_response
+		curl_close ($request); // close curl object
+		
+		// This line takes the response and breaks it into an array using the specified delimiting character
+		$response_array = explode($post_values["x_delim_char"],$post_response);
+		
+		
+		$payment_msg = $response_array[3];
+		// The results are output to the screen in the form of an html numbered list.
+		foreach ($response_array as $value)
+		{
+			if($value == "This transaction has been approved.")
+			$check_payment= true;
+		}
+		
+		$authorizeNetResponse['response_code'] = $response_array[0];	
+	    $authorizeNetResponse['response_subcode'] = $response_array[1];
+	    $authorizeNetResponse['response_reason_code'] = $response_array[2];
+	    $authorizeNetResponse['response_reason_text'] = $response_array[3];
+	    $authorizeNetResponse['authorization_code'] = $response_array[4];
+	    $authorizeNetResponse['avs_response'] = $response_array[5]; //Address Verification Service
+	    $authorizeNetResponse['transaction_id'] = $response_array[6];
+	    $authorizeNetResponse['invoice_number'] = $response_array[7];
+	    $authorizeNetResponse['description'] = $response_array[8];
+	    if ($check_payment) {
+		$authorizeNetResponse['amount'] = $response_array[9];
+		$authorizeNetResponse['method'] = $response_array[10];
+		$authorizeNetResponse['transaction_type'] = $response_array[11];
+		$authorizeNetResponse['customer_id'] = $response_array[12];
+		$authorizeNetResponse['first_name'] = $response_array[13];
+		$authorizeNetResponse['last_name'] = $response_array[14];
+		$authorizeNetResponse['company'] = $response_array[15];
+		$authorizeNetResponse['address'] = $response_array[16];
+		$authorizeNetResponse['city'] = $response_array[17];
+		$authorizeNetResponse['state'] = $response_array[18];
+		$authorizeNetResponse['zip_code'] = $response_array[19];
+		$authorizeNetResponse['country'] = $response_array[20];
+		$authorizeNetResponse['phone'] = $response_array[21];
+		$authorizeNetResponse['fax'] = $response_array[22];
+		$authorizeNetResponse['email_address'] = $response_array[23];
+		$authorizeNetResponse['ship_to_first_name'] = $response_array[24];
+		$authorizeNetResponse['ship_to_last_name'] = $response_array[25];
+		$authorizeNetResponse['ship_to_company'] = $response_array[26];
+		$authorizeNetResponse['ship_to_address'] = $response_array[27];
+		$authorizeNetResponse['ship_to_city'] = $response_array[28];
+		$authorizeNetResponse['ship_to_state'] = $response_array[29];
+		$authorizeNetResponse['ship_to_zip_code'] = $response_array[30];
+		$authorizeNetResponse['ship_to_country'] = $response_array[31];
+		$authorizeNetResponse['tax'] = $response_array[32];
+		$authorizeNetResponse['duty'] = $response_array[33];
+		$authorizeNetResponse['freight'] = $response_array[34];
+		$authorizeNetResponse['tax_exempt'] = $response_array[35];
+		$authorizeNetResponse['purchase_order_number'] = $response_array[36];
+		$authorizeNetResponse['md5_hash'] = $response_array[37];
+		$authorizeNetResponse['card_code_response'] = $response_array[38];
+		$authorizeNetResponse['cavv_response'] = $response_array[39];  
+		$authorizeNetResponse['account_number'] = $response_array[50];
+		$authorizeNetResponse['card_type'] = $response_array[51];
+		$authorizeNetResponse['split_tender_id'] = $response_array[52];
+		$authorizeNetResponse['requested_amount'] = $response_array[53];
+		$authorizeNetResponse['balance_on_card'] = $response_array[54];
+	    }
+		
+		}
+		
+		
+		$orderModel = VmModel::getModel('orders');		
+		if (($orderID = $orderModel->_createOrder($cart123, $usr, $prices)) == 0) {
+			echo 'Couldn\'t create order','Couldn\'t create order';			
+		}
+		if (!$orderModel->_createOrderLines($orderID, $cart123)) {
+			echo 'Couldn\'t create order items','Couldn\'t create order items';			
+		}
+				
+		$orderModel->_updateOrderHist($orderID);
+		if (!$orderModel->_writeUserInfo($orderID, $usr, $cart123)) {
+			echo 'Couldn\'t create order history','Couldn\'t create order history';
+		}
+		if (!$orderModel-> _createOrderCalcRules($orderID, $cart123) ) {
+			echo 'Couldn\'t create order items','Couldn\'t create order items';			
+		}
+		if($_SESSION['orderID'] == '')
+		{	
+			$_SESSION['orderID'] = $orderID;         
+		}
+		else 		
+		{
+		
+		/*$query = 'SELECT `virtuemart_user_id` FROM `#__virtuemart_order_salerep` WHERE virtuemart_order_id= "'.$_SESSION['orderID'].'"';
+		$db->setQuery($query);
+		$order_commission_user_id = $db->loadResult();*/
+		$db->setQuery('DELETE FROM `#__virtuemart_orders` where virtuemart_order_id= "'.$_SESSION['orderID'].'"');
+		$db->query();
+		
+		$db->setQuery('DELETE FROM `#__virtuemart_order_userinfos` where virtuemart_order_id= "'.$_SESSION['orderID'].'"');
+		$db->query();
+		
+		$db->setQuery('DELETE FROM `#__virtuemart_order_items` where virtuemart_order_id= "'.$_SESSION['orderID'].'"');
+		$db->query();		
+		
+		//$db->setQuery('DELETE FROM `#__virtuemart_order_salerep` where virtuemart_order_id= "'.$_SESSION['orderID'].'"');
+		//$db->query();
+		
+		$db->setQuery('UPDATE `#__virtuemart_orders` SET `virtuemart_order_id` = "'.$_SESSION['orderID'].'" where virtuemart_order_id= "'.$orderID.'"');
+		$db->query();
+		
+		$db->setQuery('UPDATE `#__virtuemart_order_userinfos` SET `virtuemart_order_id` = "'.$_SESSION['orderID'].'" where virtuemart_order_id= "'.$orderID.'"');
+		$db->query();
+		
+		$db->setQuery('UPDATE `#__virtuemart_order_items` SET `virtuemart_order_id` = "'.$_SESSION['orderID'].'" where virtuemart_order_id= "'.$orderID.'"');
+		$db->query();
+		
+		$db->setQuery('UPDATE `#__virtuemart_order_histories` SET `virtuemart_order_id` = "'.$_SESSION['orderID'].'" where virtuemart_order_id= "'.$orderID.'"');
+		$db->query();			
+		
+		$orderID = $_SESSION['orderID'];
+		//$_SESSION['orderID']="";	
+		}
+		
+		$db->setQuery('UPDATE `#__virtuemart_orders` SET `customer_note` = "'.$_POST['sales_note'].'" where virtuemart_order_id= "'.$orderID.'"');
+		$db->query();
+		
+		
+/////////============= Code END payment by authorize.net ================/////////				
+		if($check_payment)
+		{
+		
+		//$order123 = $orderModel->getOrder($orderID);
+		/*$cart123->virtuemart_order_id = $orderID;		
+		$dispatcher = JDispatcher::getInstance();
+		JPluginHelper::importPlugin('vmshipment');
+		JPluginHelper::importPlugin('vmcustom');
+		JPluginHelper::importPlugin('vmpayment');
+		$returnValues = $dispatcher->trigger('plgVmConfirmedOrder', array($cart123, $order123));*/
+			
+		// set order status of orders
+		$orderModel->_updateOrderHist($orderID,'C',0,'');
+		$db->setQuery('UPDATE `#__virtuemart_orders` SET `order_status` = "C" where virtuemart_order_id= "'.$orderID.'"');
+		$db->query();
+		$db->setQuery('UPDATE `#__virtuemart_order_items` SET `order_status` = "C" where virtuemart_order_id = "'.$orderID.'"');
+		$db->query();
+		
+		
+		// send order notification to user
+		$orderModel->notifyCustomer($orderID,0);
+		
+		///update  ekxob_virtuemart_order_userinfos table detail b'coz it's contain login user detail. 
+		$user_info = array();
+		$user_detail="select * from #__virtuemart_userinfos as vu ,#__users as u  where vu.virtuemart_user_id = u.id AND  vu.virtuemart_user_id = '".trim($customer_id)."' AND vu.address_type = 'BT'";
+		$db->setQuery($user_detail);
+		$db->query();
+		$user_info=$db->loadAssoc();		
+		if(count($user_info) > 0)
+		{
+		/*$db->setQuery('UPDATE `#__virtuemart_order_userinfos` SET `company` = "'.$user_info['company'].'", `title` = "'.$user_info['title'].'", `last_name` = "'.$user_info['last_name'].'",`first_name` = "'.$user_info['first_name'].'", `middle_name` = "'.$user_info['middle_name'].'", `phone_1` = "'.$user_info['phone_1'].'",`phone_2` = "'.$user_info['phone_2'].'", `fax` = "'.$user_info['fax'].'", `address_1` = "'.$user_info['address_1'].'", `address_2` = "'.$user_info['address_2'].'",`city` = "'.$user_info['city'].'", `virtuemart_state_id` = "'.$user_info['virtuemart_state_id'].'", `virtuemart_country_id` = "'.$user_info['virtuemart_country_id'].'",`zip`="'.$user_info['zip'].'",`email`="'.$user_info['email'].'",`created_by`="'.trim($customer_id).'",`modified_by`="'.trim($customer_id).'" WHERE `virtuemart_order_id` ="'.$orderID.'" AND `address_type`="BT" AND `virtuemart_user_id` ="'.trim($customer_id).'"');		
+		$db->query();*/
+		}
+		
+		$s_user_info = array();
+		
+		$s_user_detail="select * from #__virtuemart_userinfos as vu ,#__users as u  where vu.virtuemart_user_id = u.id AND  vu.virtuemart_user_id = '".trim($customer_id)."' AND vu.address_type = 'ST'";
+		$db->setQuery($s_user_detail);
+		$db->query();
+		$s_user_info=$db->loadAssoc();		
+		if(count($s_user_info) > 0)
+		{
+		/*$db->setQuery('UPDATE `#__virtuemart_order_userinfos` SET `company` = "'.$s_user_info['company'].'", `title` = "'.$s_user_info['title'].'", `last_name` = "'.$s_user_info['last_name'].'",`first_name` = "'.$s_user_info['first_name'].'", `middle_name` = "'.$s_user_info['middle_name'].'", `phone_1` = "'.$s_user_info['phone_1'].'",`phone_2` = "'.$user_info['phone_2'].'", `fax` = "'.$user_info['fax'].'", `address_1` = "'.$s_user_info['address_1'].'", `address_2` = "'.$s_user_info['address_2'].'",`city` = "'.$s_user_info['city'].'", `virtuemart_state_id` = "'.$s_user_info['virtuemart_state_id'].'", `virtuemart_country_id` = "'.$s_user_info['virtuemart_country_id'].'",`zip`="'.$s_user_info['zip'].'",`email`="'.$s_user_info['email'].'",`created_by`="'.trim($customer_id).'",`modified_by`="'.trim($customer_id).'" WHERE `virtuemart_order_id` ="'.$orderID.'" AND `address_type`="ST" AND `virtuemart_user_id` ="'.trim($customer_id).'"');		
+		$db->query();*/
+		}
+		else
+		{
+		if(count($user_info) > 0){
+		/*$db->setQuery('UPDATE `#__virtuemart_order_userinfos` SET `company` = "'.$user_info['company'].'", `title` = "'.$user_info['title'].'", `last_name` = "'.$user_info['last_name'].'",`first_name` = "'.$user_info['first_name'].'", `middle_name` = "'.$user_info['middle_name'].'", `phone_1` = "'.$user_info['phone_1'].'",`phone_2` = "'.$user_info['phone_2'].'", `fax` = "'.$user_info['fax'].'", `address_1` = "'.$user_info['address_1'].'", `address_2` = "'.$user_info['address_2'].'",`city` = "'.$user_info['city'].'", `virtuemart_state_id` = "'.$user_info['virtuemart_state_id'].'", `virtuemart_country_id` = "'.$user_info['virtuemart_country_id'].'",`zip`="'.$user_info['zip'].'",`email`="'.$user_info['email'].'",`created_by`="'.trim($customer_id).'",`modified_by`="'.trim($customer_id).'" WHERE `virtuemart_order_id` ="'.$orderID.'" AND `address_type`="ST" AND `virtuemart_user_id` ="'.trim($customer_id).'"');		
+		$db->query();*/
+		}
+		}
+		///end code
+		
+		$db->setQuery('INSERT INTO #__virtuemart_payment_plg_authorizenet( id, virtuemart_order_id, order_number, virtuemart_paymentmethod_id, payment_name,return_context, authorizenet_response_authorization_code,  	authorizenet_response_transaction_id, authorizenet_response_response_code, authorizenet_response_response_subcode, authorizenet_response_response_reason_code, authorizenet_response_response_reason_text, authorizenet_response_transaction_type, authorizenet_response_account_number, authorizenet_response_card_type, authorizenet_response_card_code_response, authorizenet_response_cavv_response, created_on, modified_on, created_by, modified_by  ) VALUES ( "", '.(int)$orderID.',"","2","Payment Name","4t79j7ijfh6f0kc4412r0kbm86", "'.$authorizeNetResponse['authorization_code'].'","'.$authorizeNetResponse['transaction_id'].'","'.$authorizeNetResponse['avs_response'].'","'.$authorizeNetResponse['response_subcode'].'","'.$authorizeNetResponse['response_reason_code'].'","'.$authorizeNetResponse['response_reason_text'].'","'.$authorizeNetResponse['transaction_type'].'","XXXX","'.$authorizeNetResponse['card_type'].'","'.$authorizeNetResponse['card_code_response'].'","'.$authorizeNetResponse['cavv_response'].'",now(),now(),"'.(int)$member_id.'","'.(int)$member_id.'")');
+		if (!$db->query()) {
+			   echo $db->getErrorMsg();                       
+		}
+		
+		
+		$query = 'SELECT `virtuemart_user_id` FROM `#__virtuemart_order_salerep` WHERE virtuemart_order_id= "'.$orderID.'"';
+		$db->setQuery($query);
+		$order_commission_user_id = $db->loadResult();
+		if($order_commission_user_id == '')
+		{
+			if($sales_reps_id == '')$sales_reps_id = $member_id;
+			$db->setQuery('INSERT INTO #__virtuemart_order_salerep (id, virtuemart_order_id, virtuemart_user_id, user_classref,virtuemart_calc_id ) VALUES ( "", '.(int)$orderID.', '.(int)$sales_reps_id.',"'.$user_classref.'","'.$_SESSION['virtuemart_calc_id'].'")');
+			if (!$db->query()) {
+				   echo $db->getErrorMsg();                       
+			}
+		}
+		$cart123->emptyCart();	
+		echo "<div style='color:#569E01;font-size:15px;'>Order inserted Successfully. Order Id is --> ".$orderID."</div>";
+		if($orderID > 0){
+		unset($_SESSION['item_qty_relation']);
+		$_SESSION['item_qty_relation'] = "";
+		unset($_SESSION['customer_addr_session']); 
+		$_SESSION['customer_addr_session']='';
+		unset($_SESSION['customer_id_session']);
+		$_SESSION['customer_id_session']='';
+		unset($_SESSION['pre_user_id_sess']);
+		$_SESSION['pre_user_id_sess'] = '';
+		unset($_SESSION['orderID']);
+		$_SESSION['orderID']='';
+		unset($_SESSION['pending_orders_products']);
+		$_SESSION['pending_orders_products']='';
+		}
+		
+		/////----add order in db1_bri tables----/////
+		
+	function findListID($tablename,$current_user_country_id)
+	{	
+		//code for connnect secode DB
+			$db = JFactory::getDBO();		
+            
+			if($current_user_country_id == "38")
+			{
+			$db2 = modsalesrepOrderHelper::getDBO3(); 
+			}else{
+            $db2 = modsalesrepOrderHelper::getDBO2();      
+			}  
+		///end code connect secode DB
+			
+		$new_number_x=(rand(1,10000000)); 
+		$customerListID_data= '134'.$new_number_x;
+		$sql='select ListID from '.$tablename.' order by ListID DESC limit 0,1';
+		$db2->setQuery($sql);
+		$db2->query();
+		$row = $db2->getNumRows();
+		if($row>0)
+		{
+			$record = $db2->loadAssoc();
+			$new_number=explode('-',$record['ListID']);
+			$customerListID=$new_number[0]+1;
+			$ListID=$customerListID.'-'.$customerListID_data;
+		}
+		else
+		{
+			$ListID='80000001-'.$customerListID_data;
+			
+		}
+		return $ListID;
+	}
+	
+	function add_customer()
+	{	
+		$db = JFactory::getDBO();
+		
+		//$select1="select * from #__users";	
+		$select="select * from #__users as u , #__virtuemart_userinfos as vu  where vu.address_type = 'BT' AND vu.virtuemart_user_id = u.id";	
+		$db->setQuery($select);
+		$db->query();		
+		$rows = $db->loadAssocList();
+		
+		for($w=0;$w<count($rows);$w++)
+		{
+			//code for connnect secode DB					
+            if($rows[$w]['virtuemart_country_id'] == "38")
+			{
+			$db2 = modsalesrepOrderHelper::getDBO3(); 
+			}else{
+            $db2 = modsalesrepOrderHelper::getDBO2();      
+			}
+			///end code connect secode DB			
+					
+			$select_customer="select * from customer where Email = '".trim($rows[$w]['email'])."'";
+			$db2->setQuery($select_customer);
+			$db2->query();
+			$row_data = $db2->getNumRows();			
+			
+			if($row_data==0)
+			{
+				
+				$customer_detail="select * from #__virtuemart_userinfos where virtuemart_user_id = '".$rows[$w]['id']."' AND address_type = 'BT'";
+				$db->setQuery($customer_detail);
+				$db->query();
+				$c_rows = $db->getNumRows();
+				$customer_info=$db->loadAssoc();
+				if($c_rows>0)
+				{						
+					$addreess_type=$customer_info['address_type'];
+					$company_name=$customer_info['company'];
+					$title=$customer_info['title'];
+					$last_name=$customer_info['last_name'];
+					$first_name=$customer_info['first_name'];
+					$middle_name=$customer_info['middle_name'];
+					$phone=$customer_info['phone_1'];
+					$mobile=$customer_info['phone_2'];
+					$fax=$customer_info['fax'];
+					$address_1=$customer_info['address_1'];
+					$address_2=$customer_info['address_2'];
+					$city=$customer_info['city'];
+					$zip=$customer_info['zip'];
+					$virtuemart_state_id=$customer_info['virtuemart_state_id'];
+					$country_id=$customer_info['virtuemart_country_id'];
+					/* Fetch State list */ 
+					$select_state="select cnt.country_3_code as country,st.state_2_code as state from #__virtuemart_states as st, #__virtuemart_countries as cnt  where st.virtuemart_state_id='".$virtuemart_state_id."' and cnt.virtuemart_country_id ='".$country_id."'";
+					$db->setQuery($select_state);
+					$db->query();
+					$state=$db->loadAssoc();	
+					$state_name=$state['state'];
+					$country_name=$state['country'];
+					
+				}
+				
+				$customer_st_detail="select * from #__virtuemart_userinfos where virtuemart_user_id = '".$rows[$w]['id']."' AND address_type = 'ST'";
+				$db->setQuery($customer_st_detail);
+				$db->query();
+				$st_rows = $db->getNumRows();
+				$customer_st_info=$db->loadAssoc();
+				if($st_rows>0)				
+					{	
+						$s_company_name=$customer_st_info['company'];
+						$s_title=$customer_st_info['title'];
+						$s_last_name=$customer_st_info['last_name'];
+						$s_first_name=$customer_st_info['first_name'];
+						$s_middle_name=$customer_st_info['middle_name'];
+										
+						$s_phone=$customer_st_info['phone_1'];
+						$s_mobile=$customer_st_info['phone_2'];
+						$s_fax=$customer_st_info['fax'];
+						$s_address_1=$customer_st_info['address_1'];
+						$s_address_2=$customer_st_info['address_2'];
+						$s_city=$customer_st_info['city'];
+						$s_zip=$customer_st_info['zip'];
+						$virtuemart_state_id_st=$customer_st_info['virtuemart_state_id'];
+						$country_id_st=$customer_st_info['virtuemart_country_id'];
+					/* Fetch State list */ 
+					$select_st_state="select cnt.country_3_code as country,st.state_2_code as state from #__virtuemart_states as st, #__virtuemart_countries as cnt  where st.virtuemart_state_id='".$virtuemart_state_id_st."' and cnt.virtuemart_country_id ='".$country_id_st."'";
+							$db->setQuery($select_st_state);
+							$db->query();
+							$state_st=$db->loadAssoc();					
+					
+						$s_state_name=$state_st['state'];
+						$s_country_name=$state_st['country'];
+						
+					}
+					else
+					{	
+						$s_company_name=$customer_info['company'];
+						$s_title=$customer_info['title'];
+						$s_last_name=$customer_info['last_name'];
+						$s_first_name=$customer_info['first_name'];
+						$s_middle_name=$customer_info['middle_name'];
+						$s_phone=$customer_info['phone_1'];
+						$s_mobile=$customer_info['phone_2'];
+						$s_fax=$customer_info['fax'];
+						$s_address_1=$customer_info['address_1'];
+						$s_address_2=$customer_info['address_2'];
+						$s_city=$customer_info['city'];
+						$s_zip=$customer_info['zip'];
+						$s_state_name=$state['state'];
+						$s_country_name=$state['country'];
+					}
+					
+					
+					
+					
+				$new_number=(rand(1,10000000)); 
+				$edit_seq='134'.$new_number;
+				$TimeCreated=date('m/d/Y h:m:s A'); 
+				$ListID=findListID('customer',$rows[$w]['virtuemart_country_id']);
+				$true='true';
+				
+				
+				
+			$insert="insert into customer (ListID,TimeCreated,TimeModified,EditSequence,Name,FullName,IsActive,Email,Status,CompanyName,Salutation,FirstName,MiddleName,LastName,BillAddress_Addr1,BillAddress_Addr2,BillAddress_Addr3,BillAddress_Addr4,BillAddress_City,BillAddress_State,BillAddress_PostalCode,BillAddress_Country,ShipAddress_Addr1, ShipAddress_Addr2,ShipAddress_Addr3, ShipAddress_Addr4,ShipAddress_City,ShipAddress_State,ShipAddress_PostalCode,ShipAddress_Country,Phone,Mobile,Fax,Contact,Balance,TotalBalance,JobStatus,Sublevel) values ('".$ListID."_virtuemart','".$TimeCreated."',now(),'".$edit_seq."','".trim($rows[$w]['name'])."','".trim(ucwords($first_name.' '.$last_name))."','".trim($true)."','".trim($rows[$w]['email'])."','".ADD."','".trim($company_name)."','".trim($title)."','".trim($first_name)."','".trim($middle_nam)."','".trim($last_name)."','".trim($company_name)."','".trim($first_name." ".$last_name)."','".trim($address_1)."','".trim($address_2)."','".trim($city)."','".trim($state_name)."','".trim($zip)."','".trim($country_name)."','".trim($s_company_name)."','".trim($s_first_name." ".$s_last_name)."','".trim($s_address_1)."','".trim($s_address_2)."','".trim($s_city)."','".trim($s_state_name)."','".trim($s_zip)."','".trim($s_country_name)."','".trim($phone)."','".trim($mobile)."','".trim($fax)."','".trim(ucwords($first_name.' '.$last_name))."','0','0','None','0')";	
+						
+			$db2->setQuery($insert);
+			$db2->query();
+			
+			}
+				
+		}
+	}
+
+
+	/*function add_tax_rule()
+	{	
+		$db = JFactory::getDBO();		
+		$select="select * from #__virtuemart_calcs where published = '1'";	
+		$db->setQuery($select);
+		$db->query();		
+		$rows = $db->loadAssocList();
+		
+		for($w=0;$w<count($rows);$w++)
+		{
+			//code for connnect secode DB	
+			$db2 = modsalesrepOrderHelper::getDBO2();   				
+           
+			///end code connect secode DB
+			
+			$select_customer="select * from itemsalestax where Name = '".trim($rows[$w]['calc_name'])."' AND TaxRate = '".number_format($rows[$w]['calc_value'],2, '.', '')."'";
+			$db2->setQuery($select_customer);
+			$db2->query();
+			$row_data = $db2->getNumRows();			
+			
+			if($row_data==0)
+			{
+				$new_number=(rand(1,10000000)); 
+				$edit_seq='124'.$new_number;
+				$TimeCreated=date('m/d/Y h:m:s A'); 
+				$ListID=findListID('itemsalestax','');
+			
+			 $sql0 = "insert into items (ListID , FullName , TableName) values ('".$ListID."_virtuemart','".trim($rows[$w]['calc_name'])."','iteminventory')";
+			 $db2->setQuery($sql0);
+			 $db2->query();
+			
+			 $sql = "insert into itemsalestax (ListID , TimeCreated , TimeModified , EditSequence , Name , IsActive , ItemDesc , TaxRate ,TaxVendorRef_ListID ,TaxVendorRef_FullName ,Status )
+			 		 values ('".$ListID."_virtuemart','".$TimeCreated."','".$TimeCreated."','".$edit_seq."','".trim($rows[$w]['calc_name'])."','Ture','".trim($rows[$w]['calc_descr'])."','".number_format($rows[$w]['calc_value'],2, '.', '')."','80000003-1341256089' ,'Tile Redi, LTD','ADD')";			 
+			 $db2->setQuery($sql);
+			 $db2->query();
+			
+			}
+			
+		}
+	}
+	*/
+	
+	add_customer();
+	//add_tax_rule();
+	
+	
+	$select_order="SELECT * FROM #__virtuemart_order_items AS o
+INNER JOIN #__virtuemart_products AS p ON p.product_sku = o.order_item_sku INNER JOIN #__virtuemart_orders  as vo on  o.virtuemart_order_id = vo.virtuemart_order_id INNER JOIN #__users as u on vo.virtuemart_user_id=u.id where vo.order_status = 'C' AND o.virtuemart_order_id not in( select virtuemart_order_id from #__quickbook_order_histories) group by o.virtuemart_order_id";
+
+	
+	$j=35888;
+
+	$db->setQuery($select_order);
+	$db->query();
+	$so = $db->loadAssocList();
+	// all purchale product in $so Array which in not insert in quickbook_order_histories table. 
+	//while($so=mysql_fetch_assoc($result))
+	//foreach($rows as $so)
+	for($a=0;$a<count($so);$a++)
+	{
+		$order_id_vituemart = $so[$a]['virtuemart_order_id'];		
+		$select_items="SELECT virtuemart_country_id , virtuemart_state_id , zip FROM #__virtuemart_order_userinfos WHERE address_type='ST' AND virtuemart_order_id =".$order_id_vituemart;
+		$db->setQuery($select_items);
+		$user_state_contry = $db->loadAssoc();
+		$order_country_id = $user_state_contry['virtuemart_country_id'];
+		$order_state_id = $user_state_contry['virtuemart_state_id'];
+		
+		$i=findListID("salesorder",$order_country_id);
+		/// get county name using zip code.
+		$order_zipcode = $user_state_contry['zip'];
+		$order_county_sql ="SELECT county  FROM #__virtuemart_zipcode WHERE zipcode ='".$order_zipcode."'";
+		$db->setQuery($order_county_sql);
+		$order_county = $db->loadResult();
+		
+		/// get state name in string with ID
+		$select_items="SELECT state_name FROM #__virtuemart_states WHERE virtuemart_state_id =".$order_state_id;
+		$db->setQuery($select_items);
+		$state_name = $db->loadResult();
+		$get_tax_detail = true;	
+		///code for connnect secode DB					
+            if($order_country_id == "38")
+			{
+			
+			$db2 = modsalesrepOrderHelper::getDBO3(); 
+			$select_tax="SELECT * FROM itemsalestaxgroup as ist, items as i WHERE ist.ListID  =  i.ListID and ist.Name ='".$state_name."' LIMIT 1";
+			$db2->setQuery($select_tax);
+			$db2->query();
+			$tax_detail = $db2->loadAssoc();
+			
+			if(count($tax_detail) == "0"){
+			$select_tax="SELECT * FROM itemsalestaxgroup as ist, items as i WHERE ist.ListID  =  i.ListID and ist.Name LIKE '%".$state_name."%' LIMIT 1";
+			$db2->setQuery($select_tax);
+			$db2->query();
+			$tax_detail = $db2->loadAssoc();
+			}
+			
+			if(count($tax_detail) == "0") $get_tax_detail = false;			
+			}else{
+			
+            $db2 = modsalesrepOrderHelper::getDBO2();
+			$tax_detail = array();
+			$select_tax="SELECT * FROM itemsalestaxgroup as ist, items as i WHERE ist.ListID  =  i.ListID and ist.Name = '".$order_county."' LIMIT 1";
+			$db2->setQuery($select_tax);
+			$db2->query();
+			$tax_detail = $db2->loadAssoc(); 
+			
+			if(count($tax_detail) == "0")
+			{
+			$select_tax="SELECT * FROM itemsalestaxgroup as ist, items as i WHERE ist.ListID  =  i.ListID and ist.Name LIKE '%".$order_county."%' LIMIT 1";
+			$db2->setQuery($select_tax);
+			$db2->query();
+			$tax_detail = $db2->loadAssoc();
+			}
+			//if(count($tax_detail) == "0") $get_tax_detail= false;		
+			
+			}
+		///end code connect secode DB
+		if($get_tax_detail)
+		{
+		$items_result = array();
+	   $select_items="SELECT * FROM #__virtuemart_order_items WHERE virtuemart_order_id =".$order_id_vituemart;
+		$db->setQuery($select_items);
+		$db->query();
+		$row_data = $db->loadAssocList();
+		for($z=0;$z<count($row_data);$z++){
+			$items_result[] = $row_data[$z];			
+		}
+				
+				/// get order shipping Address Detail.
+				$customer_st_info = array();
+				$customer_st_detail="select * from #__virtuemart_order_userinfos where virtuemart_order_id = '".$order_id_vituemart."' AND address_type = 'ST'";
+				$db->setQuery($customer_st_detail);
+				$db->query();
+				$st_rows1 = $db->getNumRows();
+				$customer_st_info=$db->loadAssoc();
+				if($st_rows1>0)				
+					{	
+						$s_company_name=$customer_st_info['company'];
+						$s_title=$customer_st_info['title'];
+						$s_last_name=$customer_st_info['last_name'];
+						$s_first_name=$customer_st_info['first_name'];
+						$s_middle_name=$customer_st_info['middle_name'];										
+						$s_phone=$customer_st_info['phone_1'];
+						$s_mobile=$customer_st_info['phone_2'];
+						$s_fax=$customer_st_info['fax'];
+						$s_address_1=$customer_st_info['address_1'];
+						$s_address_2=$customer_st_info['address_2'];
+						$s_city=$customer_st_info['city'];
+						$s_zip=$customer_st_info['zip'];
+						$virtuemart_state_id_st=$customer_st_info['virtuemart_state_id'];
+						$country_id_st=$customer_st_info['virtuemart_country_id'];
+						/* Fetch State list */ 
+						$select_st_state="select cnt.country_3_code as country,st.state_2_code as state from #__virtuemart_states as st, #__virtuemart_countries as cnt  where st.virtuemart_state_id='".$virtuemart_state_id_st."' and cnt.virtuemart_country_id ='".$country_id_st."'";
+						$db->setQuery($select_st_state);
+						$db->query();
+						$state_st1=$db->loadAssoc();					
+					
+						$s_state_name1=$state_st1['state'];
+						$s_country_name1=$state_st1['country'];
+						$shipping_address_add ='';
+						//if($s_company_name != '')$shipping_address_add .= $s_company_name."\n";
+						if($s_title != '')$shipping_address_add .= $s_title." ";
+						if($s_last_name != '')$shipping_address_add .= $s_last_name." ";
+						if($s_first_name != '')$shipping_address_add .= $s_first_name."\n";
+						$shipping_address_add .= $s_address_1;
+
+
+						
+					}					
+				/// endcode for get order shipping Address Detail.
+		
+		
+		$query123 = "SELECT * FROM #__virtuemart_orders WHERE virtuemart_order_id =".$order_id_vituemart;
+		$db->setQuery($query123);
+		$payment_values = $db->loadAssoc();
+		
+		// get user reffrence name and class reffrence ID and VM order number for PONumber
+		$query_order = "SELECT vo.order_number, vosr.virtuemart_user_id , vosr.user_classref FROM `#__virtuemart_orders` as vo, `#__virtuemart_order_salerep` as vosr WHERE vo.virtuemart_order_id = vosr.virtuemart_order_id  AND  vo.virtuemart_order_id ='".$order_id_vituemart."' LIMIT 1";
+		$db->setQuery($query_order);
+		$order_history_values = $db->loadAssoc();
+		if(count($order_history_values) ==0)
+		{
+		$query_order = "SELECT vo.order_number,vo.virtuemart_user_id FROM `#__virtuemart_orders` as vo WHERE  vo.virtuemart_order_id ='".$order_id_vituemart."' LIMIT 1";
+		$db->setQuery($query_order);
+		$order_history_values = $db->loadAssoc();		
+		}
+		
+		if($order_history_values['user_classref'] == '') $order_history_values['user_classref'] = 'webstore';
+		$tr='';		
+		if($order_history_values['user_classref'] != 'webstore');$tr = 'TR ';
+		if($order_country_id == '38'){ $order_history_values['user_classref'] = 'CN Online';$tr = '';}
+		echo $sql_class="select ListID, Name from class where Name LIKE '%".$tr.$order_history_values['user_classref']."%'";				
+		$db2->setQuery($sql_class);
+		$db2->query();
+		$class_detail = $db2->loadAssoc();
+		
+		$sql_template="select ListID, Name from  template where Name LIKE '%rep%'";				
+		$db2->setQuery($sql_template);
+		$db2->query();
+		$template_detail = $db2->loadAssoc();
+		
+		
+	$db->setQuery("select `name` from #__users  where id='".$order_history_values['virtuemart_user_id']."'");
+		$db->query();
+		$order_user_reff_name = $db->loadResult();
+		
+		$sql_salesrep="select ListID, SalesRepEntityRef_ListID, SalesRepEntityRef_FullName from salesrep where SalesRepEntityRef_FullName  LIKE '%".$order_user_reff_name."%'";				
+		$db2->setQuery($sql_salesrep);
+		$db2->query();
+		$salesrep_detail = $db2->loadAssoc();
+		
+		
+		// endcode for get user reffrence name and class reffrence ID and VM order number for PONumber
+		
+		
+		
+		$select_qb="select c.ListID as customer_id, i_inv.ListID as item_id ,c.Name as customer_name ,c.FullName,c.CompanyName,c.BillAddress_Addr1,c.BillAddress_Addr2 ,c.BillAddress_City,c.BillAddress_State,c.BillAddress_Country,i_inv.Name as item_name from customer as c ,iteminventory as i_inv where c.Name = '".$so[$a]['name']."'  and i_inv.Name = '".$so[$a]['order_item_sku']."'";
+				
+		$db2->setQuery($select_qb);
+		$db2->query();
+		$record = $db2->loadAssoc();
+		$row_data = $db2->getNumRows();
+		//echo "<pre>";
+		//print_r($record);
+		
+		if(count($record) > 0)
+		{
+		$pos = strpos($record['customer_id'], "virtuemart");		
+		if($pos === false)
+		{
+			//insert sales order detail
+			//$insert_order="insert into salesorder (TxnID,CustomerRef_ListID,CustomerRef_FullName,Status,TimeCreated,TimeModified,BillAddress_Addr1,BillAddress_Addr2,BillAddress_City,BillAddress_State,BillAddress_Country,SalesTaxTotal) values ('".$i."','".$record['customer_id']."','".$record['customer_name']."','ADD',now(),now(),'".$record['BillAddress_Addr1']."','".$record['BillAddress_Addr2']."','".$record['BillAddress_City']."','".$record['BillAddress_State']."','".$record['BillAddress_Country']."','".$payment_values['order_billTaxAmount']."')";
+			
+			///  select tax id in tax table in db2			
+		$query = 'SELECT vc.calc_name , vc.calc_value FROM `#__virtuemart_calcs` as vc, `#__virtuemart_order_salerep` as vos  WHERE vc.virtuemart_calc_id = vos.virtuemart_calc_id  AND vos.virtuemart_order_id = "'.$order_id_vituemart.'"';
+		$db->setQuery($query);
+		$virtuemart_calc = $db->loadAssoc();
+		
+		$sql_qb="select * from itemsalestax where Name = '".$so[$a]['name']."'";				
+		$db2->setQuery($sql_qb);
+		$db2->query();
+		$taxitem = $db2->loadAssoc();
+		
+			
+		//if(count($taxitem) > 0)
+		{
+		//$tax_pos = strpos($taxitem['ListID'], "virtuemart");		
+		//if($tax_pos === false)			
+			{					
+			//// end code for tax selection 			 
+			
+			//$insert_order="insert into salesorder (TxnID,CustomerRef_ListID,CustomerRef_FullName,Status,TimeCreated,TimeModified,BillAddress_Addr1,BillAddress_Addr2,BillAddress_City,BillAddress_State,BillAddress_Country,BillAddress_Note,Subtotal,ItemSalesTaxRef_ListID,ItemSalesTaxRef_FullName,SalesTaxPercentage,SalesTaxTotal,TotalAmount,CustomerSalesTaxCodeRef_ListID ,CustomerSalesTaxCodeRef_FullName) values ('".$i."','".$record['customer_id']."','".$record['customer_name']."','ADD',now(),now(),'".$record['BillAddress_Addr1']."','".$record['BillAddress_Addr2']."','".$record['BillAddress_City']."','".$record['BillAddress_State']."','".$record['BillAddress_Country']."','".$payment_values['customer_note']."', '".$payment_values['order_salesPrice']."', '".$tax_detail['ListID']."' ,	'".$tax_detail['Name']."' , '".$tax_detail['TaxRate']."' , '".$payment_values['order_billTaxAmount']."' , '".$payment_values['order_total']."', '', '')";
+			//$insert_order="insert into salesorder (TxnID,CustomerRef_ListID,CustomerRef_FullName,Status,TimeCreated,TimeModified,BillAddress_Addr1,BillAddress_Addr2,BillAddress_City,BillAddress_State,BillAddress_Country,SalesTaxTotal) values ('".$i."','".$record['customer_id']."','".$record['customer_name']."','ADD',now(),now(),'".$record['BillAddress_Addr1']."','".$record['BillAddress_Addr2']."','".$record['BillAddress_City']."','".$record['BillAddress_State']."','".$record['BillAddress_Country']."','".$payment_values['order_billTaxAmount']."')";
+			
+			$insert_order="insert into salesorder (TxnID,CustomerRef_ListID,CustomerRef_FullName,Status,TimeCreated,TimeModified,BillAddress_Addr1,BillAddress_Addr2,BillAddress_City,BillAddress_State,BillAddress_Country,BillAddress_Note,Subtotal,ItemSalesTaxRef_ListID,ItemSalesTaxRef_FullName,SalesTaxPercentage,SalesTaxTotal,TotalAmount,CustomerSalesTaxCodeRef_ListID ,CustomerSalesTaxCodeRef_FullName,ShipAddress_Addr1,ShipAddress_City,ShipAddress_State,ShipAddress_PostalCode,ShipAddress_Country, PONumber,ClassRef_ListID,ClassRef_FullName,SalesRepRef_ListID,SalesRepRef_FullName,ShipAddress_Note,TemplateRef_ListID ,TemplateRef_FullName) values ('".$i."','".$record['customer_id']."','".$record['customer_name']."','ADD',now(),now(),'".$record['BillAddress_Addr1']."','".$record['BillAddress_Addr2']."','".$record['BillAddress_City']."','".$record['BillAddress_State']."','".$record['BillAddress_Country']."','".$payment_values['customer_note']."', '".$payment_values['order_salesPrice']."', '".$tax_detail['ListID']."' ,	'".$tax_detail['Name']."' , '".$tax_detail['TaxRate']."' , '".$payment_values['order_billTaxAmount']."' , '".$payment_values['order_total']."', '', '', '".$shipping_address_add."', '".$s_city."', '".$s_state_name1."', '".$s_zip."', '".$s_country_name1."', '".$order_history_values['order_number']."','".$class_detail['ListID']."','".$class_detail['Name']."','".$salesrep_detail['ListID']."','".$salesrep_detail['SalesRepEntityRef_FullName']."','".$payment_values['customer_note']."','".$template_detail['ListID']."','".$template_detail['Name']."')";
+			
+			$db2->setQuery($insert_order);
+			$db2->query();
+			
+			//insert sales invoice detail BalanceRemaining =Subtotal + SalesTaxTotal
+			/*$insert_invoice="insert into invoice (TxnID,CustomerRef_ListID,CustomerRef_FullName,Status,TimeCreated,TimeModified,BillAddress_Addr1,BillAddress_Addr2,BillAddress_City,BillAddress_State,BillAddress_Country,SalesTaxTotal,Subtotal,BalanceRemaining) values ('".$i."','".$record['customer_id']."','".$record['customer_name']."','ADD',now(),now(),'".$record['BillAddress_Addr1']."','".$record['BillAddress_Addr2']."','".$record['BillAddress_City']."','".$record['BillAddress_State']."','".$record['BillAddress_Country']."','".$SalesTaxTotal."','".$so[$a]['order_subtotal']."','".$SalesTaxTotal+$so[$a]['order_subtotal']."')";			 
+			$db2->setQuery($insert_invoice);
+			$db2->query();*/
+			
+			//echo "</br>";
+			for($k=0;$k < count($items_result);$k++)
+			{ 
+			
+			$select_qb1 ="select c.ListID as customer_id, i_inv.ListID as item_id ,c.Name as customer_name ,c.FullName,c.CompanyName,c.BillAddress_Addr1,c.BillAddress_Addr2 ,c.BillAddress_City,c.BillAddress_State,c.BillAddress_Country,i_inv.Name as item_name from customer as c ,iteminventory as i_inv where c.Name = '".$so[$a]['name']."'  and i_inv.Name = '".$items_result[$k]['order_item_sku']."'";						
+			$db2->setQuery($select_qb1);
+			$db2->query();
+			$record1 = $db2->loadAssoc();
+			//echo "</br>";
+			//insert sales order products detail
+			$insert_sales_inline="insert into salesorderlinedetail (TxnLineID,ItemRef_ListID,ItemRef_FullName,Quantity,IDKEY) values ('".$j."','".$record1['item_id']."','".$record1['item_name']."','".$items_result[$k]['product_quantity']."','".$i."')";
+			$db2->setQuery($insert_sales_inline);
+			$db2->query();
+			
+			///insert invoice products detail
+			/*$insert_invoice_inline="insert into  invoicelinedetail (TxnLineID,ItemRef_ListID,ItemRef_FullName,Quantity,IDKEY) values ('".$j."','".$record1['item_id']."','".$record1['item_name']."','".$items_result[$k]['product_quantity']."','".$i."')";
+			$db2->setQuery($insert_invoice_inline);
+			$db2->query();*/
+			
+			
+			//echo "</br>";
+			}
+			
+			 $virtuemart_to_quickbook_order_history="insert into #__quickbook_order_histories (id,virtuemart_order_id) values ('','".$order_id_vituemart."')";
+			 $db->setQuery($virtuemart_to_quickbook_order_history);
+			 $db->query();
+		
+		
+			}
+			
+			}		
+			
+			
+		}
+		
+		}
+	$i++; $j++;
+	
+	}
+	
+	
+	}
+	$jAp->redirect(JURI::root().'index.php/sales-orders/', "Order inserted Successfully. Order Id is --> ".$orderID);
+	}
+		else
+		{
+		if($_POST['SaveOrderButton'] == "saveorder")
+		{
+		echo "<div style='font-size:12px;color:red;font-weight:bold;margin-left:10px;'>Order Save Successfully. Order Id is --> ".$orderID."</div>";
+		$_SESSION['orderID'] = $orderID;
+		$cart123->emptyCart();
+		$jAp->redirect(JURI::root().'index.php/sales-orders/', "Order Save Successfully. Order Id is --> ".$orderID);
+		}
+		else
+		{
+		echo '<div style="font-size:12px;color:red;font-weight:bold;margin-left:10px;">'.$payment_msg.'</div>';
+		$jAp->redirect(JURI::root().'index.php/sales-orders/', $payment_msg);
+		}
+	}		
+
+/////----end code----/////		
+		
+		return true;
+	} 
+	
+	function &getDBO2() {
+        static $dbo2 = null;
+
+        if (!$dbo2) {
+            $option = array();
+            $option['driver'] = 'mysql';       // Database driver name
+            $option['host'] = '172.25.25.11';  // Database host name
+            $option['user'] = 'db1_bri';       // User for database authentication
+            $option['password'] = '123';   	   // Password for database authentication
+            $option['database'] = 'db1_bri';   // Database name
+            $option['prefix'] = '';            // Database prefix 
+            //
+            $dbo2 = & JDatabase::getInstance($option);
+        }
+
+        return $dbo2;
+    }
+	
+	function &getDBO3() {
+        static $dbo3 = null;
+
+        if (!$dbo3) {
+            $option = array();
+            $option['driver'] = 'mysql';       // Database driver name
+            $option['host'] = '172.25.25.11';  // Database host name
+            $option['user'] = 'db1_bri1';       // User for database authentication
+            $option['password'] = '123';   	   // Password for database authentication
+            $option['database'] = 'db1_bri1';   // Database name
+            $option['prefix'] = '';            // Database prefix 
+            //
+            $dbo3 = & JDatabase::getInstance($option);
+        }
+
+        return $dbo3;
+    }
+} 
+?>
+
+

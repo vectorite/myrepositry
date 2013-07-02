@@ -1,0 +1,42 @@
+fieldset.panelform ul li>label{
+  width: 150px;
+}
+
+li fieldset.panelform label{
+  width: 150px;
+}
+
+#theme-details fieldset.panelform ul li label.icons{
+/*  width: auto;*/
+}
+
+#theme-details fieldset.panelform ul li>label{
+  width: 150px;
+}
+
+li fieldset span,
+li fieldset a{
+  float:left;
+  margin: 5px 5px 5px 0;
+}
+
+li fieldset span.jPicker, li fieldset span.jPicker span{
+  margin: 0;
+}
+
+div.panel fieldset.jelement{
+  padding: 0;
+  margin: 0;
+  margin-top:10px;
+}
+
+fieldset.panelform .jelement > label{
+  float: left;
+  clear: none;
+  max-width: none;
+  min-width: 0;
+}
+
+li fieldset.panelform label{
+  width: 145px;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="module" client="administrator" method="upgrade">
+	<name>MOD_AKADMIN_TITLE</name>
+	<author>Nicholas K. Dionysopoulos</author>
+	<authorEmail>nicholas@dionysopoulos.me</authorEmail>
+	<authorUrl>http://www.akeebabackup.com</authorUrl>
+	<creationDate>2013-05-11</creationDate>
+	<copyright>Copyright (c)2009-2013 Nicholas K. Dionysopoulos</copyright>
+	<license>GNU GPL v3</license>
+	<version>3.7.7</version>
+	<description>MOD_AKADMIN_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_akadmin">mod_akadmin.php</filename>
+		<folder>css</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_akadmin.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_akadmin.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="enablewarning" type="radio" label="MOD_AKADMIN_LBL_WARNINGS"
+					description="MOD_AKADMIN_DESC_WARNINGS" default="1">
+					<option value="0">MOD_AKADMIN_LBL_YES</option>
+					<option value="1">MOD_AKADMIN_LBL_NO</option>
+				</field>
+				<field name="warnfailed" type="radio" label="MOD_AKADMIN_LBL_WARNFAILED"
+					description="MOD_AKADMIN_DESC_WARNFAILED" default="1">
+					<option value="0">MOD_AKADMIN_LBL_YES</option>
+					<option value="1">MOD_AKADMIN_LBL_NO</option>
+				</field>
+				<field name="maxbackupperiod" type="text" label="MOD_AKADMIN_LBL_PERIOD"
+					description="MOD_AKADMIN_DESC_PERIOD" size="5" default="24" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

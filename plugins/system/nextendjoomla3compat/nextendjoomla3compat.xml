@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+  <name>Nextend Joomla 3.0 compatibility for Offlajn</name>
+  <author>Roland Soos</author>
+  <creationDate>Oct 2012</creationDate>
+  <copyright>Copyright (C) 2012 Nextendweb.com. All rights reserved.</copyright>
+  <license>GNU General Public License</license>
+  <authorEmail>roland@nextendweb.com</authorEmail>
+  <authorUrl>http://nextendweb.com</authorUrl>
+  <version>1.0</version>
+  <description></description>
+  <files>
+      <filename plugin="nextendjoomla3compat">nextendjoomla3compat.php</filename>
+      <filename>nextendjoomla3compat.xml</filename>
+      <folder>compat</folder>
+  </files>
+  <params>
+  </params>
+</install>

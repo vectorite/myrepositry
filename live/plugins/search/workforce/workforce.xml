@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="search" method="upgrade">
+	<name>Search - Work Force Employees</name>
+	<author>The Thinkery</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright (C) 2012 the Thinkery LLC. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>http://www.thethinkery.net</authorUrl>
+	<version>2.0.1</version>
+	<description>Allows searching of Work Force Employees</description>
+	<files>
+		<filename plugin="workforce">workforce.php</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">language/en-GB.plg_search_workforce.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+            <fieldset name="basic">
+                <field name="search_limit" type="text" size="5" default="50" label="PLG_WF_SEARCH_LIMIT" description="PLG_WF_SEARCH_LIMIT_DESC"/>
+                <field name="search_name" type="radio" default="1" label="PLG_WF_SEARCH_NAME" description="PLG_WF_SEARCH_NAME_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="search_bio" type="radio" default="1" label="PLG_WF_SEARCH_BIO" description="PLG_WF_SEARCH_BIO_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
+

@@ -1,0 +1,369 @@
+/*
+* main css file for the productbuilder default page
+* @version $Id: styleshet.css 1 Oct-11-2010 21:16:41Z sakisTerz $
+* @package front-end
+* @subpackage stylesheet
+* @author Sakis Terz (sakis@breakDesigns.net)
+* @copyright	Copyright (C) 2009 breakDesigns.net. All rights reserved
+* @license	GNU/GPL v3
+* see administrator/components/com_productbuilder/COPYING.txt
+*/
+
+/* General Shop Styles here please */
+#pb_builder {
+	
+}
+
+#pb_mainPage {
+	
+}
+
+/* The bundle's image */
+.pb_prod_img {
+	float: left;
+	padding: 10px;
+}
+
+/*groups*/
+#groups_part {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	margin-right: 3%;
+}
+
+.group_wrap_all {
+	margin-bottom: 10px;
+	padding: 0px;
+}
+
+.group {
+	width: 98%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	float: left;
+}
+
+.group_header {
+	margin: 0px !important;
+}
+
+.group_header h3 {
+	margin: 0px !important;
+	padding: 3px 10px;
+}
+
+/*everything below the group header*/
+.group_details {
+	padding: 10px;
+	padding-top: 0px;
+	margin-top: 3px;
+}
+
+/*contains the select*/
+.product_wrap {
+	float: left;
+}
+/*contains the price the quantity , product details and the lamp*/
+.product_wrap_r {
+	float: right;
+}
+
+.productname {
+	font-weight: bold;
+}
+
+.productname,.groupSelect {
+	width: 250px;
+	margin-top: 18px;
+	float: left;
+}
+
+/* the select or the ul list*/
+.groupSelect {
+	list-style: none;
+	padding: 0px;
+}
+
+/* the select or the ul list*/
+.groupSelect li {
+	padding: 0px;
+	background: none;
+	text-align: left;
+}
+
+.groupSelect li label,.groupSelect option {
+	color: #000000;
+}
+
+.pr_price {
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
+	margin-left: 15px;
+}
+
+/*Quantity */
+.pb_quantity_wrapper {
+	float: right;
+	margin: 0px;
+	margin-left: 10px;
+}
+
+.quantity_box {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.staticquantity {
+	height: 17px;
+	line-height: 25px;
+	font-size: 12px;
+}
+
+.quantity_box_button {
+	width: 17px;
+	height: 17px;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.quantity_box_button:focus {
+	border: none;
+}
+
+.quantity_box_button_up {
+	padding: 0px;
+	margin: 0px;
+	background: url(../images/plus.png) 0 0 no-repeat;
+}
+
+.quantity_box_button_down {
+	padding: 0px;
+	margin: 0px;
+	background: url(../images/minus.png) 0 0 no-repeat;
+}
+
+/*prod details link*/
+.pr_details {
+	position: relative;
+	width: 25%;
+	margin: 5px;
+	margin-top: 18px;
+}
+
+.grp_price {
+	width: 70px;
+}
+
+.active_group {
+	float: right;
+	margin-top: 18px;
+	width: 16px;
+	height: 16px;
+	background: url(../images/lamp_off.png) center center no-repeat;
+}
+
+#img_descr {
+	width: 33%;
+	float: right;
+	position: relative;
+	top: 0px;
+}
+
+/*image area*/
+#image_part {
+	float: left;
+	position: relative;
+	min-width: 140px;
+	min-height: 140px;
+	border: 1px solid;
+	clear: both;
+}
+
+#full_img {
+	display: block;
+	float: left;
+}
+
+#full_img:hover {
+	border: 1px solid #cccccc;
+}
+
+.imgWrapper {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+#image_part_stat {
+	width: 100%;
+}
+
+.imgWrapper_stat {
+	float: left;
+	margin: 10px;
+	margin-left: 0px;
+}
+
+.imgWrapper_stat_r {
+	float: left;
+	margin: 0px;
+	margin-left: 10px;
+}
+
+.imgWrap_in {
+	padding: 10px;
+	display: block;
+}
+
+.pb_ins_img {
+	overflow: hidden;
+}
+
+/*description part*/
+#description {
+	margin-top: 10px;
+}
+
+.mflbl {
+	font-weight: bold;
+}
+
+/* --Attributes/Custom Fields--*/
+.attributes {
+	min-height: 8px;
+	margin-top: 5px;
+	padding: 5px 0px;
+}
+
+.atr_line {
+	width: 100%;
+	clear: left;
+	line-height: 1.3em;
+	margin-bottom: 8px;
+}
+
+.inner_atr_wrapper {
+	clear: both;
+	margin-bottom: 5px;
+}
+
+.atrhead {
+	line-height: 1.3em;
+	font-weight: bold;
+	text-align: left;
+	float: left;
+}
+
+/*custom txt attribute wrapper*/
+.cus_attr_wrapper {
+	margin-top: 15px;
+}
+
+/*custom txt attribute label*/
+.atrhead_txt {
+	width: 100px;
+	text-align: right;
+}
+
+/*custom txt attribute input text*/
+.atr_text {
+	width: 170px;
+	height: 1em;
+}
+
+.warn_msg {
+	color: #ff0000;
+	display: none;
+}
+
+.atr {
+	float: left;
+	margin-left: 5px;
+	line-height: 1.3em;
+}
+
+.atr input,.atr label {
+	padding: 0px;
+	margin: 0px;
+}
+
+.atr label {
+	margin-left: 3px;
+}
+
+/* Cart info modal */
+.cart_info {
+	display: none;
+	padding: 10px;
+}
+
+.pbbuttons_area {
+	padding: 10px;
+}
+
+.cartmessage {
+	width: 100%;
+	text-align: center;
+}
+
+.pbcart_btn {
+	padding: 5px;
+	float: left;
+	margin-right: 10px;
+	text-decoration: none;
+	border: 1px solid #0054a6;
+}
+
+.pbcart_btn:hover {
+	text-decoration: none;
+}
+
+/*general*/
+#toral_pr_wrapper {
+	margin:0px;
+	margin-right: 36px;
+	margin-top: 5px;	
+	clear: both; 
+}
+
+#total_pr_lbl {
+	
+}
+
+.toral_discount_wrapper {
+	float: right;
+	margin-right: 36px;	
+	color: #ff0000;	
+	clear:both;
+	display:none;
+}
+
+#pb_discount_amount {
+	color: #ff0000;
+}
+
+#cartLoader {
+	margin-top: 10px;
+	height: 10px;
+	width: 100%;
+}
+
+#load_bar {
+	height: 10px;
+	background: #0f0;
+	width: 0%;
+}
+
+.addtocart_button {
+	float: right;
+	margin-right: 33px;
+	margin-top: 10px;
+}
+
+.clr {
+	clear: both;
+}

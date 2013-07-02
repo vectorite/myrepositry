@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_PRODUCTBUILDER_PBPRODUCTS_VIEW_DEFAULT_TITLE"
+		option="COM_PRODUCTBUILDER_PBPRODUCTS_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[COM_PRODUCTBUILDER_PBPRODUCTS_LAYOUT_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="params">
+		<fieldset name="basic"
+			addfieldpath="/administrator/components/com_productbuilder/models/fields">
+
+			<field name="target_layout" type="componentlayout" extension="com_productbuilder"
+				view="pbproduct" label="COM_PRODUCTBUILDER_PBPRODUCTS_TARGET_LAYOUT"
+				useglobal="false" description="COM_PRODUCTBUILDER_PBPRODUCTS_TARGET_LAYOUT_DESC" />
+
+			<field name="pbproducts_per_row" type="text" default="2"
+				label="COM_PRODUCTBUILDER_PBPRODUCTS_PER_ROW" description="COM_PRODUCTBUILDER_PBPRODUCTS_PER_ROW_DESC" />
+
+			<field name="pbproducts_limit" type="text" default="10"
+				label="COM_PRODUCTBUILDER_PBPRODUCTS_LIST_LIMIT" description="COM_PRODUCTBUILDER_PBPRODUCTS_LIST_LIMIT_DESC" />
+
+			<field name="show_pagination" type="list" description="JGLOBAL_PAGINATION_DESC"
+				label="JGLOBAL_PAGINATION_LABEL">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">JGLOBAL_AUTO</option>
+			</field>
+
+			<field name="pbproduct_ids" type="text" default=""
+				label="COM_PRODUCTBUILDER_PBPRODUCTS_IDS" description="COM_PRODUCTBUILDER_PBPRODUCTS_IDS_DESC" />
+
+			<field name="disp_pbproduct_descr" type="radio" default="1"
+				label="COM_PRODUCTBUILDER_PBPRODUCTS_DESCR" description="COM_PRODUCTBUILDER_PBPRODUCTS_DESCR_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="disp_pbproduct_image" type="radio" default="1"
+				label="COM_PRODUCTBUILDER_PBPRODUCTS_IMAGE" description="COM_PRODUCTBUILDER_PBPRODUCTS_IMAGE_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="bundle_img_height" type="text" default="90"
+				label="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_HEIGHT_LABEL"
+				description="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_HEIGHT_DESC"></field>
+		</fieldset>
+	</fields>
+</metadata>

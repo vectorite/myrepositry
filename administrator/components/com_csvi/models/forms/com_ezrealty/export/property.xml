@@ -1,0 +1,117 @@
+<fields name="property">
+	<field name="transaction_type"
+		type="list"
+		size="7"
+		label="COM_CSVI_EXPORT_EZREALTY_TRANSACTION_TYPE_LABEL"
+		description="COM_CSVI_EXPORT_EZREALTY_TRANSACTION_TYPE_DESC"
+		multiple="true"
+		default="">
+		<option value="">COM_CSVI_EXPORT_DONT_USE</option>
+		<option value="1">COM_CSVI_EZREALTY_TYPE_FOR_SALE</option>
+		<option value="2">COM_CSVI_EZREALTY_TYPE_FOR_RENT</option>
+		<option value="3">COM_CSVI_EZREALTY_TYPE_FOR_LEASE</option>
+		<option value="4">COM_CSVI_EZREALTY_TYPE_FOR_AUCTION</option>
+		<option value="5">COM_CSVI_EZREALTY_TYPE_SALE_BY_TENDER</option>
+		<option value="6">COM_CSVI_EZREALTY_TYPE_PROPERTY_EXCHANGE</option>
+	</field>
+	
+	<field name="property_type"
+		type="sql"
+		size="7"
+		label="COM_CSVI_EXPORT_EZREALTY_PROPERTY_TYPE_LABEL"
+		description="COM_CSVI_EXPORT_EZREALTY_PROPERTY_TYPE_DESC"
+		multiple="true"
+		query="SELECT id AS value,
+				name AS text
+				FROM #__ezrealty_catg
+				ORDER BY ordering"
+		key_field="value"
+		value_field="text"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+	
+	<field name="street"
+		type="sql"
+		size="7"
+		label="COM_CSVI_EXPORT_EZREALTY_STREET_LABEL"
+		description="COM_CSVI_EXPORT_EZREALTY_STREET_DESC"
+		multiple="true"
+		query="SELECT address2 AS value,
+				address2 AS text
+				FROM #__ezrealty
+				GROUP BY address2
+				ORDER BY address2"
+		key_field="value"
+		value_field="text"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+	
+	<field name="locality"
+		type="sql"
+		size="7"
+		label="COM_CSVI_EXPORT_EZREALTY_LOCALITY_LABEL"
+		description="COM_CSVI_EXPORT_EZREALTY_LOCALITY_DESC"
+		multiple="true"
+		query="SELECT locality AS value,
+				locality AS text
+				FROM #__ezrealty
+				GROUP BY locality
+				ORDER BY locality"
+		key_field="value"
+		value_field="text"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+	
+	<field name="state"
+		type="sql"
+		size="7"
+		label="COM_CSVI_EXPORT_EZREALTY_STATE_LABEL"
+		description="COM_CSVI_EXPORT_EZREALTY_STATE_DESC"
+		multiple="true"
+		query="SELECT state AS value,
+				state AS text
+				FROM #__ezrealty
+				GROUP BY state
+				ORDER BY state"
+		key_field="value"
+		value_field="text"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+	
+	<field name="country"
+		type="sql"
+		size="7"
+		label="COM_CSVI_EXPORT_EZREALTY_COUNTRY_LABEL"
+		description="COM_CSVI_EXPORT_EZREALTY_COUNTRY_DESC"
+		multiple="true"
+		query="SELECT country AS value,
+				country AS text
+				FROM #__ezrealty
+				GROUP BY country
+				ORDER BY country"
+		key_field="value"
+		value_field="text"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+	
+	<field name="owner"
+		type="sql"
+		size="7"
+		label="COM_CSVI_EXPORT_EZREALTY_OWNER_LABEL"
+		description="COM_CSVI_EXPORT_EZREALTY_OWNER_DESC"
+		multiple="true"
+		query="SELECT mid AS value,
+				dealer_name AS text
+				FROM #__ezrealty_profile
+				ORDER BY dealer_name"
+		key_field="value"
+		value_field="text"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+</fields>

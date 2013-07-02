@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade" client="site">
+  <name>Accordion Menu - Offlajn.com</name>
+  <author>Roland Soos</author>
+  <copyright>Copyright (C) Offlajn.com</copyright>
+  <authorEmail>roland.soos@offlajn.com</authorEmail>
+  <authorUrl>http://offlajn.com</authorUrl>
+  <version>7.219</version>
+  <description>The module displays Accordion menus</description>
+  <params addPath="/modules/mod_accordion_menu/params/offlajndashboard">
+    <param name="update" type="offlajndashboard" label="-"/>
+  </params>
+  <!-- Joomla 1.6 >= params -->
+  <config>
+    <fields name="params" addfieldpath="/modules/mod_accordion_menu/params/offlajndashboard">
+      <fieldset name="basic">
+        <field name="update" type="offlajndashboard" blogtags="accordion menu" label="-"/>
+        <field name="moduleparametersTab" type="offlajntab" label="Module parameters" position="first">
+          <param name="menutype" type="offlajnmenutype" default="" label="TYPE" description="THE_TYPE_OF_THE_MENU"/>
+          <param name="theme" type="offlajntheme" default="1" label="THEME" description="THE_STYLE_OF_THE_MENU"/>
+          <param name="accordionmode" type="offlajnlist" default="1" label="ACCORDION_MODE" description="">
+            <option value="0">ALLOW_MULTIPLE_OPENING</option>
+            <option value="1">NORMAL_ACCORDION_MODE</option>
+            <option value="2">IMPROVED_ACCORDION_MODE</option>
+          </param>
+          <param name="mode" type="offlajnradio" default="onclick" label="ACTIVATOR_EVENT" description="">
+            <option value="onclick">CLICK</option>
+            <option value="onmouseenter">MOUSE_ENTER</option>
+            <option value="both">BOTH</option>
+          </param>
+        </field>
+        <field name="advancedmenuTab" type="offlajntab" label="Advanced menu properties">
+          <param name="active" type="offlajnlist" default="1" label="ACTIVE_ITEMS" description="">
+            <option value="0">NO_ACTIVE_ELEMENTS</option>
+            <option value="1">SELECTED_ITEM_ACTIVE</option>
+            <option value="2">SELECTED_BRANCH_ACTIVE</option>
+          </param>
+          <param name="opened" type="offlajnlist" default="2" label="OPENED_ITEMS" description="">
+            <option value="-1">ALL_ELEMENTS_OPENED</option>
+            <option value="0">NO_OPENED_ELEMENTS</option>
+            <option value="1">SELECTED_ITEM_OPENED</option>
+            <option value="2">SELECTED_BRANCH_OPENED</option>
+            <option value="3">MENU_STATE_SAVING_WITH_COOKIES</option>
+          </param>
+          <param name="openedlevels" multiple="multiple" type="offlajnmultiselectlist" height="5" default="0" label="ALWAYS_OPENED_LEVELS" description="SELECT_ONE_OR_MORE_ITEMS_FROM_THE_LIST_YOU_CAN_USE_CTRLCLICK_TO_SELECT_MORE_THAN_ONE_ITEM">
+            <option value="0">NO_LEVEL_OPENED</option>
+            <option value="1">LEVEL1_OPENED</option>
+            <option value="2">LEVEL2_OPENED</option>
+            <option value="3">LEVEL3_OPENED</option>
+            <option value="4">LEVEL4_OPENED</option>
+            <option value="5">LEVEL5_OPENED</option>
+            <option value="6">LEVEL6_OPENED</option>
+            <option value="7">LEVEL7_OPENED</option>
+            <option value="8">LEVEL8_OPENED</option>
+            <option value="9">LEVEL9_OPENED</option>
+            <option value="10">LEVEL10_OPENED</option>
+          </param>
+          <param name="parentlink" type="offlajnonoff" default="0" label="PARENT_ITEM_AS_LINK" description=""/>
+          <param name="moduleshowtitle" type="offlajnonoff" default="0" label="ALLOW_TO_THE_THEME_TO_MANAGE_MODULE_TITLE" description=""/>
+          <param name="improvedstartlevel" type="offlajnonoff" default="1" label="IMPROVED_START_LEVEL_HANDLING" description=""/>
+          <param name="startLevel" type="offlajntext" validation="int" default="0" size="2" label="START_LEVEL" description=""/>
+          <param name="endLevel" type="offlajntext" validation="int" default="0" size="2" label="END_LEVEL" description=""/>
+        </field>
+        <field name="animationTab" type="offlajntab" label="Animation properties">
+          <param name="easing" type="offlajneasing" default="dojo.fx.easing.cubicInOut" label="OPEN_ANIMATION_EASING" description=""/>
+          <param name="closeeasing" type="offlajneasing" default="dojo.fx.easing.cubicInOut" label="CLOSE_ANIMATION_EASING" description=""/>
+          <param name="duration" size="3" type="offlajntext" default="500" label="ACCORDION_DURATIONMS" description="THE_ACCORDION_EFFECT_DURATION_INMS">
+            <unit value="ms">ms</unit>
+          </param>
+          <param name="snaptobottom" type="offlajnonoff" default="0" label="SNAP_SUBMENUS_TO_BOTTOM" description=""/>
+        </field>
+        <field name="otherTab" type="offlajntab" label="Other module properties">
+          <param name="cache" type="hidden" default="0"/>
+          <param name="class_sfx" type="offlajntext" size="10" default="" label="MENU_CLASS_SUFFIX" description=""/>
+          <param name="moduleclass_sfx" type="offlajntext" size="10" default="" label="MODULE_CLASS_SUFFIX" description=""/>
+          <param name="admindebug" type="offlajnonoff" default="0" label="ADMIN_DEBUG_MODE" description=""/>
+          <param name="menu_images" type="offlajnonoff" default="0" label="SHOW_MENU_ICONS" description=""/>
+          <param name="menu_images_align" mode="" type="offlajnradio" default="0" label="MENU_ICON_ALIGNMENT" description="ALIGNMENT_OF_THE_MENU_ICONS">
+            <option value="0">LEFT</option>
+            <option value="1">RIGHT</option>
+            <option value="2">None</option>
+          </param>
+          <param name="menu_images_link" type="offlajnonoff" default="0" label="MENU_ICON_LINK" description=""/>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <creationDate>2012-02-29</creationDate>
+  <license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+  <releaseDate>2012-09-11</releaseDate>
+  <files>
+    <folder>classes</folder>
+    <folder>core</folder>
+    <folder>helpers</folder>
+    <filename>index.html</filename>
+    <folder>js</folder>
+    <folder>language</folder>
+    <filename module="mod_accordion_menu">mod_accordion_menu.php</filename>
+    <filename>mod_accordion_menu.xml</filename>
+    <folder>params</folder>
+    <folder>template</folder>
+    <folder>themes</folder>
+    <folder>types</folder>
+  </files>
+<hash>d9eeAT1wn5AwhYLiLuhuk7zlX09TYNzpDw3bMsP1vF0=</hash></install>

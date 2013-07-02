@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <params>
+    <param name="themeskin" type="skin" default="" size="5" label="Theme skin" description="">
+      <lightblue>       
+        <searchboxfont>*Latin|*Arial|*Arimo|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>d3d3d3cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>297dc9</closeimagecolor>
+        <searchbuttongradient>1-309dff-1186bb</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-297dc9-104f88</searchbuttonhovergradient>
+        <plugintitlegradient>1-E4EAEE-E4EAEE</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial|*Arimo|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>297dc9</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>828b91</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>aeb8bf</inactivepaginatorcolor>
+        <resultcolor>ffffff</resultcolor>
+        <resulttitlefont>*Latin|*Arial|*Arimo|*12px|*1|*0|*4e6170|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Arimo|*11px|*0|*0|*7794aa|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>e5e5e5</resultbordertopcolor>
+        <resultborderbottomcolor>c2d5e1</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-297dc9-104f88</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*1|*0|*4e6170|*1|*1px|*1px|*0px|*ffffff|*none|*none|*left|*inherit</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </lightblue>
+      <lightorange>
+        <searchboxfont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>d3d3d3cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>e05a00</closeimagecolor>
+        <searchbuttongradient>1-ef8c00-e05a00</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-fb7400-cb4400</searchbuttonhovergradient>
+        <plugintitlegradient>1-e4eaee-e4eaee</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>e05a00</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>4e6170</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>b6bec4</inactivepaginatorcolor>
+        <resultcolor>ffffff</resultcolor>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*4e6170|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*7794aa|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>e5e5e5</resultbordertopcolor>
+        <resultborderbottomcolor>c2d5e1</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-fb7400-cb4400</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*1|*0|*4e6170|*0|*1px|*1px|*0px|*ffffff|*none|*none|*left|*inherit</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </lightorange>
+      <lightred>
+        <searchboxfont>*Latin|*Arial|*Arimo|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>d3d3d3cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>b6443d</closeimagecolor>
+        <searchbuttongradient>1-d44f47-aa2b0d</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-b6443d-87220a</searchbuttonhovergradient>
+        <plugintitlegradient>1-E4EAEE-E4EAEE</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial|*Arimo|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>b6443d</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>828b91</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>aeb8bf</inactivepaginatorcolor>
+        <resultcolor>ffffff</resultcolor>
+        <resulttitlefont>*Latin|*Arial|*Arimo|*12px|*1|*0|*4e6170|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Arimo|*11px|*0|*0|*7794aa|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>e5e5e5</resultbordertopcolor>
+        <resultborderbottomcolor>c2d5e1</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-d44f47-aa2b0d</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*1|*0|*4e6170|*1|*1px|*1px|*0px|*ffffff|*none|*none|*left|*inherit</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </lightred>
+      <lightgreen>
+        <searchboxfont>*Latin|*Arial|*Arimo|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>d3d3d3cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>559222</closeimagecolor>
+        <searchbuttongradient>1-86bc35-559222</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-729e31-3a611a</searchbuttonhovergradient>
+        <plugintitlegradient>1-E4EAEE-E4EAEE</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial|*Arimo|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>559222</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>6b7377</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>b6bec4</inactivepaginatorcolor>
+        <resultcolor>ffffff</resultcolor>
+        <resulttitlefont>*Latin|*Arial|*Arimo|*12px|*1|*0|*4e6170|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Arimo|*11px|*0|*0|*7794aa|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>e5e5e5</resultbordertopcolor>
+        <resultborderbottomcolor>c2d5e1</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-729e31-3a611a</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*1|*0|*4e6170|*0|*1px|*1px|*0px|*ffffff|*none|*none|*left|*inherit</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </lightgreen>
+      <lightgray>
+        <searchboxfont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>d3d3d3cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>5e5e5e</closeimagecolor>
+        <searchbuttongradient>1-8b8b8b-5e5e5e</searchbuttongradient>
+        <searchbuttonimage>magnifier_white_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-646464-3b3b3b</searchbuttonhovergradient>
+        <plugintitlegradient>1-e4eaee-e4eaee</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>5e5e5e</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>555c60</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>b6bec4</inactivepaginatorcolor>
+        <resultcolor>ffffff</resultcolor>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*0px|*0px|*0px|*000000|*none|*none|*left</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*0|*0|*7794aa|*1|*0px|*0px|*0px|*000000|*none|*none|*left</resultintrotextfont>
+        <resultbordertopcolor>e5e5e5</resultbordertopcolor>
+        <resultborderbottomcolor>c2d5e1</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-646464-3b3b3b</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </lightgray> 
+      <lightpurple>
+        <searchboxfont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>d3d3d3cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>595790</closeimagecolor>
+        <searchbuttongradient>1-6c6ab2-3d396b</searchbuttongradient>
+        <searchbuttonimage>magnifier_white_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-595790-2e2b52</searchbuttonhovergradient>
+        <plugintitlegradient>1-e4eaee-e4eaee</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>595790</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>555c60</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>b6bec4</inactivepaginatorcolor>
+        <resultcolor>ffffff</resultcolor>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*0px|*0px|*0px|*000000|*none|*none|*left</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*0|*0|*7794aa|*1|*0px|*0px|*0px|*000000|*none|*none|*left</resultintrotextfont>
+        <resultbordertopcolor>e5e5e5</resultbordertopcolor>
+        <resultborderbottomcolor>c2d5e1</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-595790-2e2b52</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </lightpurple>   
+      <darkblue>
+        <searchboxfont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>188dd9cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>188dd9</closeimagecolor>
+        <searchbuttongradient>1-309dff-0d70cb</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-2c91ea-0a65b5</searchbuttonhovergradient>
+        <plugintitlegradient>1-309dff-0d70cb</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*FFFFFF|*1|*0px|*0px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>5b5b5b</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>5b5b5b</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>b6bcc1</inactivepaginatorcolor>
+        <resultcolor>222222</resultcolor>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*c2c2c2|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*8b898c|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>313131</resultbordertopcolor>
+        <resultborderbottomcolor>1f1f1f</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-3e3e3e-3e3e3e</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </darkblue>
+      <darkorange>
+        <searchboxfont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>e27b2fcc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>e27b2f</closeimagecolor>
+        <searchbuttongradient>1-e27b2f-cf4e1e</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-ce6f2b-bc451a</searchbuttonhovergradient>
+        <plugintitlegradient>1-e27b2f-cf4e1e</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*FFFFFF|*1|*0px|*0px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>5b5b5b</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>5b5b5b</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>bfbfbf</inactivepaginatorcolor>
+        <resultcolor>222222</resultcolor>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*c2c2c2|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*8b898c|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>313131</resultbordertopcolor>
+        <resultborderbottomcolor>1f1f1f</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-3e3e3e-3e3e3e</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>   
+      </darkorange>
+      <darkred>
+        <searchboxfont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>aa2b0dcc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>aa2b0d</closeimagecolor>
+        <searchbuttongradient>1-d44f47-aa2b0d</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-bc443e-91240b</searchbuttonhovergradient>
+        <plugintitlegradient>1-d44f47-aa2b0d</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*FFFFFF|*1|*0px|*0px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>5b5b5b</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>5b5b5b</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>aaaaaa</inactivepaginatorcolor>
+        <resultcolor>222222</resultcolor>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*c2c2c2|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*8b898c|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>313131</resultbordertopcolor>
+        <resultborderbottomcolor>1f1f1f</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-3e3e3e-3e3e3e</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </darkred>
+      <darkgreen>
+        <searchboxfont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>77ba01cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>77ba01</closeimagecolor>
+        <searchbuttongradient>1-77ba01-569801</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-6aa300-4a8201</searchbuttonhovergradient>
+        <plugintitlegradient>1-77ba01-569801</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*FFFFFF|*1|*0px|*0px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>5b5b5b</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>5b5b5b</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>a0a0a0</inactivepaginatorcolor>
+        <resultcolor>222222</resultcolor>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*c2c2c2|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*8b898c|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>313131</resultbordertopcolor>
+        <resultborderbottomcolor>1f1f1f</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-3e3e3e-3e3e3e</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>                     
+      </darkgreen>
+      <darkpurple>
+        <searchboxfont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>6c6ab2cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>6c6ab2</closeimagecolor>
+        <searchbuttongradient>1-6c6ab2-3d396b</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-5c5b9b-312e56</searchbuttonhovergradient>
+        <plugintitlegradient>1-6c6ab2-3d396b</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*FFFFFF|*1|*0px|*0px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>5b5b5b</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>5b5b5b</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>a0a0a0</inactivepaginatorcolor>
+        <resultcolor>222222</resultcolor>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*c2c2c2|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*8b898c|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>313131</resultbordertopcolor>
+        <resultborderbottomcolor>1f1f1f</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-3e3e3e-3e3e3e</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </darkpurple>
+      <darkgray>
+        <searchboxfont>*Latin|*Arial, Helvetica|*Vigra|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</searchboxfont>
+        <searchboxbg>ffffff</searchboxbg>
+        <searchboxactivebg>ffffff</searchboxactivebg>
+        <searchboxborder>474747cc</searchboxborder>
+        <ajaxloaderimage>fadinglines.gif</ajaxloaderimage>
+        <closeimage>close_icon.png</closeimage>
+        <closeimagecolor>474747</closeimagecolor>
+        <searchbuttongradient>1-474747-282828</searchbuttongradient>
+        <searchbuttonimage>magnifier_strong_mid.png</searchbuttonimage>
+        <searchbuttonhovergradient>1-302f2f-111111</searchbuttonhovergradient>
+        <plugintitlegradient>1-474747-282828</plugintitlegradient>
+        <plugintitlefont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*FFFFFF|*1|*0px|*0px|*0px|*ffffff|*none|*27px|*left</plugintitlefont>
+        <actualpaginatorimage>dot1.png</actualpaginatorimage>
+        <actualpaginatorcolor>5b5b5b</actualpaginatorcolor>
+        <hoverpaginatorimage>dot1.png</hoverpaginatorimage>
+        <hoverpaginatorcolor>5b5b5b</hoverpaginatorcolor>
+        <inactivepaginatorimage>dot1.png</inactivepaginatorimage>
+        <inactivepaginatorcolor>a0a0a0</inactivepaginatorcolor>
+        <resultcolor>222222</resultcolor>
+        <resulttitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*c2c2c2|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*8b898c|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resultintrotextfont>
+        <resultbordertopcolor>313131</resultbordertopcolor>
+        <resultborderbottomcolor>1f1f1f</resultborderbottomcolor>
+        <resulthovertitlefont>*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit</resulthoverintrotextfont>
+        <activeresultgradient>1-3e3e3e-3e3e3e</activeresultgradient>
+        <activeresultfntcolor>ffffff</activeresultfntcolor>
+        <catchooserfont>*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left</catchooserfont>
+        <boxshadow>1</boxshadow>
+        <rounded>1</rounded>
+      </darkgray>
+    </param>    
+
+    <param name="fontskin" type="skin" default="" size="5" label="Font style" description="">
+      <arial>
+        <searchboxfont>*Latin|*Arial|*Arial|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Arial|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <resulttitlefont>*Latin|*Arial|*Arial|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Arial|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+        <resulthovertitlefont>*Latin|*Arial|*Arial|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial|*Arial|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthoverintrotextfont>
+      </arial>
+      <arimo>
+        <searchboxfont>*Latin|*Arial|*Arimo|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Arimo|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <resulttitlefont>*Latin|*Arial|*Arimo|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Arimo|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+        <resulthovertitlefont>*Latin|*Arial|*Arimo|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial|*Arimo|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthoverintrotextfont>
+      </arimo>
+      <cabin>
+        <searchboxfont>*Latin|*Arial|*Cabin|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Cabin|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <resulttitlefont>*Latin|*Arial|*Cabin|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Cabin|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+        <resulthovertitlefont>*Latin|*Arial|*Cabin|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial|*Cabin|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthoverintrotextfont>
+      </cabin>
+      <magra>
+        <searchboxfont>*Latin|*Arial|*Magra|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Magra|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <resulttitlefont>*Latin|*Arial|*Magra|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Magra|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+        <resulthovertitlefont>*Latin|*Arial|*Magra|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial|*Magra|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthoverintrotextfont>
+      </magra>
+      <opensans>
+        <searchboxfont>*Latin|*Arial|*Open Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Open Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <resulttitlefont>*Latin|*Arial|*Open Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Open Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+        <resulthovertitlefont>*Latin|*Arial|*Open Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial|*Open Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthoverintrotextfont>
+      </opensans>
+      <ptsans>
+        <searchboxfont>*Latin|*Arial|*PT Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*PT Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <resulttitlefont>*Latin|*Arial|*PT Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*PT Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+        <resulthovertitlefont>*Latin|*Arial|*PT Sans|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial|*PT Sans|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthoverintrotextfont>
+      </ptsans>
+      <rosario>
+        <searchboxfont>*Latin|*Arial|*Rosario|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Rosario|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <resulttitlefont>*Latin|*Arial|*Rosario|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Rosario|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+        <resulthovertitlefont>*Latin|*Arial|*Rosario|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial|*Rosario|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthoverintrotextfont>
+      </rosario>
+      <vigra>
+        <searchboxfont>*Latin|*Arial|*Vigra|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</searchboxfont>
+        <plugintitlefont>*Latin|*Arial|*Vigra|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</plugintitlefont>
+        <resulttitlefont>*Latin|*Arial|*Vigra|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulttitlefont>
+        <resultintrotextfont>*Latin|*Arial|*Vigra|*11px|*0|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resultintrotextfont>
+        <resulthovertitlefont>*Latin|*Arial|*Vigra|*12px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthovertitlefont>
+        <resulthoverintrotextfont>*Latin|*Arial|*Vigra|*11px|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-|*-</resulthoverintrotextfont>
+      </vigra>
+    </param>    
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="searchboxfont" type="font" default="*Latin|*Arial|*Arimo|*12px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left" label="Search box font" description="" />
+    <param name="searchboxbg" type="color" default="ffffff" label="Search box background" description="" />
+    <param name="searchboxactivebg" type="color" default="ffffff" label="Search box active background" description="" />
+    <param name="searchboxborder" type="color" alpha="1" default="E4EAEEff" label="Search box border color" description="" />
+    
+    <param name="ajaxloaderimage" type="imageradio" default="fadinglines.gif" label="Animation for loading" description="" directory="/images/loaders" exclude="" stripext="" />
+    <param name="closeimage" type="imageradio" default="close_icon.png" label="Image for close-button" description="" directory="/images/close" exclude="" stripext="" />
+    <param name="closeimagecolor" type="color" default="188dd9" size="7" label="Close image color" description="" />
+		
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="searchbuttongradient" type="gradient" default="1-47c5ed-188dd9" size="15" label="The search button background gradient color" description="" />
+    <param name="searchbuttonimage" type="imageradio" default="magnifier_strong_mid.png" label="Image for search button" description="" directory="/images/search_button" exclude="" stripext="" />
+    <param name="searchbuttonhovergradient" type="gradient" default="1-47c5ed-199aea" size="15" label="The search button background gradient hover color" description="" />
+		
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="plugintitlegradient" type="gradient" default="1-E4EAEE-E4EAEE" size="15" label="Plugin title background gradient color" description="" />
+    <param name="plugintitlefont" type="font" default="*Latin|*Arial|*Arimo|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left" label="Plugin title font" description="" />
+
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="actualpaginatorimage" type="imageradio" default="dot1.png" label="Image for actual paginator state" description="" directory="/images/paginators" exclude="" stripext="" />
+    <param name="actualpaginatorcolor" type="color" default="188dd9" size="15" label="Actual paginator color" description="" />
+    <param name="hoverpaginatorimage" type="imageradio" default="dot1.png" label="Image for hover paginator state" description="" directory="/images/paginators" exclude="" stripext="" />
+    <param name="hoverpaginatorcolor" type="color" default="565656" size="15" label="Hover paginator color" description="" />
+    <param name="inactivepaginatorimage" type="imageradio" default="dot1.png" label="Image for inactive paginator state" description="" directory="/images/paginators" exclude="" stripext="" />
+    <param name="inactivepaginatorcolor" type="color" default="999999" size="15" label="Inactive paginator color" description="" />
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="resultcolor" type="color" default="FFFFFF" size="15" label="Result-element background color" description="" />
+    <param name="resulttitlefont" type="font" default="*Latin|*Arial|*Arimo|*12px|*1|*0|*4e6170|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit" label="Result title font" description="" />
+    <param name="resultintrotextfont" type="font" default="*Latin|*Arial|*Arimo|*11px|*0|*0|*7794aa|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit" label="Result introtext font" description="" />
+    <param name="resultbordertopcolor" type="color" default="e5e5e5" size="15" label="Result-element border-top color" description="" />
+    <param name="resultborderbottomcolor" type="color" default="c2d5e1" size="15" label="Result-element border-bottom color" description="" />
+
+    <param name="resulthovertitlefont" type="font" default="*Latin|*Arial, Helvetica|*Arimo|*12px|*1|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit" label="Result title hover font" description="" />
+    <param name="resulthoverintrotextfont" type="font" default="*Latin|*Arial, Helvetica|*Arimo|*11px|*0|*0|*ffffff|*0|*0px|*0px|*0px|*000000|*none|*none|*left|*inherit" label="Result introtext hover font" description="" />
+    
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="activeresultgradient" type="gradient" default="1-188dd9-18517d" size="15" label="Hover, Active result-element background gradient color" description="" />
+    <param name="activeresultfntcolor" type="color" default="FFFFFF" size="15" label="Hover, Active result-element font color" description="" />
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="catchooserfont" type="font" default="*Latin|*Arial, Helvetica|*Vigra|*11px|*1|*0|*4E6170|*1|*1px|*1px|*0px|*ffffff|*none|*27px|*left" label="Category chooser font" description="" />
+
+    <param name="boxshadow" type="radio" default="1" label="Box shadow" description="">
+		  <option value="1">Yes</option>
+		  <option value="0">No</option>
+		</param>
+		
+		<param name="rounded" type="radio" default="1" label="Rounded Corners" description="">
+		  <option value="1">Yes</option>
+		  <option value="0">No</option>
+		</param>
+  </params>
+</theme>

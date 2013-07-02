@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_AKLAZY_TITLE</name>
+	<author>Nicholas K. Dionysopoulos</author>
+	<authorEmail>nicholas@dionysopoulos.me</authorEmail>
+	<authorUrl>http://www.akeebabackup.com</authorUrl>
+	<copyright>Copyright (c)2010-2013 Nicholas K. Dionysopoulos</copyright>
+	<license>GNU General Public License version 3, or later</license>
+	<creationDate>2013-03-08</creationDate>
+	<version>3.7.GOODBYE</version>
+	<description>THIS PLUGIN IS NOT SUPPORTED SINCE MAY 2011. We warned our users that it would be removed. Here we are now. In this version it has been modified to do ABSOLUTELY NOTHING. It will be completely removed in Akeeba Backup 3.9.</description>
+	<files>
+		<filename plugin="aklazy">aklazy.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_aklazy.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_aklazy.sys.ini</language>
+	</languages>
+</extension>

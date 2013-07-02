@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+		<field name="id" type="hidden" />
+
+		<field name="ordering"
+			type="text"
+			size="3"
+			label="COM_CSVI_TEMPLATE_FIELD_ORDERING_LABEL"
+			description="COM_CSVI_TEMPLATE_FIELD_ORDERING_DESC"
+			required="false"
+			class="inputbox" />
+		
+		<field name="field_name"
+			type="CsviAvailableFields"
+			size="1"
+			label="COM_CSVI_TEMPLATE_FIELD_NAME_LABEL"
+			description="COM_CSVI_TEMPLATE_FIELD_NAME_DESC"
+			required="true"
+			class="inputbox"
+			default="">
+			<option value="">COM_CSVI_MAKE_CHOICE</option>
+		</field>
+		
+		<field name="file_field_name"
+			type="text"
+			size="25"
+			label="COM_CSVI_TEMPLATE_FILE_FIELD_NAME_LABEL"
+			description="COM_CSVI_TEMPLATE_FILE_FIELD_NAME_DESC"
+			required="false"
+			class="inputbox" />
+			
+		<field name="template_field_name"
+			type="CsviAvailableFields"
+			size="1"
+			label="COM_CSVI_TEMPLATE_TEMPLATE_FIELD_NAME_LABEL"
+			description="COM_CSVI_TEMPLATE_TEMPLATE_FIELD_NAME_DESC"
+			required="false"
+			class="inputbox" 
+			default="">
+			<option value="">COM_CSVI_MAKE_CHOICE</option>
+		</field>
+			
+		<field name="column_header"
+			type="text"
+			size="25"
+			label="COM_CSVI_TEMPLATE_FIELD_COLUMN_HEADER_LABEL"
+			description="COM_CSVI_TEMPLATE_FIELD_COLUMN_HEADER_DESC"
+			required="false"
+			class="inputbox" />
+			
+		<field name="default_value"
+			type="text"
+			size="25"
+			label="COM_CSVI_TEMPLATE_FIELD_DEFAULT_VALUE_LABEL"
+			description="COM_CSVI_TEMPLATE_FIELD_DEFAULT_VALUE_DESC"
+			required="false"
+			class="inputbox" />
+			
+		<field name="process"
+			type="list"
+			size="1"
+			label="COM_CSVI_TEMPLATE_FIELD_PROCESS_LABEL"
+			description="COM_CSVI_TEMPLATE_FIELD_PROCESS_DESC"
+			required="true"
+			class="inputbox"
+			default="1">
+			<option value="1">COM_CSVI_YES</option>
+			<option value="0">COM_CSVI_NO</option>
+		</field>
+		
+		<field name="combine"
+			type="CsviCombineFields"
+			size="10"
+			label="COM_CSVI_TEMPLATE_COMBINE_LABEL"
+			description="COM_CSVI_TEMPLATE_COMBINE_DESC"
+			required="false"
+			class="inputbox"
+			multiple="true"
+			default="">
+			<option value="">COM_CSVI_EXPORT_DONT_USE</option>
+		</field>
+		
+		<field name="combine_char"
+			type="text"
+			size="2"
+			label="COM_CSVI_TEMPLATE_COMBINE_CHAR_LABEL"
+			description="COM_CSVI_TEMPLATE_COMBINE_CHAR_DESC"
+			required="false"
+			class="inputbox" />
+		
+		<field name="sort"
+			type="list"
+			size="1"
+			label="COM_CSVI_TEMPLATE_FIELD_SORT_LABEL"
+			description="COM_CSVI_TEMPLATE_FIELD_SORT_DESC"
+			required="false"
+			class="inputbox"
+			default="0">
+			<option value="1">COM_CSVI_YES</option>
+			<option value="0">COM_CSVI_NO</option>
+		</field>
+		
+		<field name="replacement"
+			type="CsviReplacements"
+			size="10"
+			label="COM_CSVI_TEMPLATE_REPLACEMENT_NAME_LABEL"
+			description="COM_CSVI_TEMPLATE_REPLACEMENT_NAME_DESC"
+			required="false"
+			class="inputbox"
+			multiple="true"
+			default="">
+			<option value="">COM_CSVI_EXPORT_DONT_USE</option>
+		</field>
+		
+		<field name="cdata"
+			type="list"
+			size="1"
+			label="COM_CSVI_TEMPLATE_USE_CDATA_LABEL"
+			description="COM_CSVI_TEMPLATE_USE_CDATA_DESC"
+			required="false"
+			class="inputbox"
+			default="1">
+			<option value="1">COM_CSVI_YES</option>
+			<option value="0">COM_CSVI_NO</option>
+		</field>
+	</fields>
+</form>

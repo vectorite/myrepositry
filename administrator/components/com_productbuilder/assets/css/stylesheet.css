@@ -1,0 +1,340 @@
+@charset "utf-8";
+/**
+* product builder component	
+* @version $Id:1 css/stylesheet.css  21-Sept-2010 sakisTerz $
+* @author Sakis Terz (sakis@breakDesigns.net)
+* @copyright	Copyright (C) 2010 breakDesigns.net. All rights reserved
+* @license	GNU/GPL v2
+*/
+.icon-48-pb {
+	background: url(../images/pb_logo_48.png) left top no-repeat;
+}
+/*Dashboard*/
+#pbinfo_wrapper {
+	border: 1px solid #bbb;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 15px;
+	padding: 15px
+}
+
+#pbversion_info {
+	min-height: 50px;
+}
+
+.pbversion {
+	margin-bottom: 5px;
+}
+
+#pboutdated {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+#pbupdated {
+	color: #007236;
+}
+
+.pbversion_no {
+	font-size:1.3em;
+	color:#f26522;
+}
+
+.pbversion_label {
+	
+}
+
+#pbupdate_toolbar {
+	display: none;
+	margin-top: 15px;
+}
+
+.pb_update_btn {
+	display: block;
+	background: url(../images/edit_btn.jpg) top left repeat-x;
+	height: 20px;
+	padding: 0px 5px;
+	line-height: 20px;
+	color: #000;
+	border: 1px solid #bbb;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 30%;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.pb_info {
+	width: 100%;
+}
+
+.footer {
+	margin-top: 15px;
+	text-align: right;
+}
+
+.prd_filters {
+	float: left;
+	margin-right: 10px;
+}
+
+.bund_img {
+	border: 1px solid #cfcfcf;
+	margin-bottom: 5px;
+}
+
+.prd_order {
+	float: right;
+	margin-right: 10px;
+}
+
+#loader {
+	width: 43px;
+	height: 11px;
+	padding: 10px;
+	border: 1px solid #888888;
+	position: absolute;
+	top: 48%;
+	left: 48%;
+	background: #eeeeee url(../images/loader.gif) center center no-repeat;
+	display: none;
+	margin-right: 10px;
+}
+
+/*the product details box*/
+.prod_descr {
+	padding: 10px;
+	border: 1px solid #888;
+	background-color: #efefef;
+	position: absolute;
+	left: 30%;
+	width: 0px;
+	display: none;
+}
+
+.details_head {
+	background: #888888;
+	color: #ffffff;
+	margin-bottom: 5px;
+}
+
+#hide {
+	display: block;
+	float: right;
+	margin-right: 10px;
+	color: #ffffff;
+}
+
+#hide:hover {
+	cursor: pointer;
+}
+
+.manuf {
+	margin-top: 5px;
+}
+
+.mflabel {
+	font-weight: bold;
+}
+
+.child_prod {
+	background-color: #FFFFE0;
+}
+
+.expandBtn {
+	width: 13px;
+	height: 13px;
+	background: url(../images/plus.png) center center no-repeat;
+}
+
+.childAtrWrapper {
+	border: 1px solid #6666FF;
+}
+
+.mytoolbar {
+	width: 100%;
+	float: right;
+	clear: both;
+	margin-bottom: 15px;
+}
+
+.a_mytoolbar {
+	width: 32px;
+	padding: 5px;
+	float: right;
+	border: 1px solid #cccccc;
+}
+
+.pb_icon-32-apply {
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: url(../images/icon-32-apply.png) left top no-repeat;
+}
+
+.load_r {
+	background: url(../images/j_button2_load.png) 100% 0 no-repeat;
+}
+
+.load_r_inactive {
+	background: url(../images/j_button2_load_inact.png) 100% 0 no-repeat;
+}
+
+#system-message dd ul {
+	color: #0055bb;
+	margin-bottom: 10px;
+	list-style-type: none;
+	list-style-image: none;
+	list-style-position: outside;
+	padding: 10px;
+	border: 3px solid #84a7db;
+}
+
+#system-message dt.message {
+	display: none;
+}
+
+/*Compatibility view*/
+.tagList li input {
+	margin: 0px;
+}
+
+.tag_selection {
+	float: none;
+	display: inline;
+	margin-left: 3px;
+	font-size: 12px;
+	font-weight: bold;
+}
+/*--tags drop down-- */
+.editTags {
+	display: block;
+	background: url(../images/edit_btn.jpg) top left repeat-x;
+	height: 15px;
+	padding: 0px 5px;
+	line-height: 15px;
+	color: #000;
+	border: 1px solid #bbb;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: center;
+}
+
+.editTags:hover {
+	text-decoration: none;
+}
+
+.tags {
+	position: absolute;
+	display: none;
+	border: 1px solid #888888;
+	background: #ffffff;
+	padding: 0px 10px;
+	right: 60px;
+}
+
+.tags ul {
+	list-style: none;
+	margin: 5px 0px;
+	padding: 0px;
+}
+
+.hideTags {
+	padding: 0 3px;
+	cursor: pointer;
+	margin-left: 80px;
+	background: #7b7b7b;
+	color: #fff;
+}
+
+.updateTags {
+	margin-top: 10px;
+	margin-left: 50px;
+	font-size: 13px;
+}
+
+.tagnames {
+	color: #ffffff;
+	float: left;
+	padding: 1px 5px;
+	margin: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#pb-update:hover {
+	background-position: left bottom;
+}
+
+#comp_header {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.editablestate {
+	height: 16px;
+	width: 16px;
+}
+
+.editable {
+	background: url(../images/editable_state.png) center top no-repeat;
+}
+
+.noneditable {
+	background: url(../images/editable_state.png) center bottom no-repeat;
+}
+
+/*Config view*/
+.slider {
+	margin-top: 8px;
+	float: left;
+	background: #CCC;
+	height: 10px;
+	width: 100px;
+}
+
+.slider .knob_border_radius {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #000;
+	width: 15px;
+	height: 10px;
+}
+/*help*/
+#help_icons_wrapper {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.help_links {
+	font-size: 1em;
+	float: left;
+	margin-right: 20px;
+	width: 64px;
+	text-align: center;
+}
+
+.help_icon {
+	width: 64px;
+	height: 64px;
+}
+
+#manual_ic {
+	background: url(../images/manual_icon.png) center center no-repeat;
+}
+
+#ticket_ic {
+	background: url(../images/ticket_icon.png) center center no-repeat;
+}
+
+#changelog_ic {
+	background: url(../images/changelog.png) center center no-repeat;
+}
+
+#knbase_ic {
+	background: url(../images/knbase.png) center center no-repeat;
+}

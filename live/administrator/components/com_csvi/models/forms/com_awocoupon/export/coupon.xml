@@ -1,0 +1,66 @@
+<fields name="general">
+	<field name="language"
+		type="language"
+		size="1"
+		label="COM_CSVI_LANGUAGE_LABEL"
+		description="COM_CSVI_LANGUAGE_DESC"/>
+
+	<field name="category_separator"
+		type="text"
+		size="2"
+		label="COM_CSVI_CATEGORY_SEPARATOR_LABEL"
+		description="COM_CSVI_CATEGORY_SEPARATOR_DESC"
+		default="/" />
+</fields>
+	
+<fields name="coupon">
+	<field name="function_type"
+		type="list"
+		size="1"
+		label="COM_CSVI_EXPORT_AWO_FUNCTION_TYPE_LABEL"
+		description="COM_CSVI_EXPORT_AWO_FUNCTION_TYPE_DESC"
+		default="">
+		<option value="">COM_CSVI_EXPORT_DONT_USE</option>
+		<option value="coupon">COM_CSVI_AWO_COUPON</option>
+		<option value="giftcert">COM_CSVI_AWO_GIFTCERT</option>
+	</field>
+	
+	<field name="function_type2"
+		type="list"
+		size="1"
+		label="COM_CSVI_EXPORT_AWO_FUNCTION_TYPE2_LABEL"
+		description="COM_CSVI_EXPORT_AWO_FUNCTION_TYPE2_DESC"
+		default="">
+		<option value="">COM_CSVI_EXPORT_DONT_USE</option>
+		<option value="product">COM_CSVI_AWO_PRODUCT</option>
+		<option value="category">COM_CSVI_AWO_CATEGORY</option>
+		<option value="manufacturer">COM_CSVI_AWO_MANUFACTURER</option>
+		<option value="vendor">COM_CSVI_AWO_VENDOR</option>
+		<option value="shipping">COM_CSVI_AWO_SHIPPING</option>
+		<option value="parent">COM_CSVI_AWO_PARENT</option>
+	</field>
+	
+	<field name="coupon_value_type" 
+		type="list" 
+		size="1"
+		label="COM_CSVI_EXPORT_COUPON_VALUE_TYPE_LABEL" 
+		description="COM_CSVI_EXPORT_COUPON_VALUE_TYPE_DESC"
+		default="">
+		<option value="">COM_CSVI_EXPORT_DONT_USE</option>
+		<option value="empty">COM_CSVI_AWO_EMPTY</option>
+		<option value="percent">COM_CSVI_AWO_PERCENT</option>
+		<option value="amount">COM_CSVI_AWO_AMOUNT</option>
+	</field>
+	
+	<field name="discount_type" 
+		type="list" 
+		size="1"
+		label="COM_CSVI_EXPORT_AWO_COUPON_DISCOUNT_TYPE_LABEL" 
+		description="COM_CSVI_EXPORT_AWO_COUPON_DISCOUNT_TYPE_DESC"
+		default="">
+		<option value="">COM_CSVI_EXPORT_DONT_USE</option>
+		<option value="empty">COM_CSVI_AWO_EMPTY</option>
+		<option value="specific">COM_CSVI_AWO_SPECIFIC</option>
+		<option value="overall">COM_CSVI_AWO_OVERALL</option>
+	</field>
+</fields>

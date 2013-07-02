@@ -1,0 +1,80 @@
+/*------------------------------------------------------------------------
+ # Module - Flexible - Virtuemart Zoom Effect on Product Page - Version 1.0
+ # ------------------------------------------------------------------------
+ # Copyright (C) 2011 Flexible Web Design. All Rights Reserved.
+ # @license http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ # Author: Flexible Web Design Team
+ # Websites: http://www.flexiblewebdesign.com
+ -------------------------------------------------------------------------*/
+
+ 
+		
+	ul#items1, ul#items2, ul#items3, ul#items4{		
+		margin:0 25px 0 25px;;
+		width:100%;
+		overflow:hidden;
+		height:340px;
+		}
+	ul#items1 li, ul#items2 li, ul#items3 li, ul#items4 li{
+		list-style:none;
+		float:left;
+		 width:26%;
+		overflow:hidden;
+		margin:15px;
+		 
+		 
+		text-align:center;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	 border-radius: 5px 5px 5px 5px;
+	margin:10px;
+	padding:3px;
+	background-color: #e0e0e0;
+    background-image: -moz-linear-gradient(center top , #ffffff 0pt, #efefef 100%);
+	/* Safari 4-5, Chrome 1-9 */ background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#efefef)); 
+	/* Safari 5.1, Chrome 10+ */ background: -webkit-linear-gradient(top, #ffffff, #efefef); 
+	/* Firefox 3.6+ */ background: -moz-linear-gradient(top, #ffffff, #efefef); 
+	/* IE 10 */ background: -ms-linear-gradient(top, #ffffff, #efefef); 
+	/* Opera 11.10+ */ background: -o-linear-gradient(top, #ffffff, #efefef);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#efefef)";
+	 
+	padding:20px 10px 20px 10px;	
+		}
+		ul#items1 li:hover, ul#items2 li:hover, ul#items3 li:hover, ul#items4 li:hover {
+			background-image:none;
+			background-color:#FFFFFF;
+		}
+	ul#items1 li:hover, ul#items2 li:hover, ul#items3 li:hover, ul#items4 li:hover{color:#333;}
+	ul#items1 li .image, ul#items2 li .image, ul#items3 li .image, ul#items4 li .image{
+		margin:20px 20px 10px 20px;
+		width:220px;
+		height:150px;
+		overflow:hidden;
+		border:2px solid #fff;
+		-moz-box-shadow:0 1px 1px #bbb;
+		-webkit-box-shadow:0 1px 1px #bbb;
+		box-shadow:0 1px 1px #bbb;
+		}	
+	 
+	 
+	ol#pagination1, ol#pagination2, ol#pagination3, ol#pagination4{position:relative;text-align:center;}
+	ol#pagination1 li,ol#pagination2 li, ol#pagination3 li, ol#pagination4 li{
+		display:inline-block;
+		width:16px;
+		height:16px;
+		background:url(bg_buttons.png) no-repeat 0 0;
+		text-align:left;
+		text-indent:-8000px;
+		list-style:none;
+		cursor:pointer;
+		margin:0 2px;
+		}
+	ol#pagination1 li:hover, ol#pagination2 li:hover, ol#pagination3 li:hover, ol#pagination4 li:hover{background:url(bg_buttons.png) no-repeat 0 -16px;}
+	ol#pagination1 li.current, ol#pagination2 li.current, ol#pagination3 li.current, ol#pagination4 li.current{color:#f00;font-weight:bold;background:url(bg_buttons.png) no-repeat 0 -32px;}
+	ol#pagination1 li.prev, ol#pagination1 li.next, ol#pagination2 li.prev, ol#pagination2 li.next, ol#pagination3 li.prev, ol#pagination3 li.next, ol#pagination4 li.prev, ol#pagination4 li.next{
+		position:absolute;
+		top:-190px;
+		}
+	ol#pagination1 li.prev, ol#pagination2 li.prev, ol#pagination3 li.prev, ol#pagination4 li.prev{left:0px;background:url(bg_buttons.png) no-repeat 0 -64px;}
+	ol#pagination1 li.next, ol#pagination2 li.next, ol#pagination3 li.next, ol#pagination4 li.next{right:-10px;background:url(bg_buttons.png) no-repeat 0 -48px;}
+	
+/* // content */

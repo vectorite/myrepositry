@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - Workforce Blurb</name>
+	<author>The Thinkery</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright (C) 2012 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>2.0.1</version>
+	<description>Show brief blurb about a Work Force employee with a link to view their full profile. To use, enter the Work Force employee id or comma separated list of employee ids in the following format in your article content - {wf_employee 1,2,3}</description>
+	<files>
+		<filename plugin="wfblurb">wfblurb.php</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">language/en-GB.plg_content_wfblurb.ini</language>
+    </languages>
+    <config />
+</extension>

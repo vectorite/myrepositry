@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="system" method="upgrade" client="site">
+	<name>System - ARI Sexy Lightbox</name>
+	<author>ARI Soft</author>
+	<creationDate>June 2011</creationDate>
+	<copyright>ARI Soft</copyright>
+	<license>GNU/GPL license (http://www.gnu.org/copyleft/gpl.html)</license>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>1.8.33</version>
+	<description>ARI_SEXY_LIGHTBOX_SYSTEM_PLUGIN</description>
+	<files>
+		<filename plugin="arisexylightbox">arisexylightbox.php</filename>
+		<folder>arisexylightbox/</folder>
+		<folder>help/</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_arisexylightbox.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_arisexylightbox/includes/fields">
+				<field name="loadType" type="list" default="always" label="ASEXYBOX_PARAM_LABEL_LOADTYPE" description="ASEXYBOX_PARAM_DESCR_LOADTYPE">
+		  			<option value="always">ASEXYBOX_LABEL_ALWAYS</option> 
+		  			<option value="auto">ASEXYBOX_LABEL_AUTO</option> 
+		  		</field>
+		  		<field name="loadJQueryMethod" type="list" default="google_cdn" label="ASEXYBOX_LOADJQUERYMETHOD_LABEL" description="ASEXYBOX_LOADJQUERYMETHOD_DESCR">
+		  			<option value="google_cdn">ASEXYBOX_GOOGLECDN</option> 
+		  			<option value="local">ASEXYBOX_LOCALCOPY</option> 
+		  		</field>
+		  		<field name="jQueryVer" type="list" default="1.4.4" label="ASEXYBOX_PARAM_LABEL_JQUERYVER" description="ASEXYBOX_PARAM_DESCR_JQUERYVER">
+		  			<option value="1.3.0">1.3.0</option> 
+		  			<option value="1.3.1">1.3.1</option>
+		  			<option value="1.3.2">1.3.2</option>
+		  			<option value="1.4.0">1.4.0</option>
+		  			<option value="1.4.1">1.4.1</option>
+		  			<option value="1.4.2">1.4.2</option>
+		  			<option value="1.4.3">1.4.3</option>
+		  			<option value="1.4.4">1.4.4</option>
+		  		</field>
+				<field name="includeJQuery" type="list" default="1" label="ASEXYBOX_PARAM_LABEL_INCJQUERY" description="ASEXYBOX_PARAM_DESCR_INCJQUERY">
+		  			<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+				<field name="noConflict" type="list" default="1" label="ASEXYBOX_PARAM_LABEL_NOCONFLICT" description="ASEXYBOX_PARAM_DESCR_NOCONFLICT">
+		  			<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+		  		<field name="opt_showDownloadLink" type="list" default="0" label="ASEXYBOX_PARAM_LABEL_SHOWDOWNLOADLINK" description="ASEXYBOX_PARAM_DESCR_SHOWDOWNLOADLINK">
+  					<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+		  		<field name="opt_hoverDownloadLink" type="list" default="1" label="ASEXYBOX_PARAM_LABEL_HOVERDOWNLOADLINK" description="ASEXYBOX_PARAM_DESCR_HOVERDOWNLOADLINK">
+		  			<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+		  		<field name="opt_downloadLinkTitle" type="text" size="50" default="Open the image in new window" label="ASEXYBOX_PARAM_LABEL_DOWNLOADMESSAGE" description="ASEXYBOX_PARAM_DESCR_DOWNLOADMESSAGE" />
+		  		<field name="opt_disableRightClick" type="list" default="0" label="ASEXYBOX_PARAM_LABEL_DISABLERIGHTCLICK" description="ASEXYBOX_PARAM_DESCR_DISABLERIGHTCLICK">
+		  			<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+		  		<field name="opt_enableShow" type="list" default="0" label="ASEXYBOX_PARAM_LABEL_ENABLESHOW" description="ASEXYBOX_PARAM_DESCR_ENABLESHOW">
+		  			<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+		  		<field name="opt_pauseDuration" type="text" size="6" default="5000" label="ASEXYBOX_PARAM_LABEL_PAUSEDURATION" description="ASEXYBOX_PARAM_DESCR_PAUSEDURATION" />
+		  		<field name="opt_autoStart" type="list" default="0" label="ASEXYBOX_PARAM_LABEL_AUTOSLIDESHOW" description="ASEXYBOX_PARAM_DESCR_AUTOSLIDESHOW">
+		  			<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+		  		<field name="opt_continiousShow" type="list" default="0" label="ASEXYBOX_PARAM_LABEL_CONTSHOW" description="ASEXYBOX_PARAM_DESCR_CONTSHOW">
+		  			<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+				<field name="opt_continious" type="list" default="0" label="ASEXYBOX_PARAM_LABEL_CONTINIOUS" description="ASEXYBOX_PARAM_DESCR_CONTINIOUS">
+		  			<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+		  		<field name="opt_zIndex" type="text" size="6" default="32000" label="ASEXYBOX_PARAM_LABEL_ZINDEX" description="ASEXYBOX_PARAM_DESCR_ZINDEX" />
+		  		<field name="opt_color" type="list" default="black" label="ASEXYBOX_PARAM_LABEL_THEME" description="ASEXYBOX_PARAM_DESCR_THEME">
+		  			<option value="white">ASEXYBOX_LABEL_WHITE</option> 
+		  			<option value="black">ASEXYBOX_LABEL_BLACK</option>
+		  			<option value="blanco">ASEXYBOX_LABEL_SPAINWHITE</option> 
+		  			<option value="negro">ASEXYBOX_LABEL_SPAINBLACK</option>
+					<option value="blanc">ASEXYBOX_LABEL_FRENCHWHITE</option> 
+		  			<option value="noir">ASEXYBOX_LABEL_FRENCHBLACK</option>
+		  			<option value="fancy_white">ASEXYBOX_LABEL_FANCYWHITE</option>
+		  			<option value="fancy_black">ASEXYBOX_LABEL_FANCYBLACK</option>
+		  			<option value="old_white">ASEXYBOX_LABEL_OLDWHITE</option>
+		  			<option value="old_black">ASEXYBOX_LABEL_OLDBLACK</option>
+		  		</field>
+		  		<field name="opt_emergefrom" type="list" default="top" label="ASEXYBOX_PARAM_LABEL_EMERGEFROM" description="ASEXYBOX_PARAM_DESCR_EMERGEFROM">
+		  			<option value="none">ASEXYBOX_LABEL_NONE</option> 
+		  			<option value="bottom">ASEXYBOX_LABEL_BOTTOM</option> 
+		  			<option value="top">ASEXYBOX_LABEL_TOP</option>
+					<option value="left">ASEXYBOX_LABEL_LEFT</option> 
+		  			<option value="right">ASEXYBOX_LABEL_RIGHT</option>
+		  		</field>
+		  		<field name="opt_showDuration" type="text" size="6" default="200" label="ASEXYBOX_PARAM_LABEL_SHOWDURATION" description="ASEXYBOX_PARAM_DESCR_SHOWDURATION" />
+		  		<field name="opt_closeDuration" type="text" size="6" default="400" label="ASEXYBOX_PARAM_LABEL_CLOSEDURATION" description="ASEXYBOX_PARAM_DESCR_CLOSEDURATION" />
+		  		<field name="opt_moveDuration" type="text" size="6" default="1000" label="ASEXYBOX_PARAM_LABEL_MOVEDURATION" description="ASEXYBOX_PARAM_DESCR_MOVEDURATION" />
+		  		<field name="opt_moveEffect" type="list" default="easeInOutBack" label="ASEXYBOX_PARAM_LABEL_MOVEEFFECT" description="ASEXYBOX_PARAM_DESCR_MOVEEFFECT">
+		  			<option value="swing">ASEXYBOX_LABEL_SWING</option>
+		  			<option value="easeInQuad">ASEXYBOX_LABEL_EASYINQUAD</option>
+		  			<option value="easeOutQuad">ASEXYBOX_LABEL_EASYOUTQUAD</option>
+		  			<option value="easeInOutQuad">ASEXYBOX_LABEL_EASYINOUTQUAD</option>
+		  			<option value="easeInCubic">ASEXYBOX_LABEL_EASYINCUBIC</option>
+		  			<option value="easeOutCubic">ASEXYBOX_LABEL_EASYOUTCUBIC</option>
+		  			<option value="easeInOutCubic">ASEXYBOX_LABEL_EASYINOUTCUBIC</option>
+		  			<option value="easeInQuart">ASEXYBOX_LABEL_EASYINQUART</option>
+		  			<option value="easeOutQuart">ASEXYBOX_LABEL_EASYOUTQUART</option>
+		  			<option value="easeInOutQuart">ASEXYBOX_LABEL_EASYINOUTQUART</option>
+		  			<option value="easeInQuint">ASEXYBOX_LABEL_EASYINQUINT</option>
+		  			<option value="easeOutQuint">ASEXYBOX_LABEL_EASYOUTQUINT</option>
+		  			<option value="easeInOutQuint">ASEXYBOX_LABEL_EASYINOUTQUINT</option>
+		  			<option value="easeInSine">ASEXYBOX_LABEL_EASYINSINE</option>
+		  			<option value="easeOutSine">ASEXYBOX_LABEL_EASYOUTSINE</option>
+		  			<option value="easeInOutSine">ASEXYBOX_LABEL_EASYINOUTSINE</option>
+		  			<option value="easeInExpo">ASEXYBOX_LABEL_EASYINEXPO</option>
+		  			<option value="easeOutExpo">ASEXYBOX_LABEL_EASYOUTEXPO</option>
+		  			<option value="easeInOutExpo">ASEXYBOX_LABEL_EASYINOUTEXPO</option>
+		  			<option value="easeInCirc">ASEXYBOX_LABEL_EASYINCIRC</option>
+		  			<option value="easeOutCirc">ASEXYBOX_LABEL_EASYOUTCIRC</option>
+		  			<option value="easeInOutCirc">ASEXYBOX_LABEL_EASYINOUTCIRC</option>
+		  			<option value="easeInElastic">ASEXYBOX_LABEL_EASYINELASTIC</option>
+		  			<option value="easeOutElastic">ASEXYBOX_LABEL_EASYOUTELASTIC</option>
+		  			<option value="easeInOutElastic">ASEXYBOX_LABEL_EASYINOUTELASTIC</option>
+		  			<option value="easeInBack">ASEXYBOX_LABEL_EASYINBACK</option>
+		  			<option value="easeOutBack">ASEXYBOX_LABEL_EASYOUTBACK</option>
+		  			<option value="easeInOutBack">ASEXYBOX_LABEL_EASYINOUTBACK</option>
+		  			<option value="easeInBounce">ASEXYBOX_LABEL_EASYINBOUNCE</option>
+		  			<option value="easeOutBounce">ASEXYBOX_LABEL_EASYOUTBOUNCE</option>
+		  			<option value="easeInOutBounce">ASEXYBOX_LABEL_EASYINOUTBOUNCE</option>
+		  		</field>
+		  		<field name="opt_resizeDuration" type="text" size="6" default="1000" label="ASEXYBOX_PARAM_LABEL_RESIZEDURATION" description="ASEXYBOX_PARAM_DESCR_RESIZEDURATION" />
+		  		<field name="opt_resizeEffect" type="list" default="easeInOutBack" label="ASEXYBOX_PARAM_LABEL_RESIZEEFFECT" description="ASEXYBOX_PARAM_DESCR_RESIZEEFFECT">
+		  			<option value="swing">ASEXYBOX_LABEL_SWING</option>
+		  			<option value="easeInQuad">ASEXYBOX_LABEL_EASYINQUAD</option>
+		  			<option value="easeOutQuad">ASEXYBOX_LABEL_EASYOUTQUAD</option>
+		  			<option value="easeInOutQuad">ASEXYBOX_LABEL_EASYINOUTQUAD</option>
+		  			<option value="easeInCubic">ASEXYBOX_LABEL_EASYINCUBIC</option>
+		  			<option value="easeOutCubic">ASEXYBOX_LABEL_EASYOUTCUBIC</option>
+		  			<option value="easeInOutCubic">ASEXYBOX_LABEL_EASYINOUTCUBIC</option>
+		  			<option value="easeInQuart">ASEXYBOX_LABEL_EASYINQUART</option>
+		  			<option value="easeOutQuart">ASEXYBOX_LABEL_EASYOUTQUART</option>
+		  			<option value="easeInOutQuart">ASEXYBOX_LABEL_EASYINOUTQUART</option>
+		  			<option value="easeInQuint">ASEXYBOX_LABEL_EASYINQUINT</option>
+		  			<option value="easeOutQuint">ASEXYBOX_LABEL_EASYOUTQUINT</option>
+		  			<option value="easeInOutQuint">ASEXYBOX_LABEL_EASYINOUTQUINT</option>
+		  			<option value="easeInSine">ASEXYBOX_LABEL_EASYINSINE</option>
+		  			<option value="easeOutSine">ASEXYBOX_LABEL_EASYOUTSINE</option>
+		  			<option value="easeInOutSine">ASEXYBOX_LABEL_EASYINOUTSINE</option>
+		  			<option value="easeInExpo">ASEXYBOX_LABEL_EASYINEXPO</option>
+		  			<option value="easeOutExpo">ASEXYBOX_LABEL_EASYOUTEXPO</option>
+		  			<option value="easeInOutExpo">ASEXYBOX_LABEL_EASYINOUTEXPO</option>
+		  			<option value="easeInCirc">ASEXYBOX_LABEL_EASYINCIRC</option>
+		  			<option value="easeOutCirc">ASEXYBOX_LABEL_EASYOUTCIRC</option>
+		  			<option value="easeInOutCirc">ASEXYBOX_LABEL_EASYINOUTCIRC</option>
+		  			<option value="easeInElastic">ASEXYBOX_LABEL_EASYINELASTIC</option>
+		  			<option value="easeOutElastic">ASEXYBOX_LABEL_EASYOUTELASTIC</option>
+		  			<option value="easeInOutElastic">ASEXYBOX_LABEL_EASYINOUTELASTIC</option>
+		  			<option value="easeInBack">ASEXYBOX_LABEL_EASYINBACK</option>
+		  			<option value="easeOutBack">ASEXYBOX_LABEL_EASYOUTBACK</option>
+		  			<option value="easeInOutBack">ASEXYBOX_LABEL_EASYINOUTBACK</option>
+		  			<option value="easeInBounce">ASEXYBOX_LABEL_EASYINBOUNCE</option>
+		  			<option value="easeOutBounce">ASEXYBOX_LABEL_EASYOUTBOUNCE</option>
+		  			<option value="easeInOutBounce">ASEXYBOX_LABEL_EASYINOUTBOUNCE</option>
+		  		</field>
+		  		<field name="opt_shake_distance" type="text" size="6" default="10" label="ASEXYBOX_PARAM_LABEL_SHAKEDISTANCE" description="ASEXYBOX_PARAM_DESCR_SHAKEDISTANCE" />
+		  		<field name="opt_shake_duration" type="text" size="6" default="100" label="ASEXYBOX_PARAM_LABEL_SHAKEDURATION" description="ASEXYBOX_PARAM_DESCR_SHAKEDURATION" />
+		  		<field name="opt_shake_loops" type="text" size="6" default="2" label="ASEXYBOX_PARAM_LABEL_SHAKELOOPS" description="ASEXYBOX_PARAM_DESCR_SHAKELOOPS" />
+		  		<field name="opt_shake_transition" type="list" default="easeInOutBack" label="ASEXYBOX_PARAM_LABEL_SHAKEEFFECT" description="ASEXYBOX_PARAM_DESCR_SHAKEEFFECT">
+		  			<option value="swing">ASEXYBOX_LABEL_SWING</option>
+		  			<option value="easeInQuad">ASEXYBOX_LABEL_EASYINQUAD</option>
+		  			<option value="easeOutQuad">ASEXYBOX_LABEL_EASYOUTQUAD</option>
+		  			<option value="easeInOutQuad">ASEXYBOX_LABEL_EASYINOUTQUAD</option>
+		  			<option value="easeInCubic">ASEXYBOX_LABEL_EASYINCUBIC</option>
+		  			<option value="easeOutCubic">ASEXYBOX_LABEL_EASYOUTCUBIC</option>
+		  			<option value="easeInOutCubic">ASEXYBOX_LABEL_EASYINOUTCUBIC</option>
+		  			<option value="easeInQuart">ASEXYBOX_LABEL_EASYINQUART</option>
+		  			<option value="easeOutQuart">ASEXYBOX_LABEL_EASYOUTQUART</option>
+		  			<option value="easeInOutQuart">ASEXYBOX_LABEL_EASYINOUTQUART</option>
+		  			<option value="easeInQuint">ASEXYBOX_LABEL_EASYINQUINT</option>
+		  			<option value="easeOutQuint">ASEXYBOX_LABEL_EASYOUTQUINT</option>
+		  			<option value="easeInOutQuint">ASEXYBOX_LABEL_EASYINOUTQUINT</option>
+		  			<option value="easeInSine">ASEXYBOX_LABEL_EASYINSINE</option>
+		  			<option value="easeOutSine">ASEXYBOX_LABEL_EASYOUTSINE</option>
+		  			<option value="easeInOutSine">ASEXYBOX_LABEL_EASYINOUTSINE</option>
+		  			<option value="easeInExpo">ASEXYBOX_LABEL_EASYINEXPO</option>
+		  			<option value="easeOutExpo">ASEXYBOX_LABEL_EASYOUTEXPO</option>
+		  			<option value="easeInOutExpo">ASEXYBOX_LABEL_EASYINOUTEXPO</option>
+		  			<option value="easeInCirc">ASEXYBOX_LABEL_EASYINCIRC</option>
+		  			<option value="easeOutCirc">ASEXYBOX_LABEL_EASYOUTCIRC</option>
+		  			<option value="easeInOutCirc">ASEXYBOX_LABEL_EASYINOUTCIRC</option>
+		  			<option value="easeInElastic">ASEXYBOX_LABEL_EASYINELASTIC</option>
+		  			<option value="easeOutElastic">ASEXYBOX_LABEL_EASYOUTELASTIC</option>
+		  			<option value="easeInOutElastic">ASEXYBOX_LABEL_EASYINOUTELASTIC</option>
+		  			<option value="easeInBack">ASEXYBOX_LABEL_EASYINBACK</option>
+		  			<option value="easeOutBack">ASEXYBOX_LABEL_EASYOUTBACK</option>
+		  			<option value="easeInOutBack">ASEXYBOX_LABEL_EASYINOUTBACK</option>
+		  			<option value="easeInBounce">ASEXYBOX_LABEL_EASYINBOUNCE</option>
+		  			<option value="easeOutBounce">ASEXYBOX_LABEL_EASYOUTBOUNCE</option>
+		  			<option value="easeInOutBounce">ASEXYBOX_LABEL_EASYINOUTBOUNCE</option>
+		  		</field>
+				<field name="opt_movieAutoPlay" type="list" default="0" label="ASEXYBOX_PARAM_LABEL_MOVIEAUTOPLAY" description="ASEXYBOX_PARAM_DESCR_MOVIEAUTOPLAY">
+		  			<option value="0">ASEXYBOX_LABEL_NO</option> 
+		  			<option value="1">ASEXYBOX_LABEL_YES</option> 
+		  		</field>
+		  		<field name="opt_wMode" type="list" default="transparent" label="ASEXYBOX_PARAM_LABEL_WMODE" description="ASEXYBOX_PARAM_DESCR_WMODE">
+		  			<option value="opaque">ASEXYBOX_LABEL_WMODE_OPAQUE</option>
+		  			<option value="transparent">ASEXYBOX_LABEL_WMODE_TRANSPARENT</option>
+		  			<option value="window">ASEXYBOX_LABEL_WMODE_WINDOW</option>  
+		  		</field>
+				<field name="bgColor" type="color" size="6" default="" label="ASEXYBOX_PARAM_LABEL_BGCOLOR" description="ASEXYBOX_PARAM_DESCR_BGCOLOR" />
+
+				<field type="modal" name="" label="" description="" />
+  			</fieldset>
+		</fields>
+	</config>
+</extension>

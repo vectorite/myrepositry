@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension version="1.7" type="plugin" group="system">
+
+	<name>plg_system_onepage</name>
+
+	<author>RuposTel s.r.o.</author>
+
+	<creationDate>December 2011</creationDate>
+
+	<copyright>RuposTel s.r.o.</copyright>
+
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+
+	<authorEmail>admin@rupostel.com</authorEmail>
+
+	<authorUrl>www.rupostel.com</authorUrl>
+
+	<version>1.7.0</version>
+
+	<description>One Page Checkout for VirtueMart 2</description>
+
+	<files>
+
+		<filename plugin="opc">opc.php</filename>
+
+		<filename>index.html</filename>
+
+	</files>
+
+</extension>
+

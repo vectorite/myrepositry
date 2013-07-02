@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - Work Force Mobile</name>
+	<author>The Thinkery</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright (C) 2012 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>2.0.1</version>
+	<description>Displays Work Force in mobile compatible layout.</description>
+	<files>
+		<filename plugin="wfmobile">wfmobile.php</filename>
+        <filename>index.html</filename>
+        <folder>css</folder>
+	</files>
+</extension>

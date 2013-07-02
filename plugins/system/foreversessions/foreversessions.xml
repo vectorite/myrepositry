@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+    <name>yoonique[.]net Forever Sessions</name>
+    <author>yoonique[.]net</author>
+    <creationDate>December 2010</creationDate>
+    <authorUrl>http://www.yoonique.net</authorUrl>
+    <license>http://www.gnu.org/licenses/gpl.html GNU/GPL</license>
+	<version>1.2.4</version>
+    <description>PLG_FOREVERSESSIONS_DESCRIPTION</description>
+     <files>
+         <folder>language</folder>
+        <filename plugin="foreversessions">foreversessions.php</filename>
+    </files>
+	<languages>
+	   <language tag="en-GB">language/en-GB/en-GB.plg_system_foreversessions.ini</language>
+	</languages>
+    <params>
+        <param name="usernames" type="text" default="" label="User Names" description="Comma separated list of user names with forever sessions."/>
+        <param name="usertypes" type="text" default="Super Administrator,Administrator" label="User Types" description="Comma separated list of user types with forever sessions."/>
+    </params>
+	<config>
+    <fields name="params">
+		<fieldset name="main" label="Forever Sessions Settings">
+        <field name="usernames" type="text" default="" label="User Names" description="Comma separated list of user names with forever sessions."/>
+        <field name="usergrouplevels" type="text" default="7,8" label="User Groups" description="Comma separated list of user groups with forever sessions (numeric)."/>
+        </fieldset>
+    </fields>
+	</config>
+</install>

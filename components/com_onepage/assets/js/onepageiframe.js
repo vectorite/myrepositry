@@ -1,0 +1,1 @@
+function op_calcHeight(el){  return ;  //find the height of the internal page  var the_height=    el.contentWindow.document.body.scrollHeight+100;    //change the height of the iframe  el.height = the_height;}function resizeIframe(newHeight){    x = document.getElementById('opciframe');	if (x != null)	{	 x.style.height = parseInt(newHeight) + 100 + 'px';	}}

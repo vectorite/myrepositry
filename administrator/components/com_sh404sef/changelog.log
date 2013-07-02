@@ -1,0 +1,610 @@
+                              sh404sef3 changelog                               
+
+                        (2012-11-01 18:04 - build #1481)                        
+
+
+
+--------------------------------------------------------------------------------
+ [ 2012-11-01 ] Version 3.6.4.1481
+--------------------------------------------------------------------------------
+
+
+    [bug]    Analytics snippet not inserted for non-logged in users Fixes #186
+
+
+--------------------------------------------------------------------------------
+ [ 2012-10-24 ] Version 3.6.3.1478
+--------------------------------------------------------------------------------
+
+
+    [chg]    Updated Swedish translation
+    [chg]    Updated Russian translation
+    [chg]    Updated French translation
+    [chg]    Updated Hungarian translation
+
+    [bug]    Adjusted to removal by Joomla of usertype. Would cause analytics
+             snippet to be inserted even if if it was disabled for some user
+             groups. Added a better selector, now showing a direct list of
+             user groups, allowing simple selection. Fixes 174
+    [bug]    URLs may not be removed from disk cache when deleted one at a
+             time from backend Url manager
+    [bug]    404 page category created with wrong parent_id, may not be
+             available
+    [bug]    Incorrect version check
+
+
+--------------------------------------------------------------------------------
+ [ 2012-10-12 ] Version 3.6.2.1465
+--------------------------------------------------------------------------------
+
+
+    [new]    Added check and message in case user has disabled either shLib
+             system plugin or sh404sef system plugin
+
+    [chg]    Added a protection against invalid Virtuemart non-sef urls,
+             missing product_id
+    [chg]    Added protection against pages with invalid UTF-8 characters,
+             that were breaking SEO features
+
+    [bug]    Leave URL as non-sef doesn't work (regression)
+    [bug]    Posisble PHP fatal error when shLib plugin is not installed
+             before sh404SEF plugin (due to older installations, possibly by
+             other extensions using shLib)
+    [bug]    Incorrect date tag in plugins manifest files, release date was
+             not written to manifest when building the release
+    [bug]    Automatic redirects from non-sef to sef don't work
+    [bug]    Virtuemart router.php file does not create sef links for category
+             pages, when they are linked to a menu item. Instead it returns an
+             Itemid. We now create the SEF link in such cases
+    [bug]    Release date is not inserted in manifest file
+    [bug]    Insert news site unique id in urls only inserts article id, not
+             full unique if (introduced in 3.6.0)
+    [bug]    Possible display of warning when performing security log files
+             garbage collection if security log files folder has not been
+             created yet
+
+
+--------------------------------------------------------------------------------
+ [ 2012-09-18 ] Version 3.6.0.1422
+--------------------------------------------------------------------------------
+
+
+    [new]    Added Joomla! version check before installing new version
+    [new]    Added a resource manager to handle shared programming libraries
+             amongst several extensions
+    [new]    Added shared memory caching (memcache, APC, etc) for sef/non-sef
+             url storage, and for database queries
+    [new]    Pin it button nows also handle K2 independant images in items
+             Tracker #155
+    [new]    Added global Joomla! ACL permissions option
+    [new]    Added Virtuemart 2+ plugin Tracker #144
+    [new]    Added "gclid" (from Google AdWords) to list of tracking vars that
+             are stripped before doing checks for custom page title,
+             descriptions, etc Added also to remote configuration file, so all
+             users with "Enable remote configuration" set to Yes will benefit
+             immediately, without having to upgrade
+    [new]    Open graph url tag is now cleaned from possible Google analytics
+             tracking vars Tracker #146
+    [new]    Implemented "Vary" http headers when automatic template switching
+             is enabled for mobile devices Tracker #136
+    [new]    Mobile template is now presented to Googlebot-Mobile crawler, if
+             mobile device detection is enabled Tracker #131
+    [new]    Added detection of a query var for automatic mobile template
+             switcher. Now webmaster can add
+             "sh404SEF_override_mobile_detection=force_mobile" or
+             "sh404SEF_override_mobile_detection=force_desktop" to a link on a
+             page, allowing user to override mobile device detection by
+             sh404SEF. This is maintained by a cookie for subsequent clicks on
+             the same page, and a rel="canonical" link is added to avoid
+             duplicate content
+    [new]    Added method for 3rd-party developers to obtain SEF urls from
+             inside the backend of a Joomla! site:
+             Sh404sefHelperGeneral::getSefFromNonSef( $nonSefUrl,
+             $fullyQualified = true, $xhtml = false, $ssl = null) - Method is
+             autoloaded, no need to include file Tracker #60
+
+    [chg]    Removed useless Kunena parameters
+    [chg]    Installer now checks version compatibility with any previously
+             installed shared resource (such as shlib)
+    [chg]    Updated Russian, Swedish, Italian, Romanian, French, Spanish,
+             Dutch, German and Spanish language files
+    [chg]    Updated Open Graph data implementation according to latest
+             Facebook specs Tracker #154
+    [chg]    Export urls wizard now uses "slow server" settings, to make sure
+             any number of urls can be exported w/o exceeding server resources
+             Tracker #119
+    [chg]    Cleaned new urls storage process (getSefLocation()), use only db
+             helper, exceptions and removed redundant code (should also
+             improve perf in some edge cases)
+    [chg]    Moved analytics display temp files to /media dir
+    [chg]    Simplified 404 error page edit page, now using consistently the
+             same article category ('sh404sef custom content') Tracker #151
+    [chg]    Removed uneeded css
+    [chg]    Moved all log files to Joomla! standard log directory Tracker #50
+    [chg]    Now using shLib shared programming library
+    [chg]    Moved database error handling entirely to either exceptions, or
+             dual exception/errornum handling
+    [chg]    sef_404::getCategories() now deprecated, write call to log file.
+             Use Sh404sefModelSlugs model instead
+    [chg]    Dropped remaining uses of Joomla! DS constant
+    [chg]    Updated plugin to handle Kunena 2.x Tracker #145
+    [chg]    Removed uneeded Docman configuration options Tracker #152
+    [chg]    Parsing incoming requests with Joomla! router (when user asked
+             so) is now done last, as Joomla! router jumps to 404 page if it
+             does not recognize a request, preventing us from doing shUrl and
+             custom redirects checks
+    [chg]    Now disabling Joomla! caching when displaying 404 page, to be
+             able insert our custom text (current url, and similar urls
+             suggestions) Also: language detection may not work when full page
+             caching is on.
+    [chg]    Added default value to default language function, in case default
+             language has not been saved in configuration
+    [chg]    Comply with PHP Strict standards
+    [chg]    Added a workaround for Joomla! loading its platform language
+             strings before the SEF url has been decoded. As pagination
+             strings are stored inside platform language files, this may
+             result under some circumstances in pagination strings (Start,
+             end, ...) not being translated Tracker #143
+
+    [bug]    Some regular expressions were not UTF-8 compatible - Thks
+             G.Papadakis
+    [bug]    Sef and non-sef urls are not displayed when editing a shurl or
+             meta data
+    [bug]    Offline display template lacks css when site is in a
+             sub-directory of server
+    [bug]    On multilingual sites, nowonly try to redirect user to her
+             language on homepage, as otherwise we wouldn't know what the
+             correct destination would be
+    [bug]    Pagination may not work on some components (those leaving page
+             number out of the SEF url, or not using standard Joomla!
+             JPagination object) when user has not set SEF urls on in global
+             configuration Tracker #142
+    [bug]    Possible infinite redirect loop when some custom query vars are
+             added to a homepage request
+    [bug]    Wrong page number in page title when a blog view is used as front
+             page Tracker #141
+    [bug]    Prevent notice error when displaying social buttons on a totally
+             empty article (!)
+
+
+--------------------------------------------------------------------------------
+ [ 2012-06-27 ] Version 3.5.1.1299
+--------------------------------------------------------------------------------
+
+
+    [chg]    Updated Bulgarian, French, Hungarian, Russian and Swedish
+             translations
+
+    [bug]    Homepage custom meta data is not displayed anymore Tracker #132
+    [bug]    Featured articles view does not get proper url on second or more
+             languages, on multilingual sites (reported by Simon Gendrin)
+             Tracker #134
+
+
+--------------------------------------------------------------------------------
+ [ 2012-06-14 ] Version 3.5.0.1295
+--------------------------------------------------------------------------------
+
+
+    [new]    Reworked rel="prev" and rel="next" head tags, comply now with
+             Google guidelines and improves paginated content handling by
+             search engines
+    [new]    Added Pinterest support to social buttons AND Analytics reports.
+             Pinning actions are tracked inside Google Analytics and your site
+             control panel like other social buttons Tracker #102
+    [new]    Google Anlytics backend integration now using version 2.4 of API
+             - as version 2.3 will be shut down in july 2012
+
+    [chg]    Updated Bulgarian, German, Spanish, French, Hungarian, Italian,
+             Dutch, Romanian, Russian and Swedish translations
+    [chg]    Removed uneeded language parameter Tracker #125
+    [chg]    Added check to prevent some notice error display when there is no
+             default language version of an article or category, on
+             multilingual sites
+    [chg]    Added check to prevent some notice error display when there is no
+             default language version of an article or category, on
+             multilingual sites
+    [chg]    Added check to prevent notice error display if user completely
+             delete the "Page" text from configuration Tracker #113
+    [chg]    Added workaround for bug in Joomla! front end com_media image
+             browser, probably using relative urls Tracker #120
+    [chg]    Adjust 404 errors logging in case server is running IPV6
+    [chg]    Some changes for Falang compatibility
+    [chg]    CSS tweaking to the wizards display
+    [chg]    Updated Russian translation (Alex Smirnov)
+
+    [bug]    SEF url is saved to database when doing a 301 automatic redirect
+             from non-sef to sef, when set to use Joomla! router, which should
+             not save sef url to db Tracker #114
+    [bug]    Under some circumstances, cache file lock file may not be deleted
+             and cache not used anymore Tracker #115
+    [bug]    Incorrect paginated urls on home page of some multilingual sites
+    [bug]    Social buttons link is not correct when using "no .htaccess"
+             rewrite mode Tracker #121
+    [bug]    QRCode creator does not add /index.php/ prefix when not using a
+             .htaccess file Tracker #116
+    [bug]    Under some circumstances, social buttons can be displayed on
+             category pages, even of set to display only on canonical page
+             Tracker #108
+    [bug]    Incorrect call to framework getMenu() method. No visible effect
+             though
+    [bug]    Collect memory & time would not work, need update to J! 2.5
+             format Tracker #107
+
+
+--------------------------------------------------------------------------------
+ [ 2012-02-13 ] Version 3.4.6.1269
+--------------------------------------------------------------------------------
+
+
+    [new]    Added 301 auto-redirect to protect against pages of your site
+             which have been Facebook-liked using old method, that can
+             generate fb_xd_fragment and fb_xd_bust duplicate content issue
+             Tracker #95
+    [new]    Implemented channelUrl for Facebook like/send button, to protect
+             against fb_xd_fragment and fb_xd_bust SEO issues Tracker #95
+    [new]    You can now select exactly which social button to display on a a
+             tag by tag basis, using 'type' attribute in
+             {sh404sef_social_buttons} tags
+    [new]    Added canonical tag handling for J! 2.5 new com_finder "Smart
+             search"
+    [new]    Workaround for issue in J! 2.5: cannot use categories model from
+             outside of com_content
+
+    [chg]    Updated Spanish translation by Hertak
+    [chg]    Simple title and better robots meta on 404 page
+    [chg]    Don't show Open graph data on 404 pages
+    [chg]    Removed Virtuemart 1.x plugin
+    [chg]    Better detection of item category, when displaying social
+             buttons, will work also when article is displayed inside a module
+             Tracker #103
+    [chg]    Replaced deprecated function in Mosets Tree plugin Tracker #97
+    [chg]    Updated Russian translation (Alex Smirnov)
+    [chg]    Updated Romanian translation (Valentin Barbu)
+    [chg]    Updated Italian translation (Andrea Castrovilli)
+    [chg]    Updated German translation (Jürgen Hörmann)
+    [chg]    Updated Bulgarian translation (Kiril Yoviev)
+    [chg]    Cleaned up all language files, key deduplication, ready to upload
+             to translation server
+    [chg]    Moved some of the social buttons javascript links to end of body
+             instead of end of document head Tracker #385
+    [chg]    Added a check to handle name conflict between Mighty Touch and
+             JomSocial, avoiding fatal errors Tracker #393
+    [chg]    Changed default layout for Twitter and G+, to use shURls and hide
+             clicks count Tracker #81
+    [chg]    Can now modify URLs in a case-sensitive manner Tracker #379
+    [chg]    Updated Dutch translation by Gerard van Enschut Tracker #88
+    [chg]    Update to Swedish translation, by JokrSolutions
+    [chg]    Added a check in case user enters a space as an alias to an URL
+             Tracker #87
+
+    [bug]    Prevent creating useless links to 404 page, when site is crawled
+    [bug]    Outbound links images are not inserted into page if site is in
+             root dir Tracker #96
+    [bug]    file cache TTL is multiplied by 86400 seconds (a day) instead of
+             3600 (an hour) Tracker #98
+    [bug]    A shurl is created for homepage on multilingual sites Tracker
+             #105
+    [bug]    Infinite redirect loop when site is accessed by crawlers on
+             multilingual sites when autoredirect from non-sef to sef is on
+             Tracker #104
+    [bug]    May generate loop redirects when adding aliases identical to
+             original url, except for the letter case
+    [bug]    Custom canonical URL is not saved if it is the only custom meta
+             data for an url Tracker #94
+    [bug]    Kunena plugin: new post from category doesn't have a distinct URL
+             Tracker #93
+    [bug]    Rewriting prefix is lost when redirecting incoming url to the
+             same with correct case Tracker #91
+    [bug]    Open graph fb:admins tag should use "property" field, not "name"
+    [bug]    When "Use default" is selected as Object type option for specific
+             urls, the Opengraph data object type is not inserted Tracker #395
+    [bug]    Batch-modifying page title or description would erase other meta
+             data previously set, if any Tracker #86
+    [bug]    Added test to avoid duplicating records when Apply and Save
+             button are pressed in sequence when adding custom meta data to a
+             URL Tracker #85
+
+
+--------------------------------------------------------------------------------
+ [ 2011-12-13 ] Version 3.4.4.1226
+--------------------------------------------------------------------------------
+
+
+    [new]    Added option to use shURL instead of full SEF url in social
+             buttons. Especially useful for Tweeting, to better use those 140
+             characters Tracker #67
+    [new]    Can now restrict display of social buttons to only some content
+             categories Tracker #76
+
+    [chg]    Removed display of unused hit counter Tracker #80
+    [chg]    Updated French translation
+    [chg]    Removed autoredirect from Joomla SEF to SEF Tracker #78
+    [chg]    When saving data from Title and metas manager, if one url is
+             incorrect, we now attempt to save remaining data, in case some of
+             it is correct and can be saved
+    [chg]    We now delete a meta data record if user happens to clear all
+             meta data fields, save space and avoid having a meta data icon
+             show in url manager when meta data have been cleared Tracker #75
+    [chg]    Social buttons should not be displayed when printing Joomla!
+             articles Tracker #74
+    [chg]    Added some styles to social buttons background
+    [chg]    Added a check to prevent recording empty urls in 404 list Tracker
+             #390
+
+    [bug]    Display mysql error when using slow server mode and sorting urls
+             by duplicates, meta or alias Tracker #389
+    [bug]    Popup window too small when editing some urls, poor display
+    [bug]    If Joomla! full page cache is activated, social buttons may
+             sometimes not be inserted, or may not work
+    [bug]    Disable social buttons insertion if global "Activate SEO
+             management" is disabled by user
+    [bug]    In case of incoming requests for a non-sef url, variables from
+             the home page link could be added to this non-sef
+
+
+--------------------------------------------------------------------------------
+ [ 2011-11-22 ] Version 3.4.3.1212
+--------------------------------------------------------------------------------
+
+
+    [new]    Updated Romanian translation
+
+    [chg]    Updated Swedish translation by BR Kristian
+    [chg]    Added workaround for JDispatcher::...handler not recognized when
+             running an opcache system
+
+    [bug]    Notices can be displayed if site runs with sh404sef disabled and
+             meta data management is activated
+    [bug]    Could display a notice error trying to redirect a 404 url, when
+             there is no suggested sef url found
+
+
+--------------------------------------------------------------------------------
+ [ 2011-11-19 ] Version 3.4.2.1210
+--------------------------------------------------------------------------------
+
+
+    [chg]    Added protections so that social features are not triggered on
+             404 pages
+
+
+--------------------------------------------------------------------------------
+ [ 2011-11-19 ] Version 3.4.1.1207
+--------------------------------------------------------------------------------
+
+
+    [bug]    Database error when upgrading from a previous version (site would
+             work fine). Immediately installing a second time fixes the error.
+
+
+--------------------------------------------------------------------------------
+ [ 2011-11-18 ] Version 3.4.0.1205
+--------------------------------------------------------------------------------
+
+
+    [new]    Analytics reports now includes social engagement information:
+             Facebook likes, Tweet, 1+ actions
+    [new]    Social buttons can be inserted automatically in Joomla! articles,
+             below title or at end of article
+    [new]    Added creation of social networking buttons, handling for
+             Facebook Like and Send, Tweeter, Google +1 and the new Google
+             Page badge. Will place social buttons anywhere in content, other
+             extensions, modules or even templates
+    [new]    Added automatic creation and management of Open Graph meta data,
+             to allow better indexing by Facebook, Google+ and other social
+             networks
+    [new]    Added more protection against fatal error if user accidentally
+             disable sh404SEF system plugin Tracker #375
+    [new]    Added tracking of 404 pages on Google Analytics - you'll get 404s
+             count on sh404SEF Analytics report, as well as on Google
+             Analytics panel
+    [new]    Added "All categories" options to insert article id setting
+             Tracker #53
+    [new]    404 error page mechanism now compatible with Joomla! multilingual
+             feature. Can have 404 error page per language
+
+    [chg]    Re-enabled automatic language redirect upon visitor first visit,
+             as workaround to counter bug in Firefox and IE9 was found for
+             this to work properly Tracker #59
+    [chg]    Group meta tag insertion when possible, better performance on
+             very large pages
+    [chg]    Added support for multilingual menu item associations, and a new
+             option to Enable/disable multilingual support in sh404SEF. Use
+             instead of Enabling/Disabling Joomla! Language filter plugin
+             Tracker #57
+    [chg]    Simplified similar urls plugin database query, to reduce overhead
+             Tracker #55
+    [chg]    Moved sh404SEF 404 error page content from the "Uncategorised"
+             category to our own, as localized versions of Joomla! would call
+             the "Uncategorise" category differently, making it impossible to
+             save or retrieve our error page. The change is done by install
+             script, and existing error pages will be moved over to new
+             category automatically
+    [chg]    Start and end pagination links now also use html5 rel and next
+             tags as needed Tracker #372
+    [chg]    Updated css on site main control panel sh404SEFmodule
+    [chg]    Clarified one Swedish language tooltip
+    [chg]    Moved some options (itemid management) to core instead of plugin,
+             so that they can be activated even if extension-specific plugin
+             does not implement them
+
+    [bug]    Whitelisting user agent doesn't prevent anti-flooding to operate
+    [bug]    Notice errors could be displayed if no similar urls found when
+             trying to redirect a 404
+    [bug]    On multipage articles, when not displaying the table of content,
+             first page has 2 different urls created Tracker #56
+    [bug]    under some circumstances, custom page title and meta data may not
+             be inserted in the page Tracker #47
+    [bug]    getCategories function called statically, but not declared so,
+             could cause some notices errors on some servers
+    [bug]    When auto-redirecting non-sef to SEF url, some get variables may
+             not be passed along on some occasions
+    [bug]    Itemid is lost on "Edit article" icons for Joomla content Tracker
+             #49
+    [bug]    Kunena plugin: wrong url for editing profile when "Short url to
+             profile" option is enabled Tracker #369
+    [bug]    On 404 error pages, if user removes the "similar urls" text from
+             the template, the marker for the faulty requested urls is not
+             replaced either Tracker #370
+    [bug]    Regression: custom meta_ext plugin not used anymore
+
+
+--------------------------------------------------------------------------------
+ [ 2011-09-05 ] Version 3.3.0.1122
+--------------------------------------------------------------------------------
+
+
+    [new]    Now providing a QRCode for each SEF url, in URL manager Tracker
+             #319
+    [new]    Integrated Swedish translation, by BR Kristian Tracker #39
+    [new]    Improved SEO for paginated content: now use HTML5 prev and next
+             tags on all paginated links Tracker #36
+    [new]    Added option to completely exclude category name from page title
+             (on Joomla! content) Tracker #38
+
+    [chg]    Added max url lenght on custom urls input fields
+    [chg]    Replaced a hardcoded text on control panel with language file
+             string
+    [chg]    Removed ability to not translate urls (on multilingual sites), as
+             this would cause errors, and we'll have to wait for Joomfish to
+             build a general solution Tracker #42
+    [chg]    Updated com_banners plugin Tracker #43
+
+    [bug]    Sometimes a warning could be displayed when redirecting an alias
+             with an added query string
+    [bug]    Aliases that are non-sef urls are not taken into account
+    [bug]    Always append Itemid to SEF url would not work, moved language
+             string to another file to fix Tracker #44
+    [bug]    Exact error message not displayed when saving data in Title and
+             metas manager, displays generic message instead 'Something went
+             wrong on the server' Tracker #41
+
+
+--------------------------------------------------------------------------------
+ [ 2011-07-19 ] Version 3.2.0.1108
+--------------------------------------------------------------------------------
+
+
+    [new]    Joomla 1.7 compat: load mootols in backend
+
+    [chg]    Compat with 1.7: adjusted to modified JDatabase class
+             replacePrefix() method, would prevent shUrls to be created
+    [chg]    Added protection against sites with no default menu items, or
+             default menu items set to not be publicly visible. Would cause a
+             fatal error Tracker #33
+    [chg]    Reduced url max length, very long urls could cause 404 Tracker
+             #32
+    [chg]    Added compatibility layer for shRouter::shGetPageInfo()
+
+    [bug]    Installation of 404 page article was commented out!
+    [bug]    Aliases with a trailing / are not taken into a account
+    [bug]    Preview links in backend does not use /index.php/ if in 'no
+             htaccess' mode
+    [bug]    Error doc configuration page would only list sh404SEF default
+             error doc, would miss other Uncategorised articles in select list
+             Tracker #35
+    [bug]    Missing shIncludeMetaPlugin() function in page content rewriting
+             feature Tracker #31
+    [bug]    When auto-redirect from non-sef to sef is activated, it is not
+             possible to edit articles or weblinks on the front end Tracker
+             #30
+    [bug]    Still using old #__redirection table when checking new shurl
+             creation, could prevent creation of shurl in some cases
+
+
+--------------------------------------------------------------------------------
+ [ 2011-06-30 ] Version 3.1.5.1098
+--------------------------------------------------------------------------------
+
+
+    [new]    Properly handling multilanguage, the SEO way. Warning: Joomla!
+             LanguageFilter system plugin must be DISABLED!! Tracker #26
+    [new]    Updated 3rd-party SEF url plugins installer to J! 1.6 format
+    [new]    Handling of Joomla! multi-lingual features, still need some
+             tweaking for home page links Tracker #26
+    [new]    Automatic handling of canonical urls for print version of joomla
+             articles
+    [new]    Added backward compatiblity class 'shRouter' for using J! 1.5
+             plugins in J! 1.6 Tracker #24
+
+    [chg]    Kunena plugin largely updated with help from Matias Griese,
+             increased performance and compatibility with all Kunena versions
+             Tracker #355
+    [chg]    Some SEF links may no be rewritten when Joomla SEF setting is
+             off, as the SEF plugin checks directly Joomla config instead of
+             asking router for current SEF mode Tracker #27
+    [chg]    Updated 'Home page URL' parameter tooltip
+    [chg]    Updated links to new support site url
+
+    [bug]    Bad query on uninstalling sh404SEF while removing database tables
+    [bug]    May generate fatal error on page 2 or more of Blog view, when no
+             specific number of items per page has been set at menu item level
+             (ie using only global params)
+    [bug]    Using old $database global in com_newsfeeds and mosets tree
+             plugin, would cause fatal error Tracker #28
+    [bug]    Sometimes urls consisting only of an Itemid were not properly
+             handled
+    [bug]    Jomsocial frontpage and profile page have same url when user not
+             logged in
+    [bug]    SEF url not created when a category is included in url
+    [bug]    Missing category for the * language when using more than one
+             language can result in empty sef url
+    [bug]    On url list, first attempt to reach page 2 or more after logging
+             in stays on page one Tracker #359
+    [bug]    Fatal error creating sef urls for Community Builder Tracker #23
+
+
+--------------------------------------------------------------------------------
+ [ 2011-06-07 ] Version 3.1.4.1078
+--------------------------------------------------------------------------------
+
+
+    [chg]    Changed SEF url to user edit profile Tracker #22
+
+    [bug]    "view" parameter not revoved from SEF urls for Search component
+             Tracker #21
+    [bug]    Id not removed from sef url when showing "All categories" Tracker
+             #19
+    [bug]    Fatal error in com_contact plugin Tracker #18
+
+
+--------------------------------------------------------------------------------
+ [ 2011-06-03 ] Version 3.1.3.1073
+--------------------------------------------------------------------------------
+
+
+    [new]    For Uncategorized items, user can now select to either use only
+             item title in url (recommended) or insert menu item title Tracker
+             #12
+    [new]    Registration link was not SEF
+
+    [bug]    Sometimes Meta description is not inserted by sh404sef Tracker
+             #17
+    [bug]    Insert id in article url does not work when "All categories" is
+             selected Tracker #14
+    [bug]    Create an account link cause fatal error Tracker #13
+
+
+--------------------------------------------------------------------------------
+ [ 2011-05-31 ] Version 3.1.2.1071
+--------------------------------------------------------------------------------
+
+
+    [new]    Reworked short urls system, now called shURL, faster and shorter.
+             Can be created without having to purge existing SEF urls. Prevent
+             collisions with existing SEF or aliases, bad words filtering
+    [new]    Added shortlinks tag configuration page
+    [new]    Component, module and plugins install/uninstall, complying with
+             preverve configuration settings
+
+    [chg]    Separated forced update flag between version check and remote
+             config check
+    [chg]    Converted old languages files to Joomla! language file format
+             (ini)
+    [chg]    Version checker can now handle multiple version file servers
+
+    [bug]    Error in database class, would cause purging urls to fail
+    [bug]    Can't use pagination links or other actions on meta manager after
+             using the save button Tracker #336
+    [bug]    Issue with arrays in urls, when using only non-sef urls

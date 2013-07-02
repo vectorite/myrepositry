@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+#icon_preview div.icon {
+	text-align: center;
+	margin-right: 15px;
+	float: left;
+	margin-bottom: 15px;
+	background-color: #fff;
+}
+
+#icon_preview div.icon a {
+	display: block;
+	float: left;
+	border: 1px solid #eaeaea;
+	height: 97px;
+	width: 108px;
+	color: #565656;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+#icon_preview div.icon a:hover,
+#icon_preview div.icon a:focus,
+#icon_preview div.icon a:active {
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #fbfbfb;
+	color: #025A8D;
+}
+
+#icon_preview img {
+	padding: 10px 0;
+	margin: 0 auto;
+}
+
+#icon_preview span {
+	display: block;
+	text-align: center;
+}

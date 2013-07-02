@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>WF Employee Module</name>
+	<author>The Thinkery</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright (C) 2012 the Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>2.0.1</version>
+	<description>Display employee with a link to details page in module position. Adjust module parameters to display by department, featured, etc.</description>
+	<files>
+		<filename module="mod_wf_department">mod_wf_department.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+	</files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_wf_department.ini</language>
+    </languages>
+    
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_workforce/models/fields">
+                <field name="department" type="department" default="0" label="MOD_WF_DEPARTMENT_CATID" description="MOD_WF_DEPARTMENT_CATID_DESC" />
+                <field name="" type="header" default="MOD_WF_DEPARTMENT_DISPLAY" label="" description="" />
+                <field name="include_wfcss" type="radio" default="1" label="MOD_WF_DEPARTMENT_INCLUDE_WFCSS" description="MOD_WF_DEPARTMENT_INCLUDE_WFCSS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="featured" type="radio" default="0" label="MOD_WF_DEPARTMENT_FEATURED" description="MOD_WF_DEPARTMENT_FEATURED_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="thumb_width" type="text" default="150" label="MOD_WF_DEPARTMENT_THMB_WIDTH" description="MOD_WF_DEPARTMENT_THMB_WIDTH_DESC" />
+                <field name="thumb_height" type="text" default="120" label="MOD_WF_DEPARTMENT_THMB_HEIGHT" description="MOD_WF_DEPARTMENT_THMB_HEIGHT_DESC" />
+                <field name="border_color" type="text" default="#fff" label="MOD_WF_DEPARTMENT_THMB_BORDER" description="" />
+                <field name="" type="header" default="MOD_WF_DEPARTMENT_LAYOUT" label="" description="" />
+                <field name="wflayout" type="list" default="1" label="MOD_WF_DEPARTMENT_LAYOUT" description="MOD_WF_DEPARTMENT_LAYOUT_DESC">
+                    <option value="1">MOD_WF_DEPARTMENT_HORIZONTAL</option>
+                    <option value="2">MOD_WF_DEPARTMENT_VERTICAL</option>
+                </field>
+                <field name="columns" type="list" default="3" label="MOD_WF_DEPARTMENT_COLUMNS" description="MOD_WF_DEPARTMENT_COLUMNS_DESC">
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                </field>
+                <field name="preview_count" type="text" default="200" label="MOD_WF_DEPARTMENT_CHARACTERS" description="MOD_WF_DEPARTMENT_CHARACTERS_DESC" />
+                <field name="" type="header" default="MOD_WF_DEPARTMENT_OPTIONS" label="" description="" />
+                <field name="count" type="text" default="5" label="MOD_WF_DEPARTMENT_COUNT" description="MOD_WF_DEPARTMENT_COUNT_DESC" />
+                <field name="random" type="radio" default="1" label="MOD_WF_DEPARTMENT_RANDOM" description="MOD_WF_DEPARTMENT_RANDOM_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_desc" type="radio" default="1" label="MOD_WF_DEPARTMENT_SHOWDESC" description="MOD_WF_DEPARTMENT_SHOWDESC_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="clean_desc" type="radio" default="0" label="MOD_WF_DEPARTMENT_CLEANDESC" description="MOD_WF_DEPARTMENT_CLEANDESC_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="hide_mod" type="radio" default="1" label="MOD_WF_DEPARTMENT_HIDEMOD" description="MOD_WF_DEPARTMENT_HIDEMOD_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,22 @@
+tinyMCE.addI18n('en.emotions_dlg',{
+title:"Insert emotion",
+desc:"Emotions",
+confused:"Confused",
+cool:"Cool",
+cry:"Cry",
+eek:"Eek",
+embarassed:"Embarassed",
+evil:"Evil",
+frown:"Frown",
+grin:"Grin",
+laughing:"Laughing",
+mad:"Mad",
+neutral:"Neutral",
+roll:"Roll Eyes",
+sad:"Sad",
+smile:"Smile",
+surprised:"Surprised",
+tongue_out:"Tongue out",
+wink:"Wink",
+yell:"Yell"
+});

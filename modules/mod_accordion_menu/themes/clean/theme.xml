@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <params>
+    <param name="themeskin" dependency="alignskin"  type="offlajnskin" default="" size="5" label="THEME_SKIN" description="">
+      <bluedark>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}}</titlefont>
+        <gradient>1-1580bf-0f3756</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Active":{"color":"ffffff"}, "Hover":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>
+      </bluedark>
+      <bluelight>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}}</titlefont>
+        <gradient>1-2c90ea-0b5da5</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>
+      </bluelight>
+      <brown>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-664f1f-231a06</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>
+      </brown>
+      <greenlight>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-83c902-498200</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>  
+      </greenlight>
+      <greendark>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-619600-274401</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>  
+      </greendark>         
+      <grey>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-696969-383838</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>  
+      </grey> 
+      <levander>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-6c6ab2-3d396b</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>  
+      </levander>
+      <orange>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-FB7400-b73e01</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/default/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>  
+      </orange>   
+      <pistachio>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-ABCC3D-597305</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>  
+      </pistachio>   
+      <purple>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-6d0191-3b004f</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>  
+      </purple> 
+      <red>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-A81704-5F0D02</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>  
+      </red> 
+      <steelblue>
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"18||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"center","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|0|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</titlefont>
+        <gradient>1-576072-212736</gradient>
+        <gradientheight>400</gradientheight>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <padding>0|*|0|*|0|*|0|*|px|*|</padding>
+        <borderradius>5|*|5|*|5|*|5|*|px|*|</borderradius>
+        <level1>1</level1>
+        <level1margin>3|*|4|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>1|*|2|*|3|*|15|*|px|*|</level1padding>
+        <level1bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level1bg>
+        <level1border>ffffff55</level1border>
+        <level1minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1minus>
+        <level1plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level1plus>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"13||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level1textfont>
+        <level2>2</level2>
+        <level2margin>3|*|4|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>1|*|2|*|3|*|15|*|px|*|</level2padding>
+        <level2bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level2bg>
+        <level2border>ffffff55</level2border>
+        <level2minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2minus>
+        <level2plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level2plus>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"12||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level2textfont>
+        <level3>3</level3>
+        <level3margin>3|*|4|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>1|*|2|*|3|*|15|*|px|*|</level3padding>
+        <level3bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level3bg>      
+        <level3border>ffffff55</level3border>
+        <level3minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3minus>
+        <level3plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level3plus>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level3textfont>
+        <level4>4</level4>
+        <level4margin>3|*|4|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>1|*|2|*|3|*|15|*|px|*|</level4padding>
+        <level4bg>ffffff00|*|ffffff33|*|ffffff33|*|ffffff33</level4bg>
+        <level4border>ffffff55</level4border>
+        <level4minus>/modules/mod_accordion_menu/themes/clean/images/minus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4minus>
+        <level4plus>/modules/mod_accordion_menu/themes/clean/images/plus/arrowleft.png|*|left|*|ffffff80|*|1|*|</level4plus>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","subset":"Latin","size":"11||px","color":"ffffff","bold":"0","italic":"0","underline":"0","align":"left","afont":"Arial, Helvetica||1","tshadow":"0||px|*|1||px|*|2||px|*|000000|*|1|*|","lineheight":"normal"}, "Link":{"color":"ffffff"}, "Hover":{"color":"ffffff"}, "Active":{"color":"ffffff"}}</level4textfont>  
+      </steelblue>                                         
+    </param>
+    
+    <param name="alignskin" type="offlajnskin" default="" size="5" label="ALIGN_SKIN" description="">
+      <left>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <level1margin>3|*|10|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>3|*|0|*|4|*|17|*|px|*|</level1padding>
+        <level1minus>**|*|left|*|**|*|**</level1minus>
+        <level1plus>**|*|left|*|**|*|**</level1plus>
+        <level2margin>3|*|10|*|3|*|10|*|px|*|</level2margin>
+        <level2padding>3|*|0|*|4|*|17|*|px|*|</level2padding>    
+        <level2minus>**|*|left|*|**|*|**</level2minus>
+        <level2plus>**|*|left|*|**|*|**</level2plus>    
+        <level3margin>3|*|10|*|3|*|20|*|px|*|</level3margin>
+        <level3padding>4|*|0|*|5|*|17|*|px|*|</level3padding>
+        <level3minus>**|*|left|*|**|*|**</level3minus>
+        <level3plus>**|*|left|*|**|*|**</level3plus>
+        <level4margin>3|*|10|*|3|*|30|*|px|*|</level4margin>
+        <level4padding>4|*|0|*|5|*|17|*|px|*|</level4padding>
+        <level4minus>**|*|left|*|**|*|**</level4minus>
+        <level4plus>**|*|left|*|**|*|**</level4plus>
+      </left>
+      <right>
+        <margin>0|*|0|*|10|*|0|*|px|*|</margin>
+        <level1margin>3|*|0|*|3|*|0|*|px|*|</level1margin>
+        <level1padding>3|*|22|*|4|*|10|*|px|*|</level1padding>
+        <level1minus>**|*|right|*|**|*|**</level1minus>
+        <level1plus>**|*|right|*|**|*|**</level1plus>
+        <level2margin>3|*|0|*|3|*|0|*|px|*|</level2margin>
+        <level2padding>3|*|22|*|4|*|25|*|px|*|</level2padding>    
+        <level2minus>**|*|right|*|**|*|**</level2minus>
+        <level2plus>**|*|right|*|**|*|**</level2plus>    
+        <level3margin>3|*|0|*|3|*|0|*|px|*|</level3margin>
+        <level3padding>3|*|22|*|4|*|40|*|px|*|</level3padding>
+        <level3minus>**|*|right|*|**|*|**</level3minus>
+        <level3plus>**|*|right|*|**|*|**</level3plus>
+        <level4margin>3|*|0|*|3|*|0|*|px|*|</level4margin>
+        <level4padding>3|*|22|*|4|*|55|*|px|*|</level4padding>
+        <level4minus>**|*|right|*|**|*|**</level4minus>
+        <level4plus>**|*|right|*|**|*|**</level4plus>
+      </right>
+    </param>    
+    <param name="fontskin" type="offlajnskin" default="" size="5" label="FONT_SKIN" description=""> 
+      <arial>      
+        <titlefont>{"Text":{"type":"0","size":"18||px","afont":"Arial||1"}}</titlefont>
+        <level1textfont>{"Text":{"type": "0","afont":"Arial||1"}}</level1textfont>
+        <level2textfont>{"Text":{"type": "0","afont":"Arial||1"}}</level2textfont>
+        <level3textfont>{"Text":{"type": "0","afont":"Arial||1"}}</level3textfont>
+        <level4textfont>{"Text":{"type": "0","afont":"Arial||1"}}</level4textfont>
+      </arial>
+      <arimo>
+        <titlefont>{"Text":{"type":"Latin","family":"Arimo","size":"18||px","subset":"Latin"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"Arimo","size":"13||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"Arimo","size":"12||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"Arimo","size":"11||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"Arimo","size":"11||px","subset":"Latin"}}</level4textfont>
+      </arimo>
+      <cabin>      
+        <titlefont>{"Text":{"type":"Latin","family":"Cabin","size":"18||px","subset":"Latin","lineheight":"21px"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"Cabin","size":"14||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"Cabin","size":"13||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"Cabin","size":"12||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"Cabin","size":"12||px","subset":"Latin"}}</level4textfont>
+      </cabin>
+      <carme>      
+        <titlefont>{"Text":{"type":"Latin","family":"Carme","size":"18||px","subset":"Latin"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"Carme","size":"13||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"Carme","size":"12||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"Carme","size":"11||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"Carme","size":"11||px","subset":"Latin"}}</level4textfont>
+      </carme>
+      <magra>      
+        <titlefont>{"Text":{"type":"Latin","family":"Magra","size":"18||px","subset":"Latin"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"Magra","size":"13||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"Magra","size":"12||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"Magra","size":"11||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"Magra","size":"11||px","subset":"Latin"}}</level4textfont>
+      </magra>
+      <mako>      
+        <titlefont>{"Text":{"type":"Latin","family":"Mako","size":"18||px","subset":"Latin","lineheight":"21px"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"Mako","size":"14||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"Mako","size":"13||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"Mako","size":"12||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"Mako","size":"12||px","subset":"Latin"}}</level4textfont>
+      </mako>
+      <opensans>      
+        <titlefont>{"Text":{"type":"Latin","family":"Open Sans","size":"18||px","subset":"Latin"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"Open Sans","size":"13||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"Open Sans","size":"12||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"Open Sans","size":"11||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"Open Sans","size":"11||px","subset":"Latin"}}</level4textfont>
+      </opensans>
+      <ptsans>      
+        <titlefont>{"Text":{"type":"Latin","family":"PT Sans","size":"18||px","subset":"Latin","lineheight":"21px"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"PT Sans","size":"14||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"PT Sans","size":"13||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"PT Sans","size":"12||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"PT Sans","size":"12||px","subset":"Latin"}}</level4textfont>
+      </ptsans>
+      <rosario>      
+        <titlefont>{"Text":{"type":"Latin","family":"Rosario","size":"18||px","subset":"Latin","lineheight":"21px"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"Rosario","size":"14||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"Rosario","size":"13||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"Rosario","size":"12||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"Rosario","size":"12||px","subset":"Latin"}}</level4textfont>
+      </rosario>
+      <shanti>      
+        <titlefont>{"Text":{"type":"Latin","family":"Shanti","size":"18||px","subset":"Latin"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"Shanti","size":"13||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"Shanti","size":"12||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"Shanti","size":"11||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"Shanti","size":"11||px","subset":"Latin"}}</level4textfont>
+      </shanti>
+      <viga>      
+        <titlefont>{"Text":{"type":"Latin","family":"Viga","size":"18||px","subset":"Latin","lineheight":"21px"}}</titlefont>
+        <level1textfont>{"Text":{"type":"Latin","family":"Viga","size":"14||px","subset":"Latin"}}</level1textfont>
+        <level2textfont>{"Text":{"type":"Latin","family":"Viga","size":"13||px","subset":"Latin"}}</level2textfont>
+        <level3textfont>{"Text":{"type":"Latin","family":"Viga","size":"12||px","subset":"Latin"}}</level3textfont>
+        <level4textfont>{"Text":{"type":"Latin","family":"Viga","size":"12||px","subset":"Latin"}}</level4textfont>
+      </viga>
+    </param>
+    
+    <param name="fontalignment" type="offlajnskin" default="" size="5" label="FONT_ALIGNMENT" description="">
+      <left>      
+        <titlefont>{"Text":{"align":"left"}}</titlefont>
+        <level1textfont>{"Text":{"align":"left"}}</level1textfont>
+        <level2textfont>{"Text":{"align":"left"}}</level2textfont>
+        <level3textfont>{"Text":{"align":"left"}}</level3textfont>
+        <level4textfont>{"Text":{"align":"left"}}</level4textfont>
+      </left>
+      <right>      
+        <titlefont>{"Text":{"align":"right"}}</titlefont>
+        <level1textfont>{"Text":{"align":"right"}}</level1textfont>
+        <level2textfont>{"Text":{"align":"right"}}</level2textfont>
+        <level3textfont>{"Text":{"align":"right"}}</level3textfont>
+        <level4textfont>{"Text":{"align":"right"}}</level4textfont>
+      </right>
+      <center>      
+        <titlefont>{"Text":{"align":"center"}}</titlefont>
+        <level1textfont>{"Text":{"align":"center"}}</level1textfont>
+        <level2textfont>{"Text":{"align":"center"}}</level2textfont>
+        <level3textfont>{"Text":{"align":"center"}}</level3textfont>
+        <level4textfont>{"Text":{"align":"center"}}</level4textfont>
+      </center>
+    </param>        
+    
+    <param name="titlefont" tabs="Text" type="offlajnfont" default="*Latin|*Arial, Helvetica|*PT Sans|*16px|*1|*0|*FFFFFF|*1|*1px|*1px|*0px|*000000|*none|*none|*normal" label="TITLE_FONT" description="" />
+    <param name="gradient" type="offlajngradient" default="1-1f88cc-004877" size="15" label="BACKGROUND_GRADIENT_COLOR" description=""/>
+    <param name="gradientheight" type="offlajntext" validation="int" size="3" default="400" label="GRADIENT_HEIGHT_FOR_OLDER_BROWSERS" description="">
+      <unit>px</unit>
+    </param>
+    <param type="offlajncombine" name="margin" default="0||px|*|0||px|*|0||px|*|0||px|*|" label="Margin" description="">
+      <param size="2" validation="int" type="offlajntext" label="Top"/>
+      <param size="2" validation="int" type="offlajntext" label="Right"/>
+      <param size="2" validation="int" type="offlajntext" label="Bottom"/>
+      <param size="2" validation="int" type="offlajntext" label="Left"/>
+      <param type="offlajnswitcher" label="-">
+        <unit value="px" imsrc="">px</unit>
+        <unit value="em" imsrc="">em</unit>
+      </param>
+    </param>
+    <param type="offlajncombine" name="padding" default="4|*|4|*|4|*|4|*|px" label="Padding" description="">
+      <param size="2" validation="int" type="offlajntext" label="Top"/>
+      <param size="2" validation="int" type="offlajntext" label="Right"/>
+      <param size="2" validation="int" type="offlajntext" label="Bottom"/>
+      <param size="2" validation="int" type="offlajntext" label="Left"/>
+      <param type="offlajnswitcher" label="-">
+        <unit value="px" imsrc="">px</unit>
+        <unit value="em" imsrc="">em</unit>
+      </param>
+    </param>
+    <param type="offlajncombine" name="borderradius" default="4|*|4|*|4|*|4|*|px" label="Border radius" description="">
+      <param size="2" validation="int" type="offlajntext" label="TL"/>
+      <param size="2" validation="int" type="offlajntext" label="TR"/>
+      <param size="2" validation="int" type="offlajntext" label="BR"/>
+      <param size="2" validation="int" type="offlajntext" label="BL"/>
+      <param type="offlajnswitcher" label="-">
+        <unit value="px" imsrc="">px</unit>
+        <unit value="em" imsrc="">em</unit>
+      </param>
+    </param>    
+    <param name="level" type="offlajnlevel" default="" label="LEVEL_SETTINGS" description="" />
+  </params>
+  
+  <params group="level">
+    <param name="level[x]" type="hidden" default="[x]" label="" description=""/>
+    <param type="offlajncombine" name="level[x]margin" default="0||px|*|0||px|*|0||px|*|0||px|*|" label="Margin" description="">
+      <param size="2" validation="int" type="offlajntext" label="Top"/>
+      <param size="2" validation="int" type="offlajntext" label="Right"/>
+      <param size="2" validation="int" type="offlajntext" label="Bottom"/>
+      <param size="2" validation="int" type="offlajntext" label="Left"/>
+      <param type="offlajnswitcher" label="-">
+        <unit value="px" imsrc="">px</unit>
+        <unit value="em" imsrc="">em</unit>
+      </param>
+    </param>
+    <param type="offlajncombine" name="level[x]padding" default="4||px|*|4||px|*|4||px|*|4||px|*|" label="Padding" description="">
+      <param size="2" validation="int" type="offlajntext" label="Top"/>
+      <param size="2" validation="int" type="offlajntext" label="Right"/>
+      <param size="2" validation="int" type="offlajntext" label="Bottom"/>
+      <param size="2" validation="int" type="offlajntext" label="Left"/>
+      <param type="offlajnswitcher" label="-">
+        <unit value="px" imsrc="">px</unit>
+        <unit value="em" imsrc="">em</unit>
+      </param>
+    </param>  
+    
+    <param type="offlajncombine" name="level[x]bg" default="ffffff00|*|ffffff00|*|ffffff00|*|ffffff00" label="Background color" description="">
+      <param type="offlajncolor" alpha="1" label="Default"/>
+      <param type="offlajncolor" alpha="1" label="Hover"/>
+      <param type="offlajnclear"/>
+      <param type="offlajncolor" alpha="1" label="Active"/>
+      <param type="offlajncolor" alpha="1" label="Opened"/>
+    </param> 
+    <param name="level[x]border" type="offlajncolor" default="ffffff55" alpha="1" size="15" label="BORDER_COLOR" description="" />
+    
+    <param type="offlajncombine" name="level[x]minus" default="|*|left|*|#000000|*|1" label="Opened state">
+      <param type="offlajnimagemanager" folder="/images/minus/" label="Image" />
+      <param type="offlajnclear"/>
+      <param type="offlajnradio" label="Position">
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+      </param>
+      <param type="offlajnclear"/>
+      <param type="offlajncolor" alpha="1" label="Colorize"/>
+      <param type="offlajnswitcher" label="-" onoff="1">
+        <option value="1" imsrc="">ON</option>
+        <option value="0" imsrc="">OFF</option>
+      </param>
+    </param>
+    
+    <param type="offlajncombine" name="level[x]plus" default="|*|left|*|#000000|*|1" label="Closed state">
+      <param type="offlajnimagemanager" folder="/images/plus/" label="Image" />
+      <param type="offlajnclear"/>
+      <param type="offlajnradio" label="Position">
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+      </param>
+      <param type="offlajnclear"/>
+      <param type="offlajncolor" alpha="1" label="Colorize"/>
+      <param type="offlajnswitcher" label="-" onoff="1">
+        <option value="1" imsrc="">ON</option>
+        <option value="0" imsrc="">OFF</option>
+      </param>
+    </param>
+
+    <param name="level[x]textfont" tabs="Text|Active|Link|Hover" type="offlajnfont" default="" label="TEXT_FONT" description="" />
+  </params>
+</theme>

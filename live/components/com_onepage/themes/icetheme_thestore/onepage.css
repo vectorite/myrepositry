@@ -1,0 +1,970 @@
+/*
+*
+* @copyright Copyright (C) 2007 - 2010 RuposTel - All rights reserved.
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL, see LICENSE.php
+* One Page checkout is free software released under GNU/GPL and uses code from VirtueMart
+* VirtueMart is free software. This version may have been modified pursuant
+* to the GNU General Public License, and as distributed it includes or
+* is derivative of works licensed under the GNU General Public License or
+* other free or open source software licenses.
+* 
+*/
+div#vmMainPageOPC {
+  clear: both; 
+  float: none; 
+  overflow: none; 
+  margin: 0; 
+  padding: 0; 
+  /*position: relative; */
+  margin-top: 10px;   
+  font-family: "Helvetica Neue",Helvetica,Arial;
+}
+div#vmMainPageOPC div.op_col5 .opc_PricesalesPrice, div#vmMainPageOPC div.op_col5 span.opc_PricesalesPrice {
+ text-align: left;
+}
+div#vmMainPageOPC div.op_col7 .opc_PricesalesPrice, div#vmMainPageOPC div.op_col7 span.opc_PricesalesPrice {
+ text-align: right;
+ float: right;
+}
+
+div#vmMainPageOPC h3 span.col-module_header_color {
+ margin-left: 15px;
+}
+
+div#vmMainPageOPC div.op_rounded_fix h3 span.col-module_header_r {
+  
+}
+
+
+div#vmMainPageOPC  a:hover, div#vmMainPageOPC  a:active, div#vmMainPageOPC  a:focus, div#vmMainPageOPC .op_basket_row a:hover  {
+  text-decoration: underline; 
+  background: transparent !important; 
+  outline: none !important;
+  color: #FFD11B !important;
+  
+}
+
+div#vmMainPageOPC textarea#customer_note_field {
+ padding: 3px 3px 3px 3px !important;
+}
+#vmMainPageOPC a.deletebtn, #vmMainPageOPC a.deletebtn:hover {
+ background: none;
+ background: transparent url('images/remove_from_cart.png') no-repeat top left; 
+ display: inline-block; 
+ width: 20px; 
+ height: 20px; 
+}
+#vmMainPageOPC iframe.tos_iframe {
+ width: 95%; 
+ height: 150px; 
+}
+#vmMainPageOPC input.updatebtn {
+background: none;
+background: transparent url('images/update_quantity_cart.png') no-repeat top left; 
+ display: inline-block; 
+ width: 20px; 
+ height: 20px; 
+ border: none; 
+ 
+}
+
+div#vmMainPageOPC div.loginsection {
+ padding-top: 40px; 
+}
+
+
+
+div#tab_selector {
+ margin-top: -19px;
+}
+div#top_basket_wrapper {
+ width: 100%;
+ 
+}
+
+div#vmMainPageOPC table tr td, div#vmMainPageOPC table tr, div#vmMainPageOPC table td {
+ border: 0; 
+ background: none;
+}
+
+div#vmMainPageOPC span#customer_note_input {
+ margin-top: 10px;
+}
+#onepage_main_div h3, div#vmMainPageOPC h3, #onepage_main_div h3 span span span span {
+ padding: 0 !important; 
+ margin: 0 !important; 
+ background: none !important;
+ margin-top: 10px !important;
+ margin-left: 10px; 
+} 
+div#vmMainPageOPC div.op_basket_row div a.continue_link {
+ padding: 0; 
+ padding-left: 20px;
+ margin: 0; 
+ background: none;
+ background-color: transparent;
+}
+div#vmMainPageOPC input#coupon_code {
+ padding: 0;
+ margin-right: 9px;
+ width: 100px;
+ background: none;
+ height: 20px;
+}
+/* set the width of the country field select dropdown */
+div#vmMainPageOPC div#country_input select#country_field {
+ width: 215px;
+ max-width: 215px;
+}
+
+div#basket_container {
+ width: 100%;
+ float: left;
+
+}
+
+div#couponcode_field {
+ margin-top: 10px; 
+ float: right;
+ width: 50%;
+}
+div#couponcode_field form span {
+ 
+}
+
+
+
+div#couponcode_field form input {
+ text-align: left;
+ margin-left: auto; 
+ margin-right: 0; 
+ clear: both;
+ display: block;
+ width: 200px; 
+}
+#onepage_main_div button {
+ background-color: transparent !important;
+ border: none !important;
+}
+button#confirmbtn_button {
+ background-color: transparent !important;
+ border: none !important;
+
+}
+div#couponcode_field form button {
+  clear: both;
+  float: right;
+  background-color: transparent;
+  background-color: transparent !important;
+  border: none !important;
+  
+
+}
+div#couponcode_field form button span {
+ float: none;
+}
+
+div#basket_container .black-basket {
+ width: 100%;
+}
+div#basket_container div {
+ width: 100%;
+}
+div#basket_container div div {
+ width: 100%;
+}
+div#basket_container div div div {
+ width: 100%;
+}
+div#basket_container div div div div {
+ width: 100%;
+}
+div#basket_container div div div div div {
+ width: 100%;
+}
+div#basket_container div div div div div div {
+ width: 100%;
+}
+
+
+div#onepage_main_div {
+ width: 100%;
+ margin: 0;
+ padding: 0;
+ float: left;
+}
+div#vmMainPageOPC .col-module_header_color {
+ font-size: 12px !important;
+ font-weight: bold; 
+ color: #FFD11B;
+}
+
+#basket_container .opc_product_name {
+   color: #FFD11B;
+   text-decoration: none; 
+}
+
+
+div#vmMainPageOPC .continue_link_ice span {
+  color: #FFD11B;
+  margin-left: 20px; 
+}
+div#vmMainPageOPC .op_round span#confirmbtn {
+ background-image: url(images/button_paypal.png);
+}
+div#vmMainPageOPC button#confirmbtn_button .op_round {
+ background-image: none;
+
+}
+div#vmMainPageOPC span#confirmbtn {
+ text-align: left;
+ font-weight: normal;
+ padding-left: 20px;
+ color: #FFFFFF;
+}
+span#op_separator {
+ background: url(images/separator.png) no-repeat 0 0;
+ width: 4px;
+ vertical-align: top;
+ height: 100%;
+ line-height: 100%;
+ white-space: wrap;
+}
+div#basket_container div.op_basket_row div.op_col1 div {
+  
+ position: relative; 
+ top: 0; 
+ left: 10px; 
+}
+div#basket_container div.op_basket_row div.op_col1 {
+ width: 10%;
+ float: left;
+ color: #D9D9D9;
+ overflow: visible;
+ position: relative; 
+}
+div#basket_container div.op_basket_row div.op_col2 {
+ width: 25%;
+ float: left;
+    color: #D9D9D9;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col3 {
+ width: 10%;
+ float: left;
+    color: #D9D9D9;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col4 {
+ width: 15%;
+ float: left;
+    color: #D9D9D9;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col5 {
+ width: 15%;
+ float: left;
+    color: #D9D9D9;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col6 {
+ width: 15%;
+ float: left;
+    color: #D9D9D9;
+ overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col6 form {
+ float: left;
+}
+div#basket_container div.op_basket_row div.op_col6 form input {
+ float: left !important;
+}
+div#basket_container div.op_basket_row div.op_col7 div.PricesalesPrice {
+ text-align: right;
+}
+
+div#basket_container div.op_basket_row div.op_col7 {
+ width: 9%;
+ float: left;
+ text-align: right;
+    color: #D9D9D9;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col1_4 {
+ width: 60%;
+ float: left;
+ text-align: right;
+    color: #D9D9D9;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col5_3 {
+ width: 39%;
+ float: left;
+ text-align: right;
+    color: #D9D9D9;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col2_2 {
+ width: 35%;
+ float: left;
+    color: #D9D9D9;
+  overflow: visible;
+}
+div#basket_container div.op_basket_row div.op_col2_3 {
+ width: 50%;
+float: left;
+    color: #D9D9D9;
+  overflow: visible;
+}
+div#onepage_main_div fieldset legend.sectiontableheader {
+background: none;
+padding: 0;
+margin: 0;
+border: none;
+
+}
+fieldset.op_fieldset strong {
+ clear: both !important;
+ width; 100%;
+}
+div#onepage_main_div fieldset.op_fieldset {
+background: none !important;
+padding: 0 !important;
+margin: 0 !important;
+border: none !important;
+}
+
+
+
+#basket_container div div div div div div div div div.op_basket_row {
+ float: left;
+ min-height: 30px;
+ width: 100%;
+ clear: both;
+ vertical-align: center;
+ background: url("images/othermenu_line.png") no-repeat scroll right bottom transparent;
+ min-height: 35px;
+ line-height: 35px;
+ padding-bottom: 4px;
+}
+div#vmMainPageOPC .basket_container {
+ clear: none; 
+ white-space: no-wrap;
+ float: left; 
+}
+span#op_round_and_separator {
+ background-image: url(images/button_s.png);
+ margin-left: -2px;
+}
+span#op_round_and_separator span {
+ padding-left: 5px;
+}
+
+div#tab_selector button {
+ background: none;
+ background-color: transparent;
+ color: white;
+}
+div#vmMainPageOPC span#span2 {
+ background: none;
+ background-color: transparent;
+ padding-left: 30px;
+}
+div#vmMainPageOPC span#span1 {
+background: url(images/separator.png) no-repeat left top; 
+ padding-left: 0;
+ padding-right: 0;
+}
+div#vmMainPageOPC .op_starttab  {
+ background: url(images/button-left.png) no-repeat left top;
+ line-height: 27px; 
+}
+div#vmMainPageOPC .op_tabs {
+ margin: 0;
+ padding: 0; 
+ line-height: 27px; 
+}
+div#vmMainPageOPC .op_endtab {
+background: url(images/button-right.png) no-repeat right top;
+line-height: 27px; 
+}
+div#vmMainPageOPC .coupon {
+  
+}
+button#submit_coupon_button {
+ float: right; 
+ min-width: 150px;
+ clear: both; 
+ padding: 0; 
+ margin: 0; 
+}
+div#tab_selector {
+ height: 30px;
+ padding: 0;
+ padding-top: -20px;
+ padding-left: 30px;
+}
+button#op_login_btn {
+  position: relative;
+ margin: 0; 
+ padding: 0;
+
+}
+button#op_register_btn {
+ position: relative;
+ margin: 0;
+ padding: 0;
+ margin-left: -24px; 
+}
+div#tab_selector button {
+
+}
+button#submit_coupon_button .op_round {
+ margin: 0;
+}
+span#span_coupon_button {
+ min-width: 150px;
+}
+span#span_coupon_button span span {
+ background: none; 
+ padding: 0; 
+ margin: 0; 
+ margin-right: 20px; 
+}
+span#span_coupon_button span {
+ text-align: center;
+ padding-left: 45px; 
+ 
+}
+
+textarea#customer_note_field {
+ height: auto;
+ width: auto;
+ overflow: auto;
+}
+div#onepage_userfieds {
+	width: 100%; 
+	float: left;
+}
+div#onepage_info_above_button {
+	text-align: center; 
+	margin: auto;
+}
+div#vmMainPageOPC  div#onepage_total_inc_sh {
+ padding-top: 10px;
+ width: 100%;
+}
+div#vmMainPageOPC div#onepage_info_above_button {
+ width: 100%;
+}
+div#vmMainPageOPC div#onepage_info_above_button div div {
+ width: 100%;
+}
+div#onepage_submit_section {
+	width: 100%; 
+	float: left; 
+	padding-top: 30px;
+}
+input#confirmbtn {
+	width: 350px; 
+	height: 40px;  
+	padding: 20px;
+}
+div#onepage_login_box {
+ padding: 20px; 
+ text-align: center; 
+ margin-right: auto; 
+ margin-left: auto; 
+ width: 100%; 
+}
+div#onepage_login {
+ text-align: left; 
+ padding-left: 35%;
+}
+textarea#onepage_tos {
+width: 100%;
+}
+
+div#vmMainPageOPC span.bottom_totals_txt {
+width: 30%;
+text-align: right;
+float: left;
+padding-left: 40px;
+}
+
+div#vmMainPageOPC span.bottom_totals {
+/* width: 67%; */
+text-align: left;
+padding-left: 3%;
+float: left;
+padding-left: 35px;
+
+}
+div#onepage_total_inc_sh {
+ width: 350px;
+ float: left;
+}
+div#vmMainPageOPC div#totalam div {
+ float: left;
+ clear: both;
+ width: 100%;
+}
+span#tt_total_txt {
+ font-weight: bold;
+}
+div#totalam {
+
+width: 350px;
+clear: both;
+float: left;
+margin: 0 auto;
+padding-left: 40px;
+}
+
+div#vmMainPageOPC br.op_clear {
+ clear: both;
+}
+
+div#tt_order_subtotal_div {
+ width: 100%;
+ float: left;
+ clear: both;
+}
+div#tt_order_payment_discount_before_div {
+ width: 100%;
+ display: none;
+ 
+}
+
+div#tt_order_discount_before_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_shipping_rate_div {
+ width: 100%;
+ 
+
+}
+div#tt_shipping_tax_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_tax_total_0_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_1_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_2_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_3_div {
+ display: none;
+width: 100%;
+}
+
+div#tt_tax_total_4_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_order_payment_discount_after_div {
+ width: 100%;
+ display: none;
+
+}
+
+div#tt_order_discount_after_div {
+ width: 100%;
+ display: none;
+
+}
+span#tt_total {
+ color: green;
+ font-weight: bold;
+}
+div#tt_total_div {
+ width: 100%;
+
+}
+
+div#logintab .button {
+ float: left;
+}
+div#vmMainPageOPC div.op_col2_2 a strong {
+ color: #FFD11B;
+}
+select#shipping_inside_basket_select {
+ font-family: monospace;
+}
+
+select#payment_inside_basket {
+ font-family: monospace;
+}
+
+div#rbsubmit {
+ padding-top: 20px;
+ vertical-align: bottom;
+ text-align: right;
+}
+div#rbsubmit div {
+ padding: 0;
+ width: 350px;
+}
+div#vmMainPageOPC div.op_rounded div.op_rounded_fix div div.formLabel {
+    clear: left;
+    float: left;
+    font-weight: bold;
+    margin: 10px 10px 0 0;
+    text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 30%;
+}
+div#vmMainPageOPC div.continue_link_under_basket {
+ margin-bottom: 30px; 
+}
+div#vmMainPageOPC div.op_rounded div.op_rounded_fix div div.formField {
+    float: left;
+    margin: 8px 2px 2px;
+    vertical-align: middle;
+    width: 60%;
+}
+/* rounded corners Felix */
+div#vmMainPageOPC div.op_inside {
+    /*margin-bottom: -20px;*/
+/*    margin-top: -15px; */
+    margin-top: 0px; 
+/*    padding-top: 15px;  */
+    float: left;
+    margin-right: 0; 
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;	 
+    padding-bottom: 5px;
+    padding-top: 10px;
+
+}
+
+div#vmMainPageOPC div.op_rounded_content div div {
+ padding-top: 20px;
+
+}
+div#vmMainPageOPC .checkoutarea {
+    background: none repeat scroll 0 0 transparent !important;
+    border: none !important;
+	margin: 0 !important;    
+    padding: 10px 0 !important;
+    width: 100% !important;
+    float: left !important;
+    clear: both;
+}
+
+div#vmMainPageOPC div.op_rounded {
+    background: url("images/col-module_br.png") no-repeat scroll right bottom transparent;
+    margin: 0 0 30px;
+    overflow: visible;
+    float: left;
+    width: 100%;
+    
+}
+
+#onepage_main_div button {
+ background: none;
+ background-color: transparent;
+ border: medium none;
+ cursor: pointer;
+ overflow: visible;
+ padding: 0 2px;
+ white-space: nowrap;
+ width; auto;
+}
+div#vmMainPageOPC button:hover .op_round {
+ background-position: right bottom;
+ color: #FFFFFF;
+}
+div#vmMainPageOPC button:hover .op_round span {
+ background-position: left bottom;
+}
+
+
+#onepage_main_div .op_round:hover {
+ background-position: right bottom;
+ color: #FFFFFF;
+}
+#onepage_main_div .op_round:hover span {
+ background-position: left bottom;
+}
+#onepage_main_div strong {
+ text-decoration: none !important;
+}
+div#vmMainPageOPC .op_basket_row a {
+ text-decoration: none;
+}
+#onepage_main_div button span span {
+ /*background: none;*/
+ text-indent: -25px;
+ text-align: center;
+}
+#onepage_main_div #confirmbtn_button span span {
+ text-indent: 0;
+ text-align: left;
+}
+div#vmMainPageOPC .op_round {
+ background-image: url(images/button.png);
+ background-position: right top;
+ background-repeat: no-repeat;
+ color: #CCCCCC;
+ cursor: pointer;
+ display: inline-block;
+ line-height: 27px;
+ padding-right: 15px;
+
+ text-decoration: none;
+ vertical-align: middle;
+ margin: 0;
+ margin-right: 10px;
+}
+div#vmMainPageOPC   .op_round span span {
+ background: none; 
+}
+div#vmMainPageOPC   .op_round span {
+ background-image: url(images/button.png);
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-color: transparent;
+ height: 29px;
+ padding-left: -15px;
+ display: inline-block;
+ margin: 0;
+}
+span#op_round_and_separator {
+ overflow: hidden;
+}
+div#vmMainPageOPC div.op_inside {
+}
+div#vmMainPageOPC div.op_rounded div {
+    background: url("images/col-module_bl.png") no-repeat scroll left bottom transparent;
+    padding-top: 20px;
+    margin-top: -20px;
+}
+div#vmMainPageOPC div.op_rounded div div {
+    background: url("images/col-module_tr.png") no-repeat scroll right top transparent;
+        padding-top: 20px;
+}
+div#vmMainPageOPC div.op_rounded div div div {
+    background: url("images/col-module_tl.png") no-repeat scroll left top transparent;
+        padding-top: 0px;
+    margin-top: -20px;
+}
+div#vmMainPageOPC div.op_rounded div div div div {
+    background: none repeat scroll 0 0 transparent;
+    padding-top: 0px;
+    margin: 0;
+	margin-top: 0px;
+}
+div#vmMainPageOPC div.op_rounded div.op_rounded_fix {
+    clear: both;
+    overflow: visible;
+    padding: 9px 10px;
+    /*position: relative;*/
+    /*min-height: 200px; */
+   
+    
+}
+div#vmMainPageOPC div.op_rounded_content div {
+    
+}
+div#vmMainPageOPC div.op_rounded div.op_rounded_fix div {
+ clear: none;
+ position: auto;
+ padding-left: 10px;
+ width: 95%;
+}
+
+div#vmMainPageOPC div.op_rounded div.op_rounded_fix div div {
+ clear: none;
+ position: auto;
+ padding: 0;
+ width: auto;
+}
+
+
+div#vmMainPageOPC div.op_rounded h3 {
+    color: #555555;
+    display: inline-block;
+    font-size: 1em;
+    margin-top: -50px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+div#vmMainPageOPC div.op_rounded h3 span.col-module_header_r, div#vmMainPageOPC div.op_rounded h3 span.col-module_header_l, div#vmMainPageOPC div.op_rounded h3 span.col-module_header_arrow {
+    display: inline-block;
+    height: 43px;
+    line-height: 31px;
+}
+div#vmMainPageOPC div.op_rounded h3 span.col-module_header_arrow {
+    padding: 0 15px;
+}
+div#vmMainPageOPC div.op_rounded h3 span.col-module_header_r {
+    background: url("images/col-module_header_r.png") no-repeat scroll right center transparent;
+}
+div#vmMainPageOPC div.op_rounded h3 span.col-module_header_l {
+    background: url("images/col-module_header_l.png") no-repeat scroll left center transparent;
+}
+div#vmMainPageOPC div.op_rounded h3 span.col-module_header_arrow {
+    background: url("images/col-module_header_arrow.png") no-repeat scroll center bottom transparent;
+}
+div#vmMainPageOPC div.op_rounded h3 span.col-module_header_color {
+    color: #015A80;
+}
+div#vmMainPageOPC div.op_rounded .op_rounded_content {
+    margin-top: 14px;
+    text-align: left;
+    padding: 0;
+}
+
+div#vmMainPageOPC div.op_rounded {
+    margin-right: 10px;
+}
+
+div#vmMainPageOPC div.op_rounded_fix h3 span.col-module_header_r {
+    background: url("images/col-module_dark_header_r.png") no-repeat scroll right center transparent;
+}
+div#vmMainPageOPC div.op_rounded_fix h3 span.col-module_header_l {
+    background: url("images/col-module_dark_header_l.png") no-repeat scroll left center transparent;
+}
+div#vmMainPageOPC div.op_rounded_fix h3 span.col-module_header_arrow {
+    background: url("images/col-module_dark_header_arrow.png") no-repeat scroll center bottom transparent;
+}
+div#vmMainPageOPC div.op_rounded_fix h3 {
+    color: #FFFFFF;
+}
+div#vmMainPageOPC div.op_rounded_fix h3 span.col-module_header_color {
+    color: #CCCCCC; 
+}
+button#confirmbtn {
+ top: 100px;
+}
+
+div#vmMainPageOPC div.black-basket {
+    background: url("images/colmodule_style1_br.png") no-repeat scroll right bottom transparent;
+    margin: 0px 0 30px;
+}
+#basket_container .black-basket div {
+    background: url("images/colmodule_style1_bl.png") no-repeat scroll left bottom transparent;
+}
+#basket_container .black-basket div div {
+    background: url("images/colmodule_style1_tr.png") no-repeat scroll right top transparent;
+}
+#basket_container .black-basket div div div {
+    background: url("images/colmodule_style1_tl.png") no-repeat scroll left top transparent;
+}
+#basket_container .black-basket div div div div {
+    background: none repeat scroll 0 0 transparent;
+}
+#basket_container .black-basket div.col-module_fix {
+    clear: both;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+}
+#basket_container .black-basket h3 span {
+    background: none repeat scroll 0 0 transparent !important;
+    display: inline !important;
+    height: auto !important;
+    line-height: normal !important;
+    padding: 0 !important;
+}
+#basket_container .black-basket h3 {
+    background: url("images/colmodule_style1_header.png") repeat-x scroll left bottom transparent;
+    color: #FFFFFF;
+    display: block;
+    font-size: 1.3em;
+    margin: 5px 10px 7px;
+    padding: 10px 0 8px;
+}
+#basket_container .black-basket h3 span.col-module_header_color {
+    /*color: #CCCCCC;*/
+}
+#basket_container .black-basket .col-module_content {
+    color: #D9D9D9;
+/*    padding: 0 12px 12px; */
+}
+#basket_container .black-basket .col-module_content div.op_basket_row {
+}
+#basket_container img.browseProductImage 
+{
+ margin-left: 4px;
+}
+#basket_container .black-basket {
+    margin-right: 0px;
+	margin-left: 0px;
+}
+
+#basket_container tr {
+    /* background: url("images/othermenu_line.png") no-repeat scroll right bottom transparent; */
+    border-bottom: 0.2px dotted #999999;
+    color: #999999;
+    font-size: 1em;
+    height: 29px;
+    line-height: 29px;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+}
+#basket_container tr td {
+ background: none;
+}
+div#vmMainPageOPC tbody {display:block; display:table-row-group;} /* IE and FF */
+div#vmMainPageOPC table { empty-cells:show; }
+
+
+/* address listing */
+div#vmMainPageOPC div#staddresses div.op_field_name {
+  width:40%; 
+  float: left;
+  margin: 0; 
+  padding: 0; 
+}
+div#staddresses div.op_field_value {
+ 
+ float: left; 
+ clear: right; 
+ margin:0; 
+ padding:0;
+ width:60%; 
+}
+
+div#staddresses div.op_radiowrapper {
+ width: 10%; 
+ margin: 0; 
+ margin-top: 10px; 
+ padding: 0; 
+ float: left; 
+ clear: left; 
+}
+
+div#staddresses div.op_labelwrapper {
+ margin: 0; 
+ margin-top: 10px; 
+ padding: 0; 
+ width: 90%; 
+ float: left; 
+
+ clear: right;  
+}

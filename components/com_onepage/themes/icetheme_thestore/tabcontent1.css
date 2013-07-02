@@ -1,0 +1,106 @@
+/* ######### CSS for Shade Tabs. Remove if not using ######### */
+.vmTabContent {
+	border:0px solid #636466;
+	border-top:0 solid transparent;
+	width:100%;
+	margin-bottom: 1em;
+	padding: 0px;
+	background:#FFF;
+	}
+
+.vmTabContentInner {
+	padding: 0;
+	width:100%;
+	margin: 3px auto;
+	}
+	
+.vmTabSub {
+	border-bottom:1px solid #BBB;
+	width:100%;
+	padding: 0px;
+	background:#FBFBFB;
+	margin: 0 auto 1em; 
+	}	
+	
+.vmTabSubInner {
+	width:95%;
+	padding: 6px;
+	margin: 0; 
+	}
+.shadetabs{
+padding: 3px 0;
+margin-left: 0 !important;
+margin-top: 1px;
+margin-bottom: 0;
+font: bold 13px Arial;
+list-style-type: none;
+text-align: left; /*set to left, center, or right to align the menu as desired*/
+border-bottom:2px solid #636466;
+}
+
+ul.shadetabs {
+	list-style-image: none;
+	}
+
+.shadetabs li{
+display: inline;
+margin: 0;
+height: 40px;
+}
+
+.shadetabs li a{
+text-decoration: none;
+position: relative;
+z-index: 0;
+padding: 3px 7px 5px;
+margin-right: 0px;
+border: 1px solid #AAA;
+border-bottom: 0px;
+color: #FEFEFE;
+background: url(images/tab_bg-inactive.png) top left #FFF;
+font-family: Helvetica, Verdana, arial;
+font-size: 14px;
+}
+
+.shadetabs li a:visited{
+color: #2d2b2b;
+}
+
+.shadetabs li a:hover{
+text-decoration: underline;
+color: #FFF;
+}
+
+.shadetabs li a.selected{ /*selected main tab style */
+position: relative;
+padding: 3px 7px 4px;
+font-size: 16px;
+border: 1px solid #636466;
+border-bottom:0px;
+background: url(images/tab_bg-active.png) top left #FFF;
+color: #FFFFFF;
+letter-spacing: 0.03em;
+font-weight: bold;
+font-family: Helvetica, Verdana, arial;
+}
+
+.shadetabs li a.selected:hover{ /*selected main tab style */
+text-decoration: none;
+}
+
+.tabcontentstyle{ /*style of tab content oontainer*/
+border: 1px solid gray;
+width: 450px;
+margin-bottom: 1em;
+padding: 10px;
+}
+
+.tabcontent{
+/*display:none; commented by stAn as this would require a js initialization for current tab*/
+}
+
+@media print {
+.tabcontent {
+display:block !important;
+}
+}

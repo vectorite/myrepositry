@@ -1,0 +1,25 @@
+#userregistrationForm label.error ,#cardnumberForm label.error{
+    color: red;
+    display: block;
+    float: right;
+    padding-left: 10px;
+    width: 170px;
+}
+
+
+#userregistrationForm select {
+  
+  color: #000;
+  font: 12px/21px arial,sans-serif;
+  background: url(select.png) no-repeat;
+  overflow: hidden;
+}
+
+#userregistrationForm tr td input, textarea {
+    font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 258px;
+}

@@ -1,0 +1,316 @@
+/* begin Page */
+/* Created by Artisteer v3.1.0.48375 */
+
+/* Compatibility rule for default TinyMCE skin (for td element): */
+td {
+   color: inherit;
+   font-family: inherit;
+   font-size: inherit;
+   margin: inherit;
+}
+
+body, table
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
+{
+   margin: 0;
+   padding: 0;
+}
+
+body, table
+{
+   text-align: left;
+}
+
+body 
+{
+   direction: ltr;
+   color: #333333;
+   background: #FFFFFF;
+}
+
+li,
+table,
+a,
+a:link,
+a:visited,
+a:hover
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+p
+{
+   margin: 12px 0;
+}
+
+h1,
+h1 a,
+h1 a:link,
+h1 a:visited,
+h1 a:hover,
+h2,
+h2 a,
+h2 a:link,
+h2 a:visited,
+h2 a:hover,
+h3,
+h3 a,
+h3 a:link,
+h3 a:visited,
+h3 a:hover,
+h4,
+h4 a,
+h4 a:link,
+h4 a:visited,
+h4 a:hover,
+h5,
+h5 a,
+h5 a:link,
+h5 a:visited,
+h5 a:hover,
+h6,
+h6 a,
+h6 a:link,
+h6 a:visited,
+h6 a:hover
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 35px;
+   text-decoration: none;
+}
+
+a
+{
+   font-size: 14px;
+   text-decoration: underline;
+   color: #333333;
+}
+
+a:link
+{
+   font-size: 14px;
+   text-decoration: underline;
+   color: #333333;
+}
+
+a:visited
+{
+   color: #663366;
+}
+
+a:hover
+{
+   color: #666666;
+}
+
+h1
+{
+   color: #333333;
+   margin: 5px 0;
+   font-size: 20px;
+   line-height: 100%;
+}
+
+h1 a,
+h1 a:link,
+h1 a:hover,
+h1 a:visited
+{
+   font-size: 20px;
+   line-height: 100%;
+}
+
+h2
+{
+   color: #333333;
+   margin: 5px 0;
+   font-size: 18px;
+   line-height: 100%;
+}
+
+h2 a,
+h2 a:link,
+h2 a:hover,
+h2 a:visited
+{
+   font-size: 18px;
+   line-height: 100%;
+}
+
+h3
+{
+   color: #333333;
+   margin: 5px 0;
+   font-size: 18px;
+   line-height: 100%;
+}
+
+h3 a,
+h3 a:link,
+h3 a:hover,
+h3 a:visited
+{
+   font-size: 18px;
+   line-height: 100%;
+}
+
+h4
+{
+   color: #333333;
+   margin: 5px 0;
+   font-size: 18px;
+   line-height: 100%;
+}
+
+h4 a,
+h4 a:link,
+h4 a:hover,
+h4 a:visited
+{
+   font-size: 18px;
+   line-height: 100%;
+}
+
+h5
+{
+   color: #333333;
+   margin: 5px 0;
+   font-size: 12px;
+   line-height: 100%;
+}
+
+h5 a,
+h5 a:link,
+h5 a:hover,
+h5 a:visited
+{
+   font-size: 12px;
+   line-height: 100%;
+}
+
+h6
+{
+   color: #333333;
+   margin: 5px 0;
+   font-size: 11px;
+   line-height: 100%;
+}
+
+h6 a,
+h6 a:link,
+h6 a:hover,
+h6 a:visited
+{
+   font-size: 11px;
+   line-height: 100%;
+}
+
+ul
+{
+   list-style-type: none;
+   margin: 1em 0 1em 2em;
+   padding: 0;
+}
+
+ol
+{
+   list-style-position: inside;
+   margin: 1em 0 1em 2em;
+   padding: 0;
+}
+
+/* end Page */
+
+/* begin Box, Post */
+/* set background fot correct editing in administrator: */
+
+a img
+{
+   border: 0;
+}
+
+img
+{
+   border-color: #C1CFD1;
+   border-style: solid;
+   border-width: 0;
+   margin: 7px 7px 7px 7px;
+}
+
+table
+{
+   border-collapse: collapse;
+   margin: 1px;
+}
+
+th
+{
+   text-align: center;
+   vertical-align: middle;
+   padding: 7px;
+}
+
+pre
+{
+   overflow: auto;
+   padding: 0.1em;
+}
+/* end Box, Post */
+
+/* begin PostBullets */
+
+li
+{
+   color: #111717;
+   padding: 0;
+}
+
+li ol, .nim-post li ul
+{
+   margin: 0.5em 0 0.5em 2em;
+   padding: 0;
+}
+
+/* end PostBullets */
+
+/* begin PostQuote */
+blockquote,
+blockquote a,
+blockquote a:link,
+blockquote a:visited,
+blockquote a:hover
+{
+   color: #0F1415;
+   font-style: italic;
+   font-weight: normal;
+   font-size: 18px;
+   text-align: left;
+}
+
+blockquote p
+{
+   margin: 0;
+   margin: 2px 0 2px 15px;
+}
+
+blockquote
+{
+   margin: 10px;
+   padding: 0;
+   background-color: #EDF1F2;
+   /* makes block not to align behind the image if they are in the same line */
+  overflow: auto;
+   clear:both;
+}
+
+/* end PostQuote */
+

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<theme>
+  <name>default</name>
+  <params group="defaults">
+        <param name="skin" theme="default" type="skin" size="5" label="Skin:">
+          <pine>
+          <grad>FFF6DF-D8BDA1</grad>
+          <corner>10</corner>
+          <text_c>302513</text_c>
+          <tip_c>302513</tip_c>
+          <alpha>95</alpha>
+        </pine>
+          </param>
+          </params>
+        <params>
+  <param name="preview" type="imageradio" default="preview.png" label="DOCK_PREVIEW" directory="images/preview" hide_none="true" />
+        <param label="DOCK_COLOR" name="dock_c" type="hidden" size="6" value="000000" />
+        <param label="PRICE_COLOR" name="text_c" type="color" size="6" default="302513" />
+        <param label="TOOLTIP_COLOR" name="tip_c" type="color" size="6" default="302513" />
+        <param name="grad" type="gradient" default="FFF6DF-D8BDA1" size="15" label="TOOLTIP_BACKGROUND_GRADIENT" />
+        <param label="TOOLTIP_OPACITY" name="alpha" type="text" size="3" default="95" />
+        <param label="TOOLTIP_CORNER_RADIUS_PX" name="corner" type="text" size="3" default="10" />
+        <param name="shoppingcart" type="imageradio" default="cart1.png" label="SHOPPING_CART_ICON" directory="../../images/carts" hide_none="true" size="64" />
+        <param name="checkout" type="imageradio" default="checkout1.png" label="CHECKOUT_ICON" directory="../../images/checkouts" hide_none="true" size="64" />
+        <param name="icon" type="imageradio" default="icon1.png" label="ICONS_BACKGROUND" directory="../../images/icons" hide_none="true" size="14" />
+        <param name="noimg" type="imageradio" default="noimg1.png" label="NO_IMAGE_ICON" directory="../../images/noimgs" hide_none="true" size="64" />
+        </params>
+  
+  </theme>

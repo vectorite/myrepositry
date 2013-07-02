@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form name="default">
+    <fieldset>
+      <field name="skin" theme="default" type="skin" size="5" label="SKIN">
+        <black>
+          <grad>444444-181818</grad>
+          <corner>5</corner>
+          <dock_c>000000</dock_c>
+          <text_c>ffffff</text_c>
+          <tip_c>ffffff</tip_c>
+          <alpha>88</alpha>
+        </black>
+        <white>
+          <grad>eeeeee-dddddd</grad>
+          <corner>5</corner>
+          <dock_c>cccccc</dock_c>
+          <text_c>000000</text_c>
+          <tip_c>000000</tip_c>
+          <alpha>88</alpha>
+        </white>
+        <gray>
+          <grad>949494-5E5E5E</grad>
+          <corner>5</corner>
+          <dock_c>737373</dock_c>
+          <text_c>ffffff</text_c>
+          <tip_c>ffffff</tip_c>
+          <alpha>88</alpha>
+        </gray>
+        <sky>
+          <grad>D5EBFB-89C3EB</grad>
+          <corner>10</corner>
+          <dock_c>89C3EB</dock_c>
+          <text_c>212F38</text_c>
+          <tip_c>212F38</tip_c>
+          <alpha>88</alpha>
+        </sky>
+        <blue>
+          <grad>54A3EE-1E69DE</grad>
+          <corner>10</corner>
+          <dock_c>1E69DE</dock_c>
+          <text_c>ffffff</text_c>
+          <tip_c>ffffff</tip_c>
+          <alpha>88</alpha>
+        </blue>
+        <green>
+          <grad>005700-002400</grad>
+          <corner>5</corner>
+          <dock_c>002400</dock_c>
+          <text_c>ffffff</text_c>
+          <tip_c>ffffff</tip_c>
+          <alpha>88</alpha>
+        </green>
+        <brown>
+          <grad>E9D4B3-B68D4C</grad>
+          <corner>5</corner>
+          <dock_c>B68D4C</dock_c>
+          <text_c>000000</text_c>
+          <tip_c>000000</tip_c>
+          <alpha>88</alpha>
+        </brown>
+        <pink>
+          <grad>FCECFC-FBA6E1</grad>
+          <corner>5</corner>
+          <dock_c>FBA6E1</dock_c>
+          <text_c>52083E</text_c>
+          <tip_c>52083E</tip_c>
+          <alpha>88</alpha>
+        </pink>
+        <red>
+          <grad>F18E99-BA2737</grad>
+          <corner>5</corner>
+          <dock_c>BA2737</dock_c>
+          <text_c>ffffff</text_c>
+          <tip_c>ffffff</tip_c>
+          <alpha>88</alpha>
+        </red>
+      </field>
+      <field name="preview" type="imageradio" default="preview.png" label="DOCK_PREVIEW" directory="images/preview" hide_none="true" />
+      <field label="DOCK_COLOR" name="dock_c" type="color" size="6" default="000000" />
+      <field label="PRICE_COLOR" name="text_c" type="color" size="6" default="ffffff" />
+      <field label="TOOLTIP_COLOR" name="tip_c" type="color" size="6" default="ffffff" />
+      <field name="grad" type="gradient" default="444444-181818" size="15" label="TOOLTIP_BACKGROUND_GRADIENT" />
+      <field label="TOOLTIP_OPACITY" name="alpha" type="text" size="3" default="88" />
+      <field label="TOOLTIP_CORNER_RADIUS_PX" name="corner" type="text" size="3" default="5" />
+      <field name="shoppingcart" type="imageradio" default="cart1.png" label="SHOPPING_CART_ICON" directory="../../images/carts" hide_none="true" size="64" />
+      <field name="checkout" type="imageradio" default="checkout1.png" label="CHECKOUT_ICON" directory="../../images/checkouts" hide_none="true" size="64" />
+      <field name="icon" type="imageradio" default="icon1.png" label="ICONS_BACKGROUND" directory="../../images/icons" hide_none="true" size="64" />
+      <field name="noimg" type="imageradio" default="noimg1.png" label="NO_IMAGE_ICON" directory="../../images/noimgs" hide_none="true" size="64" />
+    </fieldset>
+</form>

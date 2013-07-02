@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="opext">
+    <name>Double email field</name>
+    <version>1.0.0</version>
+    <creationDate>26.5.2011</creationDate>
+    <author>stAn</author>
+    <authorEmail>stAn|at|rupostel.com</authorEmail>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <copyright><![CDATA[RuposTel s.r.o.]]></copyright>
+    <license>GNU/GPL</license>
+    <description><![CDATA[
+	This extension will let you have two email fields at the Virtuemart checkout which must be identical for checkout to proceed. <br />
+    ]]>
+    </description>
+    <params >
+    <param name="email2_text" type="text" default="" label="Email 2 Name of the field">
+	</param>
+    <param name="email2_error" type="text" default="Emails don't match!" label="Error message when emails don't match">
+	</param>
+    </params>
+</mosinstall>

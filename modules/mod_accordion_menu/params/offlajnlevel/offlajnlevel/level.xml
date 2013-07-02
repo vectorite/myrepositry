@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level>
+  <params>
+    <param name="@spacer" type="spacer" default="Level [x]" label="" description=""/>
+    <param name="level[x]" type="hidden" default="[x]" label="" description=""/>
+    <param name="level[x]minusimage" type="imageradio" default="1minus.png" label="Image for opened state" description="" directory="/images/minus" exclude="" stripext="" />
+		<param name="level[x]minusimagecolor" type="offlajncolor" default="bf533a" size="7" label="Opened image color" description="" />
+    <param name="level[x]plusimage" type="imageradio" default="1plus.png" label="Image for closed state" description="" directory="/images/plus" exclude="" stripext="" />
+    <param name="level[x]plusimagecolor" type="offlajncolor" default="448c3b" size="7" label="Closed image color" description="" />
+    
+    <param name="level[x]textfont" type="offlajnfont" default="*Latin|*Arial, Helvetica|*PT Sans|*14px|*1|*0|*FFFFFF|*1|*1px|*1px|*1px|*000000|*none|*none|*normal" label="Text font" description="" />
+    <param name="level[x]linkfont" type="offlajnfont" default="*Latin|*Arial, Helvetica|*PT Sans|*14px|*1|*0|*FF0000|*1|*1px|*1px|*1px|*000000|*none|*none|*normal" label="Link font" description="" />
+    <param name="level[x]hoverfont" type="offlajnfont" default="*Latin|*Arial, Helvetica|*PT Sans|*14px|*1|*0|*0000FF|*1|*1px|*1px|*1px|*000000|*none|*none|*normal" label="Link hover font" description="" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+  </params>
+</level>

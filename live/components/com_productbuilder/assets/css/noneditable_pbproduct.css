@@ -1,0 +1,271 @@
+/*
+* main css file for the productbuilder non-editable-bundle layout
+* @version $Id: styleshet.css 1 24-11-2010 20:25:41Z sakisTerz $
+* @package front-end
+* @subpackage stylesheet
+* @author Sakis Terz (sakis@breakDesigns.net)
+* @copyright	Copyright (C) 2009 breakDesigns.net. All rights reserved
+* @license	GNU/GPL v3
+* see administrator/components/com_productbuilder/COPYING.txt
+*/
+
+/* General Shop Styles here please */
+ #pb_mainPage{
+
+ }
+
+/* The bundle's image */
+ .pb_prod_img{
+   float:left;
+   padding:10px;
+ }
+.pb_prod_name{
+}
+
+/*groups*/
+#groups_part{
+  padding:10px;
+  float:left;
+  margin-right:3%;
+}
+
+.group{
+  margin-bottom:10px;  
+}
+
+.group_header{
+margin:0px !important;
+}
+.group_header h3{
+margin:0px !important;
+padding:3px 10px;
+}
+.group_details{
+  margin-top:10px;
+  margin-top:10px;
+  padding:10px;
+}
+
+
+.pr_price{
+  float:right;
+  margin:22px 10px 0px 15px;
+}
+
+.pr_details{
+  margin-top:5px;
+  float:left;
+}
+
+.grp_price{
+  width:70px;
+}
+
+/*Quantity */
+.pb_quantity_wrapper{
+  float:right;
+  margin:7px 10px 0px 0px;
+}
+
+.quantity_box{
+font-size:12px;
+font-weight: bold;
+}
+
+.staticquantity{
+height:17px;
+line-height:25px;
+font-size:12px;
+}
+
+.quantity_box_button:focus{
+border:none;
+}
+.quantity_box_button{
+  width:17px;
+  height:17px;
+  border:none;
+  padding:0px;
+  margin:0px;
+}
+
+.quantity_box_button_up{
+  padding:0px;
+  margin:0px;
+  background:url(../images/plus.png) 0 0 no-repeat;
+}
+
+.quantity_box_button_down{
+  padding:0px;
+  margin:0px;
+  background:url(../images/minus.png) 0 0 no-repeat;
+}
+
+
+/*product data*/
+.prd_name_desc{
+  width:60%;
+  float:left;
+}
+
+.prd_name_desc h4{
+margin:0px;
+}
+
+.product_s_Descr{
+margin-top:10px;
+}
+
+.browseProductImageContainer{
+ float:left;
+ margin-right:25px;
+}
+
+/* --Attributes/Custom Fields--*/
+
+.attributes{
+min-height:8px;
+margin-top:5px;
+padding:5px 0px;
+}
+
+.atr_line{
+width:100%;
+clear:left;
+line-height:1.3em;
+margin-bottom:8px;
+}
+
+.inner_atr_wrapper{
+clear:both;
+margin-bottom:5px;
+}
+.atrhead{
+line-height:1.3em;
+font-weight:bold;
+text-align:left;
+float:left;
+}
+
+/*custom txt attribute wrapper*/
+.cus_attr_wrapper{
+  margin-top:15px;
+}
+
+/*custom txt attribute label*/
+.atrhead_txt{
+  width:100px;
+  text-align:right;
+
+}
+
+/*custom txt attribute input text*/
+.atr_text{
+  width:170px;
+  height:1em;
+}
+
+.warn_msg{
+  color:#ff0000;
+  display:none;
+}
+
+.atr{
+  float: left;
+  margin-left:5px;
+  line-height:1.3em;
+}
+
+.warn_msg{
+  color:#ff0000;
+  display:none;
+}
+
+.atr input,.atr label{
+  padding:0px;
+  margin:0px;
+}
+
+.atr label{ margin-left:3px;}
+
+/* Cart info modal */
+.cart_info{
+display:none;
+padding:10px;
+}
+
+.pbbuttons_area{
+padding:10px;
+
+}
+
+.cartmessage{
+width:100%;
+text-align:center;
+}
+
+.pbcart_btn{
+padding:5px;
+float:left;
+margin-right:10px;
+text-decoration:none;
+border:1px solid #0054a6;
+}
+
+.pbcart_btn:hover{
+text-decoration:none;
+}
+
+/*Footer toolbar*/
+.pb_product_footer{
+clear:both;
+}
+
+/*general*/
+#toral_pr_wrapper{
+margin-right:20px;
+margin-top:10px;
+clear: both;
+}
+
+#total_price{
+
+}
+
+#total_pr_lbl{
+
+}
+
+.toral_discount_wrapper {
+	float: right;
+	margin-right: 20px;	
+	color: #ff0000;	
+	clear:both;
+	display:none;
+}
+
+#pb_discount_amount {
+	color: #ff0000;
+}
+
+#cartLoader{
+  margin-top:10px;
+  height:10px;
+  width:100%;
+}
+#load_bar{
+  height:10px;
+  background: #0f0;
+  width:0%;
+}
+
+.addtocart_button{
+float:right;
+margin-right:20px;
+margin-top:10px;
+}
+
+.clr{
+ clear:both;
+}
+

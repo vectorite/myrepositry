@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_WORKFORCE_ALLEMPLOYEES_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[COM_WORKFORCE_ALLEMPLOYEES_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+    <fields name="params">
+        <fieldset name="basic">
+            <field
+                name="show_wf_title"
+                type="list"
+                label="COM_WORKFORCE_SHOW_WF_TITLE"
+                default="1"
+                description="COM_WORKFORCE_SHOW_WF_TITLE_DESC">
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

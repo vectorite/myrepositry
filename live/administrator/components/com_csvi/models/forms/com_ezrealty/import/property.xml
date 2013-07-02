@@ -1,0 +1,9 @@
+	<fields name="property">
+		<field name="update_based_on"
+			type="text"
+			size="15"
+			label="COM_CSVI_EZREALTY_UPDATE_BASED_ON_LABEL"
+			description="COM_CSVI_EZREALTY_UPDATE_BASED_ON_DESC"
+			default="id">
+		</field>
+	</fields>

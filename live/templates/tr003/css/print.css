@@ -1,0 +1,304 @@
+/* begin Page */
+
+/* Created by Artisteer v3.1.0.48375 */
+
+body
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited,
+.nim-postheader, .nim-postheader a, .nim-postheader a:link, .nim-postheader a:visited, .nim-postheader a:hover,
+.nim-blockheader .t, .nim-vmenublockheader .t, .nim-logo-text, .nim-logo-text a,
+.nim-logo-name, .nim-logo-name a, .nim-logo-name a:link, .nim-logo-name a:visited, .nim-logo-name a:hover
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 35px;
+   text-decoration: none;
+}
+
+a
+{
+   font-size: 14px;
+   text-decoration: underline;
+}
+
+a:link
+{
+   font-size: 14px;
+   text-decoration: underline;
+}
+
+h1, h1 a, h1 a:link, h1 a:visited, h1 a:hover
+{
+   font-size: 20px;
+   line-height: 100%;
+}
+
+h2, h2 a, h2 a:link, h2 a:visited, h2 a:hover
+{
+   font-size: 18px;
+   line-height: 100%;
+}
+
+h3, h3 a, h3 a:link, h3 a:visited, h3 a:hover
+{
+   font-size: 18px;
+   line-height: 100%;
+}
+
+h4, h4 a, h4 a:link, h4 a:visited, h4 a:hover
+{
+   font-size: 18px;
+   line-height: 100%;
+}
+
+h5, h5 a, h5 a:link, h5 a:visited, h5 a:hover
+{
+   font-size: 12px;
+   line-height: 100%;
+}
+
+h6, h6 a, h6 a:link, h6 a:visited, h6 a:hover
+{
+   font-size: 11px;
+   line-height: 100%;
+}
+
+#nim-main
+{
+   position: relative;
+   width: 100%;
+   left: 0;
+   top: 0;
+   cursor:default;
+}
+
+#nim-page-background-glare, #nim-page-background-middle-texture, #nim-page-background-top-texture
+{
+   display: none;
+}
+
+.cleared
+{
+   float: none;
+   clear: both;
+   margin: 0;
+   padding: 0;
+   border: none;
+   font-size: 1px;
+}
+
+form
+{
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+table.position
+{
+   position: relative;
+   width: 100%;
+   table-layout: fixed;
+}
+/* end Page */
+
+/* begin Box, Post */
+.nim-post
+{
+   margin: 0;
+}
+
+a img
+{
+   border: 0;
+}
+
+.nim-article img, img.nim-article
+{
+   margin: 7px 7px 7px 7px;
+}
+
+.nim-metadata-icons img
+{
+   border: none;
+   vertical-align: middle;
+   margin: 2px;
+}
+
+.nim-article table, table.nim-article
+{
+   border-collapse: collapse;
+   margin: 1px;
+   width: auto;
+}
+
+.nim-article table, table.nim-article .nim-article tr, .nim-article th, .nim-article td
+{
+   background-color: Transparent;
+}
+
+.nim-article th
+{
+   text-align: center;
+   vertical-align: middle;
+   padding: 7px;
+}
+
+pre
+{
+   overflow: auto;
+   padding: 0.1em;
+}
+
+/* end Box, Post */
+
+/* begin PostHeaderIcon */
+.nim-postheader
+{
+   margin: 5px 0;
+   font-size: 26px;
+}
+
+.nim-postheader a, 
+.nim-postheader a:link, 
+.nim-postheader a:visited,
+.nim-postheader a.visited,
+.nim-postheader a:hover,
+.nim-postheader a.hovered
+{
+   font-size: 26px;
+}
+
+.nim-postheader a, .nim-postheader a:link
+{
+   text-align: left;
+   text-decoration: none;
+}
+
+/* end PostHeaderIcon */
+
+/* begin PostHeader */
+
+/* end PostHeader */
+
+/* begin PostIcons, PostHeaderIcons */
+.nim-postheadericons
+{
+   padding: 1px;
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+.nim-postheadericons a, .nim-postheadericons a:link, .nim-postheadericons a:visited, .nim-postheadericons a:hover
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+.nim-postheadericons a, .nim-postheadericons a:link, .nim-postheadericons a:visited, .nim-postheadericons a:hover
+{
+   margin: 0;
+}
+
+.nim-postheadericons a:link
+{
+   text-decoration: none;
+}
+
+.nim-postheadericons a:visited, .nim-postheadericons a.visited
+{
+   font-style: italic;
+   font-weight: normal;
+}
+
+.nim-postheadericons a:hover, .nim-postheadericons a.hover
+{
+   text-decoration: underline;
+}
+/* end PostIcons, PostHeaderIcons */
+
+/* begin PostContent */
+.nim-postcontent p
+{
+   margin: 0.5em 0;
+}
+
+.nim-postcontent
+{
+   margin: 0;
+}
+/* end PostContent */
+
+/* begin PostBullets */
+ol, ul
+{
+   margin: 1em 0 1em 2em;
+   padding: 0;
+}
+
+li ol, li ul
+{
+   margin: 0.5em 0 0.5em 2em;
+   padding: 0;
+}
+
+li
+{
+   margin: 0.2em 0;
+   padding: 0;
+}
+
+ul
+{
+   list-style-type: none;
+}
+
+ol
+{
+   list-style-position: inside;
+}
+
+/* end PostBullets */
+
+/* begin PostQuote */
+
+blockquote,
+.nim-postcontent blockquote
+{
+   margin: 10px 10px 10px 50px;
+   padding: {QuoteIconPadding}px {QuoteIconPadding}px {QuoteIconPadding}px {QuoteIconLeftPadding}px;
+}
+
+/* end PostQuote */
+
+/* begin PostIcons, PostFooterIcons */
+.nim-postfootericons
+{
+   padding: 1px;
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+.nim-postfootericons a, .nim-postfootericons a:link, .nim-postfootericons a:visited, .nim-postfootericons a:hover
+{
+   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+
+.nim-postfootericons a, .nim-postfootericons a:link, .nim-postfootericons a:visited, .nim-postfootericons a:hover
+{
+   margin: 0;
+}
+
+.nim-postfootericons a:link
+{
+   text-decoration: none;
+}
+
+/* end PostIcons, PostFooterIcons */
+

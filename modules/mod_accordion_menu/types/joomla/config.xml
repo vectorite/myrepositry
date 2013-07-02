@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  <params addPath="/modules/mod_accordion_menu/params">
+    <param name="joomlamenu" type="offlajnmenu" default="mainmenu" label="MENU_NAME" description="THE_NAME_OF_THE_MENU_DEFAULT_IS_MAINMENU" />
+    <param name="joomlamenutype" type="offlajnmenuitemextended" default="mainmenu" label="MENU_ITEMS" description="MENU_ITEMS" height="10" />
+  </params>
+</form>

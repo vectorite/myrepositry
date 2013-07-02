@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0" method="upgrade">
+	<name>Universal_AJAX_Live_Search</name>
+	<creationDate>Apr 2012</creationDate>
+	<copyright>Copyright (C) 2009-2012 Offlajn. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>janos.biro@offlajn.com</authorEmail>
+	<authorUrl>http://www.offlajn.com</authorUrl>
+	<version>3.2</version>
+	<description>Universal AJAX Live Search</description>
+  <installfile>install.php</installfile>
+  
+	<files folder="site">
+		<filename>universal_ajax_live_search.php</filename>
+		<filename>index.html</filename>
+		<filename>helpers/index.html</filename>
+		<filename>helpers/image.php</filename>
+		<filename>helpers/caching.php</filename>
+		<filename>helpers/functions.php</filename>
+	</files>
+
+	<administration>
+		<menu>Universal AJAX Live Search</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>universal_ajax_live_search.php</filename>
+			<folder>extensions</folder>
+		</files>	
+	</administration>
+</install>

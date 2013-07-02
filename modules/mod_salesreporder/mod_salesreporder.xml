@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="1.6" client="site" method="upgrade">
+	<name>Fill Sales Order Information</name>
+	<author>rca test</author>
+	<creationDate>January 2012</creationDate>
+	<authorEmail>info@joomla.com</authorEmail>
+	<authorUrl>www.joomla.com</authorUrl>
+	<version>1.0</version>
+	<description>Free Sales Order Form by http://www.test123.com/</description>
+	<files>
+		<filename module="mod_salesreporder">mod_salesreporder.php</filename>
+		<filename module="mod_salesreporder">helper.php</filename>		
+		<filename module="mod_salesreporder">index.html</filename>
+		<filename module="mod_salesreporder">mod_salesreporder.js</filename>
+		<filename module="mod_salesreporder">mod_salesreporder.css</filename>
+		<filename module="mod_salesreporder">jquery.js</filename>
+		
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="Preferences" label="Basic">
+
+		<field name="introtext" type="text" default="" label="Introduction Text" description="Introduction Text on the top" size="55" />
+		<field name="receipt_email" type="text" default="" label="Email Destination" description="Please enter a valid email address where the form will be sent to." size="35" />
+		<field name="subject" type="text" default="" label="Subject" description="Please enter a subject for the email that will be sent." size="55" />	
+		<field name="thanks" type="text" default="" label="Thank you Message" description="thank you message" size="55" />
+		<field name="error" type="text" default="" label="Error Message" description="Enter error message" size="55" />
+		<field name="submit_button" type="text" default="" label="Submit Button" description="Enter the text for submit button" size="20" />
+		<field name="moduleclass_sfx" type="text" default="" label="Module Suffix" description="Add a suffix to the module (if you need to) which will allow individual css styling" />
+
+			</fieldset>
+		</fields>
+	</config>
+	</extension>

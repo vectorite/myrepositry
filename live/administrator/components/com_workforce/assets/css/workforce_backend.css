@@ -1,0 +1,98 @@
+/**
+ * @version 2.0.1 2012-08-17
+ * @package Joomla
+ * @subpackage Work Force
+ * @copyright (C) 2012 the Thinkery
+ * @license GNU/GPL see LICENSE.php
+ */
+
+/* icon uploader */
+div.item {float: left;border: 1px solid #ddd !important;margin: 3px;position: relative;}
+div.item img{margin: 3px;}
+div.iconBorder {height: 72px;vertical-align: middle;width: 88px;overflow: hidden;}
+div.iconBorder a {height: 72px;width: 88px;display: block;cursor: pointer;}
+div.iconBorder a:hover {height: 72px;width: 88px;background-color: #f0f0f0;color : #FF6600;}
+div.iconcontrols {text-align: center;height: 20px;line-height: 20px;background: #f9fcf9;border-top: 1px solid #ddd;}
+div.iconcontrols img {vertical-align: middle;}
+div.iconinfo {background: #f9f9f9;font-family: Arial, Helvetica, sans-serif;font-size: 10px;width: 88px;height: 15px;vertical-align: middle;text-align: center;overflow: hidden;}
+div.icon {}
+div.iconnav {padding: 5px;text-align: center;border-top: 1px solid #7d578f;overflow: hidden; margin-top: 3px; background: #f5eff8;}
+div.iconhead {padding: 3px;border-bottom: 1px solid #7d578f; margin-bottom: 3px; width: 100%; background: #f5eff8;}
+div.iconfoldername{position: absolute; top: 12px; right: 10px; width: 300px; padding: 5px; text-align: right;}
+
+div.clear{ border: 0; clear: both; float: none; height: 1px; line-height: 1px; }
+div.ta_overview_row{padding: 4px 10px; border-bottom: solid 1px #ccc;}
+
+#sbox-window{background-color: #7d578f !important;}
+/* System Messages */
+#system-message    { margin-bottom: 10px; padding: 0;}
+#system-message dt { font-weight: bold; }
+#system-message dd { margin: 0; font-weight: bold; text-indent: 30px; }
+#system-message dd ul { color: #0055BB; margin-bottom: 10px; list-style: none; padding: 10px; border-top: 3px solid #84A7DB; border-bottom: 3px solid #84A7DB;}
+
+/* System Standard Messages */
+#system-message dt.message { display: none; }
+#system-message dd.message {  }
+
+/* System Error Messages */
+#system-message dt.error { display: none; }
+#system-message dd.error ul { color: #c00; background-color: #E6C0C0; border-top: 3px solid #DE7A7B; border-bottom: 3px solid #DE7A7B;}
+
+/* System Notice Messages */
+#system-message dt.notice { display: none; }
+#system-message dd.notice ul { color: #c00; background: #EFE7B8; border-top: 3px solid #F0DC7E; border-bottom: 3px solid #F0DC7E;}
+
+hr{width: 100%; height: 1px; border: 0px; color:#ccc; background-color:#ccc;}
+.icon-48-workforce{ background-image: url(../images/icon-48-workforce.png);}
+.wf_adminHeader{font-size: 22px; font-weight: bold; color: #7d578f !important;}
+.wf_adminSubheader{font-size: 15px; font-weight: bold; color: #666 !important;}
+.wf_spacer {display: block; height: 1px;}
+legend{color: #7d578f !important;}
+#parah{width: 200px; background: #f5eff8; border: solid 1px #7d578f; padding: 10px;}
+table.adminlist tbody tr.row0:hover td, table.adminlist tbody tr.row1:hover td{background-color: #f5eff8 !important;}
+p.copyright{text-align: center;}
+.invalid, #cat .invalid,#employee .invalid{background: #ffacac !important; border: solid 1px #ff0000;}
+span.invalid{border: none !important; background: none !important; color: #ff0000 !important;}
+
+.tnews_header{padding: 5px 10px; background: #7d578f; color: #ffffff; font-size: 14px; font-weight: bold;}
+.tnews_content{padding: 10px; border: solid 1px #cccccc; height: 250px; overflow: auto;}
+.ipblue{color: #7d578f;}
+
+.ip_h{margin: 0px;}
+.ip_header{padding: 5px 10px; background: #7d578f; color: #fff;font-weight: bold; margin:10px 0px;}
+.ip_attention{background: #f5eff8; border: solid 1px #7d578f; padding: 10px;font-weight: bold;}
+
+table.toolbar span{float: none;width: 32px;height: 32px;margin-top: 0pt;margin-right: auto;margin-bottom: 0pt;margin-left: auto;display: block;}
+.optbackgr {background: #F1F3F5;border-bottom: 1px solid #cccccc;}
+.icon-32-upload{background-image: url(../images/icon-32-upload.png);}
+.get_started{width:100%; text-align:center;}
+.multi_select{width: 152px;}
+
+/* 2.0 additions */
+div.wf_spacer {display: block; height: 0px;}
+fieldset.admin_params{background: #eaffe4 !important;}
+
+.tip-wrap { width: auto !important; z-index: 99;}
+.tip { padding: 3px; border: 1px solid #7D578F !important; margin-bottom: 2em; font-weight:normal; color: #7D578F; background: #e5d8ec !important;}
+.tip .tip-title { color: #7D578F; font-weight: bold; text-shadow:1px 1px 1px #fff; padding-bottom: 6px; font-size: 110%;}
+.tip-title {background-image: none !important;}
+
+.inputbox{padding: 2px; border-top-left-radius: 3px;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+border-bottom-left-radius: 3px;}
+.inputbox:focus{outline-width: 0pt;
+outline-style: none;
+outline-color: -moz-use-text-color;
+border-top-color: rgba(125, 87, 143, 0.8);
+border-right-color-value: rgba(125, 87, 143, 0.8);
+border-bottom-color: rgba(125, 87, 143, 0.8);
+border-left-color-value: rgba(125, 87, 143, 1);
+border-left-color-ltr-source: physical;
+border-left-color-rtl-source: physical;
+border-right-color-ltr-source: physical;
+border-right-color-rtl-source: physical;
+box-shadow: 0pt 1px 3px rgba(0, 0, 0, 0.1) inset, 0pt 0pt 8px rgba(125, 87, 143, 0.6);}
+
+div.wf_warning, tr.wf_warning{padding: 10px; color: #c00; background: #EFE7B8; border-top: 3px solid #F0DC7E; border-bottom: 3px solid #F0DC7E; margin-bottom: 10px;}
+div.wf_message, tr.wf_message{padding: 10px; color: #0055BB; background: #C3D2E5; border-top: 3px solid #84A7DB; border-bottom: 3px solid #84A7DB; margin-bottom: 10px;}

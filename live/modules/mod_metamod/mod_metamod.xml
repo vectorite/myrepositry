@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+
+	<name>MetaMod</name>
+	<author>Stephen Brandon</author>
+	<creationDate>2012-03-12</creationDate>
+	<copyright>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>stephen@brandonitconsulting.co.uk</authorEmail>
+	<authorUrl>http://www.metamodpro.com/</authorUrl>
+	<version>3.9</version>
+	<description>METAMOD_OVERALL_DESCRIPTION</description>
+	<description2>A module that allows selective inclusion of other modules, depending on time, date, GeoIP-based Country lookup, and any other factors.</description2>
+
+	<files>
+		<filename module="mod_metamod">mod_metamod.php</filename>
+		<filename>helper.php</filename>
+		<filename>changecache.php</filename>
+		<filename>JomGenius.class.php</filename>
+		<filename>language/en-GB/en-GB.mod_metamod.sys.ini</filename>
+		<filename>language/fr-FR/fr-FR.mod_metamod.sys.ini</filename>
+		<filename>language/de-DE/de-DE.mod_metamod.sys.ini</filename>
+		<filename>language/pt-BR/pt-BR.mod_metamod.sys.ini</filename>
+		<filename>language/pt-PT/pt-PT.mod_metamod.sys.ini</filename>
+		<filename>language/hu-HU/hu-HU.mod_metamod.sys.ini</filename>
+		<folder>fields</folder>
+		<folder>geoip</folder>
+		<folder>images</folder>
+		<folder>jomgenius</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_metamod.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_metamod.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_metamod.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_metamod.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_metamod.ini</language>
+		<language tag="pt-PT">pt-PT/pt-PT.mod_metamod.ini</language>
+		<language tag="hu-HU">hu-HU/hu-HU.mod_metamod.ini</language>
+	</languages>
+
+	<config>
+
+		<fields name="params" addfieldpath="/modules/mod_metamod/fields">
+
+			<fieldset name="basic">
+
+			    <field name="info" type="mminfo" default="" label="MM_INFO" />
+
+			    <field name="debug" type="list" default="0" label="MM_DEBUG"
+			           description="MM_DEBUG_DESC">
+			      <option value="0">JOFF</option>
+			      <option value="1">JON</option>
+			      <option value="2">Advanced</option>
+			    </field>
+
+			    <field name="spacer1" type="spacer" hr="true" />
+
+			    <field name="start_datetime" type="calendar" size="30" default=""
+					label="MM_START_DATETIME_LABEL"
+					description="MM_START_DATETIME_DESC" />
+					
+			    <field name="end_datetime" type="calendar" size="30" default=""
+					label="MM_STOP_DATETIME_LABEL"
+					description="MM_STOP_DATETIME_DESC" />
+					
+			    <field name="timezone" type="timezone"
+					default="default"
+					label="MM_TIME_ZONE_LABEL"
+					description="MM_TIME_ZONE_DESC">
+					<option value="default">JDEFAULT</option>
+				</field>
+
+			    <field name="spacer2" type="spacer" hr="true" />
+
+			    <field name="logged_in_users" type="list" default="0" label="MM_LOGGED_IN_USERS_LABEL"
+			           description="MM_LOGGED_IN_USERS_DESC">
+			      <option value="0">MM_OPTION_ALL_USERS</option>
+			      <option value="1">MM_OPTION_LOGGED_IN</option>
+			      <option value="2">MM_OPTION_NON_LOGGED_IN</option>
+			    </field>
+
+			    <field name="spacer3" type="spacer" hr="true" />
+
+			    <field name="check" type="geoipcheck" label="MM_GEOIP_CHECK_LABEL" default="" />
+
+			    <field name="use_geoip" type="list" default="0" label="MM_ENABLE_GEOIP_LABEL"
+			           description="MM_ENABLE_GEOIP_DESC">
+			      <option value="0">MM_OPTION_DISABLED</option>
+			      <option value="1">MM_OPTION_GEOIP_COUNTRY</option>
+			      <option value="2">MM_OPTION_GEOCITY_FREE</option>
+			      <option value="3">MM_OPTION_GEOCITY_COMMERCIAL</option>
+			    </field>
+			    <field name="ip_override" type="text" size="30" default=""
+					label="MM_IP_OVERRIDE_LBL"
+					description="MM_IP_OVERRIDE_DESC" />
+			
+			    <field name="include_countries" type="text" size="30" default=""
+					label="MM_INCLUDE_COUNTRIES_LABEL"
+					description="MM_INCLUDE_COUNTRIES_DESC" />
+			    <field name="exclude_countries" type="text" size="30" default=""
+					label="MM_EXCLUDE_COUNTRIES_LABEL"
+					description="MM_EXCLUDE_COUNTRIES_DESC" />
+
+			    <field name="spacer4" type="spacer" hr="true" />
+
+			    <field name="language_option" type="list" default="0" label="MM_LANGUAGE_HANDLING_LABEL"
+			           description="MM_LANGUAGE_HANDLING_DESC">
+			      <option value="0">MM_OPTION_BROWSER_PREFERRED_LANGUAGE</option>
+			      <option value="1">MM_OPTION_MOST_PREFERRED_LANGUAGE_FROM_LIST</option>
+			      <option value="2">MM_OPTION_FRONT_END_LANGUAGE</option>
+			    </field>
+
+			    <field name="language_preferred"
+					type="text"
+					size="30"
+					default=""
+					label="MM_PREFERRED_LANGUAGE_LIST_LABEL"
+					description="MM_PREFERRED_LANGUAGE_LIST_DESC" />
+
+			    <field name="language_compare_strict"
+					type="list"
+					default="1"
+					label="MM_STRICT_LANGUAGE_COMPARISON_LABEL"
+					description="MM_STRICT_LANGUAGE_COMPARISON_DESC">
+			      <option value="0">JOFF</option>
+			      <option value="1">JON</option>
+			    </field>
+
+			    <field name="spacer5" type="spacer" hr="true" />
+
+			    <field name="style" type="list" default="rounded"
+					label="MM_MODULE_STYLE_LABEL"
+					description="MM_MODULE_STYLE_DESC">
+			      <option value="table">MM_OPTION_MODULE_STYLE_TABLE</option>
+			      <option value="rounded">MM_OPTION_MODULE_STYLE_ROUNDED</option>
+			      <option value="horz">MM_OPTION_MODULE_STYLE_HORZ</option>
+			      <option value="xhtml">MM_OPTION_MODULE_STYLE_XHTML</option>
+			      <option value="none">MM_OPTION_MODULE_STYLE_NONE</option>
+			    </field>
+
+			    <field name="force_style" type="text" size="30"
+					default=""
+					label="MM_STYLE_OVERRIDE_LABEL"
+					description="MM_STYLE_OVERRIDE_DESC" />
+
+				<field name="autoenable" type="list" default="all" label="MM_AUTO_ENABLE_LABEL" description="MM_AUTO_ENABLE_DESC">
+					<option value="none">JNONE</option>
+					<option value="id">MM_OPTION_AUTO_ENABLE_ID</option>
+					<option value="position">MM_OPTION_AUTO_ENABLE_POSITION</option>
+					<option value="all">MM_OPTION_AUTO_ENABLE_ALL</option>
+				</field>
+
+			    <field name="available_modules" type="modulelist" default=""
+					label="MM_OPTION_AVAILABLE_MODULES_LABEL"
+					description="" />
+					
+			    <field name="module_ids" type="text" size="30" default=""
+					label="MM_QUICK_MODULE_POSITION_INCLUDE_LABEL"
+					description="MM_QUICK_MODULE_POSITION_INCLUDE_DESC" />
+					
+			    <field name="php" type="textarea" rows="20" cols="50"
+					  default="// example: return 23;"
+			          label="PHP"
+					  filter="RAW"
+					  description="MM_PHP_DESC" />
+
+			</fieldset>
+			
+			<fieldset
+				name="METAMOD_HELP">
+			
+				<field name="help" type="metamodhelp" label="MM_HELP_LABEL" default="" />
+			
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

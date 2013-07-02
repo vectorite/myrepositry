@@ -1,0 +1,49 @@
+.item_name{width:120px;}
+.item_id{width:120px;}
+.item_desc{width:200px;height:40px;}
+.item_qty{width:40px;float:left;}
+.item_unit{width:50px;}
+.item_rate{width:90px;}
+.item_amount{width:90px;}
+.item_tax{width:100px;}
+#dataTable tr td{vertical-align:top;}
+#WWMainPage{display:none;}
+.nim-nostyle h3 {margin-top:20px;margin-left:10px;}
+
+.add {
+    background-image: url("images/add.gif");
+    float: left;
+    height:20px;
+    left: 700px;   
+    width: 20px;
+	top:0;
+	margin-right:-3px;
+}
+
+.minus{
+	background-image: url("images/minus.gif");
+	width: 20px;
+	height: 20px;                
+	float:left;
+	margin-left:-5px;
+	top:0;
+}
+
+#salesrepOrderForm input, #salesrepOrderForm select, #salesrepOrderForm textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+	line-height:18px;
+}
+
+#salesrepOrderForm{font-size:11px !important;font-weight:normal;}
+
+#nim-main, table {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px !important;
+    font-weight: normal;
+}
+#system-message dd.message ul {
+    border-bottom: 3px solid #84A7DB!important;
+    border-top: 3px solid #84A7DB!important;
+}

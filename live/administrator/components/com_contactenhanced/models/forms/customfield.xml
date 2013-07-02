@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="form">
+		<field name="id" type="text" label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC" size="10" default="0"
+			required="true" readonly="true" class="readonly" />
+
+		<field name="name" type="text"
+			label="CE_CF_NAME_LABEL" description="CE_CF_NAME_DESC"
+			class="inputbox" size="30" required="true" />
+
+		<field id="published" name="published" type="list"
+			label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+			class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field name="catid" type="category" extension="com_contactenhanced"
+			label="JCATEGORY" description="JFIELD_CATEGORY_DESC"
+			class="inputbox" required="true"
+		>
+			<option value="0">JALL</option>
+		</field>
+
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC" class="inputbox" size="1" />
+		<field name="required" type="radio" default="0" label="Required" 
+			description="Set to Yes to make this field mandatory" >
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="type" type="groupedlist"
+				label="CE_CF_FIELD_TYPE" description="CE_CF_FIELD_TYPE_DESC"
+				onchange="updateInputs(this.value);" class="inputbox">
+				
+				<option value="text">CE_CF_TYPE_TEXT</option>
+				<option value="autocomplete">CE_CF_TYPE_AUTOCOMPLETE</option>
+				<option value="button">CE_CF_TYPE_BUTTON</option>
+				<option value="checkbox">CE_CF_TYPE_CHECKBOX</option>
+				<option value="date">CE_CF_TYPE_DATE</option>
+				<option value="daterange">CE_CF_TYPE_DATERANGE</option>
+				<option value="freetext">CE_CF_TYPE_FREETEXT</option>
+				<option value="hidden">CE_CF_TYPE_HIDDEN_INPUT</option>
+				<option value="multiplefiles">CE_CF_TYPE_MULTIPLE_FILES</option>
+				<option value="multitext">CE_CF_TYPE_MULTITEXT</option>
+				<option value="number">CE_CF_TYPE_NUMBER</option>
+				<option value="numberrange">CE_CF_TYPE_NUMBER_RANGE</option>
+				<option value="pagination">CE_CF_TYPE_PAGINATION</option>
+				<option value="radiobutton">CE_CF_TYPE_RADIOBOX</option>
+				<option value="selectlist">CE_CF_TYPE_SELECTLIST</option>
+				<option value="sql">CE_CF_TYPE_SQL</option>
+				<option value="wysiwyg">CE_CF_TYPE_WYSIWYG</option>
+				
+				<group label="CE_CF_GROUP_ONLY_ONE_PER_CATEGORY"> </group>
+					<option value="name">CE_CF_TYPE_NAME</option>
+					<option value="surname">CE_CF_TYPE_SURNAME</option>
+					<option value="email">CE_CF_TYPE_EMAIL</option>
+					<!-- option value="email_verify">CE_CF_TYPE_EMAIL_VERIFY</option -->
+					<option value="subject">CE_CF_TYPE_SUBJECT</option>
+					<option value="recipient">CE_CF_TYPE_RECIPIENT</option>
+					<option value="username">CE_CF_TYPE_USERNAME</option>
+					<option value="password">CE_CF_TYPE_PASSWORD</option>
+					
+				<group label="CE_CF_GROUP_NEWSLETTERS"> </group>
+					<option value="acymailing">CE_CF_TYPE_ACYMAILING</option>
+					<option value="campaignmonitor">CE_CF_TYPE_CAMPAIGNMONITOR</option>
+					<option value="mailchimp">CE_CF_TYPE_MAILCHIMP</option>
+					
+				<group label="CE_CF_GROUP_OTHER_INTEGRATIONS"> </group>	
+					<option value="gmapsaddress">CE_CF_TYPE_GMAPSADDRESS</option>
+					
+				<group label="CE_CF_GROUP_INSERT_CODE"> </group>	
+					<option value="css">CE_CF_TYPE_CSS</option>
+					<option value="js">CE_CF_TYPE_JS</option>
+					<option value="php">CE_CF_TYPE_PHP</option>
+				
+					
+			</field>
+
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+			description="COM_CONTACTENHANCED_FIELD_LANGUAGE_DESC" class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+		<field name="ordering" type="ordering" class="inputbox" default="999"
+			label="JFIELD_ORDERING_LABEL" description="JFIELD_ORDERING_DESC"
+			table="#__ce_cf" />
+		<field name="tooltip" type="textarea"
+			label="CE_CF_TOOLTIP"
+			description="CE_CF_TOOLTIP_DESC"
+			class="inputbox" rows="6" cols="50" />
+			
+		<field name="attributes" type="textarea"
+			label="CE_CF_ATTRIBUTES"
+			description="CE_CF_ATTRIBUTES_DESC"
+			class="inputbox"
+			rows="10" cols="70" />
+		
+	</fieldset>
+
+
+	<fields name="params">
+		<fieldset name="general" label="CE_CF_PARAMS_GENERAL">
+			<field name="field-width" type="list" default="99" 
+				label="CE_CF_PARAM_FIELD_WIDTH_LABEL" 
+				description="CE_CF_PARAM_FIELD_WIDTH_DESC">
+				<option value="100">CE_CF_PARAM_FIELD_WIDTH_OPT_100_COLUMN</option>
+				<option value="50">CE_CF_PARAM_FIELD_WIDTH_OPT_50_COLUMNS</option>
+				<option value="33">CE_CF_PARAM_FIELD_WIDTH_OPT_33_COLUMNS</option>
+				<option value="25">CE_CF_PARAM_FIELD_WIDTH_OPT_25_COLUMNS</option>
+				<option value="20">CE_CF_PARAM_FIELD_WIDTH_OPT_20_COLUMNS</option>
+				<option value="15">CE_CF_PARAM_FIELD_WIDTH_OPT_15_COLUMNS</option>
+				<option value="75">CE_CF_PARAM_FIELD_WIDTH_OPT_75_COLUMNS</option>
+				<option value="66">CE_CF_PARAM_FIELD_WIDTH_OPT_67_COLUMNS</option>
+			</field>
+			<field name="hide_field" type="radio" default="0" 
+				label="CE_CF_PARAM_HIDE_FIELD_LABEL" 
+				description="CE_CF_PARAM_HIDE_FIELD_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="hide_field_label" type="list" default="0" 
+				label="CE_CF_PARAM_HIDE_FIELDS_LABEL_LABEL" 
+				description="CE_CF_PARAM_HIDE_FIELDS_LABEL_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				<option value="overtext">CE_CF_PARAM_SHOW_LABEL_OVER_FIELD</option>
+			</field>
+			<field name="tooltip_behavior" type="radio" default="mouseover" 
+				label="CE_CF_TOOLTIP_BEHAVIOR_LABEL" 
+				description="CE_CF_TOOLTIP_BEHAVIOR_DESC" >
+				<option value="mouseover">CE_CF_TOOLTIP_BEHAVIOR_ON_MOUSE_OVER</option>
+				<option value="inline">CE_CONFIG_INLINE</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="autocomplete" label="CE_CF_PARAMS_autocomplete">
+			<field name="autocomplete_allow_multiple_lines" type="radio" default="0" 
+			label="CE_CF_SQL_MULTIPLE_LINES_LABEL" 
+			description="CE_CF_SQL_MULTIPLE_LINES_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="autocomplete_show_quantity" type="radio" default="0" 
+			label="CE_CF_SQL_SHOW_QUANTATY_LABEL" 
+			description="CE_CF_SQL_SHOW_QUANTATY_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="autocomplete_quantity_validation" type="list" default="0" 
+				label="CE_CF_SQL_QUANTITY_VALIDATION_LABEL" 
+				description="CE_CF_SQL_QUANTITY_VALIDATION_DESC" >
+				<option value="0"					>CE_CF_TEXT_VALIDATION_OPT_NO_VALIDATION</option>
+				<option value="validate-alpha"		>CE_CF_TEXT_VALIDATION_OPT_ALPHA</option>
+				<option value="validate-alphanum"	>CE_CF_TEXT_VALIDATION_OPT_ALPHANUMERIC</option>
+				<option value="validate-digits"		>CE_CF_TEXT_VALIDATION_OPT_DIGITS</option>
+				<option value="validate-integer"	>CE_CF_TEXT_VALIDATION_OPT_INTEGER</option>
+				<option value="validate-numeric"	>CE_CF_TEXT_VALIDATION_OPT_NUMERIC</option>
+			</field>
+			<field name="autocomplete_show_heading" type="radio" default="0" 
+				label="CE_CF_SQL_SHOW_FIELD_HEADINGS_LABEL" 
+				description="CE_CF_SQL_SHOW_FIELD_HEADINGS_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			
+		</fieldset>
+		
+		<!-- CUSTOM FIELDS SPECIFIC PARAMETERS -->
+		<fieldset name="gmapsaddress" label="CE_CF_PARAMS_GMAPSADDRESS">
+			<field name="gmaps_linkToGoogleEarth" type="list" default=""
+					label="CE_GMAPS_LINK_OUTPUT_LABEL"
+					description="CE_GMAPS_LINK_OUTPUT_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="gmaps">CE_GMAPS_LINK_OUTPUT_OPT_GOOGLE_MAPS</option>
+				<option value="gearth">CE_GMAPS_LINK_OUTPUT_OPT_GOOGLE_EARTH</option>
+			</field>
+			<field name="gmap_mapTypeControl" type="list" default=""
+					label="CE_GMAPS_MAPTYPE_CONTROL"
+					description="CE_GMAPS_MAPTYPE_CONTROL_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="gmaps_MapTypeId" type="list" default=""
+					label="CE_GMAPS_MAPTYPE"
+					description="CE_GMAPS_MAPTYPE_ROADMAP_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="ROADMAP">CE_GMAPS_MAPTYPE_ROADMAP</option>
+				<option value="SATELLITE">CE_GMAPS_MAPTYPE_SATELLITE</option>
+				<option value="HYBRID">CE_GMAPS_MAPTYPE_HYBRID</option>
+				<option value="TERRAIN">CE_GMAPS_MAPTYPE_TERRAIN</option>
+			</field>
+			<field name="gmaps_showCoordinates" type="list" default=""
+					label="CE_GMAPS_SHOW_COORDINATES"
+					description="CE_GMAPS_SHOW_COORDINATES_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="gmap_scrollWheel" type="list" default=""
+					label="CE_GMAPS_SCROLLWHEEL"
+					description="CE_GMAPS_SCROLLWHEEL_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">CE_TRUE</option>
+				<option value="0">CE_FALSE</option>
+			</field>
+			<field name="gmaps_icon" type="imagelist" 
+					directory="/components/com_contactenhanced/assets/images/gmaps/marker" hide_none="1" 
+					default="" label="CE_GMAPS_MARKER_ICON" 
+					description="CE_GMAPS_MARKER_ICON_DESC" />
+			<field name="gmaps_icon_shadow" type="imagelist" 
+					directory="/components/com_contactenhanced/assets/images/gmaps/shadow" hide_none="1" 
+					default="" label="CE_GMAPS_MARKER_ICON_SHADOW" 
+					description="CE_GMAPS_MARKER_ICON_SHADOW_DESC" />
+			
+			
+			<field name="gmap_infoWindowDisplay" type="list" default=""
+					label="CE_GMAPS_INFO_WINDOW_DISPLAY"
+					description="CE_GMAPS_INFO_WINDOW_DISPLAY_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="alwaysOn">CE_GMAPS_INFO_WINDOW_DISPLAY_ALWAYS_ON</option>
+				<option value="onClick">CE_GMAPS_INFO_WINDOW_DISPLAY_ON_CLICK</option>
+				<option value="hide">JHIDE</option>
+			</field>
+			<field name="gmap_infoWindowDisplay" type="list" default=""
+					label="CE_GMAPS_INFO_WINDOW_DISPLAY"
+					description="CE_GMAPS_INFO_WINDOW_DISPLAY_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="alwaysOn">CE_GMAPS_INFO_WINDOW_DISPLAY_ALWAYS_ON</option>
+				<option value="onClick">CE_GMAPS_INFO_WINDOW_DISPLAY_ON_CLICK</option>
+				<option value="hide">JHIDE</option>
+			</field>
+			<field name="gmap_infoWindowContent" type="textarea" default=" "
+					label="CE_GMAPS_INFO_WINDOW_CONTENT"
+					description="CE_GMAPS_INFO_WINDOW_CONTENT_DESC"
+					class="inputbox" rows="3" cols="30" />
+			
+			<field name="gmaps_lat" type="text" default=""
+				label="CE_MAPS_LATITUDE_LABEL"
+				description="CE_MAPS_LATITUDE_DESC"
+				 />
+			
+			<field name="gmaps_lng" type="text" default=""
+				label="CE_MAPS_LONGITUDE_LABEL"
+				description="CE_MAPS_LONGITUDE_DESC"
+				 />
+			
+			<field name="gmaps_zoom" type="list" default="12"
+				label="CE_MAPS_ZOOM_LABEL"
+				description="CE_MAPS_ZOOM_DESC">
+				<option value="1">J1</option>
+				<option value="2">J2</option>
+				<option value="3">J3</option>
+				<option value="4">J4</option>
+				<option value="5">J5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">J10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">J5</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">J20</option>
+			</field>
+			
+		</fieldset>
+		<fieldset name="checkbox" label="CE_CF_PARAMS_CHECKBOX">
+			<field name="checkbox_first_selected" type="radio" default="0" 
+				label="CE_CF_CHECKBOX_FIRST_OPTION_SELECTED_LABEL" 
+				description="CE_CF_CHECKBOX_FIRST_OPTION_SELECTED_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="number_of_columns" type="list" default="1" 
+				label="CE_CF_CHECKBOX_NUMBER_OF_COLUMNS_LABEL" 
+				description="CE_CF_CHECKBOX_NUMBER_OF_COLUMNS_DESC" >
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</field>
+			<field name="select_all_button" type="radio" default="0" 
+				label="CE_CF_CHECKBOX_SELECT_ALL_BUTTON_LABEL" 
+				description="CE_CF_CHECKBOX_SELECT_ALL_BUTTON_DESC" >
+				<option value="1">Show</option>
+				<option value="0">Hide</option>
+			</field>
+		</fieldset>
+		
+		
+		<fieldset name="freetext" label="CE_CF_PARAMS_FREETEXT">
+			<field name="parse_content_plugins" type="radio" default="0" 
+				label="CE_CF_FREETEXT_PROCESS_PLUGINS_LABEL" 
+				description="CE_CF_FREETEXT_PROCESS_PLUGINS_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+		
+		<fieldset name="date" label="CE_CF_PARAMS_DATE">
+			<field name="date-format" type="list" default="%d-%m-%Y" 
+				label="CE_CF_DATE_FORMAT_LABEL"
+				 description="CE_CF_DATE_FORMAT_DESC">
+				 <option value="%d-%m-%Y">CE_CF_DATE_FORMAT_OPT_D_M_Y</option>
+				 <option value="%m-%d-%Y">CE_CF_DATE_FORMAT_OPT_M_D_Y</option>
+				 <option value="%Y-%m-%d">CE_CF_DATE_FORMAT_OPT_Y_M_D</option>
+				 <option value="%d-%b-%Y">CE_CF_DATE_FORMAT_OPT_D_MON_Y</option>
+				 <option value="%b-%d-%Y">CE_CF_DATE_FORMAT_OPT_MON_D_Y</option>
+			</field>
+		</fieldset>
+		<fieldset name="daterange" label="CE_CF_PARAMS_DATERANGE">
+			<field name="date-format" type="list" default="%d-%m-%Y" 
+				label="CE_CF_DATE_FORMAT_LABEL"
+				 description="CE_CF_DATE_FORMAT_DESC">
+				 <option value="%d-%m-%Y">CE_CF_DATE_FORMAT_OPT_D_M_Y</option>
+				 <option value="%m-%d-%Y">CE_CF_DATE_FORMAT_OPT_M_D_Y</option>
+				 <option value="%Y-%m-%d">CE_CF_DATE_FORMAT_OPT_Y_M_D</option>
+				 <option value="%d-%b-%Y">CE_CF_DATE_FORMAT_OPT_D_MON_Y</option>
+				 <option value="%b-%d-%Y">CE_CF_DATE_FORMAT_OPT_MON_D_Y</option>
+			</field>
+		</fieldset>
+		
+		<fieldset name="multiplefiles" label="CE_CF_PARAMS_MULTIPLEFILES">
+			<field name="mf_filter_type" type="radio" default="whitelist" 
+				label="CE_CF_MULTIPLEFILES_RESTRICTION_TYPE_LABEL" 
+				description="CE_CF_MULTIPLEFILES_RESTRICTION_TYPE_DESC">
+				<option value="blacklist">CE_CF_MULTIPLEFILES_RESTRICTION_TYPE_OPT_BLACKLIST</option>
+				<option value="whitelist">CE_CF_MULTIPLEFILES_RESTRICTION_TYPE_OPT_WHITELIST</option>
+			</field>
+			<field name="mf_filter_file_extensions" type="text" size="" 
+				default="doc,docx,ppt,xls,pdf,jpg,gif,png,zip" 
+				label="CE_CF_MULTIPLEFILES_FILE_EXTENSIONS_LABEL" 
+				description="CE_CF_MULTIPLEFILES_FILE_EXTENSIONS_DESC" />
+			<field name="max_file_size" type="text" default="300" 
+				label="CE_CF_MULTIPLEFILES_MAX_FILE_SIZE_LABEL" 
+				description="CE_CF_MULTIPLEFILES_MAX_FILE_SIZE_DESC" />
+			<field name="mf_number_of_files" type="text" default="3" 
+				label="CE_CF_MULTIPLEFILES_NUMBER_OF_FILES_LABEL" 
+				description="CE_CF_MULTIPLEFILES_NUMBER_OF_FILES_DESC" />
+		</fieldset>
+		
+		<fieldset name="radiobutton" label="CE_CF_PARAMS_RADIOBUTTON">
+			<field name="radiobutton_first_selected" type="radio" default="0" 
+				label="CE_CF_RADIOBUTTON_FIRST_OPTION_SELECTED_LABEL" 
+				description="CE_CF_RADIOBUTTON_FIRST_OPTION_SELECTED_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="number_of_columns" type="list" default="1" 
+				label="CE_CF_RADIOBUTTON_NUMBER_OF_COLUMNS_LABEL" 
+				description="CE_CF_RADIOBUTTON_NUMBER_OF_COLUMNS_DESC" >
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</field>
+			<field name="chain_select" type="switch" default="0" 
+				label="CE_CF_RADIOBUTTON_CHAIN_SELECT_LABEL" 
+				description="CE_CF_RADIOBUTTON_CHAIN_SELECT_DESC" >
+				<option value="0">JDISABLED</option>
+				<option value="enabled">JENABLED</option>
+			</field>
+			<field name="chain_select-enabled-title" subgroup="chain_select-enabled" type="title" 
+				label="CE_CF_RADIOBUTTON_CHAIN_SELECT_FIELD_TO_UPDATE_LABEL" 
+				description="CE_CF_RADIOBUTTON_CHAIN_SELECT_FIELD_TO_UPDATE_DESC" />
+			<field name="chain_select-enabled-option" type="sql" 
+				label="CE_CF_RADIOBUTTON_CHAIN_SELECT_FIELD_TO_UPDATE_LABEL" 
+				description="CE_CF_RADIOBUTTON_CHAIN_SELECT_FIELD_TO_UPDATE_DESC" 
+						query="SELECT id, name  FROM #__ce_cf WHERE type = 'sql' AND published=1"
+						key_field="id" value_field="name" />
+			
+			<field name="chain_select-enabled-title2" subgroup="chain_select-enabled" type="title" 
+				label="CE_CF_RADIOBUTTON_CHAIN_SELECT_TITLE_LABEL" 
+					description="CE_CF_RADIOBUTTON_CHAIN_SELECT_TITLE_DESC" />
+					
+			<field name="chain_select-enabled-first_option" type="text" default="" 
+				label="CE_CF_RADIOBUTTON_CHAIN_SELECT_FIRST_OPTION_LABEL" 
+						description="CE_CF_RADIOBUTTON_CHAIN_SELECT_FIRST_OPTION_DESC" />
+				
+		</fieldset>
+		
+		<fieldset name="selectlist" label="CE_CF_PARAMS_SELECTLIST">
+			<field name="first_option" type="text" default="" 
+				label="CE_CF_SELECTLIST_FIRST_OPTION_LABEL" 
+				description="CE_CF_SELECTLIST_FIRST_OPTION_DESC" />
+			
+			<field name="chain_select" type="switch" default="0" 
+				label="CE_CF_SQL_CHAIN_SELECT_LABEL" 
+				description="CE_CF_SQL_CHAIN_SELECT_DESC" >
+				<option value="0">JDISABLED</option>
+				<option value="enabled">JENABLED</option>
+			</field>
+			<field name="chain_select-enabled-subtitle" subgroup="chain_select-enabled" type="title" 
+				label="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_TITLE_LABEL" 
+					description="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_TITLE_DESC" />
+			<field name="chain_select-enabled-option" type="sql" 
+				label="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_LABEL" 
+				description="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_LABEL" 
+						query="SELECT id, name  FROM #__ce_cf WHERE type = 'sql' AND published=1"
+						key_field="id" value_field="name" />
+			
+			<field name="chain_select-enabled-subtitle" subgroup="chain_select-enabled" type="title" 
+				label="CE_CF_SQL_CHAIN_SELECT_LINKED_FIELD_LABEL_LABEL" 
+					description="CE_CF_SQL_CHAIN_SELECT_LINKED_FIELD_LABEL_DESC" />
+
+			<field name="chain_select-enabled-first_option" type="text" default="" 
+				label="CE_CF_SQL_CHAIN_SELECT_LINKED_FIRST_OPTION_LABEL" 
+				description="CE_CF_SQL_CHAIN_SELECT_LINKED_FIRST_OPTION_DESC" />
+			
+		</fieldset>
+		
+		<fieldset name="recipient" label="CE_CF_PARAMS_RECIPIENT">
+			<field name="display_type" type="switch" default="select" 
+				label="CE_CF_RECIPIENT_DISPLAY_TYPE_LABEL" 
+				description="CE_CF_RECIPIENT_DISPLAY_TYPE_DESC" >
+				<option value="select">CE_CF_TYPE_SELECTLIST</option>
+				<option value="checkbox">CE_CF_TYPE_CHECKBOX</option>
+			</field>
+			<field name="load_contact_emails" type="radio" default="0" 
+				label="CE_CF_RECIPIENT_USE_CONTACT_EMAILS_LABEL" 
+				description="CE_CF_RECIPIENT_USE_CONTACT_EMAILS_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="display_type-checkbox-number_of_columns" type="list" default="1" 
+				label="CE_CF_CHECKBOX_NUMBER_OF_COLUMNS_LABEL" 
+				description="CE_CF_CHECKBOX_NUMBER_OF_COLUMNS_DESC" >
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</field>
+			<field name="display_type-checkbox-select_all_button" type="radio" default="0" 
+				label="CE_CF_CHECKBOX_SELECT_ALL_BUTTON_LABEL" 
+				description="CE_CF_CHECKBOX_SELECT_ALL_BUTTON_DESC" >
+				<option value="1">Show</option>
+				<option value="0">Hide</option>
+			</field>
+			<field name="display_type-checkbox-chainwarning" type="title" 
+				label="CE_CF_RECIPIENT_CHAIN_SELECT_ONLY_WORKS_WITH_SELECT_LIST_LABEL" 
+					description="CE_CF_RECIPIENT_CHAIN_SELECT_ONLY_WORKS_WITH_SELECT_LIST_DESC" />
+			<field name="chain_select" type="switch" default="0" 
+				label="CE_CF_SQL_CHAIN_SELECT_LABEL" 
+				description="CE_CF_SQL_CHAIN_SELECT_DESC" >
+				<option value="0">JDISABLED</option>
+				<option value="enabled">JENABLED</option>
+			</field>
+			<field name="chain_select-enabled-subtitle" subgroup="chain_select-enabled" type="title" 
+				label="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_TITLE_LABEL" 
+					description="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_TITLE_DESC" />
+			<field name="chain_select-enabled-option" type="sql" 
+				label="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_LABEL" 
+				description="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_LABEL" 
+						query="SELECT id, name  FROM #__ce_cf WHERE type = 'sql' AND published=1"
+						key_field="id" value_field="name" />
+			
+			<field name="chain_select-enabled-subtitle" subgroup="chain_select-enabled" type="title" 
+				label="CE_CF_SQL_CHAIN_SELECT_LINKED_FIELD_LABEL_LABEL" 
+					description="CE_CF_SQL_CHAIN_SELECT_LINKED_FIELD_LABEL_DESC" />
+
+			<field name="chain_select-enabled-first_option" type="text" default="" 
+				label="CE_CF_SQL_CHAIN_SELECT_LINKED_FIRST_OPTION_LABEL" 
+				description="CE_CF_SQL_CHAIN_SELECT_LINKED_FIRST_OPTION_DESC" />
+		</fieldset>
+		<fieldset name="sql" label="CE_CF_PARAMS_SQL">
+			<field name="sql_allow_multiple_lines" type="radio" default="0" 
+			label="CE_CF_SQL_MULTIPLE_LINES_LABEL" 
+			description="CE_CF_SQL_MULTIPLE_LINES_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="sql_show_quantity" type="radio" default="0" 
+			label="CE_CF_SQL_SHOW_QUANTATY_LABEL" 
+			description="CE_CF_SQL_SHOW_QUANTATY_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="sql_quantity_validation" type="list" default="0" 
+				label="CE_CF_SQL_QUANTITY_VALIDATION_LABEL" 
+				description="CE_CF_SQL_QUANTITY_VALIDATION_DESC" >
+				<option value="0"					>CE_CF_TEXT_VALIDATION_OPT_NO_VALIDATION</option>
+				<option value="validate-alpha"		>CE_CF_TEXT_VALIDATION_OPT_ALPHA</option>
+				<option value="validate-alphanum"	>CE_CF_TEXT_VALIDATION_OPT_ALPHANUMERIC</option>
+				<option value="validate-digits"		>CE_CF_TEXT_VALIDATION_OPT_DIGITS</option>
+				<option value="validate-integer"	>CE_CF_TEXT_VALIDATION_OPT_INTEGER</option>
+				<option value="validate-numeric"	>CE_CF_TEXT_VALIDATION_OPT_NUMERIC</option>
+			</field>
+			<field name="sql_show_heading" type="radio" default="0" 
+				label="CE_CF_SQL_SHOW_FIELD_HEADINGS_LABEL" 
+				description="CE_CF_SQL_SHOW_FIELD_HEADINGS_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="first_option" type="text" default="" 
+				label="CE_CF_SQL_FIRST_OPTION_LABEL" 
+				description="CE_CF_SQL_FIRST_OPTION_DESC" />
+			<field name="sql_no_result_msg" type="text" default="" 
+				label="CE_CF_SQL_EMPTY_RESULT_MSG_LABEL" 
+				description="CE_CF_SQL_EMPTY_RESULT_MSG_DESC" />
+			
+			<field name="chain_select" type="switch" default="0" 
+				label="CE_CF_SQL_CHAIN_SELECT_LABEL" 
+				description="CE_CF_SQL_CHAIN_SELECT_DESC" >
+				<option value="0">JDISABLED</option>
+				<option value="enabled">JENABLED</option>
+			</field>
+			<field name="chain_select-enabled-subtitle" subgroup="chain_select-enabled" type="title" 
+				label="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_TITLE_LABEL" 
+					description="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_TITLE_DESC" />
+			<field name="chain_select-enabled-option" type="sql" 
+				label="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_LABEL" 
+				description="CE_CF_SQL_CHAIN_SELECT_FIELD_TO_UPDATE_LABEL" 
+						query="SELECT id, name  FROM #__ce_cf WHERE type = 'sql' AND published=1"
+						key_field="id" value_field="name" />
+			
+			<field name="chain_select-enabled-subtitle" subgroup="chain_select-enabled" type="title" 
+				label="CE_CF_SQL_CHAIN_SELECT_LINKED_FIELD_LABEL_LABEL" 
+					description="CE_CF_SQL_CHAIN_SELECT_LINKED_FIELD_LABEL_DESC" />
+
+			<field name="chain_select-enabled-first_option" type="text" default="" 
+				label="CE_CF_SQL_CHAIN_SELECT_LINKED_FIRST_OPTION_LABEL" 
+				description="CE_CF_SQL_CHAIN_SELECT_LINKED_FIRST_OPTION_DESC" />
+			
+		</fieldset>
+		
+		<fieldset name="subject" label="CE_CF_PARAMS_SUBJECT">
+		
+			<field name="prefix" type="switch" default="site" 
+				label="CE_CF_SUBJECT_PREFIX_LABEL" 
+				description="CE_CF_SUBJECT_PREFIX_DESC" >
+				<option value="none">JNONE</option>
+				<option value="text">CE_CF_SUBJECT_PREFIX_OPT_TEXT</option>
+				<option value="site">CE_CF_SUBJECT_PREFIX_OPT_SITE_NAME</option>
+				<option value="content-title">CE_CF_SUBJECT_PREFIX_OPT_CURRENT_PAGE_TITLE</option>
+			</field>
+			<field name="prefix-text-value" type="text" default="" label="CE_CF_SUBJECT_PREFIX_LABEL" 
+					subgroup="prefix-text" description="CE_CF_SUBJECT_PREFIX_DESC" />
+		</fieldset>
+		
+		<fieldset name="multitext" label="CE_CF_PARAMS_MULTITEXT">
+		
+			<field name="maxlen" type="text" default="" 
+				label="CE_CF_PARAMS_MULTITEXT_MAXLEN_LABEL" 
+				description="CE_CF_PARAMS_MULTITEXT_MAXLEN_DESC" />
+		</fieldset>
+		
+		<fieldset name="username" label="CE_CF_PARAMS_USERNAME">
+			<field name="username_registration" type="switch" default="0" 
+				label="CE_CF_USERNAME_ALLOW_REGISTRATION_LABEL" 
+				description="CE_CF_USERNAME_ALLOW_REGISTRATION_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="cf-username-title"  type="title" 
+			label="CE_CF_USERNAME_TITLE_LABEL" 
+			description="CE_CF_USERNAME_TITLE_DESC" />
+		</fieldset>
+		
+				
+		<fieldset name="text" label="CE_CF_PARAMS_TEXT">
+			<field name="validation" type="switch" default="0" 
+				label="Validation" description="CE_CF_TEXT_VALIDATION_DESC" >
+				<option value="0"		>CE_CF_TEXT_VALIDATION_OPT_NO_VALIDATION</option>
+				<option value="alpha"	>CE_CF_TEXT_VALIDATION_OPT_ALPHA</option>
+				<option value="alphanum">CE_CF_TEXT_VALIDATION_OPT_ALPHANUMERIC</option>
+				<option value="date"	>CE_CF_TEXT_VALIDATION_OPT_DATE</option>
+				<option value="digits"	>CE_CF_TEXT_VALIDATION_OPT_DIGITS</option>
+				<option value="integer"	>CE_CF_TEXT_VALIDATION_OPT_INTEGER</option>
+				<option value="numeric"	>CE_CF_TEXT_VALIDATION_OPT_NUMERIC</option>
+				<option value="email"	>CE_CF_TEXT_VALIDATION_OPT_EMAIL</option>
+				<!-- option value="passverify">CE_CF_TEXT_VALIDATION_OPT_PASSWORD_VERIFY</option -->
+				<option value="url"		>CE_CF_TEXT_VALIDATION_OPT_URL</option>
+				<option value="custom"	>CE_CF_TEXT_VALIDATION_OPT_CUSTOM</option>
+				<option value="iMask"	>CE_CF_TEXT_VALIDATION_OPT_APPLY_MASK</option>
+				<!-- option value="allowOnlyNumbers">Only Numbers</option>
+				<option value="allowCurrency">Numbers, comma and decimal point</option -->
+			</field>
+			<field name="validation-custom-title" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_CUSTOM_LABEL" description="CE_CF_TEXT_VALIDATION_CUSTOM_DESC" />
+			
+			<field name="validation-custom-name" type="text" default="" 
+				label="CE_CF_TEXT_VALIDATION_CUSTOM_NAME_LABEL" description="CE_CF_TEXT_VALIDATION_CUSTOM_NAME_DESC" />
+			
+			<field name="validation-custom-errorMsg" type="text" default="" 
+				label="CE_CF_TEXT_VALIDATION_CUSTOM_ERRORMSG_LABEL" description="CE_CF_TEXT_VALIDATION_CUSTOM_ERRORMSG_DESC" />
+			
+			<field name="validation-custom-test" type="textarea" rows="5" cols="50" default="" 
+				label="CE_CF_TEXT_VALIDATION_CUSTOM_TEST_LABEL" description="CE_CF_TEXT_VALIDATION_CUSTOM_TEST_DESC" />
+			
+			<field name="validation-custom-example" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_CUSTOM_EXAMPLE_LABEL" description="CE_CF_TEXT_VALIDATION_CUSTOM_EXAMPLE_DESC" />
+			
+			
+			<field name="validation-email-title" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_EMAIL_LABEL" description="CE_CF_TEXT_VALIDATION_EMAIL_DESC" />
+			
+			<field name="validation-alpha-title" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_ALPHA_LABEL" description="CE_CF_TEXT_VALIDATION_ALPHA_DESC" />
+			
+			<field name="validation-alphanum-title" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_ALPHANUM_LABEL" description="CE_CF_TEXT_VALIDATION_ALPHANUM_DESC" />
+			
+			<field name="validation-digits-title" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_DIGITS_LABEL" description="CE_CF_TEXT_VALIDATION_DIGITS_DESC" />
+			
+			<field name="validation-integer-title" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_INTEGER_LABEL" description="CE_CF_TEXT_VALIDATION_INTEGER_DESC" />
+			
+			
+			<field name="validation-url-title" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_URL_LABEL" description="CE_CF_TEXT_VALIDATION_URL_DESC" />
+				
+			<field name="validation-date-title" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_DATE_LABEL" description="CE_CF_TEXT_VALIDATION_DATE_DESC" />
+		
+			<field name="validation-date-format" type="list" default="%d-%m-%Y" 
+				label="CE_CF_TEXT_VALIDATION_DATE_FORMAT_LABEL"
+				 description="CE_CF_TEXT_VALIDATION_DATE_FORMAT_DESC">
+				 <option value="%d-%m-%Y">CE_CF_DATE_FORMAT_OPT_D_M_Y</option>
+				 <option value="%m-%d-%Y">CE_CF_DATE_FORMAT_OPT_M_D_Y</option>
+				 <option value="%Y-%m-%d">CE_CF_DATE_FORMAT_OPT_Y_M_D</option>
+				 <option value="%d-%b-%Y">CE_CF_DATE_FORMAT_OPT_D_MON_Y</option>
+				 <option value="%b-%d-%Y">CE_CF_DATE_FORMAT_OPT_MON_D_Y</option>
+			</field>
+				
+			<field name="validation-passverify-title" type="title" default="" 
+				label="CE_CF_TEXT_VALIDATION_PASSWORD_VERIFY_TITLE_LABEL" description="CE_CF_TEXT_VALIDATION_PASSWORD_VERIFY_TITLE_DESC" />
+			
+			<field name="validation-passverify-passlabel" type="text" default="" 
+				label="CE_CF_TEXT_VALIDATION_PASSWORD_VERIFY_PASSWORD_LABEL_LABEL" description="CE_CF_TEXT_VALIDATION_PASSWORD_VERIFY_PASSWORD_LABEL_DESC" />
+			
+			
+			<field
+			name="txt-spacer1"
+			type="spacer"
+			hr="true"
+			/>
+				
+			<field name="minLength" type="text" default="" 
+				label="CE_CF_TEXT_VALIDATION_MINLENGTH_LABEL" description="CE_CF_TEXT_VALIDATION_MINLENGTH_DESC" />
+				
+			<field name="maxLength" type="text" default="" 
+				label="CE_CF_TEXT_VALIDATION_MAXLENGTH_LABEL" description="CE_CF_TEXT_VALIDATION_MAXLENGTH_DESC" />
+			
+			<field
+			name="txt-spacer2"
+			type="spacer"
+			hr="true"
+			/>
+			
+			<field name="validation-iMask-type" type="radio" default="fixed" 
+				label="CE_CF_IMASK_TYPE_LABEL" description="CE_CF_IMASK_TYPE_DESC" >
+				<option value="fixed">CE_CF_IMASK_FIXED</option>
+				<option value="number">CE_CF_IMASK_NUMBER</option>
+			</field>
+			<field name="validation-iMask-mask" type="text" default="" 
+				label="CE_CF_IMASK_LABEL" description="CE_CF_IMASK_DESC" />
+			
+			<!-- field name="validation-iMask-stripMask" type="radio" default="false" 
+				label="CE_CF_IMASK_STRIPMASK_LABEL" description="CE_CF_IMASK_STRIPMASK_DESC" >
+				<option value="true">JYES</option>
+				<option value="false">JNO</option>
+			</field  -->
+			<field name="validation-iMask-decSymbol" type="radio" default="." 
+				label="CE_CF_IMASK_DECIMAL_SYMBOL_LABEL" description="CE_CF_IMASK_DECIMAL_SYMBOL_DESC" >
+				<option value=".">.</option>
+				<option value=",">,</option>
+				<option value="">JNONE</option>
+			</field>
+		</fieldset>
+		
+		<fieldset name="campaignmonitor" label="CE_CF_PARAMS_CAMPAIGN_MONITOR">
+			<field name="cf-cm-title" type="title" 
+				label="CE_CF_CM_CREATE_API_KEY_LABEL" 
+				description="CE_CF_CM_CREATE_API_KEY_DESC" />
+			<field name="campaignmonitor_api_key" type="text" size="30" default="" 
+				label="CE_CF_CM_API_KEY_LABEL"
+				 description="CE_CF_CM_API_KEY_DESC" />
+			<field name="cf-cm-subtitle" type="title" 
+				label="CE_CF_CM_API_CLIENT_ID_TITLE_LABEL" 
+				description="CE_CF_CM_API_CLIENT_ID_TITLE_DESC" />
+			<field name="campaignmonitor_api_client" type="text" size="30" default="" 
+				label="CE_CF_CM_API_CLIENT_ID_LABEL"
+				 description="" />
+				 
+			<!--field name="campaignmonitorlist" type="modal_campaignmonitorlist" size="" default="" 
+				label="List"
+				 description="" / -->
+			<field name="campaignmonitor_always_update" type="radio" default="1" 
+				label="CE_CF_CM_ALWAYS_UPDATE_LABEL"
+				 description="CE_CF_CM_ALWAYS_UPDATE_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="cm-all-checked" type="radio" default="0" 
+				label="CE_CF_CM_CHECK_ALL_LABEL"
+				 description="CE_CF_CM_CHECK_ALL_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+		
+		<fieldset name="mailchimp" label="CE_CF_PARAMS_MAILCHIMP">
+			<field name="cf-mc-title" type="title" 
+				label="CE_CF_MC_CREATE_API_KEY_TITLE_LABEL" 
+				description="CE_CF_MC_CREATE_API_KEY_TITLE_DESC" />
+			<field name="mailchimp_api_key" type="text" size="30" default="" 
+				label="CE_CF_MC_CREATE_API_KEY_LABEL"
+				 description="CE_CF_MC_CREATE_API_KEY_DESC" />
+			<field name="cf-mc-title-2" type="title" label="CE_CF_MC_LIST_TITLE_LABEL" 
+					description="CE_CF_MC_LIST_TITLE_DESC" />
+				 
+			<field name="mailchimplist" type="text" size="" default="" 
+				label="CE_CF_MC_LIST_LABEL"
+				 description="CE_CF_MC_LIST_DESC" />
+			<field name="input_type" type="switch" size="" default="checkbox" 
+				label="CE_CF_MC_INPUT_TYPE_LABEL"
+				 description="CE_CF_MC_INPUT_TYPE_DESC">
+				 <option value="checkbox">CE_CF_TYPE_CHECKBOX</option>
+				 <option value="radio">CE_CF_TYPE_RADIOBOX</option>
+			</field>
+			<field name="input_type-checkbox-allchecked" type="radio" size="" default="0" 
+				label="CE_CF_MC_CHECK_ALL_LABEL"
+				 description="CE_CF_MC_CHECK_ALL_DESC">
+				 <option value="1">JYES</option>
+				 <option value="0">JNO</option>
+			</field>
+			<field name="mc-emailType" type="list" size="" default="html" 
+				label="CE_CF_MC_EMAIL_TYPE_LABEL"
+				 description="CE_CF_MC_EMAIL_TYPE_DESC">
+				 <option value="html">CE_CF_MC_EMAIL_TYPE_OPT_HTML</option>
+				 <option value="text">CE_CF_MC_EMAIL_TYPE_OPT_TEXT</option>
+				 <option value="text">CE_CF_MC_EMAIL_TYPE_OPT_MOBILE</option>
+			</field>
+			<field name="mc-doubleOptIn" type="list" size="" default="1" 
+				label="CE_CF_MC_DOUBLE_OPTIN_LABEL"
+				 description="CE_CF_MC_DOUBLE_OPTIN_DESC">
+				 <option value="1">JYES</option>
+				 <option value="0">JNO</option>
+			</field>
+			<field name="mc-update_existing" type="list" size="" default="1" 
+				label="CE_CF_MC_UPDATING_EXISTING_LABEL"
+				 description="CE_CF_MC_UPDATING_EXISTING_DESC">
+				 <option value="1">JYES</option>
+				 <option value="0">JNO</option>
+			</field>
+			<field name="mc-send_welcome" type="list" size="" default="0" 
+				label="CE_CF_MC_SEND_WELCOME_MSG_LABEL"
+				 description="CE_CF_MC_SEND_WELCOME_MSG_DESC">
+				 <option value="1">JYES</option>
+				 <option value="0">JNO</option>
+			</field>
+		</fieldset>
+		
+		<fieldset name="acymailing" label="CE_CF_PARAMS_ACYMAILING">
+			<field name="acyTitle" group="" type="title" label="CE_CF_PARAMS_ACYMAILING_TITLE_LABEL" 
+					description="CE_CF_PARAMS_ACYMAILING_TITLE_DESC" />
+				 
+			<field name="acylist" type="sql" size="7" multiple="multiple"
+				default="" 
+				label="CE_CF_PARAMS_ACYMAILING_LIST_LABEL"
+				description=""
+				key_field="value" value_field="text"
+				query="SELECT listid AS value, name AS text FROM #__acymailing_list WHERE published = 1"
+			/>
+			<field name="acy-all-checked" type="radio" size="" default="0" 
+				label="CE_CF_PARAMS_ACYMAILING_CHECK_ALL_LABEL"
+				 description="CE_CF_PARAMS_ACYMAILING_CHECK_ALL_DESC">
+				 <option value="1">JYES</option>
+				 <option value="0">JNO</option>
+			</field>
+		</fieldset>
+		
+		<fieldset name="js" label="CE_CF_PARAMS_JAVASCRIPT">
+			<field name="position" type="radio" default="1" 
+				label="CE_CF_PARAMS_JAVASCRIPT_LOAD_IN_HEAD_LABEL" 
+				description="CE_CF_PARAMS_JAVASCRIPT_LOAD_IN_HEAD_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+		
+		<fieldset name="pagination" label="CE_CF_PARAMS_PAGE">
+		
+			<field name="button_text" type="text"
+				label="CE_CF_PAGINANTION_BUTTON_TEXT_LABEL" 
+				description="CE_CF_PAGINANTION_BUTTON_TEXT_DESC"
+				class="inputbox" />
+			
+			<field name="page-title" group="" type="title" 
+				label="CE_CF_PARAMS_PAGE_TITLE_LABEL" 
+				description="CE_CF_PARAMS_PAGE_TITLE_DESC" />
+			
+			<field name="pageProgress" type="switch" default="1" 
+				label="CE_CF_PARAMS_PAGE_SHOW_PROGRESS_BAR_LABEL" 
+				description="CE_CF_PARAMS_PAGE_SHOW_PROGRESS_BAR_DESC" >
+				<option value="0">JNO</option>
+				<option value="bar">JYES</option>
+			</field>
+			
+			<field name="pageProgress-bar-text" type="radio" default="1" 
+				label="CE_CF_PARAMS_PAGE_SHOW_PROGRESS_BAR_TEXT_LABEL" 
+				description="CE_CF_PARAMS_PAGE_SHOW_PROGRESS_BAR_TEXT_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+		</fieldset>
+		
+		<fieldset name="button" label="CE_CF_PARAMS_BUTTON">
+		
+			
+			<field name="buttonType" type="switch" default="submit" 
+				label="CE_CF_PARAMS_BUTTON_TYPE_LABEL" 
+				description="CE_CF_PARAMS_BUTTON_TYPE_DESC" >
+				<option value="button"	>CE_CF_PARAMS_BUTTON_TYPE_OPT_BUTTON</option>
+				<option value="submit"	>CE_CF_PARAMS_BUTTON_TYPE_OPT_SUBMIT</option>
+			</field>
+			
+			
+			<field name="buttonType-submit-reset" type="radio" default="1" 
+				label="CE_CF_PARAMS_BUTTON_TYPE_SUBMIT_RESET_LABEL" 
+				description="CE_CF_PARAMS_BUTTON_TYPE_SUBMIT_RESET_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="buttonType-button-title" group="" type="title" 
+				label="CE_CF_PARAMS_BUTTON_TYPE_BUTTON_TITLE_LABEL" 
+				description="CE_CF_PARAMS_BUTTON_TYPE_BUTTON_TITLE_DESC" />
+			
+			<field name="buttonType-submit-title" group="" type="title" 
+				label="CE_CF_PARAMS_BUTTON_TYPE_SUBMIT_TITLE_LABEL" 
+				description="CE_CF_PARAMS_BUTTON_TYPE_SUBMIT_TITLE_DESC" />
+			
+			
+		</fieldset>
+		<fieldset name="email" label="CE_CF_PARAMS_EMAIL">
+			<field name="email_validation" type="radio" default="0" 
+				label="COM_CONTACTENHANCED_CF_PARAMS_EMAIL_VALIDATION_LABEL" 
+				description="COM_CONTACTENHANCED_CF_PARAMS_EMAIL_VALIDATION_DESC" >
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+		
+		<fieldset name="advanced" label="CE_CF_PARAMS_ADVANCED">
+			<field name="advanced" type="switch" default="0" 
+				label="CE_CF_PARAMS_ADVANCED_INTEGRATION_LABEL" 
+				description="CE_CF_PARAMS_ADVANCED_INTEGRATION_DESC" 
+				switch="advanced">
+				<option value="0">JNO</option>
+				<option value="integration">JYES</option>
+			</field>
+			<field name="advanced-integration-title" type="title" 
+				label="CE_CF_PARAMS_ADVANCED_INTEGRATION_TITLE_LABEL" 
+				description="CE_CF_PARAMS_ADVANCED_INTEGRATION_TITLE_DESC"
+				subgroup="advanced" />
+			<field name="advanced-integration-name" type="text" default="" 
+				label="CE_CF_PARAMS_ADVANCED_INTEGRATION_NAME_LABEL" 
+				description="CE_CF_PARAMS_ADVANCED_INTEGRATION_NAME_DESC" />
+			
+		</fieldset>
+	</fields>
+
+</form>

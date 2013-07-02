@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="component" label="COM_WORKFORCE_CONFIG_LABEL" description="COM_WORKFORCE_CONFIG_DESC" addfieldpath="/administrator/components/com_workforce/models/fields">
+        <field name="offline" type="list" default="0" label="COM_WORKFORCE_OFFLINE" description="COM_WORKFORCE_OFFLINE_DESC" class="inputbox">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="offmessage" type="textarea" cols="50" rows="3" label="COM_WORKFORCE_OFF_MESSAGE" description="COM_WORKFORCE_OFF_MESSAGE_DESC" class="inputbox" />
+        <field name="accent" type="text" size="50" label="COM_WORKFORCE_PRIMARY" description="COM_WORKFORCE_PRIMARY_DESC" />
+        <field name="secondary_accent" type="text" size="50" label="COM_WORKFORCE_SECONDARY" description="COM_WORKFORCE_SECONDARY_DESC" />
+
+        <!-- EMPLOYEES -->
+        <field name="wfhead1" type="header"  default="COM_WORKFORCE_EMPLOYEES" label="" description=""/>
+        <field name="perpage" type="list" default="20" label="COM_WORKFORCE_PER_PAGE" description="COM_WORKFORCE_PER_PAGE_DESC" class="inputbox">
+            <option value="5">J5</option>
+            <option value="10">J10</option>
+            <option value="20">J20</option>
+            <option value="30">J30</option>
+            <option value="50">J50</option>
+        </field>
+        <field name="employee_columns" type="list" default="1" label="COM_WORKFORCE_EMPLOYEE_COLUMNS" description="COM_WORKFORCE_EMPLOYEE_COLUMNS_DESC">
+            <option value="1">J1</option>
+            <option value="2">J2</option>
+            <option value="3">J3</option>
+        </field>
+        <field name="num_featured" type="text" label="COM_WORKFORCE_NUM_FEATURED" default="5" description="COM_WORKFORCE_NUM_FEATURED_DESC" class="inputbox" />
+        <field name="featured_pos" type="list" default="1" label="COM_WORKFORCE_FEATURED_POS" description="COM_WORKFORCE_FEATURED_POS_DESC" class="inputbox">
+            <option value="0">COM_WORKFORCE_TOP</option>
+            <option value="1">COM_WORKFORCE_BOTTOM</option>
+        </field>
+        <field name="full_bio" type="list" default="0" label="COM_WORKFORCE_SHOW_FULLBIO" description="COM_WORKFORCE_SHOW_FULLBIO_DESC" class="inputbox">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="overview_char" type="text" label="COM_WORKFORCE_OVERVIEW_CHAR" default="300" description="COM_WORKFORCE_OVERVIEW_CHAR_DESC" class="inputbox" />
+        <field name="show_overview_contact" type="list" default="1" label="COM_WORKFORCE_SHOW_OVERVIEW_CONTACT" description="COM_WORKFORCE_SHOW_OVERVIEW_CONTACT_DESC" class="inputbox">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <!-- DEPARTMENTS -->
+        <field name="wfhead2" type="header" default="COM_WORKFORCE_DEPARTMENTS" />
+        <field name="department_columns" type="list" default="2" label="COM_WORKFORCE_DEPARTMENT_COLUMNS" description="COM_WORKFORCE_DEPARTMENT_COLUMNS_DESC">
+            <option value="1">J1</option>
+            <option value="2">J2</option>
+            <option value="3">J3</option>
+            <option value="4">J4</option>
+            <option value="5">J5</option>
+        </field>
+        <field name="department_show_desc" type="list" default="1" label="COM_WORKFORCE_DEPARTMENT_SHOWDESC" description="COM_WORKFORCE_DEPARTMENT_SHOWDESC_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="department_show_employeelist" type="list" default="1" label="COM_WORKFORCE_DEPARTMENT_SHOWEMPLOYEES" description="COM_WORKFORCE_DEPARTMENT_SHOWEMPLOYEES_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <!-- IMAGES -->
+        <field name="wfhead3" type="header" default="COM_WORKFORCE_IMAGES" />
+        <field name="maximgsize" type="text" label="COM_WORKFORCE_MAX_IMAGE_SIZE" default="8000" description="COM_WORKFORCE_MAX_IMAGE_SIZE_DESC" class="inputbox" />
+        <field name="department_photo_width" type="text" label="COM_WORKFORCE_DEP_PHOTO_WIDTH" default="100" description="COM_WORKFORCE_DEP_PHOTO_WIDTH_DESC" class="inputbox" />
+        <field name="department_align" type="list" default="left" label="COM_WORKFORCE_DEPARTMENT_IMG_ALIGN" description="COM_WORKFORCE_DEPARTMENT_IMG_ALIGN_DESC" class="inputbox">
+            <option value="left">JGLOBAL_LEFT</option>
+            <option value="right">JGLOBAL_RIGHT</option>
+        </field>
+        <field name="employee_photo_width" type="text" label="COM_WORKFORCE_EMP_PHOTO_WIDTH" default="100" description="COM_WORKFORCE_EMP_PHOTO_WIDTH_DESC" class="inputbox" />
+
+        <!-- SHOW/HIDE -->
+        <field name="wfhead4" type="header" default="COM_WORKFORCE_SHOWHIDE" />
+        <field name="show_results_header" type="list" default="1" label="COM_WORKFORCE_SHOW_RESULTS_HEADER" description="COM_WORKFORCE_SHOW_RESULTS_HEADER_DESC" class="inputbox">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_quicksearch" type="list" default="1" label="COM_WORKFORCE_SHOW_QUICKSEARCH" description="COM_WORKFORCE_SHOW_QUICKSEARCH_DESC" class="inputbox">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_employee_email" type="list" default="1" label="COM_WORKFORCE_SHOW_EMPLOYEE_EMAIL" description="COM_WORKFORCE_SHOW_EMPLOYEE_EMAIL_DESC" class="inputbox">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_print" type="list" default="1" label="COM_WORKFORCE_SHOW_PRINT" description="COM_WORKFORCE_SHOW_PRINT_DESC" class="inputbox">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="contact_link" type="list" default="1" label="COM_WORKFORCE_CONTACT_LINK" description="COM_WORKFORCE_CONTACT_LINK_DESC" class="inputbox">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_vcard" type="list" default="1" label="COM_WORKFORCE_SHOW_VCARD" description="COM_WORKFORCE_SHOW_VCARD_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_country" type="list" default="0" label="COM_WORKFORCE_SHOW_COUNTRY" description="COM_WORKFORCE_SHOW_COUNTRY_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_map" type="list" default="1" label="COM_WORKFORCE_SHOW_MAP" description="COM_WORKFORCE_SHOW_MAP_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_twitter" type="list" default="1" label="COM_WORKFORCE_SHOW_TWITTER" description="COM_WORKFORCE_SHOW_TWITTER_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_facebook" type="list" default="1" label="COM_WORKFORCE_SHOW_FACEBOOK" description="COM_WORKFORCE_SHOW_FACEBOOK_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_youtube" type="list" default="1" label="COM_WORKFORCE_SHOW_YOUTUBE" description="COM_WORKFORCE_SHOW_YOUTUBE_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="show_linkedin" type="list" default="1" label="COM_WORKFORCE_SHOW_LINKEDIN" description="COM_WORKFORCE_SHOW_LINKEDIN_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="footer" type="list" default="1" label="COM_WORKFORCE_FOOTER" description="COM_WORKFORCE_FOOTER_DESC" class="inputbox">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <!-- DEFAULTS -->
+        <field name="wfhead5" type="header" default="COM_WORKFORCE_DEFAULTS" />
+        <field name="default_overview" type="textarea" cols="50" rows="8" label="COM_WORKFORCE_DEFAULT_OVERVIEW" description="COM_WORKFORCE_DEFAULT_OVERVIEW_DESC" class="inputbox" />
+        <field name="default_department" type="department" default="" label="COM_WORKFORCE_DEFAULT_DEPARTMENT" description="COM_WORKFORCE_DEFAULT_DEPARTMENT_DESC" />
+        <field name="default_street" type="text" default="" label="COM_WORKFORCE_DEFAULT_STREET" description="COM_WORKFORCE_DEFAULT_STREET_DESC" />
+        <field name="default_city" type="text" default="" label="COM_WORKFORCE_DEFAULT_CITY" description="COM_WORKFORCE_DEFAULT_CITY_DESC" />
+        <field name="default_locstate" type="locstate" default="" label="COM_WORKFORCE_DEFAULT_STATE" description="COM_WORKFORCE_DEFAULT_STATE_DESC" />
+        <field name="default_province" type="text" default="" label="COM_WORKFORCE_DEFAULT_PROVINCE" description="COM_WORKFORCE_DEFAULT_PROVINCE_DESC" />
+        <field name="default_postcode" type="text" default="" label="COM_WORKFORCE_DEFAULT_POSTCODE" description="COM_WORKFORCE_DEFAULT_STREET_DESC" />
+        <field name="default_country" type="country" default="" label="COM_WORKFORCE_DEFAULT_COUNTRY" description="COM_WORKFORCE_DEFAULT_COUNTRY_DESC" />
+        <field name="default_website" type="text" default="" label="COM_WORKFORCE_DEFAULT_WEBSITE" description="COM_WORKFORCE_DEFAULT_WEBSITE_DESC" />
+        <field name="default_availability" type="textarea" cols="50" rows="3" default="" label="COM_WORKFORCE_DEFAULT_AVAILABILITY" description="COM_WORKFORCE_DEFAULT_AVAILABILITY_DESC" />
+
+        <field name="wfhead6" type="header" default="COM_WORKFORCE_ALLOW_EDIT" />
+        <field name="allow_edit" type="list" default="0" label="COM_WORKFORCE_ALLOW_USER_EDIT" description="COM_WORKFORCE_ALLOW_USER_EDIT_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+        <field
+            name="rules"
+            type="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            class="inputbox"
+            filter="rules"
+            validate="rules"
+            component="com_workforce"
+            section="component" />
+    </fieldset>
+</config>

@@ -1,0 +1,39 @@
+<fields name="giftcertificate">
+	<field name="product_sku"
+		type="text"
+		size="25"
+		label="COM_CSVI_EXPORT_AWO_PRODUCT_SKU_LABEL"
+		description="COM_CSVI_EXPORT_AWO_PRODUCT_SKU_DESC"
+		default="" />
+	
+	<field name="template"
+		type="sql"
+		size="1"
+		label="COM_CSVI_EXPORT_AWO_TEMPLATE_LABEL"
+		description="COM_CSVI_EXPORT_AWO_TEMPLATE_DESC"
+		query="SELECT #__awocoupon_vm.id AS value,
+				#__awocoupon_vm.coupon_code AS text
+				FROM #__awocoupon_vm
+				WHERE published = '-2'"
+		key_field="value"
+		value_field="text"
+		translate="true"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+	
+	<field name="profile"
+		type="sql"
+		size="1"
+		label="COM_CSVI_EXPORT_AWO_PROFILE_LABEL"
+		description="COM_CSVI_EXPORT_AWO_PROFILE_DESC"
+		query="SELECT #__awocoupon_vm_profile.id AS value,
+				#__awocoupon_vm_profile.title AS text
+				FROM #__awocoupon_vm_profile"
+		key_field="value"
+		value_field="text"
+		translate="true"
+		default="">
+		<option value="">COM_CSVI_DONT_USE</option>
+	</field>
+</fields>

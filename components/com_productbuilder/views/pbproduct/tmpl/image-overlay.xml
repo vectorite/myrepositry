@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_PRODUCTBUILDER_PBPRODUCT_VIEW_TMPL_OVERLAY_TITLE"
+		option="COM_PRODUCTBUILDER_PBPRODUCT_VIEW_TMPL_OVERLAY_TITLE">
+		<message>
+			<![CDATA[COM_PRODUCTBUILDER_LAYOUT_OVERLAY_DESC]]>
+		</message>
+	</layout>
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_productbuilder/models/fields">
+
+			<field name="id" type="bundles" label="COM_PRODUCTBUILDER_CONF_PRODUCT"
+				required="true" description="COM_PRODUCTBUILDER_CONF_PRODUCT_DESC" />
+		</fieldset>
+	</fields>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="disp_image" type="hidden" default="1" />
+			<field name="resize_img" type="radio" default="0"
+				label="COM_PRODUCTBUILDER_RESIZE_PROD_IMAGE_LABEL" description="COM_PRODUCTBUILDER_RESIZE_PROD_IMAGE_LABEL_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="img_width" type="text" default="100"
+				label="COM_PRODUCTBUILDER_IMAGE_WIDTH_LABEL" description="COM_PRODUCTBUILDER_IMAGE_WIDTH_DESC" />
+			<field name="img_height" type="text" default=""
+				label="COM_PRODUCTBUILDER_IMAGE_HEIGHT_LABEL" description="COM_PRODUCTBUILDER_IMAGE_HEIGH_DESC" />
+			<field name="@spacer" type="spacer" default="" label=""
+				description="" />
+			<field name="img_ar_width" type="text" default="140"
+				label="COM_PRODUCTBUILDER_IMAGE_AREA_WIDTH_LABEL" description="COM_PRODUCTBUILDER_IMAGE_AREA_WIDTH_DESC" />
+			<field name="img_ar_height" type="text" default="140"
+				label="COM_PRODUCTBUILDER_IMAGE_AREA_HEIGHT_LABEL" description="COM_PRODUCTBUILDER_IMAGE_AREA_HEIGHT_DESC" />
+		</fieldset>
+		<fieldset name="component" label="COM_PRODUCTBUILDER_COMPONENT_OPTIONS">
+			<field name="compatibility" type="radio"
+				label="COM_PRODUCTBUILDER_CONFIG_DISPLAY_COMPATIBILITY_LABEL"
+				description="COM_PRODUCTBUILDER_CONFIG_DISPLAY_COMPATIBILITY_DESC"
+				class="inputbox" default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="disp_price" type="radio"
+				label="COM_PRODUCTBUILDER_CONFIG_DISPLAY_PRICE_LABEL" description="COM_PRODUCTBUILDER_CONFIG_DISPLAY_PRICE_DESC"
+				class="inputbox" default="1">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="disp_pb_prod_descr" type="radio" default="0"
+				label="COM_PRODUCTBUILDER_DISPLAY_CONF_DESCR_LABEL" description="COM_PRODUCTBUILDER_DISPLAY_CONF_DESCR_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="disp_pb_prod_img" type="radio" default="0"
+				label="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_LABEL" description="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="bundle_img_height" type="text" default="90"
+				label="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_HEIGHT_LABEL"
+				description="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_HEIGHT_DESC"></field>
+
+			<field name="disp_gr_header" type="radio" default="1"
+				label="COM_PRODUCTBUILDER_DISPLAY_GR_NAME_AS_HEADER_LABEL"
+				description="COM_PRODUCTBUILDER_DISPLAY_GR_NAME_AS_HEADER_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+			<field name="prod_display" type="list" default="0"
+				label="COM_PRODUCTBUILDER_VM_PROD_DISPLAY_TYPE_LABEL" description="COM_PRODUCTBUILDER_VM_PROD_DISPLAY_TYPE_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">COM_PRODUCTBUILDER_VM_PROD_DISPLAY_LIST
+				</option>
+				<option value="1">COM_PRODUCTBUILDER_VM_PROD_DISPLAY_RADIO
+				</option>
+			</field>
+
+			<field name="disp_quantity" type="radio" default="1"
+				label="COM_PRODUCTBUILDER_DISPLAY_GR_QUANTITY_LABEL" description="COM_PRODUCTBUILDER_DISPLAY_GR_QUANTITY_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="disp_full_image" type="radio" default="1"
+				label="COM_PRODUCTBUILDER_DISPLAY_VM_PROD_IMG_LIGHTBOX_LABEL"
+				description="COM_PRODUCTBUILDER_DISPLAY_VM_PROD_IMG_LIGHTBOX_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS `#__example_items` (
+`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT COLLATE=utf8_general_ci;
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: access.xml 1814 2011-02-21 19:39:42Z silianacom-svn $ -->
+<types>
+	<type name="article" title="COM_SH404SEF_OG_TYPES_ARTICLE">
+	  <property name="og:url" title="Article url" type="URL" description=""/>
+	  <property name="og:image" title="Article image" type="URL[]" description=""/>
+		<property name="og:title" title="Article title" type="String" description=""/>
+		<property name="og:description" title="Article description" type="String" description=""/>
+		<property name="og:site_name" title="Site name" type="String" description=""/>
+		<property name="article:published_time" title="Time when article was published" type="DateTime" description=""/>
+		<property name="article:modified_time" title="Time when article was last updated" type="DateTime" description=""/>
+		<property name="article:expiration_time" title="Time when article should expire" type="DateTime" description=""/>
+		<property name="article:author" title="Author(s) of the article" type="Profile[]" description=""/>
+		<property name="article:section" title="Section this article belongs to" type="String" description=""/>
+		<property name="article:tag" title="Key words for the article" type="String[]" description=""/>
+	</type>
+	<type name="blog" title="COM_SH404SEF_OG_TYPES_BLOG">
+	  <property name="og:url" title="URL" type="URL" description=""/>
+	  <property name="og:image" title="URL to an image" type="URL[]" description=""/>
+    <property name="og:title" title="Name of blog" type="String" description=""/>
+    <property name="og:description" title="Description" type="String" description=""/>
+  </type>
+  <type name="book" title="COM_SH404SEF_OG_TYPES_BOOK">
+    <property name="og:url" title="URL" type="URL" description=""/>
+    <property name="og:image" title="URL to an image" type="URL[]" description=""/>
+    <property name="og:title" title="Book name" type="String" description=""/>
+    <property name="og:description" title="Description" type="String" description=""/>
+    <property name="book:release_date" title="Release date" type="DateTime" description=""/>
+    <property name="book:author" title="Author(s)" type="String[]" description=""/>
+    <property name="book:isbn" title="Isbn" type="String" description=""/>
+    <property name="book:tag" title="Key words for the book" type="String[]" description=""/>
+  </type>
+  <type name="profile" title="COM_SH404SEF_OG_TYPES_PROFILE">
+    <property name="og:url" title="URL" type="URL" description=""/>
+    <property name="og:image" title="URL to an image" type="URL[]" description=""/>
+    <property name="og:title" title="Profile name" type="String" description=""/>
+    <property name="og:description" title="Description" type="String" description=""/>
+    <property name="profile:first_name" title="First name" type="String" description=""/>
+    <property name="profile:last_name" title="Last name" type="String" description=""/>
+    <property name="profile:username" title="User name" type="String" description=""/>
+    <property name="profile:gender" title="Gender" type="male | female" description=""/>
+    <property name="fb:profile_id" title="Facebook UID" type="String" description=""/>
+  </type>
+  <type name="video.movie" title="COM_SH404SEF_OG_TYPES_MOVIE">
+    <property name="og:url" title="URL" type="URL" description=""/>
+    <property name="og:image" title="URL to an image" type="URL[]" description=""/>
+    <property name="og:title" title="Movie title" type="String" description=""/>
+    <property name="og:description" title="Description" type="String" description=""/>
+    <property name="video:release_date" title="Release date" type="DateTime" description=""/>
+    <property name="video:duration" title="Duration" type="Integer" description=""/>
+    <property name="video:director" title="Director" type="Profile[]" description=""/>
+    <property name="video:writer" title="Writer" type="Profile[]" description=""/>
+    <property name="video:tag" title="Key words for the movie" type="String[]" description=""/>
+  </type>
+  <type name="video.episode" title="COM_SH404SEF_OG_TYPES_TV_EPISODE">
+    <property name="og:url" title="URL" type="URL" description=""/>
+    <property name="og:image" title="URL to an image" type="URL[]" description=""/>
+    <property name="og:title" title="Episode title" type="String" description=""/>
+    <property name="og:description" title="Description" type="String" description=""/>
+    <property name="video:series" title="TV series" type="video.tv_show" description=""/>
+    <property name="video:release_date" title="Release date" type="DateTime" description=""/>
+    <property name="video:duration" title="Duration" type="Integer" description=""/>
+    <property name="video:director" title="Director" type="Profile[]" description=""/>
+    <property name="video:writer" title="Writer" type="Profile[]" description=""/>
+    <property name="video:tag" title="Key words for the episode" type="String[]" description=""/>
+  </type>
+  <type name="video.tv_show" title="COM_SH404SEF_OG_TYPES_TV_SHOW">
+    <property name="og:url" title="URL" type="URL" description=""/>
+    <property name="og:image" title="URL to an image" type="URL[]" description=""/>
+    <property name="og:title" title="Show title" type="String" description=""/>
+    <property name="og:description" title="Description" type="String" description=""/>
+    <property name="video:release_date" title="Release date" type="DateTime" description=""/>
+    <property name="video:duration" title="Duration" type="Integer" description=""/>
+    <property name="video:director" title="Director" type="Profile[]" description=""/>
+    <property name="video:writer" title="Writer" type="Profile[]" description=""/>
+    <property name="video:tag" title="Key words for the show" type="String[]" description=""/>
+  </type>
+  <type name="video.other" title="COM_SH404SEF_OG_TYPES_TV_VIDEO">
+    <property name="og:url" title="URL" type="URL" description=""/>
+    <property name="og:image" title="URL to an image" type="URL[]" description=""/>
+    <property name="og:title" title="Video title" type="String" description=""/>
+    <property name="og:description" title="Description" type="String" description=""/>
+    <property name="video:release_date" title="Release date" type="DateTime" description=""/>
+    <property name="video:duration" title="Duration" type="Integer" description=""/>
+    <property name="video:director" title="Director" type="Profile[]" description=""/>
+    <property name="video:writer" title="Writer" type="Profile[]" description=""/>
+    <property name="video:tag" title="Key words for the video" type="String[]" description=""/>
+  </type>
+  <type name="website" title="COM_SH404SEF_OG_TYPES_WEBSITE">
+    <property name="og:url" title="URL" type="URL" description=""/>
+    <property name="og:image" title="URL to an image" type="URL[]" description=""/>
+    <property name="og:title" title="Video title" type="String" description=""/>
+    <property name="og:description" title="Description" type="String" description=""/>
+  </type>
+</types>
+

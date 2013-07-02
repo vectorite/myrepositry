@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="FRONTEND" label="COM_PRODUCTBUILDER_FE_OPTIONS_LABEL">
+		<field name="compatibility" type="radio"
+			label="COM_PRODUCTBUILDER_CONFIG_DISPLAY_COMPATIBILITY_LABEL"
+			description="COM_PRODUCTBUILDER_CONFIG_DISPLAY_COMPATIBILITY_DESC"
+			class="inputbox" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="disp_price" type="radio"
+			label="COM_PRODUCTBUILDER_CONFIG_DISPLAY_PRICE_LABEL" description="COM_PRODUCTBUILDER_CONFIG_DISPLAY_PRICES_DESC"
+			class="inputbox" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="disp_total_discount" type="radio"
+			label="COM_PRODUCTBUILDER_DISPLAY_TOTAL_DISCOUNT_LABEL" description="COM_PRODUCTBUILDER_DISPLAY_TOTAL_DISCOUNT_DESC"
+			class="inputbox" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="ajax_priceupdate_forquantity" type="radio"
+			label="COM_PRODUCTBUILDER_AJAX_PRICE_ONQUANTITY_LABEL" description="COM_PRODUCTBUILDER_AJAX_PRICE_ONQUANTITY_DESC"
+			class="inputbox" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>		
+
+
+		<field name="name_price_sep" type="text" default=" : "
+			label="COM_PRODUCTBUILDER_CONFIG_NAMEPRICE_SEPARATOR_LABEL"
+			description="COM_PRODUCTBUILDER_CONFIG_NAMEPRICE_SEPARATOR_DESC"
+			class="inputbox" size="10" />
+
+		<field name="disp_pb_prod_descr" type="radio" default="0"
+			label="COM_PRODUCTBUILDER_DISPLAY_CONF_DESCR_LABEL" description="COM_PRODUCTBUILDER_DISPLAY_CONF_DESCR_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="disp_pb_prod_img" type="radio" default="0"
+			label="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_LABEL" description="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="bundle_img_height" type="text" default="90"
+			label="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_HEIGHT_LABEL" description="COM_PRODUCTBUILDER_DISPLAY_CONF_IMG_HEIGHT_DESC"></field>
+
+		<field name="disp_gr_header" type="radio" default="1"
+			label="COM_PRODUCTBUILDER_DISPLAY_GR_NAME_AS_HEADER_LABEL"
+			description="COM_PRODUCTBUILDER_DISPLAY_GR_NAME_AS_HEADER_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="prod_display" type="list" default="0"
+			label="COM_PRODUCTBUILDER_VM_PROD_DISPLAY_TYPE_LABEL" description="COM_PRODUCTBUILDER_VM_PROD_DISPLAY_TYPE_DESC">
+			<option value="0">COM_PRODUCTBUILDER_VM_PROD_DISPLAY_LIST</option>
+			<option value="1">COM_PRODUCTBUILDER_VM_PROD_DISPLAY_RADIO
+			</option>
+		</field>
+
+		<field name="disp_quantity" type="radio" default="1"
+			label="COM_PRODUCTBUILDER_DISPLAY_GR_QUANTITY_LABEL" description="COM_PRODUCTBUILDER_DISPLAY_GR_QUANTITY_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="disp_full_image" type="radio" default="1"
+			label="COM_PRODUCTBUILDER_DISPLAY_VM_PROD_IMG_LIGHTBOX_LABEL"
+			description="COM_PRODUCTBUILDER_DISPLAY_VM_PROD_IMG_LIGHTBOX_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="styling" label="COM_PRODUCTBUILDER_FIELDSET_STYLING"
+		addfieldpath="administrator/components/com_productbuilder/models/fields">
+
+		<field name="groups_area_bckgr" type="color" maxlength="6"
+			label="COM_PRODUCTBUILDER_CONFIG_GR_AREA_BACKGR_LABEL" description="COM_PRODUCTBUILDER_CONFIG_GR_AREA_BACKGR__DESC"
+			size="15" />
+
+		<field name="group_bckgr" type="color" maxlength="6"
+			label="COM_PRODUCTBUILDER_CONFIG_GR_BACKGR_LABEL" description="COM_PRODUCTBUILDER_CONFIG_GR_BACKGR_DESC"
+			size="15" />
+
+		<field name="group_border_color" type="color" maxlength="6"
+			label="COM_PRODUCTBUILDER_CONFIG_GR_BORDER_COLOR_LABEL" size="15" />
+
+		<field name="group_border_radius" type="slider" maxlength="2"
+			label="COM_PRODUCTBUILDER_CONFIG_GR_BORDER_RADIUS_LABEL" description="COM_PRODUCTBUILDER_CONFIG_GR_BORDER_RADIUS_DESC"
+			size="2" default="0" />
+
+		<field name="gr_header_bckgr" type="text" maxlength="6"
+			label="COM_PRODUCTBUILDER_CONFIG_GR_HEADER_BACKGR_LABEL" class="inputbox color {required:false}"
+			size="15" />
+
+		<field name="gr_header_font_color" type="text" maxlength="6"
+			label="COM_PRODUCTBUILDER_CONFIG_GR_HEADER_COLOR_LABEL" class="inputbox color {required:false}"
+			size="15" />
+
+		<field name="gr_header_text_shadow" type="color" maxlength="6"
+			label="COM_PRODUCTBUILDER_CONFIG_GR_HEADER_TXT_SHADOW_LABEL"
+			description="COM_PRODUCTBUILDER_CONFIG_GR_HEADER_TXT_SHADOW_DESC"
+			size="15" />
+
+		<field name="gr_header_font_size" type="text"
+			label="COM_PRODUCTBUILDER_CONFIG_GR_HEADER_FSIZE_LABEL" description="COM_PRODUCTBUILDER_CONFIG_GR_HEADER_FSIZE_DESC"
+			class="inputbox" size="10" />
+
+
+		<field name="attr_font_color" type="color" maxlength="6"
+			label="COM_PRODUCTBUILDER_CONFIG_ATTRIBUTE_COLOR_LABEL" size="15" />
+
+		<field name="img_border_color" type="color" maxlength="6"
+			label="COM_PRODUCTBUILDER_CONFIG_IMAGE_BORDER_COLOR_LABEL"
+			description="COM_PRODUCTBUILDER_CONFIG_IMAGE_BORDER_COLOR_DESC" size="15" />
+	</fieldset>
+</config>

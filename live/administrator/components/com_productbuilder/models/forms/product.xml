@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="basic">
+		<field name="id"  type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC" size="10" default="0"
+			readonly="true"  />
+			
+		<field name="name" type="text" label="COM_PRODUCTBUILDER_NAME_LABEL"
+			class="inputbox"
+			size="45" required="1" />
+
+		<field name="sku" type="text" label="COM_PRODUCTBUILDER_CONF_PRODUCT_SKU_LABEL"
+			class="inputbox"  
+			size="30" required="1" />
+
+		<field name="alias" type="text" label="COM_PRODUCTBUILDER_CONF_PRODUCT_ALIAS_LABEL"
+			description="COM_PRODUCTBUILDER_CONF_PRODUCT_ALIAS_DESC" class="inputbox" field="id" unique="true"
+			size="45" filter="JFilterOutput::stringUrlSafe" />
+
+		<field name="compatibility" type="radio"
+			label="COM_PRODUCTBUILDER_CONF_PRODUCT_COMPATIBILITY_LABEL" description="COM_PRODUCTBUILDER_CONF_PRODUCT_COMPATIBILITY_DESC"
+			class="inputbox" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="published" type="radio"
+			label="JSTATUS" description="COM_PRODUCTBUILDER_PUBLISHED_CONF_PROD_DESC"
+			class="inputbox" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field name="ordering" type="text" label="JGRID_HEADING_ORDERING"
+			class="inputbox"
+			size="5" filter="integer" required="1" default="0"/>
+
+		<field name="image_path" type="media" 
+			label="COM_PRODUCTBUILDER_CONF_PRODUCT_IMAGE_LABEL"
+			class="inputbox" size="50" />
+			
+		<field name="language" type="contentlanguage" 
+			label="JFIELD_LANGUAGE_LABEL" 	description="COM_PRODUCTBUILDER_LANGUAGE_DESC" 
+			class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="description" type="editor"  class="inputbox" 
+			label="COM_PRODUCTBUILDER_DESCRIPT_LABEL"
+			filter="safehtml"/>
+	</fieldset>
+	
+	<fieldset name="metadata">
+		<field name="metaKeywords" type="textarea" rows="10" cols="50" class="inputbox" 
+			label="COM_PRODUCTBUILDER_METAKEY_LABEL"
+			description="COM_PRODUCTBUILDER_METAKEY_DESC" />
+			
+			<field name="metaDecr" type="textarea" rows="10" cols="50" class="inputbox" 
+			label="COM_PRODUCTBUILDER_METADESC_LABEL"
+			description="COM_PRODUCTBUILDER_METADESC_DESC" />
+	</fieldset>
+</form>

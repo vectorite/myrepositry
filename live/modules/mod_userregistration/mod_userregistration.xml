@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="1.6" client="site" method="upgrade">
+	<name>User registration for virtuemart and joomla</name>
+	<author>rca test</author>
+	<creationDate>Aug 2012</creationDate>
+	<authorEmail>info@joomla.com</authorEmail>
+	<authorUrl>www.joomla.com</authorUrl>
+	<version>1.0</version>
+	<description>Free User registration by http://www.test123.com/</description>
+	<files>
+		<filename module="mod_userregistration">mod_userregistration.php</filename>
+		<filename module="mod_userregistration">helper.php</filename>
+		<filename module="mod_userregistration">mod_userregistration.js</filename>
+		<filename module="mod_userregistration">index.html</filename>
+		<filename module="mod_userregistration">mod_userregistration.css</filename>
+	</files>
+</extension>
