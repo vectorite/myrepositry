@@ -219,7 +219,7 @@ class moduserregistrationHelper
 				
 					$jApp->redirect('sales-orders','Customer Added Successfully...');
 					
-				 } 				 
+				  }
 				 }
 			
 		}

@@ -137,6 +137,21 @@ span.addtocart-button input.addtocart-button, a.addtocart-button, .FlexibleThumb
 
 <?php defined('_JEXEC') or die('Restricted Direct Access'); ?>
 
+<?php
+		$db1 = JFactory::getDBO();
+		$userId = JFactory::getUser()->id;
+
+		$salesreper = "select * from `#__users_sales_rep` where rep_id = $userId";
+		$db1->setQuery($salesreper);
+		$total_result = $db1->loadResult();
+		if(count($total_result) > 0)
+		 {
+			$mystyle = 'disabled = true; style="opacity:0.50"';
+		 }
+
+?>
+
+
 <div class="FWListBrowseV1" style="display:block;">
 
 <?php $z = 0; ?>
@@ -187,8 +202,6 @@ span.addtocart-button input.addtocart-button, a.addtocart-button, .FlexibleThumb
 						<p><?php echo $result->text; ?></p>
 
 				<?php
-				
-						$db1 = JFactory::getDBO();		
 						$myquery = "SELECT pcu.virtuemart_custom_id, pcu.virtuemart_customfield_id, pcu.custom_value, pcu.custom_price, pcu.virtuemart_product_id as pcu_product_id, pp.product_sku as psku, m1.file_url FROM `#__virtuemart_product_customfields` as pcu INNER JOIN `#__virtuemart_products` AS pp ON pp.virtuemart_product_id = pcu.custom_value INNER JOIN `#__virtuemart_product_medias` as m2 ON pp.virtuemart_product_id = m2.virtuemart_product_id INNER JOIN `#__virtuemart_medias` AS m1 ON m1.virtuemart_media_id = m2.virtuemart_media_id WHERE pcu.virtuemart_product_id = " . $result->virtuemart_product_id ." and pcu.virtuemart_custom_id = 47";
 
 						 $db1->setQuery($myquery);
@@ -242,9 +255,9 @@ span.addtocart-button input.addtocart-button, a.addtocart-button, .FlexibleThumb
 									<span class="addtocart-button">	
 
 									<?php if($ipad) : ?>
-										<input class="addtocart-button" type="submit" title="Add to Cart" value="Add to Cart" name="addtocart">
+										<input class="addtocart-button" type="submit" title="Add to Cart" value="Add to Cart" name="addtocart" <?php echo $mystyle ?>>
 									<?php else : ?>
-										<a href="javascript:void(0)" id="my_virtuemart_product_id_<?php echo $z ?>" value="<?php echo $result->virtuemart_category_id ?>:<?php echo $result->virtuemart_product_id ?>" style="text-decoration:none;" onclick="Addtocartajax(this, this.id);"><input class="addtocart-button" type="button" title="Add to Cart" value="Add to Cart" name="addtocart"></a>
+										<a href="javascript:void(0)" id="my_virtuemart_product_id_<?php echo $z ?>" value="<?php echo $result->virtuemart_category_id ?>:<?php echo $result->virtuemart_product_id ?>" style="text-decoration:none;" onclick="Addtocartajax(this, this.id);"><input class="addtocart-button" type="button" title="Add to Cart" value="Add to Cart" name="addtocart" <?php echo $mystyle ?>></a>
 									<?php endif; ?>
 
 									</span>
@@ -330,7 +343,6 @@ function pro_add(myval)
 			myss = myval.split('::');
 			myss1 = myss[1].split(':');
 
-			//var myList = document.getElementsByClassName('vm_p_id')[l].id;
 			document.getElementById('cart_virtuemart_product_id_'+l).value = myss1[0];
 		  }
 		 else

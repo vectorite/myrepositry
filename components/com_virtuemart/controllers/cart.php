@@ -487,7 +487,7 @@ class VirtueMartControllerCart extends JController {
 
 			$_dispatcher = JDispatcher::getInstance();
 
-			$_retValues = $_dispatcher->trigger('plgVmOnSelectCheckShipment', array(   &$cart));
+			$_retValues = $_dispatcher->trigger('plgVmOnSelectCheckShipment', array(&$cart));
 
 			$dataValid = true;
 

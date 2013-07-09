@@ -73,7 +73,7 @@ class SalesreporderController extends JController
 		 if($userdetail->address_2 != '')
 		 $bt_address2 = "\n".$userdetail->address_2."\n";
 		
-		 // ======== Add by RCA ========
+		 // ======== Add by RCA chetnath ========
 
 		 if(!empty($userdetail->CustomerType))
 			$data[4] = $userdetail->CustomerType;			
@@ -372,13 +372,11 @@ class SalesreporderController extends JController
 		
 		if($zipcode_id_count > 0)
 		{
-		echo "notcorrect";
-		die;
+		echo "notcorrect"; die;
 		}
 		else
 		{
-		echo "correct";
-		die;
+		echo "correct"; die;
 		}
 		}
 		else	
@@ -388,13 +386,11 @@ class SalesreporderController extends JController
 		$zipcode_id = $db->loadObject();
 		if($zipcode_id > 0)
 		{
-		echo "correct";
-		die;
+		echo "correct";	die;
 		}
 		else
 		{
-		echo "notcorrect";
-		die;
+		echo "notcorrect"; die;
 		}
 		}
 	

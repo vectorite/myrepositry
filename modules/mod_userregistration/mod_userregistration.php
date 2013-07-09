@@ -101,9 +101,8 @@ $db->setQuery($user_detail);
 $db->query();
 $user_info=$db->loadAssoc();
 
-
-
 ?>
+
 <script>	
 <?php 
 
@@ -129,6 +128,7 @@ function myuserregistrationValidate1()
 { 
    var zipcode = jQuery('#zip_field').val();
    var state_id = jQuery('#virtuemart_state_id').val();
+
    //var email = $('#email_field').val();
 if ( jQuery.browser.msie )
  {  
@@ -272,34 +272,43 @@ if ( jQuery.browser.msie )
 
 	   if(flg == 1)return false;
  }	
-	
+
+	//alert(jQuery('#userregistrationButton').val());
+	if(!jQuery('#userregistrationButton').val() == "Continue")
+	    var mycountry_id = jQuery('#virtuemart_country_id').val();
+		
 	jQuery.ajax({  
-		type: "POST",  
-		url: "index.php?option=com_salesreporder&task=check_zipcode",  
-		data: { 'zipcode': zipcode,'state_id':state_id },   
+		type: "POST",
+		//url: "index.php?option=com_salesreporder&task=check_zipcode",
+		url: "<?php echo JURI::base()?>components/com_salesreporder/ajax_info.php",
+		data: { 'zipcode': zipcode,'state_id':state_id,'mycountry_id':mycountry_id },
 		success: function(responce){
-		responce = jQuery.trim(responce);		
-		if(responce == "correct")
-		{
-		if(flag_submit){
-						flag_submit=0;	
-						document.getElementById("userregistrationButton").click();						
-						}else{							
-		//document.getElementById("userregistrationButton").click();	
-		document.getElementById("userregistrationForm").submit();
-		
-		return true;
-		}
-		//document.getElementById("userregistrationForm").submit();
-		//document.frm1.submit();	
-		
-		}
-		else
-		{
-		jQuery("#zip_field").css('border','1px solid red');		
-		alert('zip code is not correct.');
-		return false;
-		}			
+		responce = jQuery.trim(responce);
+			if(responce == "correct")
+			{
+			if(flag_submit){
+							flag_submit=0;	
+							document.getElementById("userregistrationButton").click();						
+							}else{							
+			//document.getElementById("userregistrationButton").click();	
+			document.getElementById("userregistrationForm").submit();
+			
+			return true;
+			}
+			//document.getElementById("userregistrationForm").submit();
+			//document.frm1.submit();	
+			
+			}
+			else if(responce == "notcorrect")
+			 {
+				jQuery("#zip_field").css('border','1px solid red');		
+				alert('zip code is not correct.');
+				return false;
+			 }
+			else
+			 {
+				document.getElementById("virtuemart_state_id").innerHTML = responce;
+			 }
 		} 
 	});
 
@@ -354,6 +363,21 @@ function sendData()
  }
 </script>
 
+
+
+	<?php
+			$mystate = "select virtuemart_state_id,state_name from #__virtuemart_states where virtuemart_country_id = ".$user_info['virtuemart_country_id'];
+			$db->setQuery($mystate);
+			$state_list_name = $db->loadObjectList();
+	
+			$db = JFactory::getDBO();
+			$mysql = "select uv.fieldvalue from #__virtuemart_userfields as uf right join #__virtuemart_userfield_values as uv on uv.virtuemart_userfield_id = uf.virtuemart_userfield_id where uf.name='CustomerType'";
+			$db->setQuery($mysql);
+			$myresults = $db->loadObjectList();
+			
+	?>
+
+
 <div id="part_second">
 
 <form id="userregistrationForm" name="frm1" method="post" onsubmit="return myuserregistrationValidate1();"  action="<?php echo $_SERVER['REQUEST_URI']; ?>" >
@@ -387,15 +411,6 @@ function sendData()
 		</tr>
 		
 <!--=======  add by RCA ==========-->
-
-	<?php
-			
-			$db = JFactory::getDBO();
-			$mysql = "select uv.fieldvalue from #__virtuemart_userfields as uf right join #__virtuemart_userfield_values as uv on uv.virtuemart_userfield_id = uf.virtuemart_userfield_id where uf.name='CustomerType'";
-			$db->setQuery($mysql);
-			$myresults = $db->loadObjectList();
-	?>
-
 
 		 <tr>
 			<td class="key">
@@ -707,7 +722,11 @@ function sendData()
 				</label>
 			</td>
 			<td>
-				<select class="virtuemart_country_id" name="virtuemart_country_id" id="virtuemart_country_id" aria-required="true" required="required" aria-invalid="true" onchange="jQuery( function($) {$('select.virtuemart_country_id').vm2front('list',{dest : '#virtuemart_state_id',ids : this.id});});">
+				<!--<select class="virtuemart_country_id" name="virtuemart_country_id" id="virtuemart_country_id" aria-required="true" required="required" aria-invalid="true" onchange="jQuery( function($) {$('select.virtuemart_country_id').vm2front('list',{dest : '#virtuemart_state_id',ids : this.id});});">-->
+				<!-- add by rca -->
+				<select class="virtuemart_country_id" name="virtuemart_country_id" id="virtuemart_country_id" aria-required="true" required="required" aria-invalid="true" onchange="myuserregistrationValidate1();">
+				<!-- end by rca -->
+
 	<!--<option selected="selected" value="">-- Select --</option>-->
     <option <?php if($user_info['virtuemart_country_id'] == "223" || $post['virtuemart_country_id'] == "223")echo 'selected="selected"'; ?> value="223">United States</option>
 	<option <?php if($user_info['virtuemart_country_id'] == "38" || $post['virtuemart_country_id'] == "38")echo 'selected="selected"'; ?> value="38">Canada</option>	
@@ -724,7 +743,10 @@ function sendData()
 			<td>
 				<select required="" name="virtuemart_state_id" size="1" id="virtuemart_state_id" class="inputbox multiple" aria-invalid="false">
 						<option value="">-- Select --</option>
-						</select>
+						<?php foreach($state_list_name as $mystatelist) : ?>
+							<option value="<?php echo $mystatelist->virtuemart_state_id?>"<?php if($mystatelist->virtuemart_state_id==$user_info['virtuemart_state_id']) echo "selected='selected'" ?>><?php echo $mystatelist->state_name; ?></option>
+						<?php endforeach; ?>
+				</select>
 			</td>
 		</tr>
          <tr>

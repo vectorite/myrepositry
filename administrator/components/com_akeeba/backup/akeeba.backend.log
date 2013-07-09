@@ -1,8 +1,4 @@
-DEBUG   |130617 13:33:04|
-DEBUG   |130617 13:33:06|
-DEBUG   |130617 13:33:20|
-DEBUG   |130617 13:33:25|
-DEBUG   |130617 13:33:39|
-DEBUG   |130617 13:33:41|
-DEBUG   |130617 13:33:43|
-DEBUG   |130617 13:33:45|
+DEBUG   |130708 01:25:48|
+WARNING |130708 01:25:48|AEAbstractArchiver:: Selected embedded installer not found, using ABI instead
+ERROR   |130708 01:25:48|AEAbstractArchiver:: Installer package <root>/administrator/components/com_akeeba/assets/installers/abi.jpa does not exist!
+ERROR   |130708 01:25:48|Failed Smart algorithm on AECoreDomainInstaller

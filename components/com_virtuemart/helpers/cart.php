@@ -94,34 +94,35 @@ class VirtueMartCart {
 
 				self::$_cart = new VirtueMartCart;
 
-				self::$_cart->products = $sessionCart->products;
-				self::$_cart->vendorId	 							= $sessionCart->vendorId;
-				self::$_cart->lastVisitedCategoryId	 			= $sessionCart->lastVisitedCategoryId;
+				self::$_cart->products						= $sessionCart->products;
+				self::$_cart->vendorId	 					= $sessionCart->vendorId;
+				self::$_cart->lastVisitedCategoryId	 		= $sessionCart->lastVisitedCategoryId;
 				self::$_cart->virtuemart_shipmentmethod_id	= $sessionCart->virtuemart_shipmentmethod_id;
 				self::$_cart->virtuemart_paymentmethod_id 	= $sessionCart->virtuemart_paymentmethod_id;
-				self::$_cart->automaticSelectedShipment 		= $sessionCart->automaticSelectedShipment;
+				self::$_cart->automaticSelectedShipment 	= $sessionCart->automaticSelectedShipment;
 				self::$_cart->automaticSelectedPayment 		= $sessionCart->automaticSelectedPayment;
-				self::$_cart->BT 										= $sessionCart->BT;
-				self::$_cart->ST 										= $sessionCart->ST;
-				self::$_cart->tosAccepted 							= $sessionCart->tosAccepted;
-				self::$_cart->customer_comment 					= base64_decode($sessionCart->customer_comment);
-				self::$_cart->couponCode 							= $sessionCart->couponCode;
-				self::$_cart->cartData 								= $sessionCart->cartData;
+				self::$_cart->BT 							= $sessionCart->BT;
+				self::$_cart->ST 							= $sessionCart->ST;
+				self::$_cart->tosAccepted 					= $sessionCart->tosAccepted;
+				self::$_cart->customer_comment 				= base64_decode($sessionCart->customer_comment);
+				self::$_cart->couponCode 					= $sessionCart->couponCode;
+				self::$_cart->cartData 						= $sessionCart->cartData;
 
 // 				if(!class_exists('calculationHelper')) require(JPATH_VM_ADMINISTRATOR.DS.'helpers'.DS.'calculationh.php');
 // 				$calculator = calculationHelper::getInstance();
-// 				self::$_cart->cartData								= $calculator->getCartData();
-				self::$_cart->lists 								= $sessionCart->lists;
-			  //self::$_cart->user 									= $sessionCart->user;
-// 				self::$_cart->prices 								= $sessionCart->prices;
-				self::$_cart->pricesUnformatted					= $sessionCart->pricesUnformatted;
-				self::$_cart->pricesCurrency						= $sessionCart->pricesCurrency;
-				self::$_cart->paymentCurrency						= $sessionCart->paymentCurrency;
 
-				self::$_cart->_inCheckOut 							= $sessionCart->_inCheckOut;
-				self::$_cart->_dataValidated						= $sessionCart->_dataValidated;
-				self::$_cart->_confirmDone							= $sessionCart->_confirmDone;
-				self::$_cart->STsameAsBT							= $sessionCart->STsameAsBT;
+// 				self::$_cart->cartData						= $calculator->getCartData();
+				self::$_cart->lists 						= $sessionCart->lists;
+			  //self::$_cart->user 							= $sessionCart->user;
+// 				self::$_cart->prices 						= $sessionCart->prices;
+				self::$_cart->pricesUnformatted				= $sessionCart->pricesUnformatted;
+				self::$_cart->pricesCurrency				= $sessionCart->pricesCurrency;
+				self::$_cart->paymentCurrency				= $sessionCart->paymentCurrency;
+
+				self::$_cart->_inCheckOut 					= $sessionCart->_inCheckOut;
+				self::$_cart->_dataValidated				= $sessionCart->_dataValidated;
+				self::$_cart->_confirmDone					= $sessionCart->_confirmDone;
+				self::$_cart->STsameAsBT					= $sessionCart->STsameAsBT;
 
 			}
 
@@ -206,6 +207,7 @@ class VirtueMartCart {
 				unset($product->product_price_edate);
 			}
 		}
+		
 		//$sessionCart->products = $products;
 		$sessionCart->products = $this->products;
 		//echo '<pre>'.print_r($products,1).'</pre>';die;
@@ -331,52 +333,52 @@ class VirtueMartCart {
 			// dump($tmpProduct,'my product add to cart before');
 			// trying to save some space in the session table
 			$product = new stdClass();
-			$product -> virtuemart_manufacturer_id = $tmpProduct -> virtuemart_manufacturer_id;
-// 			$product -> mf_name = $tmpProduct -> mf_name;
-			$product -> slug = $tmpProduct -> slug;
-// 			$product -> mf_desc = $tmpProduct -> mf_desc;
-// 			$product -> mf_url = $tmpProduct -> mf_url;
-			$product -> published = $tmpProduct -> published;
-			$product -> virtuemart_product_price_id = $tmpProduct -> virtuemart_product_price_id;
-			$product -> virtuemart_product_id = $tmpProduct -> virtuemart_product_id;
-			$product -> virtuemart_shoppergroup_id = $tmpProduct -> virtuemart_shoppergroup_id;
-			$product -> product_price = $tmpProduct -> product_price;
-			$product -> override = $tmpProduct -> override;
-			$product -> product_override_price = $tmpProduct -> product_override_price;
+			$product -> virtuemart_manufacturer_id	= $tmpProduct -> virtuemart_manufacturer_id;
+// 			$product -> mf_name						= $tmpProduct -> mf_name;
+			$product -> slug						= $tmpProduct -> slug;
+// 			$product -> mf_desc						= $tmpProduct -> mf_desc;
+// 			$product -> mf_url						= $tmpProduct -> mf_url;
+			$product -> published					= $tmpProduct -> published;
+			$product -> virtuemart_product_price_id	= $tmpProduct -> virtuemart_product_price_id;
+			$product -> virtuemart_product_id		= $tmpProduct -> virtuemart_product_id;
+			$product -> virtuemart_shoppergroup_id	= $tmpProduct -> virtuemart_shoppergroup_id;
+			$product -> product_price				= $tmpProduct -> product_price;
+			$product -> override					= $tmpProduct -> override;
+			$product -> product_override_price		= $tmpProduct -> product_override_price;
 
-			$product -> product_tax_id = $tmpProduct -> product_tax_id;
-			$product -> product_discount_id = $tmpProduct -> product_discount_id;
-			$product -> product_currency = $tmpProduct -> product_currency;
-// 			$product -> product_price_vdate = $tmpProduct -> product_price_vdate;
-// 			$product -> product_price_edate = $tmpProduct -> product_price_edate;
-			$product -> virtuemart_vendor_id = $tmpProduct -> virtuemart_vendor_id;
-			$product -> product_parent_id = $tmpProduct -> product_parent_id;
-			$product -> product_sku = $tmpProduct -> product_sku;
-			$product -> product_name = $tmpProduct -> product_name;
-			$product -> product_s_desc = $tmpProduct -> product_s_desc;
+			$product -> product_tax_id				= $tmpProduct -> product_tax_id;
+			$product -> product_discount_id			= $tmpProduct -> product_discount_id;
+			$product -> product_currency			= $tmpProduct -> product_currency;
+// 			$product -> product_price_vdate			= $tmpProduct -> product_price_vdate;
+// 			$product -> product_price_edate			= $tmpProduct -> product_price_edate;
+			$product -> virtuemart_vendor_id		= $tmpProduct -> virtuemart_vendor_id;
+			$product -> product_parent_id			= $tmpProduct -> product_parent_id;
+			$product -> product_sku					= $tmpProduct -> product_sku;
+			$product -> product_name				= $tmpProduct -> product_name;
+			$product -> product_s_desc				= $tmpProduct -> product_s_desc;
 
-			$product -> product_weight = $tmpProduct -> product_weight;
-			$product -> product_weight_uom = $tmpProduct -> product_weight_uom;
-			$product -> product_length = $tmpProduct -> product_length;
-			$product -> product_width = $tmpProduct -> product_width;
-			$product -> product_height = $tmpProduct -> product_height;
-			$product -> product_lwh_uom = $tmpProduct -> product_lwh_uom;
+			$product -> product_weight				= $tmpProduct -> product_weight;
+			$product -> product_weight_uom			= $tmpProduct -> product_weight_uom;
+			$product -> product_length				= $tmpProduct -> product_length;
+			$product -> product_width				= $tmpProduct -> product_width;
+			$product -> product_height				= $tmpProduct -> product_height;
+			$product -> product_lwh_uom				= $tmpProduct -> product_lwh_uom;
 
-			$product -> product_in_stock = $tmpProduct -> product_in_stock;
-			$product -> product_ordered = $tmpProduct -> product_ordered;
+			$product -> product_in_stock			= $tmpProduct -> product_in_stock;
+			$product -> product_ordered				= $tmpProduct -> product_ordered;
 
-			$product -> product_sales = $tmpProduct -> product_sales;
-			$product -> product_unit = $tmpProduct -> product_unit;
-			$product -> product_packaging = $tmpProduct -> product_packaging;
-			$product -> min_order_level = $tmpProduct -> min_order_level;
-			$product -> max_order_level = $tmpProduct -> max_order_level;
-			$product -> virtuemart_media_id = $tmpProduct -> virtuemart_media_id;
+			$product -> product_sales				= $tmpProduct -> product_sales;
+			$product -> product_unit				= $tmpProduct -> product_unit;
+			$product -> product_packaging			= $tmpProduct -> product_packaging;
+			$product -> min_order_level				= $tmpProduct -> min_order_level;
+			$product -> max_order_level				= $tmpProduct -> max_order_level;
+			$product -> virtuemart_media_id			= $tmpProduct -> virtuemart_media_id;
 
 			if(!empty($tmpProduct ->images)) $product->image =  $tmpProduct -> images[0];
 
-			$product -> categories = $tmpProduct -> categories;
-			$product -> virtuemart_category_id = $tmpProduct -> virtuemart_category_id;
-			$product -> category_name = $tmpProduct -> category_name;
+			$product -> categories					= $tmpProduct -> categories;
+			$product -> virtuemart_category_id		= $tmpProduct -> virtuemart_category_id;
+			$product -> category_name				= $tmpProduct -> category_name;
 
 			$product -> link = $tmpProduct -> link;
 			$product -> packaging = $tmpProduct -> packaging;
@@ -515,7 +517,7 @@ class VirtueMartCart {
 			$prod_id = JRequest::getVar('cart_virtuemart_product_id');
 
 		if($prod_id == 0)
-			$prod_id = $_SESSION['my_p_cart_id']; // coming from loader.php line no.885 comments by chetnath
+			$prod_id = $_SESSION['my_p_cart_id']; // coming from onepage/helper/loader.php line no.885 comments by chetnath
 
 		$exp_pro_id = explode(":",$prod_id);
 		
@@ -528,12 +530,12 @@ class VirtueMartCart {
 		
 
 		foreach($myparent_prod_id as $myproducts_id)
-		{
+		 {
 			$myparent_prod_id1 = (int)$myproducts_id->virtuemart_product_id."::".(int)$myproducts_id->virtuemart_customfield_id.":".'47;';
 
 			if(array_key_exists($myparent_prod_id1, $this->products))
 				 unset($this->products[$myparent_prod_id1]);
-		}
+		 }
 		// this condition will always run parent and child case both
 
 		$mycustom_value_id = $this->products[$prod_id]->customPrices[$exp_pro_id[0]][47];
@@ -1491,7 +1493,7 @@ class VirtueMartCart {
 	}
 
 	// Render the code for Ajax Cart
-	function prepareAjaxData(){
+	function prepareAjaxData(){ 
 		// Added for the zone shipment module
 		//$vars["zone_qty"] = 0;
 		$this->prepareCartData(false);
@@ -1533,6 +1535,13 @@ class VirtueMartCart {
 
 			}
 			$this->data->products[$i]['product_sku'] = $product->product_sku;
+			
+			//============== add by rca chetnath ===================
+
+				$this->data->products[$i]['product_fileimage'] = $product->image->file_url;
+				$this->data->products[$i]['mycategory_id'] = $category_id;
+
+			//============== end by rca chetnath ===================
 
 			//** @todo WEIGHT CALCULATION
 			//$weight_subtotal = vmShipmentMethod::get_weight($product["virtuemart_product_id"]) * $product->quantity'];
@@ -1552,7 +1561,7 @@ class VirtueMartCart {
 
 			// UPDATE CART / DELETE FROM CART
 			//$this->data->products[$i]['quantity'] = $product->quantity;
-			if (array_key_exists($product->product_sku, $temp_qty_sku))			
+			if (@array_key_exists($product->product_sku, $temp_qty_sku))			
 			$this->data->products[$i]['quantity'] = $temp_qty_sku[$product->product_sku];
 			else			
 			$this->data->products[$i]['quantity'] = $product->quantity;
@@ -1560,7 +1569,7 @@ class VirtueMartCart {
 
 			$i++;
 		}
-		$user =& JFactory::getUser();
+		$user = JFactory::getUser();
 		if($user->id)
 		$this->data->billTotal = $currency->priceDisplay( $this->pricesUnformatted['billTotal'] );
 		else

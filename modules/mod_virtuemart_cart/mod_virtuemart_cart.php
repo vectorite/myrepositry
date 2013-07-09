@@ -33,6 +33,7 @@ if (!class_exists( 'VmConfig' )) require(JPATH_ADMINISTRATOR . DS . 'components'
 if(!class_exists('VirtueMartCart')) require(JPATH_VM_SITE.DS.'helpers'.DS.'cart.php');
 $cart = VirtueMartCart::getCart(false);
 $data = $cart->prepareAjaxData();
+
 $lang = JFactory::getLanguage();
 $extension = 'com_virtuemart';
 $lang->load($extension);//  when AJAX it needs to be loaded manually here >> in case you are outside virtuemart !!!

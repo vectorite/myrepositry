@@ -980,7 +980,7 @@ class vmrouterHelper {
 						$this->menu['virtuemart_'.$dbKey.'_id'][ $link['virtuemart_'.$dbKey.'_id'] ] = $item->id;
 					}
 					elseif ($home == $view ) continue;
-					else $this->menu[$view]= $item->id ;
+					else $this->menu[$view]= $item->id;
 
 					if ($item->home === 1) {
 						$home = $view;
@@ -992,7 +992,6 @@ class vmrouterHelper {
 
 			}
 		}
-
 
 
 		// init unsetted views  to defaut front view or nothing(prevent duplicates routes)
@@ -1086,32 +1085,32 @@ class vmrouterHelper {
 			if ($this->orderings == null) {
 				$this->orderings = array(
 					'p.virtuemart_product_id'=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_ID'),
-					'product_sku'		=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_SKU'),
-					'product_price'		=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_PRICE'),
-					'category_name'		=> JText::_('COM_VIRTUEMART_SEF_CATEGORY_NAME'),
-					'category_description'=> JText::_('COM_VIRTUEMART_SEF_CATEGORY_DESCRIPTION'),
-					'mf_name' 			=> JText::_('COM_VIRTUEMART_SEF_MF_NAME'),
-					'product_s_desc'	=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_S_DESC'),
-					'product_desc'		=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_DESC'),
-					'product_weight'	=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_WEIGHT'),
-					'product_weight_uom'=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_WEIGHT_UOM'),
-					'product_length'	=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_LENGTH'),
-					'product_width'		=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_WIDTH'),
-					'product_height'	=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_HEIGHT'),
-					'product_lwh_uom'	=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_LWH_UOM'),
-					'product_in_stock'	=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_IN_STOCK'),
-					'low_stock_notification'=> JText::_('COM_VIRTUEMART_SEF_LOW_STOCK_NOTIFICATION'),
-					'product_available_date'=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_AVAILABLE_DATE'),
-					'product_availability'  => JText::_('COM_VIRTUEMART_SEF_PRODUCT_AVAILABILITY'),
-					'product_special'	=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_SPECIAL'),
-					'created_on' 		=> JText::_('COM_VIRTUEMART_SEF_CREATED_ON'),
-					// 'p.modified_on' 		=> JText::_('COM_VIRTUEMART_SEF_MDATE'),
-					'product_name'		=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_NAME'),
-					'product_sales'		=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_SALES'),
-					'product_unit'		=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_UNIT'),
-					'product_packaging'	=> JText::_('COM_VIRTUEMART_SEF_PRODUCT_PACKAGING'),
-					'p.intnotes'			=> JText::_('COM_VIRTUEMART_SEF_INTNOTES'),
-					'ordering' => JText::_('COM_VIRTUEMART_SEF_ORDERING')
+					'product_sku'			 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_SKU'),
+					'product_price'			 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_PRICE'),
+					'category_name'			 => JText::_('COM_VIRTUEMART_SEF_CATEGORY_NAME'),
+					'category_description'	 => JText::_('COM_VIRTUEMART_SEF_CATEGORY_DESCRIPTION'),
+					'mf_name' 				 => JText::_('COM_VIRTUEMART_SEF_MF_NAME'),
+					'product_s_desc'		 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_S_DESC'),
+					'product_desc'			 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_DESC'),
+					'product_weight'		 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_WEIGHT'),
+					'product_weight_uom'	 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_WEIGHT_UOM'),
+					'product_length'		 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_LENGTH'),
+					'product_width'			 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_WIDTH'),
+					'product_height'		 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_HEIGHT'),
+					'product_lwh_uom'		 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_LWH_UOM'),
+					'product_in_stock'		 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_IN_STOCK'),
+					'low_stock_notification' => JText::_('COM_VIRTUEMART_SEF_LOW_STOCK_NOTIFICATION'),
+					'product_available_date' => JText::_('COM_VIRTUEMART_SEF_PRODUCT_AVAILABLE_DATE'),
+					'product_availability'   => JText::_('COM_VIRTUEMART_SEF_PRODUCT_AVAILABILITY'),
+					'product_special'		 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_SPECIAL'),
+					'created_on' 			 => JText::_('COM_VIRTUEMART_SEF_CREATED_ON'),
+				//  'p.modified_on' 		 => JText::_('COM_VIRTUEMART_SEF_MDATE'),
+					'product_name'			 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_NAME'),
+					'product_sales'			 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_SALES'),
+					'product_unit'			 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_UNIT'),
+					'product_packaging'		 => JText::_('COM_VIRTUEMART_SEF_PRODUCT_PACKAGING'),
+					'p.intnotes'			 => JText::_('COM_VIRTUEMART_SEF_INTNOTES'),
+					'ordering'				 => JText::_('COM_VIRTUEMART_SEF_ORDERING')
 				);
 			}
 			if ($result = array_search($key,$this->orderings )) {
