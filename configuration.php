@@ -10,9 +10,9 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
 	public $host = 'localhost';
-	public $user = 'db1_dev';
-	public $password = 'MyCat8aRabbit';
-	public $db = 'db1_dev';
+	public $user = 'user';
+	public $password = 'password';
+	public $db = 'db';
 	public $dbprefix = 'ekxob_';
 	public $live_site = '';
 	public $secret = '';
